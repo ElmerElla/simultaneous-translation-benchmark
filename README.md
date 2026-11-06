@@ -22,6 +22,8 @@
 
 下载 v1.1 Release 中的 `benchmark-report-offline.zip`，完整解压后打开 `report.html`，可直接阅读并播放视频，也包含 Excel、截图、代码和数据，无需登录产品或联网加载外部脚本。
 
+2026-11-06 修订：仓库内的 Excel、对比数据和完整报告已按软件、指标分别说明缺少的证据，未新增实测或改变原有结果。v1.1 Release 保留修订前的离线快照，最新说明请使用本页的仓库文件链接。
+
 已公开 **19 段脱敏 MP4、47 张截图、2 份独立测试参考 WAV**。单独视频和音频保留在 [v1.0 素材下载页](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106)：[S01 测试输入](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/s01-input.wav)、[音色克隆参考](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/clone-reference.wav)。各软件的翻译播报保留在视频音轨中；中间分析音频不另行发布。视频不存入 Git 历史。
 
 Excel 仅清空作者/修改人身份和本机工作目录属性；单元格、样式、绘图及公开来源批注保持原样。表内价格、政策和未实测功能描述是当时资料记录，不能当作最新报价或新增实测结论；实测范围与限制以报告为准。

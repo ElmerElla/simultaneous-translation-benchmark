@@ -10,8 +10,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "dfc034411ba4a43304fb2af6e4dd5f7a388b7da53dd89377925ddd05e918af3b",
-      "size_bytes": 3601
+      "sha256": "c31700ffe3d002d22440d2c3b42f33b636f76f6529f2a792ff42e06ea75d9a84",
+      "size_bytes": 3858
     },
     {
       "path": "data/audio-manifest.json",
@@ -20,8 +20,8 @@
     },
     {
       "path": "data/comparison.csv",
-      "sha256": "b457d7e2ae67848df545ce6b8c66ccc223103e218fa7392f3557872903abd4b3",
-      "size_bytes": 17388
+      "sha256": "569b11426c3660788c958930ef336dc269f30dd2254ba2a7a54b31abf69ca738",
+      "size_bytes": 20590
     },
     {
       "path": "data/evidence-index.csv",
@@ -45,8 +45,8 @@
     },
     {
       "path": "data/results.json",
-      "sha256": "0c390b807e899a8b24d80ee5449b058d222eab46bf6dfbbb5513aecdbe1d8076",
-      "size_bytes": 146331
+      "sha256": "7c21497729ab5efc20ff471725ac2afb758faa968b341e5c055a65953e53d773",
+      "size_bytes": 149552
     },
     {
       "path": "data/source-code-manifest.json",
@@ -235,7 +235,7 @@
     },
     {
       "path": "data/workbook-verification.json",
-      "sha256": "bc3bd892a5925ba9a9df56a659d1dbf8b37ed938d4e636e447ed98c3f9cd5d72",
+      "sha256": "fa3680338cc3799f8ea6774c6537aac86fc0c18868accf1f3bf1218853e4a9de",
       "size_bytes": 760
     },
     {
@@ -245,13 +245,13 @@
     },
     {
       "path": "docs/report.md",
-      "sha256": "83dba11889bb454099660cf567a33cd592c595a1334f6ce0f5861e747717840c",
-      "size_bytes": 54959
+      "sha256": "4115a64fa45b79a666e7d34744894c826cc5f31d70580664501bd047c45741dd",
+      "size_bytes": 58285
     },
     {
       "path": "docs/reproducibility.md",
-      "sha256": "c9cfebee771fd1975e71d533a9ed13747f3e0a49eb8b6def4edb756874d0ed07",
-      "size_bytes": 5350
+      "sha256": "82b083d9d336fadf7da8cf604cf54ae753776bdf46d33c13649724de2e05b594",
+      "size_bytes": 5732
     },
     {
       "path": "evidence/images/iflytek-n01.png",
@@ -490,8 +490,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "16178cc70ee227c7f2f8ea51650c62ab2eea9c704655a191440e8a418ed2f2ad",
-      "size_bytes": 80453
+      "sha256": "89b062eb02800d121e72c218de33046bd61419be41627d26f29c8f53b9d88184",
+      "size_bytes": 83845
     },
     {
       "path": "requirements-analysis.txt",
@@ -780,8 +780,8 @@
     },
     {
       "path": "测试结论.xlsx",
-      "sha256": "89aeb26b0c898091ddb7c0948464d25b8a8af8f834d2f6c6a3bfa90377b80649",
-      "size_bytes": 26695
+      "sha256": "af9b6d49ab62398c3615518693c6d66b784a07fefa269610fac77b7fa214a734",
+      "size_bytes": 27155
     }
   ],
   "release_media": [
@@ -870,5 +870,13 @@
       "sha256": "b129ba82395663933f9558aa94e2efe12d22146be1eb26ba639c0d1c36ee815f"
     }
   ],
-  "media_release_tag": "v1.0-20261106"
+  "media_release_tag": "v1.0-20261106",
+  "repository_revision": {
+    "date": "2026-11-06",
+    "change": "七款软件按指标说明证据缺口；同步综合对比工作簿、对比数据及报告。",
+    "new_product_tests_performed": false,
+    "existing_scene_and_timing_records_unchanged": true,
+    "release_assets_updated": false,
+    "release_note": "v1.1 Release 保留修订前快照；repository_files 对应当前仓库内容。"
+  }
 }
