@@ -1,7 +1,7 @@
 {
-  "release_tag": "v1.0-20261106",
-  "policy": "最终采用材料白名单；不上传废稿、旧表、备份、日志、配置、缓存、模型、安装包或原件。",
-  "text_files_scanned": 106,
+  "release_tag": "v1.1-20261106",
+  "policy": "最终采用材料白名单；不上传废稿、旧表、备份、日志、配置、缓存、模型、安装包或未脱敏原件。",
+  "text_files_scanned": 107,
   "repository_files": [
     {
       "path": ".gitignore",
@@ -10,8 +10,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "07ffcd8460bcb1262c1897525ee4bd527e71d1a631b94311b92ea1b5fa95ec2f",
-      "size_bytes": 2492
+      "sha256": "dfc034411ba4a43304fb2af6e4dd5f7a388b7da53dd89377925ddd05e918af3b",
+      "size_bytes": 3601
     },
     {
       "path": "data/audio-manifest.json",
@@ -234,19 +234,24 @@
       "size_bytes": 1125
     },
     {
+      "path": "data/workbook-verification.json",
+      "sha256": "bc3bd892a5925ba9a9df56a659d1dbf8b37ed938d4e636e447ed98c3f9cd5d72",
+      "size_bytes": 760
+    },
+    {
       "path": "docs/privacy.md",
-      "sha256": "1fa291bbaa29671a6ed1bbe4d4b990ea0d65f219637d963940714755ce6aa822",
-      "size_bytes": 4791
+      "sha256": "52aec998d56a9639b5f08ef99a09c4ba19520dc24744e9cbe7db5f1f56500117",
+      "size_bytes": 5272
     },
     {
       "path": "docs/report.md",
-      "sha256": "658786965d68079f0c979256ac762293d75aba01b8d9b7dd6e704d90e6985959",
-      "size_bytes": 54590
+      "sha256": "83dba11889bb454099660cf567a33cd592c595a1334f6ce0f5861e747717840c",
+      "size_bytes": 54959
     },
     {
       "path": "docs/reproducibility.md",
-      "sha256": "3798d66fee337abc53860082264ffd05483f42a7cc148153f6e4ecee8bf781d6",
-      "size_bytes": 4891
+      "sha256": "c9cfebee771fd1975e71d533a9ed13747f3e0a49eb8b6def4edb756874d0ed07",
+      "size_bytes": 5350
     },
     {
       "path": "evidence/images/iflytek-n01.png",
@@ -485,8 +490,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "23b7804f5e18fef26e148da32a999f55bdde8c353d34df89e9304c8ea53e171f",
-      "size_bytes": 80062
+      "sha256": "16178cc70ee227c7f2f8ea51650c62ab2eea9c704655a191440e8a418ed2f2ad",
+      "size_bytes": 80453
     },
     {
       "path": "requirements-analysis.txt",
@@ -595,8 +600,8 @@
     },
     {
       "path": "scripts/build_report.py",
-      "sha256": "ba52cc470231b08206bfad2d0408dbf36b320bff22a5f8b6ee37ec49b43f843a",
-      "size_bytes": 8608
+      "sha256": "c5dac3982fda72516bc72d4cbbd51fb911142294ee531fc8ae41d7891c7df861",
+      "size_bytes": 8671
     },
     {
       "path": "scripts/weak-network/NativeCollector.cs",
@@ -772,6 +777,11 @@
       "path": "tests/test_benchmark.py",
       "sha256": "477ec5ef5b3bac1aaf50d4c7fc44f46331e67e37e711a20b3e85cca0e7353cb9",
       "size_bytes": 1709
+    },
+    {
+      "path": "测试结论.xlsx",
+      "sha256": "89aeb26b0c898091ddb7c0948464d25b8a8af8f834d2f6c6a3bfa90377b80649",
+      "size_bytes": 26695
     }
   ],
   "release_media": [
@@ -859,5 +869,6 @@
       "file": "clone-reference.wav",
       "sha256": "b129ba82395663933f9558aa94e2efe12d22146be1eb26ba639c0d1c36ee815f"
     }
-  ]
+  ],
+  "media_release_tag": "v1.0-20261106"
 }

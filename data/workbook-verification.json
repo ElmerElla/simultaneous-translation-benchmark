@@ -1,0 +1,20 @@
+{
+  "file": "测试结论.xlsx",
+  "source_sha256": "818b5580242bd3431c877311d3d9df65296ce73fd60a579184f2b8ef92ca5600",
+  "public_sha256": "89aeb26b0c898091ddb7c0948464d25b8a8af8f834d2f6c6a3bfa90377b80649",
+  "source_unchanged": true,
+  "changed_package_parts": [
+    "xl/workbook.xml",
+    "docProps/core.xml"
+  ],
+  "privacy_changes": [
+    "清空修改人/作者身份属性",
+    "清空本机工作目录属性"
+  ],
+  "unchanged_package_parts": 12,
+  "cell_values_unchanged": true,
+  "cell_xml_styles_comments_drawings_unchanged": true,
+  "workbook_formulas": 0,
+  "external_relationships": 0,
+  "note": "原表全部内容与公开资料批注原样保留。未测试功能描述及历史价格/政策不作为新实测结论。"
+}
