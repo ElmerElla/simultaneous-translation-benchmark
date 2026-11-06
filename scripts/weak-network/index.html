@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>弱网工作台 · v2</title><link rel="icon" href="/app-icon.svg"><link rel="stylesheet" href="/panel.css"></head>
+<body>
+<header class="topbar"><div class="brand"><img src="/app-icon.svg" alt=""><strong>弱网工作台</strong><span class="version">v2 · 本机</span></div><div class="top-actions"><span id="collectorBadge" class="badge">连接采集中</span><button id="openSelftest" class="quiet">离线自检</button><button id="openHelp" class="quiet" aria-label="使用说明">帮助</button><button id="exportJson" class="quiet">导出 JSON</button><button id="exportCsv" class="quiet">CSV</button><button id="exit" class="quiet">退出</button></div></header>
+<div id="notice" role="status" class="notice hidden"></div>
+<div class="workspace">
+ <aside class="sidebar" aria-label="程序列表"><div class="side-head"><div class="section-line"><h1>程序</h1><span id="programCount" class="muted">—</span></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜索名称、路径或 PID" aria-label="搜索程序"></label><select id="scope" aria-label="程序范围"><option value="active">近期网络程序</option><option value="all">全部运行程序</option></select><p id="activityNote" class="small muted">当前或最近60秒的网络活动</p></div><div id="programList" class="program-list" role="list"></div><div class="sidebar-foot"><span class="live-dot"></span>每秒刷新 · 按完整路径合并</div></aside>
+ <main id="main"><div id="emptyDetail" class="empty"><img src="/app-icon.svg" alt=""><h2>选择一个程序</h2><p>查看真实连接和网络指标，或启动独立诊断。</p></div>
+ <div id="detail" class="hidden">
+  <section class="app-header"><div class="app-title"><img id="selectedIcon" src="/app-icon.svg" alt=""><div><div class="title-row"><h1 id="appName"></h1><span id="capability" class="badge"></span></div><p id="appPath" class="path"></p></div></div><div class="app-meta"><details><summary id="pidSummary"></summary><div id="pidList"></div></details><span>控制范围：同一路径的全部运行实例</span><span id="sampleTime"></span></div></section>
+  <div id="permissionNote" class="inline-note hidden"></div><div id="coverageNote" class="inline-note hidden"></div>
+  <section class="metrics-section" aria-label="程序实测指标"><div class="section-line"><h2>程序实测</h2><span class="small muted">Windows ETW / IP Helper / EStats</span></div><div id="metricGrid" class="metric-grid"></div><div class="chart-box"><div class="section-line"><span class="small">最近60秒流量</span><span class="small legend"><i class="up"></i>上行 <i class="down"></i>下行 <span id="chartScale"></span></span></div><svg id="trafficChart" viewBox="0 0 720 86" preserveAspectRatio="none" role="img" aria-label="最近60秒上下行速度走势"></svg><div id="chartEmpty" class="chart-empty"></div></div></section>
+  <section class="data-section"><div class="tabs" role="tablist"><button role="tab" id="tab-connections" aria-controls="connections" aria-selected="true" data-tab="connections">连接详情 <span id="connectionCount"></span></button><button role="tab" id="tab-diagnostics" aria-controls="diagnostics" aria-selected="false" data-tab="diagnostics">诊断探针</button><button role="tab" id="tab-actions" aria-controls="actions" aria-selected="false" data-tab="actions">操作记录</button></div>
+   <div id="connections" role="tabpanel" aria-labelledby="tab-connections"><div class="table-wrap"><table><thead><tr><th>协议 / PID</th><th>本地地址</th><th>远端地址</th><th>状态</th><th>RTT / 重传段</th></tr></thead><tbody id="connectionRows"></tbody></table></div><p class="table-note">UDP只展示本地端点；TCP指标仅在EStats启用成功后显示。重传段数不是丢包率。</p></div>
+   <div id="diagnostics" role="tabpanel" aria-labelledby="tab-diagnostics" class="hidden"><div class="probe-intro"><strong>独立诊断 · 由你手动启动</strong><p>3次新连接 + 20次ICMP，直连发送，不继承HTTP代理。它不代表所选程序的请求。</p></div><form id="diagnoseForm" class="probe-form"><label>连接中的目标IP<select id="targetIp"><option value="">使用填写的域名</option></select></label><label>域名（用于DNS及证书校验）<input id="targetDomain" placeholder="例如 example.com" autocomplete="off"></label><button id="startDiagnose" type="submit" class="primary">开始诊断</button></form><p class="small muted">选IP并填域名：DNS仍单独解析，HTTPS连接固定到所选IP，TLS按域名校验。</p><div id="diagnosticResult" class="probe-results"><div class="empty small">尚未开始诊断</div></div></div>
+   <div id="actions" role="tabpanel" aria-labelledby="tab-actions" class="hidden"><div id="actionRows"></div></div>
+  </section>
+ </div></main>
+</div>
+<footer class="control-dock">
+ <div class="control-status"><span id="controlTarget">实际控制对象：无</span><span id="countdown"></span><button id="emergency" class="link hidden">紧急恢复本工具改动</button></div>
+ <div id="engineNote" class="engine-note">控制引擎状态读取中…</div><div id="lossNote" class="loss-note hidden"></div>
+ <form id="controlForm" class="control-form">
+  <label>模式<select id="mode"><option value="delay">附加延迟</option><option value="drop">概率丢包</option><option value="outage">连接中断</option></select></label>
+  <label class="delay-field">上行 <span>ms</span><input id="upstream" type="number" min="0" max="3000" value="100" required></label>
+  <label class="delay-field">下行 <span>ms</span><input id="downstream" type="number" min="0" max="3000" value="100" required></label>
+  <label class="drop-field hidden">上行概率 <span>%</span><input id="upstreamDrop" type="number" min="0" max="100" step="1" value="10" required disabled></label>
+  <label class="drop-field hidden">下行概率 <span>%</span><input id="downstreamDrop" type="number" min="0" max="100" step="1" value="10" required disabled></label>
+  <label>持续 <span>秒</span><input id="duration" type="number" min="1" max="300" value="10" required></label>
+  <div class="quick-picks"><button type="button" id="quickDelay" class="quiet">延迟100ms</button><button type="button" id="quickDrop" class="quiet">丢包10%</button><button type="button" id="quickOutage" class="quiet">中断10秒</button></div>
+  <button id="apply" class="primary" type="submit" disabled>应用</button><button id="restore" type="button" disabled>恢复原设置</button>
+ </form>
+</footer>
+<dialog id="selftestDialog"><div class="dialog-head"><h2>离线自检</h2><button data-close="selftestDialog" aria-label="关闭">×</button></div><p>无需Codex联网。自检仅修改本工具的隔离探针程序，分别验证延迟、中断、概率丢包的配置回读及恢复。会向你指定的目标发送少量诊断请求。</p><form id="selftestForm"><label>直连HTTPS目标<input id="selftestTarget" value="https://example.com/" required></label><button id="runSelftest" class="primary">运行独立自检</button></form><pre id="selftestResult">尚未运行</pre><p class="small muted">未通过的模式保持禁用，其他已通过模式仍可用。丢包自检不测包级实际丢弃比例。完整流量统计另需管理员采集。</p></dialog>
+<dialog id="helpDialog"><div class="dialog-head"><h2>本机使用</h2><button data-close="helpDialog" aria-label="关闭">×</button></div><ol><li>自行关闭iKuuuVPN，再打开本目录的“启动弱网面板v2”。</li><li>需要完整流量和TCP统计时，运行“启动管理员采集”，在Windows授权窗口确认。网页保持普通权限。</li><li>先运行“离线自检”。只有配置回读、效果验证和恢复均通过的能力才允许控制。</li><li>选择程序。设置模式和时间，点击“应用”。控制覆盖同一路径的全部实例。</li><li>到时、手动恢复或退出工具都会还原操作前配置。关闭网页不影响独立恢复计时。</li><li>导出JSON包含详细指标及诊断样本；CSV提供程序指标表，均保存在本机下载位置。</li></ol><p>已有优先级规则尚未验证无损恢复的程序将拒绝修改。外部修改冲突会保留现场并提示，不覆盖第三方设置。</p><p class="small muted">控制依赖本机NetBalancer服务、驱动、权限及许可；不更改系统代理、VPN或全局网络。DNS/TCP/TLS探针需目标网络可达，启动和监控不需要Codex在线。</p></dialog>
+<script src="/panel.js"></script></body></html>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "s01-input",
+    "file": "s01-input.wav",
+    "source_sha256": "b9e9c69a8556fb46618d58d9f5b88634b2ddb92b4aa84bf93d0abbc4dc542379",
+    "public_sha256": "60b32d31f3b3e07450dc17e0bfc44336bde561c3533821b30d0947eac892ddeb",
+    "purpose": "获准公开的测试参考音频；无身份向量。"
+  },
+  {
+    "id": "clone-reference",
+    "file": "clone-reference.wav",
+    "source_sha256": "5c9079fb871af3486b16641099f289676fdb626971abcd71d0e2d1e14477fb72",
+    "public_sha256": "b129ba82395663933f9558aa94e2efe12d22146be1eb26ba639c0d1c36ee815f",
+    "purpose": "获准公开的测试参考音频；无身份向量。"
+  }
+]

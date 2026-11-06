@@ -1,0 +1,3708 @@
+[
+  {
+    "slug": "transync",
+    "name": "Transync AI",
+    "analysis_date": "2026-11-02",
+    "summary": {
+      "翻译事实覆盖": "中→英，统一S01两句短语料。正常3条、100ms档1条、上下行各10%概率丢包配置1条，5条完整输出的最终字幕各5/5事实正确，共25/25项检查通过。日期时间、预算上限3万元、不是13万元、测试通过才发布、有问题推迟至周五均保留。\n流式中间字幕仍有误译：冷启动约22～23秒曾将“预算上限”译成budget up or down，约24秒修正，最终字幕及播报正确。\n10秒中断恢复的新段只有2项完整正确、1项部分、2项遗漏：发布条件及周五延期保留，只剩30,000 yuan金额，首句和“不是13万”缺失。\n5/5仅为本语料事实覆盖；25项来自同一语料的5次输出，不能当总体准确率。重叠语音用同源抵消辅助转写核对，10%实际业务丢包未验证。",
+      "音色克隆": "3D-Speaker CAMPPlus声纹模型（192维），同一S01语义内容的中文输入与英文译音对照：输入原声→克隆0.6002，输入原声→默认0.0742，原始余弦分差0.5259。另用独立克隆参考音频，参考→克隆0.6817、参考→默认0.1571，排序一致。\n主比较取样：输入13.48秒、克隆15.60秒、默认12.94秒；两段译音均无中文源音重叠，未使用抵消音算主声纹。\n结论：本样本克隆音色的模型特征明显更接近原声。0.6002不能解释为60.02%还原率；跨语言、短样本，无通用身份阈值及主观盲听，不能推断长期稳定性。10%补录虽开启克隆，但语音重叠，未混入主声纹比较。",
+      "实时性能": "OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“英文字幕首显／同句译音首响”，单位秒：\n首次启动·克隆：4.81／18.25；同进程新会话·克隆：4.91／6.94；默认音色：5.67／16.10。\n上下行各100ms：6.09／7.89；上下行各10%概率丢包配置：5.98／8.10。\n首次会话从开始受理到明确就绪约0.83秒，不等于进程启动耗时，也不等于可听到译音。冷启动字幕后还需13.44秒才发声；同进程克隆约2.03秒，10%补录约2.12秒。\n按ASR首词“请”计，冷启动为4.06／17.51秒，10%补录为5.25／7.37秒。主口径含前导低能量声段；视频30fps，OBS通路未标定，重叠首响定位约±0.1秒。各条件仅1条对应观测，不报告稳定均值或P95。",
+      "译音质量": "正常无重叠完整译音中，克隆／默认的首末发声跨度为15.53／12.86秒，峰值幅度0.381／0.275（满幅为1），数字削波占比均0.0%。段间停顿：克隆约0.41～0.56秒，默认约0.20～0.54秒。独立英文转写均恢复5项事实，未见整句内容重复。\n10%概率丢包配置补录：辅助转写恢复5项事实，发声跨度13.27秒；未重叠尾段峰值0.188、削波0.0%，两处短语停顿约0.53／0.96秒。\n结论：本样本可懂性证据较好、未见满幅数字过载。停顿不能直接判为卡顿，完整转写不能排除词内断音、机械感或细微失真。\n三条标记音轨实为相同混音，抵消音只作内容／时间辅助。自然度、韵律、主观清晰度均未做人耳评分；无MOS、PESQ或STOI分数。",
+      "弱网表现": "100ms档：上、下行各附加100ms，首显6.09秒、首响7.89秒，完整输出，最终字幕5/5事实。设置值不等于实测RTT。\n10%概率丢包档：上、下行各配置10%，克隆开启，首显5.98秒、首响8.10秒，字幕和译音均保留5项事实；29.654秒完成播报。相对同进程克隆场景，首显观测多1.07秒、首响多1.16秒。工具注明“实测丢弃比例未采集、业务覆盖待验证”，不能宣称稳定耐受真实10%丢包。\n10秒中断：界面控制状态54.800～65.033秒，约10.23秒。撤销后约13秒才见新英文金额，约13.49秒记录到金额发声，约82秒补出发布条件及周五延期；新字幕完整事实2/5，预算仅金额，首句及否定信息缺失。\n局限：撤销后68.524秒同文重播、约84.13秒结束会话，补译归属及后续播报未完全观察。只判本次观察内恢复不完整，不判永久丢失或严格超时率。各网络条件仅1条观测，单次差异不能归因于网络损伤。",
+      "记录状态": "测试完成"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "normal",
+        "label": "首次启动·克隆开启",
+        "pts_s": 48.904,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "首响用无源音重叠区；仅1次首次启动样本。",
+        "evidence_image": "evidence/images/transync-n01.png",
+        "video_id": "transync-normal"
+      },
+      {
+        "id": "N02",
+        "video": "normal",
+        "label": "同进程新会话·克隆开启",
+        "pts_s": 81.129,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "首响与中文源音重叠，经同源波形抵消辅助定位，误差约±0.1秒。",
+        "evidence_image": "evidence/images/transync-n02.png",
+        "video_id": "transync-normal"
+      },
+      {
+        "id": "N03",
+        "video": "normal",
+        "label": "同进程新会话·默认音色",
+        "pts_s": 124.454,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "90～91秒关闭声音克隆，选择深沉男声-A。",
+        "evidence_image": "evidence/images/transync-n03.png",
+        "video_id": "transync-normal"
+      },
+      {
+        "id": "W01",
+        "video": "network",
+        "label": "上行100ms+下行100ms",
+        "pts_s": 39.194,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "首响重叠，经同源抵消辅助定位；网络数值为工具设置。",
+        "evidence_image": "evidence/images/transync-w01.png",
+        "video_id": "transync-network"
+      },
+      {
+        "id": "W02",
+        "video": "network",
+        "label": "中断10秒期间的输入",
+        "pts_s": 64.0,
+        "subtitle": [],
+        "audio": [],
+        "note": "旧字幕保留；恢复后同文重播，无法把残段唯一归属原输入。",
+        "evidence_image": "evidence/images/transync-w02.png",
+        "video_id": "transync-network"
+      },
+      {
+        "id": "W03",
+        "video": "network",
+        "label": "撤销中断后同文重播",
+        "pts_s": 82.8,
+        "subtitle": [],
+        "audio": [],
+        "note": "78秒附近出现新字幕30,000 yuan，78.526秒附近发声；84.13秒附近停止，未等待完整播报。",
+        "evidence_image": "evidence/images/transync-w03.png",
+        "video_id": "transync-network"
+      },
+      {
+        "id": "W04",
+        "video": "loss10",
+        "label": "上下行各10%概率丢包·克隆开启",
+        "pts_s": 30,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确（抵消辅助）",
+          "正确（抵消辅助）",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "工具只显示配置上/下行10%，实测丢弃比例未采集，业务覆盖待验证。；1条样本，无统计稳定性结论。进程已在录像开始时打开，此条不记冷启动。；三音轨解码后相同，首句/预算与源音重叠，用同源抵消辅助ASR；不据此作完整音质或新声纹主比较。；会话结束附近工具显示控制对象变无，未单独验证撤销后恢复表现。",
+        "evidence_image": "evidence/images/transync-w04.png",
+        "video_id": "transync-loss10"
+      }
+    ],
+    "timing": [
+      {
+        "id": "N01",
+        "scene": "首次启动·克隆开启",
+        "video": "normal",
+        "source_wav": 15.145,
+        "subtitle_pts": 19.933333333333334,
+        "audio_pts": 33.374,
+        "audio_end_pts": 48.903999999999996,
+        "status": "完整输出",
+        "limit": "首响用无源音重叠区；仅1次首次启动样本。",
+        "source_pts": 15.123999999999999,
+        "subtitle_latency": 4.809333333333335,
+        "audio_latency": 18.250000000000004,
+        "source_first_word": "请",
+        "source_first_word_pts": 15.869,
+        "subtitle_latency_word": 4.064333333333334,
+        "audio_latency_word": 17.505000000000003
+      },
+      {
+        "id": "N02",
+        "scene": "同进程新会话·克隆开启",
+        "video": "normal",
+        "source_wav": 59.615,
+        "subtitle_pts": 64.5,
+        "audio_pts": 66.529,
+        "audio_end_pts": 81.129,
+        "status": "完整输出",
+        "limit": "首响与中文源音重叠，经同源波形抵消辅助定位，误差约±0.1秒。",
+        "source_pts": 59.594,
+        "subtitle_latency": 4.905999999999999,
+        "audio_latency": 6.934999999999995,
+        "source_first_word": "请",
+        "source_first_word_pts": 60.339,
+        "subtitle_latency_word": 4.161000000000001,
+        "audio_latency_word": 6.189999999999998
+      },
+      {
+        "id": "N03",
+        "scene": "同进程新会话·默认音色",
+        "video": "normal",
+        "source_wav": 95.515,
+        "subtitle_pts": 101.16666666666667,
+        "audio_pts": 111.594,
+        "audio_end_pts": 124.454,
+        "status": "完整输出",
+        "limit": "90～91秒关闭声音克隆，选择深沉男声-A。",
+        "source_pts": 95.494,
+        "subtitle_latency": 5.672666666666672,
+        "audio_latency": 16.099999999999994,
+        "source_first_word": "请",
+        "source_first_word_pts": 96.04899999999999,
+        "subtitle_latency_word": 5.117666666666679,
+        "audio_latency_word": 15.545000000000002
+      },
+      {
+        "id": "W01",
+        "scene": "上行100ms+下行100ms",
+        "video": "network",
+        "source_wav": 16.565,
+        "subtitle_pts": 22.633333333333333,
+        "audio_pts": 24.4356875,
+        "audio_end_pts": 39.194,
+        "status": "完整输出",
+        "limit": "首响重叠，经同源抵消辅助定位；网络数值为工具设置。",
+        "source_pts": 16.544,
+        "subtitle_latency": 6.089333333333332,
+        "audio_latency": 7.8916875,
+        "source_first_word": "请",
+        "source_first_word_pts": 17.308999999999997,
+        "subtitle_latency_word": 5.324333333333335,
+        "audio_latency_word": 7.126687500000003
+      },
+      {
+        "id": "W02",
+        "scene": "中断10秒期间的输入",
+        "video": "network",
+        "source_wav": 53.005,
+        "subtitle_pts": null,
+        "audio_pts": null,
+        "audio_end_pts": null,
+        "status": "未得到可唯一归属的完整输出",
+        "limit": "旧字幕保留；恢复后同文重播，无法把残段唯一归属原输入。",
+        "source_pts": 52.984,
+        "subtitle_latency": null,
+        "audio_latency": null
+      },
+      {
+        "id": "W03",
+        "scene": "撤销中断后同文重播",
+        "video": "network",
+        "source_wav": 68.545,
+        "subtitle_pts": null,
+        "audio_pts": null,
+        "audio_end_pts": null,
+        "status": "仅恢复部分内容",
+        "limit": "78秒附近出现新字幕30,000 yuan，78.526秒附近发声；84.13秒附近停止，未等待完整播报。",
+        "source_pts": 68.524,
+        "subtitle_latency": null,
+        "audio_latency": null
+      },
+      {
+        "id": "W04",
+        "scene": "上下行各10%概率丢包·克隆开启",
+        "source_wav": 8.31,
+        "source_pts": 8.289,
+        "source_first_word_pts": 9.018999999999998,
+        "subtitle_pts": 14.266666666666667,
+        "audio_pts": 16.387375,
+        "audio_end_pts": 29.654,
+        "subtitle_latency": 5.977666666666668,
+        "audio_latency": 8.098374999999999,
+        "subtitle_latency_word": 5.247666666666669,
+        "audio_latency_word": 7.368375,
+        "subtitle_to_audio_gap": 2.120708333333331,
+        "audio_span": 13.266625000000001,
+        "source_to_audio_end": 21.365000000000002,
+        "configuration": {
+          "uplink_probability": 0.1,
+          "downlink_probability": 0.1,
+          "configured_duration": 30,
+          "active_first_pts": 2.7,
+          "inactive_first_pts": 34.0,
+          "ui_active_span": 31.3,
+          "real_packet_loss_measured": false,
+          "coverage_verified": false,
+          "cloning_enabled": true
+        },
+        "quality": {
+          "pure_tail_wav_start": 21.3,
+          "pure_tail_wav_end": 30,
+          "peak": 0.187835693359375,
+          "clipped_sample_ratio": 0.0,
+          "observed_phrase_gaps": [
+            0.9550000000000018,
+            0.5299999999999976
+          ],
+          "subjective_listening": false
+        },
+        "facts": [
+          {
+            "id": "F1",
+            "source": "下周二上午十点前确认测试结果",
+            "keyword": "Please confirm the test results by 10:00 a.m. next Tuesday.",
+            "subtitle": "正确",
+            "audio": "正确（抵消辅助）"
+          },
+          {
+            "id": "F2",
+            "source": "预算上限三万元",
+            "keyword": "The budget cap is 30,000 yuan",
+            "subtitle": "正确",
+            "audio": "正确（抵消辅助）"
+          },
+          {
+            "id": "F3",
+            "source": "不是十三万元",
+            "keyword": "not 130,000 yuan",
+            "subtitle": "正确",
+            "audio": "正确"
+          },
+          {
+            "id": "F4",
+            "source": "只有测试通过才发布",
+            "keyword": "Only release after passing the tests",
+            "subtitle": "正确",
+            "audio": "正确"
+          },
+          {
+            "id": "F5",
+            "source": "发现问题则推迟到周五",
+            "keyword": "If any issues are discovered, postpone them until Friday.",
+            "subtitle": "正确",
+            "audio": "正确"
+          }
+        ],
+        "manifest": {
+          "sha256": "3ff24cb9d8d08103044069ff147569589e9f6758312690ed0a9e976f138cc059",
+          "duration": "34.200000",
+          "audio_hashes": {
+            "mix": "0f0023542bfc0006779b61f3d5b987865ae745dfe900a64e8433f541f06d0562",
+            "source": "0f0023542bfc0006779b61f3d5b987865ae745dfe900a64e8433f541f06d0562",
+            "translated": "0f0023542bfc0006779b61f3d5b987865ae745dfe900a64e8433f541f06d0562"
+          },
+          "tracks_identical": true
+        },
+        "limitations": [
+          "工具只显示配置上/下行10%，实测丢弃比例未采集，业务覆盖待验证。",
+          "1条样本，无统计稳定性结论。进程已在录像开始时打开，此条不记冷启动。",
+          "三音轨解码后相同，首句/预算与源音重叠，用同源抵消辅助ASR；不据此作完整音质或新声纹主比较。",
+          "会话结束附近工具显示控制对象变无，未单独验证撤销后恢复表现。"
+        ],
+        "video": "loss10"
+      }
+    ],
+    "startup": {
+      "trigger_pts": 13.3,
+      "ready_pts": 14.133333333333333,
+      "duration": 0.8333333333333321,
+      "boundary": "开始按钮转加载的第一帧为触发代理；暂停按钮和开始转写提示第一帧为就绪。点击动画误差≤1帧。未测进程创建到就绪。"
+    },
+    "completion": [],
+    "network": {
+      "on_pts": 54.8,
+      "off_pts": 65.03333333333333,
+      "ui_active_duration": 10.233333333333334,
+      "replay_source_pts": 68.524,
+      "reconnect_notice_observed_pts": 73,
+      "partial_subtitle_observed_pts": 78,
+      "partial_audio_pts": 78.5256875,
+      "new_final_subtitle_observed_pts": 82,
+      "stopped_pts_approx": 84.13,
+      "conclusion": "配置中断10秒，界面控制状态持续约10.23秒。恢复后出现重连提示并只恢复部分新内容，未自动补齐完整语料。存在重播及提前停止，不能给出严格完整恢复耗时或超时率。"
+    },
+    "limits": []
+  },
+  {
+    "slug": "parley",
+    "name": "Parley Voice",
+    "analysis_date": "2026-11-03",
+    "summary": {
+      "翻译事实覆盖": "本批界面均为豆包同声传译。正常两次及100ms、10%配置录次，最终字幕/辅助译音完整事实各4/5：F1把“确认测试结果”改成“发送修订版”，或“向HR/小组提交书面说明”；其余金额、否定、发布条件和周五延期保留。\n克隆段F1仍错，F2只剩预算金额、缺“上限”，为完整3/5、部分1项、错误1项。恢复与重播合并段混有be available、From now until Friday等无来源内容，不能归为准确完整补译。",
+      "音色克隆": "录像明确系统音色VV女声与实时克隆输入声音。CAMPPlus 192维，同一原声参考，无重叠F4～F5英文尾句：克隆0.5450、系统音色0.0264，原始余弦差0.5186。\n本样本克隆特征更接近原声。仅约6秒尾句、跨语言短样本，不代表完整语句或长期稳定性；未用抵消音做主声纹。相似度不是还原百分比，无主观盲听评分。",
+      "实时性能": "首显／首响，单位秒；均从本轮原声声学起点计。\n首次3.7/4.2；再次3.8/4.3；克隆3.7/4.6；100ms4.0/4.6；10%4.1/4.4。\n首显含短暂完整英文单词碎片，稳定短语时间另存；译音早于原声结束，首响采用同源抵消辅助估计。单次录像观察；音画通路未标定，无稳定均值或P95。\n启动分阶段：程序窗口3～4秒出现，主界面4～5秒；会话就绪7～8秒之间，输入8.3秒开始。\n首次尾句显全距输入13.4秒；译音末响距输入20.8秒。尾句首度显全不代表后续不再修订或重复。",
+      "译音质量": "无重叠F4～F5尾句峰值：系统音色0.561、克隆0.908，满幅数字削波均0%；阈值下停顿约0.16～0.65秒。独立尾段转写保留发布条件和周五延期。\n首句、金额等重叠区只以辅助转写核对，不能完整评细微失真；无数字过载不等于自然。未做自然度、韵律或MOS评分。",
+      "弱网表现": "100ms及10%概率丢包配置均有完整输出，但F1语义错译；本地工具控制parley.exe，设置上下行各100ms或10%，实际业务损伤未独立验证。\n约42～53秒中断显示期间已有残段声/字幕；38.4秒输入早于应用，54.8秒又重播。恢复合并段出现可用时间、从现在到周五等无来源内容。\n中断作用覆盖、旧缓存与新输入归属受限，不报告严格完整恢复耗时。",
+      "记录状态": "录像分析完成；部分项目证据不足"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "V01",
+        "frame": 870,
+        "pts_s": 29,
+        "label": "豆包/系统音色VV女声/首次",
+        "subtitle": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please send me the revised version before 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "F1动作与对象从确认测试结果变成发送修订版，时间虽然保留仍记错误。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-n01.png",
+        "video_id": "parley-v01"
+      },
+      {
+        "id": "N02",
+        "video": "V01",
+        "frame": 1620,
+        "pts_s": 54,
+        "label": "豆包/系统音色/再次输入",
+        "subtitle": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please send me the revised version before 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "再次输入仍出现相同首句语义替换；不是纯数字或标点差异。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-n02.png",
+        "video_id": "parley-v01"
+      },
+      {
+        "id": "C01",
+        "video": "V03",
+        "frame": 750,
+        "pts_s": 25,
+        "label": "豆包/实时克隆输入声音",
+        "subtitle": [
+          "错误",
+          "部分",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "错误",
+          "部分",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please send me the revised version before 10 a.m. next Tuesday.",
+          "The budget is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "画面明确实时克隆输入声音；F1仍错，F2只保留金额未保留预算上限，记部分。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-c01.png",
+        "video_id": "parley-v03"
+      },
+      {
+        "id": "W01",
+        "video": "V02",
+        "frame": 960,
+        "pts_s": 32,
+        "label": "豆包/上下行各100ms配置",
+        "subtitle": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please submit a written explanation to the HR department before 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "F1改成向HR部门提交书面说明，新增无来源内容；其他4项关键事实保留。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-w01.png",
+        "video_id": "parley-v02"
+      },
+      {
+        "id": "R01",
+        "video": "V02",
+        "frame": 1620,
+        "pts_s": 54,
+        "label": "中断期间/撤销附近短段",
+        "subtitle": [
+          "部分",
+          "遗漏",
+          "遗漏",
+          "遗漏",
+          "遗漏"
+        ],
+        "audio": [
+          "部分",
+          "遗漏",
+          "遗漏",
+          "遗漏",
+          "遗漏"
+        ],
+        "quotes": [
+          "Please be available next Tuesday at 10 a.m. Yes. From now until Friday.",
+          "未出现",
+          "未出现",
+          "未出现",
+          "未出现"
+        ],
+        "note": "输入38.4秒先于约42秒中断应用；在控制仍显示中断时已有声音/字幕残段，作用覆盖未证实。不能把旧完整段计入。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-r01.png",
+        "video_id": "parley-v02"
+      },
+      {
+        "id": "R02",
+        "video": "V02",
+        "frame": 2280,
+        "pts_s": 76,
+        "label": "恢复后重播合并输出",
+        "subtitle": [
+          "部分",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "部分",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "From now until Friday, please be available next Tuesday at 10 a.m. to confirm the test results.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "54.8秒重播后输出混有From now until Friday、be available等无来源时间与动作；恢复补译和新输入归属不清，F1记部分。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-r02.png",
+        "video_id": "parley-v02"
+      },
+      {
+        "id": "W04",
+        "video": "V02",
+        "frame": 3120,
+        "pts_s": 104,
+        "label": "豆包/上下行各10%概率丢包配置",
+        "subtitle": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "错误",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please submit a written explanation to the group before 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "F1又改成向小组提交书面说明，4项关键事实仍保留。丢包作用覆盖和实际比例未验证。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/parley-w04.png",
+        "video_id": "parley-v02"
+      }
+    ],
+    "timing": [
+      {
+        "scene": "N01",
+        "video": "V01",
+        "source_template_pts_s": 8.258875,
+        "source_pts_s": 8.298874999999999,
+        "audio_asr_candidate_wav_s": 12.05,
+        "target_audio_pts_s": 12.539,
+        "audio_delay_s": 4.240125000000001,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 362,
+        "first_present_frame": 363,
+        "subtitle_pts_s": 12.0,
+        "subtitle_delay_s": 3.701125000000001,
+        "label": "首次录次",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。 主首显采用先出现的完整英文单词碎片；稳定短语时间另存。",
+        "stable_subtitle_pts_s": 12.1,
+        "fragment_boundary_screenshots": [
+          "frames\\N01_fragment_00359.png",
+          "frames\\N01_fragment_00360.png"
+        ]
+      },
+      {
+        "scene": "N02",
+        "video": "V01",
+        "source_template_pts_s": 33.638875,
+        "source_pts_s": 33.678875,
+        "audio_asr_candidate_wav_s": 37.52,
+        "target_audio_pts_s": 37.979,
+        "audio_delay_s": 4.300125000000001,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1125,
+        "first_present_frame": 1126,
+        "subtitle_pts_s": 37.43333333333333,
+        "subtitle_delay_s": 3.754458333333332,
+        "label": "正常/再次输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。 主首显采用先出现的完整英文单词碎片；稳定短语时间另存。",
+        "stable_subtitle_pts_s": 37.533,
+        "fragment_boundary_screenshots": [
+          "frames\\N02_fragment_01122.png",
+          "frames\\N02_fragment_01123.png"
+        ]
+      },
+      {
+        "scene": "C01",
+        "video": "V03",
+        "source_template_pts_s": 4.0555,
+        "source_pts_s": 4.0955,
+        "audio_asr_candidate_wav_s": 8.1,
+        "target_audio_pts_s": 8.668999999999999,
+        "audio_delay_s": 4.573499999999998,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 233,
+        "first_present_frame": 234,
+        "subtitle_pts_s": 7.8,
+        "subtitle_delay_s": 3.7044999999999995,
+        "label": "文件标称克隆",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。"
+      },
+      {
+        "scene": "W01",
+        "video": "V02",
+        "source_template_pts_s": 9.0955,
+        "source_pts_s": 9.135499999999999,
+        "audio_asr_candidate_wav_s": 13.26,
+        "target_audio_pts_s": 13.748999999999999,
+        "audio_delay_s": 4.6135,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 397,
+        "first_present_frame": 398,
+        "subtitle_pts_s": 13.166666666666666,
+        "subtitle_delay_s": 4.0311666666666675,
+        "label": "100ms配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。 主首显采用先出现的完整英文单词碎片；稳定短语时间另存。",
+        "stable_subtitle_pts_s": 13.267,
+        "fragment_boundary_screenshots": [
+          "frames\\W01_fragment_00394.png",
+          "frames\\W01_fragment_00395.png"
+        ]
+      },
+      {
+        "scene": "W02",
+        "video": "V02",
+        "source_template_pts_s": 38.405499999999996,
+        "source_pts_s": 38.4455,
+        "audio_asr_candidate_wav_s": 51.28,
+        "target_audio_pts_s": 50.359,
+        "audio_delay_s": 11.913499999999999,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1558,
+        "first_present_frame": 1559,
+        "subtitle_pts_s": 51.9,
+        "subtitle_delay_s": 13.454499999999996,
+        "label": "中断相关输入",
+        "note": "输入跨越中断且同文重播；该时间差只描述事件，不能当严格恢复延迟或单轮完成指标。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。 主首显采用先出现的完整英文单词碎片；稳定短语时间另存。",
+        "stable_subtitle_pts_s": 51.967,
+        "fragment_boundary_screenshots": [
+          "frames\\W02_fragment_01556.png",
+          "frames\\W02_fragment_01557.png"
+        ]
+      },
+      {
+        "scene": "W03",
+        "video": "V02",
+        "source_template_pts_s": 54.765499999999996,
+        "source_pts_s": 54.8055,
+        "audio_asr_candidate_wav_s": null,
+        "label": "恢复后重播",
+        "note": "输入跨越中断且同文重播；该时间差只描述事件，不能当严格恢复延迟或单轮完成指标。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。"
+      },
+      {
+        "scene": "W04",
+        "video": "V02",
+        "source_template_pts_s": 81.2555,
+        "source_pts_s": 81.2955,
+        "audio_asr_candidate_wav_s": 85.14,
+        "target_audio_pts_s": 85.649,
+        "audio_delay_s": 4.353499999999997,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 2560,
+        "first_present_frame": 2561,
+        "subtitle_pts_s": 85.367,
+        "subtitle_delay_s": 4.0715,
+        "label": "10%配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。"
+      }
+    ],
+    "startup": {
+      "summary": "程序窗口3～4秒出现，主界面4～5秒；会话就绪7～8秒之间，输入8.3秒开始。",
+      "interval_semantics": "状态发生于前一截图之后、后一截图之前/当时；不是精确点击时间或单独可比较的纯网络连接耗时。",
+      "stages": [
+        {
+          "stage": "程序窗口出现",
+          "video": "V01",
+          "after_pts_s": 3,
+          "by_pts_s": 4,
+          "note": "3秒桌面，4秒Parley透明加载窗口出现。"
+        },
+        {
+          "stage": "主界面出现",
+          "video": "V01",
+          "after_pts_s": 4,
+          "by_pts_s": 5,
+          "note": "4秒加载、5秒准备好了就开始配置页可见；不等于会话已连接。"
+        },
+        {
+          "stage": "会话准备中",
+          "video": "V01",
+          "after_pts_s": 5,
+          "by_pts_s": 6,
+          "note": "5秒开始入口，6秒正在准备双向同传。"
+        },
+        {
+          "stage": "会话可接收输入",
+          "video": "V01",
+          "after_pts_s": 7,
+          "by_pts_s": 8,
+          "note": "7秒仍准备中，8秒显示正在聆听与计时。"
+        }
+      ]
+    },
+    "completion": [
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 21.666666666666668,
+        "last_absent_frame": 649,
+        "first_present_frame": 650,
+        "scene": "N01",
+        "video": "V01",
+        "source_pts_s": 8.298874999999999,
+        "audio_end_pts_s": 29.139,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 47.13333333333333,
+        "last_absent_frame": 1413,
+        "first_present_frame": 1414,
+        "scene": "N02",
+        "video": "V01",
+        "source_pts_s": 33.678875,
+        "audio_end_pts_s": 54.019,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 17.633333333333333,
+        "last_absent_frame": 528,
+        "first_present_frame": 529,
+        "scene": "C01",
+        "video": "V03",
+        "source_pts_s": 4.0955,
+        "audio_end_pts_s": 23.849,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 22.766666666666666,
+        "last_absent_frame": 682,
+        "first_present_frame": 683,
+        "scene": "W01",
+        "video": "V02",
+        "source_pts_s": 9.135499999999999,
+        "audio_end_pts_s": 31.689,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 52.5,
+        "last_absent_frame": 1574,
+        "first_present_frame": 1575,
+        "scene": "W02",
+        "video": "V02",
+        "source_pts_s": 38.4455,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "note": "中断残段/恢复重播合并文本的尾部事件；不代表准确补译或可归属单轮完整输出。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 68.56666666666666,
+        "last_absent_frame": 2056,
+        "first_present_frame": 2057,
+        "scene": "W03",
+        "video": "V02",
+        "source_pts_s": 54.8055,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "note": "中断残段/恢复重播合并文本的尾部事件；不代表准确补译或可归属单轮完整输出。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 95.03333333333333,
+        "last_absent_frame": 2850,
+        "first_present_frame": 2851,
+        "scene": "W04",
+        "video": "V02",
+        "source_pts_s": 81.2955,
+        "audio_end_pts_s": 102.18900000000001,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      }
+    ],
+    "network": [
+      [
+        "100ms",
+        "V02约4～32秒",
+        "控制parley.exe；上下行各100ms",
+        "完整输出但F1新增HR提交说明；不把配置当RTT",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10秒中断",
+        "V02约42～53秒",
+        "连接中断倒计时10秒；随后控制对象变无",
+        "输入38.4秒早于应用；中断显示期间仍出现残段，54.8秒再次输入，覆盖与恢复归属受限",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10%丢包",
+        "V02约80～104秒",
+        "控制parley.exe；上下行各10%概率丢包",
+        "4项完整事实、F1错译；实际业务丢弃比例未采集",
+        "frames/V02_controls_contact_1.jpg"
+      ]
+    ],
+    "limits": []
+  },
+  {
+    "slug": "palabra",
+    "name": "Palabra",
+    "analysis_date": "2026-11-03",
+    "summary": {
+      "翻译事实覆盖": "正常2条、标称克隆、100ms配置及恢复后重播：最终新字幕均5/5事实。首次、标称克隆、100ms及重播译音核对到5项；正常录次及10%配置的译音转写出现yen/yuan歧义，各有币种两项未确认，其他3项保留。\n中断输入后新段仅为“Please postpone it from next Tuesday to Friday.”：完整事实0/5、部分1项，其余错误或遗漏；旧完整块不计入。71.8秒明确重播后才见完整新输出。",
+      "音色克隆": "CAMPPlus 192维声纹；同一原声参考与无重叠F2～F5英文片段比较：标称克隆0.5822、正常录次0.1979，原始余弦差0.3844。\n本样本标称克隆片段更接近原声；正常与克隆开关未在录像中展示，不能据此严格证明“开启克隆”造成差异。跨语言短样本，无主观盲听；相似度不是还原百分比。",
+      "实时性能": "首显／首响，单位秒；均从本轮原声声学起点计。\n首次14.3/14.8；正常14.4/14.9；标称克隆14.7/15.4；100ms14.5/15.1；10%16.4/15.9。\n字幕在历史新块中整段出现，不能算成较早已有旧块。单次录像观察；音画通路未标定，无稳定均值或P95。\n启动分阶段：主界面在12～15秒出现；会话就绪在30～31秒之间，输入32.0秒才开始。\n首次尾句显全距输入14.3秒；译音末响距输入26.3秒。尾句首度显全不代表后续不再修订或重复。",
+      "译音质量": "未重叠F2～F5片段峰值：正常0.049、标称克隆0.387；100ms完整译音0.273、10%完整译音0.285，满幅削波均0%。\n正常与标称克隆录次音量差异明显，未作响度校准；低音量下能量阈值造成的断续区间不直接判卡顿。字幕及独立转写支持可懂性；正常及10%录次译音币种待人工听辨。自然度、韵律未盲听评分。",
+      "弱网表现": "100ms及10%配置下均出现完整新字幕；本地工具控制Palabra.ai.exe，配置上下行分别100ms或10%。真实业务丢包比例未验证。\n约54～64秒中断，输入51.2秒已开始；撤销后只出现错误的周二推迟到周五短段。71.8秒重播后完整输出，不能把重播结果当成前次缓存自动补齐。",
+      "记录状态": "录像分析完成；部分项目证据不足"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "V01",
+        "frame": 1770,
+        "pts_s": 59,
+        "label": "首次录次",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "历史面板新块出现后核对，不计上方旧块。英文译音在源音结束后，可独立核对。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-n01.png",
+        "video_id": "palabra-v01"
+      },
+      {
+        "id": "N02",
+        "video": "V03",
+        "frame": 1200,
+        "pts_s": 40,
+        "label": "正常录制",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "未确认",
+          "未确认",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "新输出为第二个历史块；原始无重叠全段独立转写与辅助转写对币种给出yen/yuan不同结果，F2/F3译音记未确认，不判产品错译。译音前几词原自动时间戳偏早，最终首响改由原音波形定位。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-n02.png",
+        "video_id": "palabra-v03"
+      },
+      {
+        "id": "C01",
+        "video": "V04",
+        "frame": 1290,
+        "pts_s": 43,
+        "label": "文件标称音色克隆",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "文件名标称克隆；录像未展示声音克隆开关，不把名称当作开关状态已验证。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-c01.png",
+        "video_id": "palabra-v04"
+      },
+      {
+        "id": "W01",
+        "video": "V02",
+        "frame": 1380,
+        "pts_s": 46,
+        "label": "上下行各100ms配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "新历史块与完整译音均保留5项事实。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-w01.png",
+        "video_id": "palabra-v02"
+      },
+      {
+        "id": "W02",
+        "video": "V02",
+        "frame": 2100,
+        "pts_s": 70,
+        "label": "中断后短残段",
+        "subtitle": [
+          "错误",
+          "遗漏",
+          "遗漏",
+          "遗漏",
+          "部分"
+        ],
+        "audio": [
+          "错误",
+          "遗漏",
+          "遗漏",
+          "遗漏",
+          "部分"
+        ],
+        "quotes": [
+          "Please postpone it from next Tuesday to Friday.",
+          "未出现",
+          "未出现",
+          "未出现",
+          "postpone it ... to Friday."
+        ],
+        "note": "中断配置约54～64秒，51.2秒已开始输入。新段只剩一句错误改写；F5缺少发现问题的条件，仅记部分。上方完整旧块不计入。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-w02.png",
+        "video_id": "palabra-v02"
+      },
+      {
+        "id": "W03",
+        "video": "V02",
+        "frame": 3000,
+        "pts_s": 100,
+        "label": "恢复后重新播放",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "71.8秒明确重播；完整输出不能追溯填补前一次中断输入。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-w03.png",
+        "video_id": "palabra-v02"
+      },
+      {
+        "id": "W04",
+        "video": "V02",
+        "frame": 3960,
+        "pts_s": 132,
+        "label": "上下行各10%概率丢包配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "未确认",
+          "未确认",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "字幕币种为yuan；译音自动转写出现yen，币种未做人耳确认，F2/F3译音记未确认，不直接判产品错译。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/palabra-w04.png",
+        "video_id": "palabra-v02"
+      }
+    ],
+    "timing": [
+      {
+        "scene": "N01",
+        "video": "V01",
+        "source_template_pts_s": 31.9853125,
+        "source_pts_s": 32.0153125,
+        "audio_asr_candidate_wav_s": 46.34,
+        "target_audio_pts_s": 46.829,
+        "audio_delay_s": 14.8136875,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1389,
+        "first_present_frame": 1390,
+        "subtitle_pts_s": 46.333,
+        "subtitle_delay_s": 14.317687499999998,
+        "label": "首次录次",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "N02",
+        "video": "V03",
+        "source_template_pts_s": 12.519124999999999,
+        "source_pts_s": 12.559125,
+        "audio_asr_candidate_wav_s": 25.13,
+        "target_audio_pts_s": 27.489,
+        "audio_delay_s": 14.929875000000001,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 808,
+        "first_present_frame": 809,
+        "subtitle_pts_s": 26.967,
+        "subtitle_delay_s": 14.407874999999999,
+        "label": "正常/再次输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "C01",
+        "video": "V04",
+        "source_template_pts_s": 14.797625,
+        "source_pts_s": 14.827625,
+        "audio_asr_candidate_wav_s": 29.53,
+        "target_audio_pts_s": 30.249,
+        "audio_delay_s": 15.421375,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 885,
+        "first_present_frame": 886,
+        "subtitle_pts_s": 29.533,
+        "subtitle_delay_s": 14.705375000000002,
+        "label": "文件标称克隆",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W01",
+        "video": "V02",
+        "source_template_pts_s": 18.0188125,
+        "source_pts_s": 18.0588125,
+        "audio_asr_candidate_wav_s": 32.49,
+        "target_audio_pts_s": 33.129,
+        "audio_delay_s": 15.0701875,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 977,
+        "first_present_frame": 978,
+        "subtitle_pts_s": 32.6,
+        "subtitle_delay_s": 14.541187500000003,
+        "label": "100ms配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W02",
+        "video": "V02",
+        "source_template_pts_s": 51.1559375,
+        "source_pts_s": 51.1859375,
+        "audio_asr_candidate_wav_s": 66.28,
+        "target_audio_pts_s": 66.469,
+        "audio_delay_s": 15.283062499999993,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 2091,
+        "first_present_frame": 2092,
+        "subtitle_pts_s": 69.733,
+        "subtitle_delay_s": 18.547062500000003,
+        "label": "中断相关输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W03",
+        "video": "V02",
+        "source_template_pts_s": 71.7558125,
+        "source_pts_s": 71.7858125,
+        "audio_asr_candidate_wav_s": 86.4,
+        "target_audio_pts_s": 86.559,
+        "audio_delay_s": 14.773187499999992,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 2581,
+        "first_present_frame": 2582,
+        "subtitle_pts_s": 86.067,
+        "subtitle_delay_s": 14.281187499999987,
+        "label": "恢复后重播",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W04",
+        "video": "V02",
+        "source_template_pts_s": 102.3865,
+        "source_pts_s": 102.4265,
+        "audio_asr_candidate_wav_s": 117.79,
+        "target_audio_pts_s": 118.319,
+        "audio_delay_s": 15.892499999999998,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 3563,
+        "first_present_frame": 3564,
+        "subtitle_pts_s": 118.8,
+        "subtitle_delay_s": 16.373499999999993,
+        "label": "10%配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      }
+    ],
+    "startup": {
+      "summary": "主界面在12～15秒出现；会话就绪在30～31秒之间，输入32.0秒才开始。",
+      "interval_semantics": "状态发生于前一截图之后、后一截图之前/当时；不是精确点击时间或单独可比较的纯网络连接耗时。",
+      "stages": [
+        {
+          "stage": "程序窗口出现",
+          "video": "V01",
+          "after_pts_s": 3,
+          "by_pts_s": 6,
+          "note": "3秒桌面、6秒白色程序窗口；12秒仍白屏，15秒主界面Start可见。"
+        },
+        {
+          "stage": "主界面出现",
+          "video": "V01",
+          "after_pts_s": 12,
+          "by_pts_s": 15,
+          "note": "Start只是可请求连接；18～30秒仍Please wait，期间有连接耗时较长提示。"
+        },
+        {
+          "stage": "会话可接收输入",
+          "video": "V01",
+          "after_pts_s": 30,
+          "by_pts_s": 31,
+          "note": "30秒Please wait，31秒显示Speak和空历史栏。"
+        }
+      ]
+    },
+    "completion": [
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 46.333,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "N01",
+        "video": "V01",
+        "source_pts_s": 32.0153125,
+        "audio_end_pts_s": 58.299,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 26.967,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "N02",
+        "video": "V03",
+        "source_pts_s": 12.559125,
+        "audio_end_pts_s": 38.869,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 29.533,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "C01",
+        "video": "V04",
+        "source_pts_s": 14.827625,
+        "audio_end_pts_s": 42.339,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 32.6,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "W01",
+        "video": "V02",
+        "source_pts_s": 18.0588125,
+        "audio_end_pts_s": 45.309000000000005,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 69.733,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "W02",
+        "video": "V02",
+        "source_pts_s": 51.1859375,
+        "audio_end_pts_s": 68.709,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 86.067,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "W03",
+        "video": "V02",
+        "source_pts_s": 71.7858125,
+        "audio_end_pts_s": 99.169,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "whole_history_block_appears_at_once",
+        "subtitle_tail_pts_s": 118.8,
+        "note": "新历史块整段出现；复核首显相邻帧中的末句，不按旧块Friday计时。",
+        "scene": "W04",
+        "video": "V02",
+        "source_pts_s": 102.4265,
+        "audio_end_pts_s": 130.769,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      }
+    ],
+    "network": [
+      [
+        "100ms",
+        "V02约10～45秒",
+        "控制Palabra.ai.exe；上下行各100ms",
+        "有完整5项事实字幕、译音；不是实测RTT",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10秒中断",
+        "V02约54～64秒",
+        "控制Palabra.ai.exe；连接中断倒计时",
+        "源音51.2秒已开始；随后只输出错误短段；71.8秒重播后才见完整新输出",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10%丢包",
+        "V02约105～130秒",
+        "控制Palabra.ai.exe；上下行各10%",
+        "字幕完整；译音币种转写有歧义；工具注明业务覆盖待验证",
+        "frames/V02_controls_contact_1.jpg"
+      ]
+    ],
+    "limits": []
+  },
+  {
+    "slug": "maestra",
+    "name": "Maestra Live",
+    "analysis_date": "2026-11-03",
+    "summary": {
+      "翻译事实覆盖": "首次、既有正常录次、100ms配置、Offline恢复段和10%配置段，最终新字幕各5/5关键事实；对应无重叠完整译音的独立转写也保留5项。\n首显常为Please next Tuesday / Please by next Tuesday等不完整中间稿；恢复首稿Please go后来修正。5/5是本语料事实覆盖，不代表总体准确率。既有正常录像原件校验一致，已复核复用。",
+      "音色克隆": "本次按原评测范围跳过，未开展音色克隆验收；不据此判断产品是否支持该功能。",
+      "实时性能": "首显／首响，单位秒；均从本轮原声声学起点计。\n首次3.7/16.0；既有正常3.0/17.2；100ms配置3.7/15.7；10%配置6.3/17.6。\n字幕较早出现，译音多在原声结束后才播出。既有正常录次输入波形不同，按自身原声测量。单次录像观察；音画通路未标定，无稳定均值或P95。\n启动分阶段：浏览器1～2秒打开；产品主页5～6秒可见；会话就绪10～10.5秒，输入11.0秒开始。\n首次尾句显全距输入14.2秒；译音末响距输入27.7秒。尾句首度显全不代表后续不再修订或重复。",
+      "译音质量": "5段无重叠完整英文译音峰值约0.577～0.584，满幅数字削波均0%；能量阈值下短语停顿约0.23～0.75秒。\n独立转写各保留5项事实，未见本批完整译音的整句重复。可支持本样本可懂性及无满幅过载，不能证明无细微断音或机械感；自然度、韵律未盲听评分。",
+      "弱网表现": "DevTools页面配置：100ms、约37～47秒Offline、随后10% Packet Loss；与本地工具“上下行各100ms/10%”不能等同。\n100ms和10%配置段均有完整新字幕/译音。Offline期间有WebSocket/GET断网报错；撤销后新字幕逐步修正，完整译音在下一次71.8秒重播前结束，5项事实保留。\n只验证可见页面状态，未独立确认整个翻译链路的实际丢包与作用范围。",
+      "记录状态": "录像分析完成；部分项目证据不足"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "V01",
+        "frame": 1140,
+        "pts_s": 38,
+        "label": "首次录次/Puck",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "自动声音克隆关闭。流式首显仅Please next Tuesday，最终补齐5项事实。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/maestra-n01.png",
+        "video_id": "maestra-v01"
+      },
+      {
+        "id": "N02",
+        "video": "V03",
+        "frame": 900,
+        "pts_s": 30,
+        "label": "既有正常录次/Puck",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results before 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "原件SHA256与2026-11-02旧分析一致；该录次输入波形与本轮其他录像不同，单独用其本身原声定位。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/maestra-n02.png",
+        "video_id": "maestra-v03"
+      },
+      {
+        "id": "W01",
+        "video": "V02",
+        "frame": 990,
+        "pts_s": 33,
+        "label": "DevTools延迟100ms配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "首显只是Please by next Tuesday，最终字幕和独立译音均保留5项。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/maestra-w01.png",
+        "video_id": "maestra-v02"
+      },
+      {
+        "id": "W02",
+        "video": "V02",
+        "frame": 2055,
+        "pts_s": 68.5,
+        "label": "Offline撤销后新段",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "35.9秒输入跨越约37～47秒Offline；撤销后先出现Please go再修正并完成。完整译音在71.8秒下一次重播前结束，可归属本段。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/maestra-w02.png",
+        "video_id": "maestra-v02"
+      },
+      {
+        "id": "W04",
+        "video": "V02",
+        "frame": 3000,
+        "pts_s": 100,
+        "label": "DevTools 10%丢包配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "画面显示10% Packet Loss配置；未独立验证WebRTC或实际业务包覆盖。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/maestra-w04.png",
+        "video_id": "maestra-v02"
+      }
+    ],
+    "timing": [
+      {
+        "scene": "N01",
+        "video": "V01",
+        "source_template_pts_s": 10.9536875,
+        "source_pts_s": 10.9936875,
+        "audio_asr_candidate_wav_s": 26.4,
+        "target_audio_pts_s": 27.029,
+        "audio_delay_s": 16.0353125,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 441,
+        "first_present_frame": 442,
+        "subtitle_pts_s": 14.733,
+        "subtitle_delay_s": 3.7393125000000005,
+        "label": "首次录次",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "N02",
+        "video": "V03",
+        "source_template_pts_s": 3.6790000000000003,
+        "source_pts_s": 3.74,
+        "audio_asr_candidate_wav_s": 20.94,
+        "target_audio_pts_s": 20.94,
+        "audio_delay_s": 17.2,
+        "subtitle_pts_s": 6.733,
+        "subtitle_delay_s": 2.993,
+        "subtitle_status": "reused_prior_visually_checked_adjacent_frames",
+        "label": "正常/再次输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W01",
+        "video": "V02",
+        "source_template_pts_s": 6.15225,
+        "source_pts_s": 6.1922500000000005,
+        "audio_asr_candidate_wav_s": 21.63,
+        "target_audio_pts_s": 21.929,
+        "audio_delay_s": 15.736749999999997,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 295,
+        "first_present_frame": 296,
+        "subtitle_pts_s": 9.867,
+        "subtitle_delay_s": 3.6747500000000004,
+        "label": "100ms配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W02",
+        "video": "V02",
+        "source_template_pts_s": 35.8584375,
+        "source_pts_s": 35.8984375,
+        "audio_asr_candidate_wav_s": 56.42,
+        "target_audio_pts_s": 56.819,
+        "audio_delay_s": 20.920562500000003,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1424,
+        "first_present_frame": 1425,
+        "subtitle_pts_s": 47.5,
+        "subtitle_delay_s": 11.6015625,
+        "label": "中断相关输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W04",
+        "video": "V02",
+        "source_template_pts_s": 71.7525625,
+        "source_pts_s": 71.7925625,
+        "audio_asr_candidate_wav_s": 88.69,
+        "target_audio_pts_s": 89.379,
+        "audio_delay_s": 17.586437500000002,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 2342,
+        "first_present_frame": 2343,
+        "subtitle_pts_s": 78.1,
+        "subtitle_delay_s": 6.307437499999992,
+        "label": "10%配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      }
+    ],
+    "startup": {
+      "summary": "浏览器1～2秒打开；产品主页5～6秒可见；会话就绪10～10.5秒，输入11.0秒开始。",
+      "interval_semantics": "状态发生于前一截图之后、后一截图之前/当时；不是精确点击时间或单独可比较的纯网络连接耗时。",
+      "stages": [
+        {
+          "stage": "浏览器打开",
+          "video": "V01",
+          "after_pts_s": 1,
+          "by_pts_s": 2,
+          "note": "1秒桌面，2秒Chrome用户选择；不是Maestra页面启动完成。"
+        },
+        {
+          "stage": "产品主页显示",
+          "video": "V01",
+          "after_pts_s": 5,
+          "by_pts_s": 6,
+          "note": "5秒地址栏转入产品、页面仍Google；6秒Maestra主页可见。"
+        },
+        {
+          "stage": "会话连接中",
+          "video": "V01",
+          "after_pts_s": 8,
+          "by_pts_s": 9,
+          "note": "8秒仍配置首页，9秒为连接中。"
+        },
+        {
+          "stage": "会话可接收输入",
+          "video": "V01",
+          "after_pts_s": 10,
+          "by_pts_s": 10.5,
+          "note": "10秒连接中，10.5秒显示您现在可以开始说话了。"
+        }
+      ]
+    },
+    "completion": [
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 25.233333333333334,
+        "last_absent_frame": 756,
+        "first_present_frame": 757,
+        "scene": "N01",
+        "video": "V01",
+        "source_pts_s": 10.9936875,
+        "audio_end_pts_s": 38.649,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 18.3,
+        "last_absent_frame": 548,
+        "first_present_frame": 549,
+        "scene": "N02",
+        "video": "V03",
+        "source_pts_s": 3.74,
+        "audio_end_pts_s": 33.498999999999995,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 20.4,
+        "last_absent_frame": 611,
+        "first_present_frame": 612,
+        "scene": "W01",
+        "video": "V02",
+        "source_pts_s": 6.1922500000000005,
+        "audio_end_pts_s": 33.549,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 55.36666666666667,
+        "last_absent_frame": 1660,
+        "first_present_frame": 1661,
+        "scene": "W02",
+        "video": "V02",
+        "source_pts_s": 35.8984375,
+        "audio_end_pts_s": 68.509,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 88.0,
+        "last_absent_frame": 2639,
+        "first_present_frame": 2640,
+        "scene": "W04",
+        "video": "V02",
+        "source_pts_s": 71.7925625,
+        "audio_end_pts_s": 100.919,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      }
+    ],
+    "network": [
+      [
+        "100ms",
+        "V02约3～37秒",
+        "当前页面DevTools选择延迟100ms",
+        "该段完整输出；100ms为配置延迟而非上下行各100ms的等价证明",
+        "frames/V02_overview_contact_1.jpg"
+      ],
+      [
+        "约10秒Offline",
+        "V02约37～47秒",
+        "Offline状态并出现WebSocket/GET ERR_INTERNET_DISCONNECTED",
+        "撤销后新字幕、译音完成5项；不把其他分析请求400错误算翻译失败",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10%丢包",
+        "V02约71秒后",
+        "DevTools WebRTC丢包10%配置；后段Settings显示Packet Loss 10%",
+        "有完整字幕/译音；未抓包验证实际翻译链路覆盖",
+        "frames/V02_facts_05700.png"
+      ]
+    ],
+    "limits": []
+  },
+  {
+    "slug": "jotme",
+    "name": "JotMe",
+    "analysis_date": "2026-11-03",
+    "summary": {
+      "翻译事实覆盖": "统一S01中→英。首次、同进程重播及100ms配置录次，最终字幕和辅助译音均为3/5完整事实：截止时间、发布条件及周五延期保留；3万元被改成13万元或30万元，“不是13万元”被改成“不是130万元”。\n单独10%丢包配置录次最终字幕及辅助译音5/5；不能据此推断丢包改善准确性。恢复与重播合并段仍有金额错误，归属受限。",
+      "音色克隆": "本次按原评测范围跳过，未开展音色克隆验收；不据此判断产品是否支持该功能。",
+      "实时性能": "首显／首响，单位秒；均从本轮原声声学起点计。\n首次3.9/5.1；再次5.6/6.9；100ms配置5.5/6.6；10%配置5.1/6.5。\n单次录像观察；音画通路未标定，无稳定均值或P95。源音与译音重叠，首响由同源抵消辅助定位；首显仅首个英文片段，不等于完整句。\n启动分阶段：程序加载约2～8秒区间；会话就绪在录像14～15秒之间，输入17.5秒才开始。\n首次尾句显全距输入18.3秒；译音末响距输入19.7秒。尾句首度显全不代表后续不再修订或重复。",
+      "译音质量": "干净尾段峰值：首次0.159、再次0.174、10%配置0.257；满幅数字削波均0%。\n再次输入后，发布条件和周五延期又播报一遍；保留字幕及独立尾段转写证据。10%录次有超过2秒的停顿，但不能仅凭停顿判网络卡顿。\n混音重叠区无法完整评音质；未做自然度、韵律或MOS盲听评分。",
+      "弱网表现": "100ms：画面显示对JotMe.exe上、下行各附加100ms；输出完整但金额错译。\n10%：单独录像显示概率丢包配置，上下行各10%；最终字幕/辅助译音5项事实保留，真实业务丢包率未采集。\n中断：约31～41秒显示控制；24.5秒已开始输入，38.8秒再次输入，随后新段及额外播报交错。只能描述本次新输出，无法给出严格恢复耗时或缓存补译归属。",
+      "记录状态": "录像分析完成；部分项目证据不足"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "V03",
+        "frame": 1170,
+        "pts_s": 39,
+        "label": "首次录次",
+        "subtitle": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please be sure to confirm the test results before 10 a.m. next Tuesday.",
+          "The maximum for calculations is 130,000 yuan.",
+          "not 1,300,000.",
+          "It will only be released if the test passes.",
+          "If there are issues, it will be postponed to Friday."
+        ],
+        "note": "字幕与抵消辅助译音均把3万改成13万、13万改成130万。最终结果未修正。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/jotme-n01.png",
+        "video_id": "jotme-v03"
+      },
+      {
+        "id": "N02",
+        "video": "V03",
+        "frame": 2100,
+        "pts_s": 70,
+        "label": "同进程重播",
+        "subtitle": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget ceiling is 130,000 yuan.",
+          "not 1.3 million yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "尾句又出现一次发布条件和周五延期；仅一次S01输入后重复播报，不把重复当独立样本。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/jotme-n02.png",
+        "video_id": "jotme-v03"
+      },
+      {
+        "id": "W01",
+        "video": "V02",
+        "frame": 690,
+        "pts_s": 23,
+        "label": "上下行各100ms配置",
+        "subtitle": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 300,000 yuan.",
+          "not 1.3 million yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "以工具已应用状态核对；金额均多一位数量级。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/jotme-w01.png",
+        "video_id": "jotme-v02"
+      },
+      {
+        "id": "R01",
+        "video": "V02",
+        "frame": 1560,
+        "pts_s": 52,
+        "label": "中断与重播合并新段",
+        "subtitle": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "错误",
+          "错误",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 300,000 yuan.",
+          "not 1.3 million yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "24.5秒输入先于中断真正应用，38.8秒又输入；40～52秒新输出无法严格归属某一轮，不能计算单轮完整恢复耗时。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/jotme-r01.png",
+        "video_id": "jotme-v02"
+      },
+      {
+        "id": "W04",
+        "video": "V01",
+        "frame": 1110,
+        "pts_s": 37,
+        "label": "上下行各10%概率丢包配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "We will only release it if the tests pass.",
+          "If any issues are found, postpone it until Friday."
+        ],
+        "note": "字幕写thirty thousand与one hundred thirty thousand；辅助译音也恢复5项。仅为该配置录次，真实业务丢包率未验证。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/jotme-w04.png",
+        "video_id": "jotme-v01"
+      }
+    ],
+    "timing": [
+      {
+        "scene": "N01",
+        "video": "V03",
+        "source_template_pts_s": 17.4283125,
+        "source_pts_s": 17.4683125,
+        "audio_asr_candidate_wav_s": 22.2,
+        "target_audio_pts_s": 22.608999999999998,
+        "audio_delay_s": 5.1406874999999985,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 641,
+        "first_present_frame": 642,
+        "subtitle_pts_s": 21.4,
+        "subtitle_delay_s": 3.931687499999999,
+        "label": "首次录次",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "N02",
+        "video": "V03",
+        "source_template_pts_s": 42.3083125,
+        "source_pts_s": 42.3483125,
+        "audio_asr_candidate_wav_s": 48.84,
+        "target_audio_pts_s": 49.289,
+        "audio_delay_s": 6.940687500000003,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1438,
+        "first_present_frame": 1439,
+        "subtitle_pts_s": 47.967,
+        "subtitle_delay_s": 5.6186875,
+        "label": "正常/再次输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W01",
+        "video": "V02",
+        "source_template_pts_s": 4.6276875,
+        "source_pts_s": 4.6676875,
+        "audio_asr_candidate_wav_s": 11.25,
+        "target_audio_pts_s": 11.229,
+        "audio_delay_s": 6.561312499999999,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 305,
+        "first_present_frame": 306,
+        "subtitle_pts_s": 10.2,
+        "subtitle_delay_s": 5.532312499999999,
+        "label": "100ms配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W02a",
+        "video": "V02",
+        "source_template_pts_s": 24.497687499999998,
+        "source_pts_s": 24.5376875,
+        "audio_asr_candidate_wav_s": 40.96,
+        "target_audio_pts_s": 41.069,
+        "audio_delay_s": 16.531312500000002,
+        "label": "中断/重播输入A",
+        "note": "输入跨越中断且同文重播；该时间差只描述事件，不能当严格恢复延迟或单轮完成指标。"
+      },
+      {
+        "scene": "W02b",
+        "video": "V02",
+        "source_template_pts_s": 38.8076875,
+        "source_pts_s": 38.8476875,
+        "audio_asr_candidate_wav_s": 55.56,
+        "target_audio_pts_s": 55.809,
+        "audio_delay_s": 16.9613125,
+        "label": "中断/重播输入B",
+        "note": "输入跨越中断且同文重播；该时间差只描述事件，不能当严格恢复延迟或单轮完成指标。"
+      },
+      {
+        "scene": "W04",
+        "video": "V01",
+        "source_template_pts_s": 7.72025,
+        "source_pts_s": 7.76025,
+        "audio_asr_candidate_wav_s": 13.85,
+        "target_audio_pts_s": 14.279,
+        "audio_delay_s": 6.51875,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 386,
+        "first_present_frame": 387,
+        "subtitle_pts_s": 12.9,
+        "subtitle_delay_s": 5.13975,
+        "label": "10%配置",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      }
+    ],
+    "startup": {
+      "summary": "程序加载约2～8秒区间；会话就绪在录像14～15秒之间，输入17.5秒才开始。",
+      "interval_semantics": "状态发生于前一截图之后、后一截图之前/当时；不是精确点击时间或单独可比较的纯网络连接耗时。",
+      "stages": [
+        {
+          "stage": "程序窗口出现",
+          "video": "V03",
+          "after_pts_s": 2,
+          "by_pts_s": 4,
+          "note": "2秒仍为桌面，4秒为JotMe Loading；点击启动本身未逐帧定点。"
+        },
+        {
+          "stage": "主界面出现",
+          "video": "V03",
+          "after_pts_s": 6,
+          "by_pts_s": 8,
+          "note": "6秒仍Loading，8秒主界面已显示；不等于会话连接完成。"
+        },
+        {
+          "stage": "会话可接收输入",
+          "video": "V03",
+          "after_pts_s": 14,
+          "by_pts_s": 15,
+          "note": "14秒显示正在准备，15秒准备提示消失且暂停/停止控制可见。"
+        }
+      ]
+    },
+    "completion": [
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 35.766666666666666,
+        "last_absent_frame": 1072,
+        "first_present_frame": 1073,
+        "scene": "N01",
+        "video": "V03",
+        "source_pts_s": 17.4683125,
+        "audio_end_pts_s": 37.129,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "note": "此处为首段尾句首次完整；随后画面另出现孤立Friday，不能据首次完整帧断言后续不再变化。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 61.8,
+        "last_absent_frame": 1853,
+        "first_present_frame": 1854,
+        "scene": "N02",
+        "video": "V03",
+        "source_pts_s": 42.3483125,
+        "audio_end_pts_s": 68.559,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "note": "字幕先完成尾句，随后重复发布/延期条件；声音完成包括重复尾句。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 21.3,
+        "last_absent_frame": 638,
+        "first_present_frame": 639,
+        "scene": "W01",
+        "video": "V02",
+        "source_pts_s": 4.6676875,
+        "audio_end_pts_s": 23.279,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 34.8,
+        "last_absent_frame": 1043,
+        "first_present_frame": 1044,
+        "scene": "W04",
+        "video": "V01",
+        "source_pts_s": 7.76025,
+        "audio_end_pts_s": 37.208999999999996,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "unconfirmed",
+        "note": "无法分离本轮新字幕/残段的完成，保留未确认。",
+        "scene": "W02a",
+        "video": "V02",
+        "source_pts_s": 24.5376875,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "当前录像不足以确认本轮字幕尾句完成。"
+      },
+      {
+        "status": "unconfirmed",
+        "note": "无法分离本轮新字幕/残段的完成，保留未确认。",
+        "scene": "W02b",
+        "video": "V02",
+        "source_pts_s": 38.8476875,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "当前录像不足以确认本轮字幕尾句完成。"
+      }
+    ],
+    "network": [
+      [
+        "100ms",
+        "V02约3～24秒",
+        "实际控制对象JotMe.exe；上/下行各100ms",
+        "完整输出但金额误译；配置值不等于RTT",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10秒中断",
+        "V02约31～41秒",
+        "连接中断倒计时；恢复后控制对象变无",
+        "24.5秒输入早于应用，38.8秒再输入跨越中断；完整恢复归属不明",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10%丢包",
+        "V01约18～31秒",
+        "上下行各10%概率丢包；控制JotMe.exe",
+        "完整字幕与辅助译音5项事实；实际业务丢包率未采集",
+        "frames/V01_facts_01110.png"
+      ]
+    ],
+    "limits": []
+  },
+  {
+    "slug": "wordly",
+    "name": "Wordly",
+    "analysis_date": "2026-11-03",
+    "summary": {
+      "翻译事实覆盖": "首次字幕及弱网录像前两条No throttling基线，最终新字幕保留5项关键事实；开启播音后的独立译音也恢复5项。英文把发布/延期对象写成test，表达有歧义，不能把5/5理解为整段措辞无误。\n100ms两次输入有新字幕，关键事实保留；未确认对应新译音。正常录像后段丢包配置的新字幕缺next Tuesday，完整事实4/5、部分1项。末次10%输入的新输出未确认。",
+      "音色克隆": "本次按原评测范围跳过，未开展音色克隆验收；不据此判断产品是否支持该功能。",
+      "实时性能": "首显／首响，单位秒；均从本轮原声声学起点计。\n首次字幕2.3秒，初期静音未测首响；开启播音后录次首响15.1秒。No throttling基线为2.2/16.0、2.4/15.1。\n100ms两次新字幕约2.3和15.5秒，未确认新译音；第二次有重播/队列干扰。单次录像观察；音画通路未标定，无稳定均值或P95。\n启动分阶段：浏览器打开时间缺失；讲话端2～4秒、听众端4～6秒加入，路由配置8～10秒完成；初期播音关闭。\n首次尾句显全距输入14.0秒；译音末响距输入未确认。尾句首度显全不代表后续不再修订或重复。",
+      "译音质量": "开启播音后完整译音峰值0.659；另两段No throttling基线0.658/0.653，满幅数字削波均0%，短语停顿约0.17～0.75秒。独立转写可恢复5项事实，但test作为发布/延期对象有歧义。\n早期静音和弱网段未录入的新译音不能评分，也不能据此断言产品不支持语音。未做自然度、韵律盲听评分。",
+      "弱网表现": "“弱网”录像0～约76秒仍是No throttling，11.6/45.2秒输入仅为基线。约77秒后听众页选择100ms，字幕有更新，未记录可归属新英文播报；讲话端为另一浏览器页面，作用范围未验证。\n约131秒选10%配置后又输入，录像149.6秒结束前未确认新输出，旧字幕不计成功。正常录像后段也曾选丢包配置，新字幕遗漏星期二。\n未找到连续约10秒应用Offline的证据，不能给中断恢复结论。",
+      "记录状态": "录像分析完成；部分项目证据不足"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "V01",
+        "frame": 840,
+        "pts_s": 28,
+        "label": "首次字幕录次",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "听众端早期静音，未记录本轮英文播报。F4/F5把发布、延期对象写成test，存在表达歧义；关键条件和日期保留。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-n01.png",
+        "video_id": "wordly-v01"
+      },
+      {
+        "id": "N03",
+        "video": "V01",
+        "frame": 2484,
+        "pts_s": 82.8,
+        "label": "开启播音后的录次",
+        "subtitle": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "输入52.8秒，原音67.9～82.7秒为完整独立英文译音；约76秒后切换丢包设置，播报尾部跨设置改变，不算全段严格纯正常网络。重复语料且画面旧字幕保留，本轮新字幕无法独立计分。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-n03.png",
+        "video_id": "wordly-v01"
+      },
+      {
+        "id": "N04",
+        "video": "V01",
+        "frame": 3000,
+        "pts_s": 100,
+        "label": "正常录像后段10%配置",
+        "subtitle": [
+          "部分",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "quotes": [
+          "The budget limit for confirming test results before 10:00 AM is 30,000 yuan.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "该文件后段切换WebRTC丢包配置。可见新段没有保留next Tuesday；不纳入正常基线，也无可确认新译音。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-n04.png",
+        "video_id": "wordly-v01"
+      },
+      {
+        "id": "B01",
+        "video": "V02",
+        "frame": 810,
+        "pts_s": 27,
+        "label": "弱网录像/No throttling基线1",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "此时明确显示No throttling，不当作100ms或中断结果。独立英文译音约27.6秒起。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-b01.png",
+        "video_id": "wordly-v02"
+      },
+      {
+        "id": "B02",
+        "video": "V02",
+        "frame": 1830,
+        "pts_s": 61,
+        "label": "弱网录像/No throttling基线2",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "此时仍为No throttling。初期test results budget等中间稿后来修正；最终5项保留。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-b02.png",
+        "video_id": "wordly-v02"
+      },
+      {
+        "id": "W01a",
+        "video": "V02",
+        "frame": 2880,
+        "pts_s": 96,
+        "label": "DevTools 100ms/首次输入",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "源音81.4秒，新please在83.7秒出现；最终新字幕可核对，未记录可归属的新英文译音。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-w01a.png",
+        "video_id": "wordly-v02"
+      },
+      {
+        "id": "W01b",
+        "video": "V02",
+        "frame": 3540,
+        "pts_s": 118,
+        "label": "DevTools 100ms/继续重播",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "not 130,000 yuan.",
+          "The test will only be released if it passes.",
+          "If any problems are found, the test will be postponed to Friday."
+        ],
+        "note": "99.5秒又输入，115秒完整新字幕才出现；重复和队列影响存在，不作为独立冷启动或稳定均值。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-w01b.png",
+        "video_id": "wordly-v02"
+      },
+      {
+        "id": "W04",
+        "video": "V02",
+        "frame": 4470,
+        "pts_s": 149,
+        "label": "DevTools 10%/末次输入",
+        "subtitle": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "audio": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "quotes": [
+          "未确认新的对应输出",
+          "未确认新的对应输出",
+          "未确认新的对应输出",
+          "未确认新的对应输出",
+          "未确认新的对应输出"
+        ],
+        "note": "131.9秒输入后，录像于149.6秒结束；未确认新的对应字幕或英文播报。下方仍在的旧字幕不能算本轮成功，也不能据此断言永久丢失。",
+        "fact_notes": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "evidence_image": "evidence/images/wordly-w04.png",
+        "video_id": "wordly-v02"
+      }
+    ],
+    "timing": [
+      {
+        "scene": "N01",
+        "video": "V01",
+        "source_template_pts_s": 13.8365625,
+        "source_pts_s": 13.876562499999999,
+        "audio_asr_candidate_wav_s": null,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 484,
+        "first_present_frame": 485,
+        "subtitle_pts_s": 16.167,
+        "subtitle_delay_s": 2.290437500000003,
+        "label": "首次录次",
+        "note": "初期听众端可见静音；未记录对应新英文译音，不把缺录音当首响超时。"
+      },
+      {
+        "scene": "N02",
+        "video": "V01",
+        "source_template_pts_s": 38.1058125,
+        "source_pts_s": 38.1458125,
+        "audio_asr_candidate_wav_s": null,
+        "label": "正常/再次输入",
+        "note": "初期听众端可见静音；未记录对应新英文译音，不把缺录音当首响超时。"
+      },
+      {
+        "scene": "N03",
+        "video": "V01",
+        "source_template_pts_s": 52.780875,
+        "source_pts_s": 52.820875,
+        "audio_asr_candidate_wav_s": 67.57,
+        "target_audio_pts_s": 67.949,
+        "audio_delay_s": 15.128124999999997,
+        "label": "开启播音后输入",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "N04",
+        "video": "V01",
+        "source_template_pts_s": 83.8564375,
+        "source_pts_s": 83.8964375,
+        "audio_asr_candidate_wav_s": null,
+        "subtitle_status": "初始英文碎片不含Please，自动括区失败，未给精确首显",
+        "bracket_texts": [
+          "VGBN-3745 D 文A ENGLISH (UK) The current speaker is speaking CHINESE morning Wordly Al Interpretation|Privacy Policy |Terms of Service Copyright  2019 -2026 Wordly, Inc.|Version 4.5.0",
+          "VGBN-3745 D 文A ENGLISH (UK) ThecurrentspeakerisspeakingCHINESE The budget limit for confirming test results before 10:00 AM is 30,000 yuan. Wordly Al Interpretation|Privacy Policy |Terms of Service Copyright  2019 -2026 Wordly, Inc.|Version 4.5.0"
+        ],
+        "label": "正常录像后段丢包配置",
+        "note": "后段属于丢包配置；首次只见morning等碎片，不用错误OCR匹配补成精确首显。"
+      },
+      {
+        "scene": "B01",
+        "video": "V02",
+        "source_template_pts_s": 11.543,
+        "source_pts_s": 11.582999999999998,
+        "audio_asr_candidate_wav_s": 27.22,
+        "target_audio_pts_s": 27.628999999999998,
+        "audio_delay_s": 16.046,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 412,
+        "first_present_frame": 413,
+        "subtitle_pts_s": 13.767,
+        "subtitle_delay_s": 2.184000000000001,
+        "label": "No throttling基线1",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "B02",
+        "video": "V02",
+        "source_template_pts_s": 45.1126875,
+        "source_pts_s": 45.1526875,
+        "audio_asr_candidate_wav_s": 59.73,
+        "target_audio_pts_s": 60.239,
+        "audio_delay_s": 15.086312499999998,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1427,
+        "first_present_frame": 1428,
+        "subtitle_pts_s": 47.6,
+        "subtitle_delay_s": 2.4473125000000024,
+        "label": "No throttling基线2",
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。"
+      },
+      {
+        "scene": "W01a",
+        "video": "V02",
+        "source_template_pts_s": 81.3225625,
+        "source_pts_s": 81.3625625,
+        "audio_asr_candidate_wav_s": null,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 2510,
+        "first_present_frame": 2511,
+        "subtitle_pts_s": 83.7,
+        "subtitle_delay_s": 2.337437500000007,
+        "label": "100ms首次输入",
+        "note": "未确认可归属的新英文译音；旧字幕不算本轮新输出。W01b重复/排队干扰存在。"
+      },
+      {
+        "scene": "W01b",
+        "video": "V02",
+        "source_template_pts_s": 99.4959375,
+        "source_pts_s": 99.5359375,
+        "audio_asr_candidate_wav_s": null,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 3449,
+        "first_present_frame": 3450,
+        "subtitle_pts_s": 115.0,
+        "subtitle_delay_s": 15.464062499999997,
+        "label": "100ms继续重播",
+        "note": "未确认可归属的新英文译音；旧字幕不算本轮新输出。W01b重复/排队干扰存在。"
+      },
+      {
+        "scene": "W04",
+        "video": "V02",
+        "source_template_pts_s": 131.83481250000003,
+        "source_pts_s": 131.87481250000002,
+        "audio_asr_candidate_wav_s": null,
+        "label": "10%配置",
+        "note": "未确认可归属的新英文译音；旧字幕不算本轮新输出。W01b重复/排队干扰存在。"
+      }
+    ],
+    "startup": {
+      "summary": "浏览器打开时间缺失；讲话端2～4秒、听众端4～6秒加入，路由配置8～10秒完成；初期播音关闭。",
+      "interval_semantics": "状态发生于前一截图之后、后一截图之前/当时；不是精确点击时间或单独可比较的纯网络连接耗时。",
+      "stages": [
+        {
+          "stage": "程序/浏览器打开",
+          "video": "V01",
+          "after_pts_s": null,
+          "by_pts_s": null,
+          "note": "录像0秒两端浏览器已打开，只记录加入会话过程，无法测程序打开耗时。"
+        },
+        {
+          "stage": "讲话端加入",
+          "video": "V01",
+          "after_pts_s": 2,
+          "by_pts_s": 4,
+          "note": "2秒仍Join，4秒已显示会话工具栏；尚未完成麦克风路由选择。"
+        },
+        {
+          "stage": "听众端加入",
+          "video": "V01",
+          "after_pts_s": 4,
+          "by_pts_s": 6,
+          "note": "4秒仍Attend入口/加载，6秒已进入英文听众页，初期播音关闭。"
+        },
+        {
+          "stage": "输入路由配置完毕的可见上界",
+          "video": "V01",
+          "after_pts_s": 8,
+          "by_pts_s": 10,
+          "note": "8秒麦克风设置弹窗，10秒弹窗关闭；输入声卡选择与页面连接是不同阶段。"
+        }
+      ]
+    },
+    "completion": [
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 27.866666666666667,
+        "last_absent_frame": 835,
+        "first_present_frame": 836,
+        "scene": "N01",
+        "video": "V01",
+        "source_pts_s": 13.876562499999999,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 98.6,
+        "last_absent_frame": 2957,
+        "first_present_frame": 2958,
+        "scene": "N04",
+        "video": "V01",
+        "source_pts_s": 83.8964375,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 25.8,
+        "last_absent_frame": 773,
+        "first_present_frame": 774,
+        "scene": "B01",
+        "video": "V02",
+        "source_pts_s": 11.582999999999998,
+        "audio_end_pts_s": 42.389,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 59.06666666666667,
+        "last_absent_frame": 1771,
+        "first_present_frame": 1772,
+        "scene": "B02",
+        "video": "V02",
+        "source_pts_s": 45.1526875,
+        "audio_end_pts_s": 74.999,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 95.13333333333334,
+        "last_absent_frame": 2853,
+        "first_present_frame": 2854,
+        "scene": "W01a",
+        "video": "V02",
+        "source_pts_s": 81.3625625,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "adjacent_frame_candidate",
+        "subtitle_tail_pts_s": 116.03333333333333,
+        "last_absent_frame": 3480,
+        "first_present_frame": 3481,
+        "scene": "W01b",
+        "video": "V02",
+        "source_pts_s": 99.5359375,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "note": "记录首次新尾句，随后约123秒仍有重复同文，排队结束与单轮完成归属不明。",
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+      },
+      {
+        "status": "unconfirmed",
+        "note": "无法分离本轮新字幕/残段的完成，保留未确认。",
+        "scene": "N02",
+        "video": "V01",
+        "source_pts_s": 38.1458125,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "当前录像不足以确认本轮字幕尾句完成。"
+      },
+      {
+        "status": "unconfirmed",
+        "note": "对应新字幕无法区分；独立有声段末尾跨越约76秒配置切换，不是纯正常条件全段。",
+        "scene": "N03",
+        "video": "V01",
+        "source_pts_s": 52.820875,
+        "audio_end_pts_s": 82.709,
+        "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
+        "review": "当前录像不足以确认本轮字幕尾句完成。"
+      },
+      {
+        "status": "unconfirmed",
+        "note": "无法分离本轮新字幕/残段的完成，保留未确认。",
+        "scene": "W04",
+        "video": "V02",
+        "source_pts_s": 131.87481250000002,
+        "audio_end_pts_s": null,
+        "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
+        "review": "当前录像不足以确认本轮字幕尾句完成。"
+      }
+    ],
+    "network": [
+      [
+        "前段基线",
+        "V02 0～约76秒",
+        "听众页DevTools为No throttling",
+        "11.6/45.2秒输入均为基线，不归入弱网成绩",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "100ms",
+        "V02约77～130秒",
+        "仅听众页面显示延迟100ms；讲话端是另一浏览器页面",
+        "有新字幕；未记录可归属的新英文译音，录音/播放设置影响不能排除",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10%丢包",
+        "V02约131秒后；V01后段亦选择",
+        "听众页选择WebRTC丢包10%；未验证传输类型和作用覆盖",
+        "V02末次输入未确认新输出；V01后段新字幕遗漏星期二；旧字幕均排除",
+        "frames/V02_controls_contact_1.jpg"
+      ],
+      [
+        "10秒中断",
+        "未形成可验证连续场景",
+        "约76秒菜单悬停Offline，前后均未见持续约10秒应用",
+        "缺少合格中断、撤销和恢复证据，不给恢复耗时",
+        "frames/V02_controls_contact_1.jpg"
+      ]
+    ],
+    "limits": []
+  },
+  {
+    "slug": "iflytek",
+    "name": "讯飞同传",
+    "analysis_date": "2026-11-04",
+    "summary": {
+      "翻译事实覆盖": "统一S01中→英。首次、再次、发送端100ms及10%配置轮次，最终新字幕与录入译音各保留5项关键事实。\n发送端中断这一轮，在下一次重播前未观察到完整新S01；旧字幕不计成功。\n收听侧100ms/Offline轮次录音F1只保留时间或结果片段，完整事实4/5、部分1项；末次录音未检出发布条件。末次客户端字幕完整，可见收听页未更新。多个收听窗口使后半段译音归属受限。5/5仅指本语料事实覆盖，另有4、3、Yes等额外片段，来源未确认。",
+      "音色克隆": "本次按原评测范围跳过，未开展音色克隆验收；不据此判断产品是否支持该功能。",
+      "实时性能": "录像观测，非校准正式成绩。按“客户端英文首显／录入译音首响”，从原音声学起点计，单位秒：\n首次3.0/9.6；再次3.3/9.4；发送端100ms 3.4/9.8；发送端10% 3.3/9.8。\n收听页100ms 3.0/9.2；Offline相关输入3.5/11.5；WebRTC丢包配置3.5/10.9。后半段音频未隔离到受控窗口，不能当该页面的严格首响成绩。\n启动页2～4秒、首页6～8秒、会话计时22～24秒、收听页30～32秒就绪；原音35.2秒开始。首次末响距输入27.6秒、句尾拖尾14.2秒。各条件仅一次，OBS通路未校准，不报均值或P95。",
+      "译音质量": "原录像48kHz双声道译音解码检查：7段S01输出片段峰值约0.782～0.811（满幅1），满幅数字削波均0%。正常前两轮分段静音最长约4.5/6.3秒，不能仅凭停顿判网络卡顿。\n首次、再次及发送端100ms/10%录音转写保留5项；收听侧两轮首句不完整，末次录音未检出发布条件。\n“混音”轨实际主要为英文，另外两轨主要为中文；按内容选轨。无数字削波不代表无细微失真。自然度、韵律未盲听评分；后半段多窗口的声音来源未独立隔离。",
+      "弱网表现": "发送端：讯飞同传.exe上/下行各100ms配置，完成本轮；约129～139秒中断，下一次155.9秒重播前无完整新S01。10%概率丢包约155秒应用、175～176秒撤销，译音181.1秒才结束，尾部跨撤销。实际业务损伤未验证。\n收听端：DevTools 100ms不能等同双向各100ms；约249～261秒“离线”期间仍有新字幕/录入译音，未证实实时链路断流。约273秒后WebRTC丢包配置，客户端新字幕完整，收听页到录像结束仍停留旧段。录音有新英文但多窗口归属受限，不能据此判受控页丢包下成功。\n各档一次，配置值不是实测业务丢包率；无严格恢复耗时。",
+      "记录状态": "录像分析完成；部分证据不足"
+    },
+    "cases": [
+      {
+        "id": "N01",
+        "video": "V01",
+        "label": "首次输入",
+        "pts_s": 54,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "首次输入；字幕初稿Next Tuesday, please.逐步改写，最后补齐。原声仍在输入时已有译音，前两轮的部分中文输入与英文播报在时间上重叠，但实际选用的英文轨无中文混入。",
+        "evidence_image": "evidence/images/iflytek-n01.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "N02",
+        "video": "V01",
+        "label": "正常再次输入",
+        "pts_s": 84,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "同一会话再次播放同一S01。前一轮译音至62.8秒结束，本轮57.1秒已输入；本轮译音66.5秒起，可依先后及内容分段。不是独立热启动实验。",
+        "evidence_image": "evidence/images/iflytek-n02.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "S100",
+        "video": "V01",
+        "label": "客户端上下行各100ms配置",
+        "pts_s": 120,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "控制对象讯飞同传.exe，画面确认上下行各附加100ms，约94～123秒有效。输入与全部译音均在该配置状态内；实际业务损伤量未独立验证。",
+        "evidence_image": "evidence/images/iflytek-s100.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "Soff",
+        "video": "V01",
+        "label": "客户端中断相关输入",
+        "pts_s": 142,
+        "subtitle": [
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到"
+        ],
+        "receiver": [
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到"
+        ],
+        "audio": [
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到"
+        ],
+        "note": "输入125.9秒开始，约129～139秒显示连接中断；恢复至155.9秒再次输入前未见完整新S01。128.1秒附近只录到额外four，不能算有效首句。原有三段完整旧字幕不算本轮成功。",
+        "evidence_image": "evidence/images/iflytek-soff.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "Sdrop",
+        "video": "V01",
+        "label": "客户端上下行各10%丢包配置",
+        "pts_s": 182,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "约155秒起上下行各配置10%概率丢包；约175～176秒人工撤销，译音181.1秒才结束。输入基本在配置期，播报尾段跨撤销；不能声称全段在10%下完成。",
+        "evidence_image": "evidence/images/iflytek-sdrop.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "R100",
+        "video": "V01",
+        "label": "收听页100ms配置",
+        "pts_s": 240,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "部分",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "新Chrome配置收听页显示延迟100ms；客户端最终字幕与可见网页均完整。录音首句仅10 a.m. next Tuesday.，缺确认测试结果，F1记部分。此前另一个收听窗口仍存在，音频未按浏览器窗口独立隔离。",
+        "evidence_image": "evidence/images/iflytek-r100.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "Roff",
+        "video": "V01",
+        "label": "收听页Offline相关输入",
+        "pts_s": 266,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "部分",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "收听页约249～261秒显示离线；该期间仍更新字幕并录入译音，未证明实时业务连接真正断开。录音首句仅Results before 10 a.m. next Tuesday…，动作不完整；额外three另存。不能计算严格断流恢复耗时。",
+        "evidence_image": "evidence/images/iflytek-roff.png",
+        "video_id": "iflytek-v01"
+      },
+      {
+        "id": "Rdrop",
+        "video": "V01",
+        "label": "收听页WebRTC丢包10%配置",
+        "pts_s": 308,
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "receiver": [
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认",
+          "未确认"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "本轮未观察到",
+          "正确"
+        ],
+        "note": "可见收听页约273秒后选择WebRTC丢包10%；客户端本轮新字幕完整，可见收听页到308.6秒仍停留上轮文字。录音存在新英文但两次转写均未检出F4发布条件；多个收听窗口使译音来源和受控页面归属不唯一。",
+        "evidence_image": "evidence/images/iflytek-rdrop.png",
+        "video_id": "iflytek-v01"
+      }
+    ],
+    "timing": [
+      {
+        "id": "N01",
+        "label": "首次输入",
+        "source_window": [
+          34,
+          49
+        ],
+        "target_window": [
+          44,
+          64
+        ],
+        "source_center": 35.24,
+        "target_center": 44.81,
+        "last_target_center": 62.8,
+        "source_pts_s": 35.239,
+        "source_end_pts_s": 48.649,
+        "target_pts_s": 44.809,
+        "target_end_pts_s": 62.829,
+        "audio_delay_s": 9.57,
+        "tail_s": 14.18,
+        "clip": {
+          "original_start_pts_s": 44,
+          "original_end_pts_s": 64,
+          "peak": 0.7882080078125,
+          "clipped_fraction": 0.0
+        },
+        "note": "首次输入；字幕初稿Next Tuesday, please.逐步改写，最后补齐。原声仍在输入时已有译音，前两轮的部分中文输入与英文播报在时间上重叠，但实际选用的英文轨无中文混入。",
+        "quality": {
+          "id": "N01",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7864562273025513,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 18.020000000000003,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 47.759,
+              "to_pts_s": 48.979,
+              "duration_s": 1.22
+            },
+            {
+              "from_pts_s": 52.82899999999999,
+              "to_pts_s": 57.339,
+              "duration_s": 4.51
+            },
+            {
+              "from_pts_s": 59.57899999999999,
+              "to_pts_s": 59.899,
+              "duration_s": 0.32
+            }
+          ],
+          "longest_gap_s": 4.51
+        },
+        "subtitle_pts_s": 38.267,
+        "subtitle_delay_s": 3.028000000000006,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "CCCCC",
+        "voice_status": "CCCCC"
+      },
+      {
+        "id": "N02",
+        "label": "正常再次输入",
+        "source_window": [
+          56,
+          71
+        ],
+        "target_window": [
+          66,
+          88
+        ],
+        "source_center": 57.1,
+        "target_center": 66.46,
+        "last_target_center": 86.69,
+        "source_pts_s": 57.089,
+        "source_end_pts_s": 70.509,
+        "target_pts_s": 66.459,
+        "target_end_pts_s": 86.689,
+        "audio_delay_s": 9.370000000000005,
+        "tail_s": 16.179999999999993,
+        "clip": {
+          "original_start_pts_s": 66,
+          "original_end_pts_s": 88,
+          "peak": 0.796173095703125,
+          "clipped_fraction": 0.0
+        },
+        "note": "同一会话再次播放同一S01。前一轮译音至62.8秒结束，本轮57.1秒已输入；本轮译音66.5秒起，可依先后及内容分段。不是独立热启动实验。",
+        "quality": {
+          "id": "N02",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7970055341720581,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 20.22999999999999,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 69.409,
+              "to_pts_s": 70.929,
+              "duration_s": 1.52
+            },
+            {
+              "from_pts_s": 74.779,
+              "to_pts_s": 81.089,
+              "duration_s": 6.3100000000000005
+            },
+            {
+              "from_pts_s": 83.44900000000001,
+              "to_pts_s": 83.759,
+              "duration_s": 0.31
+            }
+          ],
+          "longest_gap_s": 6.3100000000000005
+        },
+        "subtitle_pts_s": 60.433,
+        "subtitle_delay_s": 3.344000000000001,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "CCCCC",
+        "voice_status": "CCCCC"
+      },
+      {
+        "id": "S100",
+        "label": "客户端上下行各100ms配置",
+        "source_window": [
+          94,
+          109
+        ],
+        "target_window": [
+          104,
+          122
+        ],
+        "source_center": 94.83,
+        "target_center": 104.57,
+        "last_target_center": 120.34,
+        "source_pts_s": 94.819,
+        "source_end_pts_s": 108.239,
+        "target_pts_s": 104.569,
+        "target_end_pts_s": 120.339,
+        "audio_delay_s": 9.75,
+        "tail_s": 12.099999999999994,
+        "clip": {
+          "original_start_pts_s": 104,
+          "original_end_pts_s": 122,
+          "peak": 0.78271484375,
+          "clipped_fraction": 0.0
+        },
+        "note": "控制对象讯飞同传.exe，画面确认上下行各附加100ms，约94～123秒有效。输入与全部译音均在该配置状态内；实际业务损伤量未独立验证。",
+        "quality": {
+          "id": "S100",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7875165939331055,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 15.769999999999996,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 107.539,
+              "to_pts_s": 108.479,
+              "duration_s": 0.9400000000000001
+            },
+            {
+              "from_pts_s": 112.339,
+              "to_pts_s": 114.739,
+              "duration_s": 2.4
+            },
+            {
+              "from_pts_s": 117.089,
+              "to_pts_s": 117.399,
+              "duration_s": 0.31
+            }
+          ],
+          "longest_gap_s": 2.4
+        },
+        "subtitle_pts_s": 98.267,
+        "subtitle_delay_s": 3.4479999999999933,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "CCCCC",
+        "voice_status": "CCCCC"
+      },
+      {
+        "id": "Soff",
+        "label": "客户端中断相关输入",
+        "source_window": [
+          125,
+          140
+        ],
+        "target_window": [
+          127.5,
+          129
+        ],
+        "source_center": 125.89,
+        "target_center": null,
+        "last_target_center": null,
+        "source_pts_s": 125.879,
+        "source_end_pts_s": 139.299,
+        "clip": {
+          "original_start_pts_s": 127.5,
+          "original_end_pts_s": 129,
+          "peak": 0.7274169921875,
+          "clipped_fraction": 0.0
+        },
+        "note": "输入125.9秒开始，约129～139秒显示连接中断；恢复至155.9秒再次输入前未见完整新S01。128.1秒附近只录到额外four，不能算有效首句。原有三段完整旧字幕不算本轮成功。",
+        "quality": {
+          "id": "Soff",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7309707403182983,
+          "clipped_fraction": 0.0
+        },
+        "subtitle_pts_s": null,
+        "subtitle_delay_s": null,
+        "subtitle_status": "未观察到可归属本轮的有效新译文",
+        "client_status": "OOOOO",
+        "receiver_status": "OOOOO",
+        "voice_status": "OOOOO",
+        "target_pts_s": null,
+        "target_end_pts_s": null
+      },
+      {
+        "id": "Sdrop",
+        "label": "客户端上下行各10%丢包配置",
+        "source_window": [
+          155,
+          170
+        ],
+        "target_window": [
+          165,
+          183
+        ],
+        "source_center": 155.94,
+        "target_center": 165.77,
+        "last_target_center": 181.15,
+        "source_pts_s": 155.939,
+        "source_end_pts_s": 169.359,
+        "target_pts_s": 165.769,
+        "target_end_pts_s": 181.149,
+        "audio_delay_s": 9.830000000000013,
+        "tail_s": 11.789999999999992,
+        "clip": {
+          "original_start_pts_s": 165,
+          "original_end_pts_s": 183,
+          "peak": 0.78387451171875,
+          "clipped_fraction": 0.0
+        },
+        "note": "约155秒起上下行各配置10%概率丢包；约175～176秒人工撤销，译音181.1秒才结束。输入基本在配置期，播报尾段跨撤销；不能声称全段在10%下完成。",
+        "quality": {
+          "id": "Sdrop",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.8111794590950012,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 15.379999999999995,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 168.75900000000001,
+              "to_pts_s": 169.669,
+              "duration_s": 0.91
+            },
+            {
+              "from_pts_s": 173.56900000000002,
+              "to_pts_s": 175.659,
+              "duration_s": 2.09
+            },
+            {
+              "from_pts_s": 177.899,
+              "to_pts_s": 178.219,
+              "duration_s": 0.32
+            }
+          ],
+          "longest_gap_s": 2.09
+        },
+        "subtitle_pts_s": 159.2,
+        "subtitle_delay_s": 3.2609999999999957,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "CCCCC",
+        "voice_status": "CCCCC"
+      },
+      {
+        "id": "R100",
+        "label": "收听页100ms配置",
+        "source_window": [
+          213,
+          228
+        ],
+        "target_window": [
+          223,
+          241
+        ],
+        "source_center": 214.24,
+        "target_center": 223.42,
+        "last_target_center": 239.36,
+        "source_pts_s": 214.239,
+        "source_end_pts_s": 227.659,
+        "target_pts_s": 223.419,
+        "target_end_pts_s": 239.359,
+        "audio_delay_s": 9.180000000000007,
+        "tail_s": 11.700000000000017,
+        "clip": {
+          "original_start_pts_s": 223,
+          "original_end_pts_s": 241,
+          "peak": 0.78167724609375,
+          "clipped_fraction": 0.0
+        },
+        "note": "新Chrome配置收听页显示延迟100ms；客户端最终字幕与可见网页均完整。录音首句仅10 a.m. next Tuesday.，缺确认测试结果，F1记部分。此前另一个收听窗口仍存在，音频未按浏览器窗口独立隔离。",
+        "quality": {
+          "id": "R100",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7864351272583008,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 15.939999999999998,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 224.78900000000002,
+              "to_pts_s": 227.25900000000001,
+              "duration_s": 2.47
+            },
+            {
+              "from_pts_s": 231.18900000000002,
+              "to_pts_s": 233.84900000000002,
+              "duration_s": 2.66
+            },
+            {
+              "from_pts_s": 236.109,
+              "to_pts_s": 236.429,
+              "duration_s": 0.32
+            }
+          ],
+          "longest_gap_s": 2.66
+        },
+        "subtitle_pts_s": 217.233,
+        "subtitle_delay_s": 2.9939999999999998,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "CCCCC",
+        "voice_status": "PCCCC"
+      },
+      {
+        "id": "Roff",
+        "label": "收听页Offline相关输入",
+        "source_window": [
+          244,
+          259
+        ],
+        "target_window": [
+          256,
+          272
+        ],
+        "source_center": 245.2,
+        "target_center": 256.66,
+        "last_target_center": 270.29,
+        "source_pts_s": 245.199,
+        "source_end_pts_s": 258.619,
+        "target_pts_s": 256.659,
+        "target_end_pts_s": 270.289,
+        "audio_delay_s": 11.45999999999998,
+        "tail_s": 11.669999999999959,
+        "clip": {
+          "original_start_pts_s": 256,
+          "original_end_pts_s": 272,
+          "peak": 0.77557373046875,
+          "clipped_fraction": 0.0
+        },
+        "note": "收听页约249～261秒显示离线；该期间仍更新字幕并录入译音，未证明实时业务连接真正断开。录音首句仅Results before 10 a.m. next Tuesday…，动作不完整；额外three另存。不能计算严格断流恢复耗时。",
+        "quality": {
+          "id": "Roff",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7825863361358643,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 13.629999999999995,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 258.829,
+              "to_pts_s": 259.159,
+              "duration_s": 0.33
+            },
+            {
+              "from_pts_s": 261.159,
+              "to_pts_s": 261.43899999999996,
+              "duration_s": 0.28
+            },
+            {
+              "from_pts_s": 263.339,
+              "to_pts_s": 264.789,
+              "duration_s": 1.45
+            },
+            {
+              "from_pts_s": 267.039,
+              "to_pts_s": 267.359,
+              "duration_s": 0.32
+            }
+          ],
+          "longest_gap_s": 1.45
+        },
+        "subtitle_pts_s": 248.667,
+        "subtitle_delay_s": 3.4679999999999893,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "CCCCC",
+        "voice_status": "PCCCC"
+      },
+      {
+        "id": "Rdrop",
+        "label": "收听页WebRTC丢包10%配置",
+        "source_window": [
+          280,
+          295
+        ],
+        "target_window": [
+          291,
+          306
+        ],
+        "source_center": 280.66,
+        "target_center": 291.54,
+        "last_target_center": 304.48,
+        "source_pts_s": 280.659,
+        "source_end_pts_s": 294.079,
+        "target_pts_s": 291.539,
+        "target_end_pts_s": 304.479,
+        "audio_delay_s": 10.879999999999995,
+        "tail_s": 10.399999999999977,
+        "clip": {
+          "original_start_pts_s": 291,
+          "original_end_pts_s": 306,
+          "peak": 0.780487060546875,
+          "clipped_fraction": 0.0
+        },
+        "note": "可见收听页约273秒后选择WebRTC丢包10%；客户端本轮新字幕完整，可见收听页到308.6秒仍停留上轮文字。录音存在新英文但两次转写均未检出F4发布条件；多个收听窗口使译音来源和受控页面归属不唯一。",
+        "quality": {
+          "id": "Rdrop",
+          "sr": 48000,
+          "channels": 2,
+          "peak": 0.7921402454376221,
+          "clipped_fraction": 0.0,
+          "signal_span_s": 12.939999999999998,
+          "silence_gaps_gt250ms": [
+            {
+              "from_pts_s": 294.159,
+              "to_pts_s": 295.649,
+              "duration_s": 1.49
+            },
+            {
+              "from_pts_s": 295.949,
+              "to_pts_s": 296.269,
+              "duration_s": 0.32
+            },
+            {
+              "from_pts_s": 297.029,
+              "to_pts_s": 297.349,
+              "duration_s": 0.32
+            },
+            {
+              "from_pts_s": 301.24899999999997,
+              "to_pts_s": 301.549,
+              "duration_s": 0.3
+            }
+          ],
+          "longest_gap_s": 1.49
+        },
+        "subtitle_pts_s": 284.133,
+        "subtitle_delay_s": 3.4739999999999895,
+        "subtitle_status": "相邻帧已视觉复核；首个英文片段",
+        "client_status": "CCCCC",
+        "receiver_status": "UUUUU",
+        "voice_status": "CCCOC"
+      }
+    ],
+    "startup": [
+      [
+        "启动页出现",
+        2,
+        4,
+        "进程启动触发时刻未逐帧确认；不是完整冷启动耗时。",
+        "frames/V01_detail_004.png"
+      ],
+      [
+        "产品首页出现",
+        6,
+        8,
+        "首页可见，尚未开始同传。",
+        "frames/V01_detail_008.png"
+      ],
+      [
+        "会话开始计时",
+        22,
+        24,
+        "22秒开始按钮加载，24秒计时00:00:00。",
+        "frames/V01_detail_024.png"
+      ],
+      [
+        "收听页已加载/选择频道",
+        30,
+        32,
+        "32秒可见原声/翻译/双语频道选择；不把人工操作都算翻译延迟。",
+        "frames/V01_detail_032.png"
+      ]
+    ],
+    "completion": [],
+    "network": [
+      [
+        "S100",
+        "讯飞客户端",
+        "上/下行各附加100ms",
+        "约94～123秒",
+        "输入94.8秒；译音104.6～120.3秒",
+        "新字幕/录音5项保留",
+        "工具参数不是RTT，业务损伤未独立验证",
+        "frames/V01_detail_096.png"
+      ],
+      [
+        "Soff",
+        "讯飞客户端",
+        "连接中断10秒",
+        "约129～139秒",
+        "输入125.9秒跨中断；再次输入155.9秒",
+        "恢复到下一次重播前无完整新S01",
+        "输入早于应用；无未出现过的新探针，不能给严格恢复时间",
+        "frames/V01_detail_130.png"
+      ],
+      [
+        "Sdrop",
+        "讯飞客户端",
+        "上/下行各10%概率丢包",
+        "约155～175/176秒",
+        "输入155.9秒；末响181.1秒跨撤销",
+        "重播后字幕/录音5项保留",
+        "真实丢弃比例未采集，尾部在撤销后完成",
+        "frames/V01_extra_176.png"
+      ],
+      [
+        "R100",
+        "新Chrome收听页",
+        "DevTools延迟100ms",
+        "约213～249秒",
+        "输入214.2秒；录音223.4秒首响",
+        "客户端/网页字幕完整；录音F1部分",
+        "页面参数不等同客户端上下行各100ms；多收听窗口未隔离",
+        "frames/V01_detail_240.png"
+      ],
+      [
+        "Roff",
+        "新Chrome收听页",
+        "DevTools离线",
+        "约249～261秒",
+        "输入245.2秒跨设置；离线中仍有新字幕/音频",
+        "完整最终字幕；录音F1部分",
+        "没有业务断流及恢复证据，不给恢复时延",
+        "frames/V01_detail_256.png"
+      ],
+      [
+        "Rdrop",
+        "新Chrome收听页",
+        "WebRTC丢包10%配置",
+        "约273秒～录像结束",
+        "输入280.7秒；客户端新段完整，网页未更新",
+        "录音缺F4；来源归属受限",
+        "未确认WebRTC业务流，不能按页面名认定实际10%丢包",
+        "frames/V01_detail_308.png"
+      ]
+    ],
+    "limits": [
+      "计时采用原录像PTS共同时间轴。音轨采样0为PTS -0.021秒。不是播放器显示秒数或ASR词时间。",
+      "原音主选stream2，译音主选stream1；stream3为另一份中文源音，匹配偏移约26～36毫秒；未校准各采集通路绝对延迟。",
+      "字幕首显7组使用蓝色新译文候选检索，均已视觉复核相邻帧。只是首个有效英文片段，不代表语义完整。",
+      "英文内容以干净stream1全轨及4段独立无VAD转写交叉检查。track3强制英文的识别候选不用于产品判定。没有主观盲听/MOS。",
+      "源音10ms RMS -50dBFS、译音-42dBFS为主阈值；原始候选含其他阈值。源音尾部包含低能量收尾，按本次统一口径报告。",
+      "后半段打开两个Chrome收听窗口/配置，音轨未按窗口隔离。录入声音不能直接认定为受控网页声音。",
+      "额外4、3、Yes与源语料不符；客户端使用混合声源，额外输入或识别错误来源未确认。",
+      "同稿重播和旧字幕逐条分开；中断观察窗截止下一次输入。不推断永久丢失，不用重播成绩补记自动恢复。",
+      "配置100ms/10%不等于实测RTT/丢包率；DevTools只保留其可见页面配置事实，未证明覆盖实时连接。",
+      "本报告为单条短语料单次各条件观察，不报告通用准确率、均值、P95或稳定故障率。"
+    ]
+  }
+]

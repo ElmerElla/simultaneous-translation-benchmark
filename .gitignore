@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+media/
+*.mp4
+*.mkv
+*.wav
+*.m4a
+*.zip
+*.log
+*.pem
+*.key
+.env
+scripts/weak-network/data/
+scripts/weak-network/logs/
+scripts/weak-network/bin/

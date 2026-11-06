@@ -1,0 +1,373 @@
+[
+  {
+    "file": "scripts/analysis/shared-five/analyze.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/analyze.py",
+    "source_sha256": "a5a6a48be03d76a10466fdc01555f1c95f24efbd44d7c554f17e3acb3c5db036",
+    "published_sha256": "e3bd863e23747845e3ea999946a71a3c11cabc57dd84fe581230c25daf09c364",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/measure.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/measure.py",
+    "source_sha256": "067fbf457d8d9ac6c32b5195aaaccb2e23f9b71d2aa348a39745901de4d0b06e",
+    "published_sha256": "7c5fa43ef91d37deb7627b5baefe2910d347580fea1fd1b1067b691b798e8339",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/fragments.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/fragments.py",
+    "source_sha256": "87b6f42153ff43d047cb43a58063adb09e2cc4d19e226e83a83c306bee0ce49c",
+    "published_sha256": "b26253eda96471a0e260ff0bf4ef4581898cfd323ad9cbd420f2174dc9cab255",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/completion.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/completion.py",
+    "source_sha256": "bfa94847479206330798a71a02717e9dae9fff69ccc8be2912f516b7b3e6500d",
+    "published_sha256": "fc1d8d9ac553623c6cf42158f117a6f7704a770dbce0a13254ed1022ed5ae55e",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/sound.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/sound.py",
+    "source_sha256": "655384d3f1ca4aa0f13d9847ca66a5bee8107f958d7dbd752e09bc1ad3944aa0",
+    "published_sha256": "406a60eeeb18aa0162f6247d6153afdbe837555e01176ff4333fd6aed00a048b",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/proofs.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/proofs.py",
+    "source_sha256": "af066e42ff77195fd00ce7a2c3c2aed499ba9f1b18427cf2c197fea87ca54371",
+    "published_sha256": "d5d9518f5a8a975b33884080a4fbc9931356f671bdeff385fb61e44f7052b3c6",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/stages.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/stages.py",
+    "source_sha256": "1bc5cf46c7a5678484001ca59e6ccb930edd12fbbe09c22f3fa6d199a64897f4",
+    "published_sha256": "c74c49245d5a182bdc5f2c081a28896a4022e4e8b393bcbd0b4ff54fba0716ca",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/review.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/review.py",
+    "source_sha256": "bf4a0008867a41664062a3b427da04ab0633c87c5253f45cf475048e536a3849",
+    "published_sha256": "37c28f479a864901ee1a345cceb28bb7f1e66c10619808575cf626d632862fac",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/shared-five/endplots.py",
+    "source": "outputs/JotMe测试/评测结果_20261103/_support/endplots.py",
+    "source_sha256": "df4f4ee7956b613d05f14cf644f3a0fd810cadd483dbc31c6e0c93d385e83154",
+    "published_sha256": "58c40fd8d3cd31b2aef0a6be397786bf2a73a72d7ead60eafd3008a01534e870",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/prepare.py",
+    "source": "outputs/Transync测试/analysis_20261102/prepare.py",
+    "source_sha256": "0ec3df853301f49bab88a4d10e877af4078884da4b32e98c62b7337f500b98bd",
+    "published_sha256": "69d88c0abb59d83e4d24a21744cc8feee6f05ccc3afd661814d2f84f94e63788",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/analyze.py",
+    "source": "outputs/Transync测试/analysis_20261102/analyze.py",
+    "source_sha256": "928091b9b9476f0eee44cb5f2f5cf131f6db17599b25b1b9f70970147043f0e9",
+    "published_sha256": "d9efec57d60eeecd2b017bfec73a012e4689c88e071164be2479f983eb9b8584",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/evidence.py",
+    "source": "outputs/Transync测试/analysis_20261102/evidence.py",
+    "source_sha256": "a7fe0596206661935c13b07e82682577cb910b6645da883d9b01d3b727a41e8a",
+    "published_sha256": "f91e68f692f066313694d44f048ace6ae6a89d89d8bfd1ffe463a7168a5df9f4",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/precision.py",
+    "source": "outputs/Transync测试/analysis_20261102/precision.py",
+    "source_sha256": "cd1f99e0a40b7e6b25eddc2856b02c1ccc9009b917cecc19fa11f23755681765",
+    "published_sha256": "cae65c0e158f46b989452c1e590152b0e646e4479716f75eb43c82c9ed873077",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/network_precision.py",
+    "source": "outputs/Transync测试/analysis_20261102/network_precision.py",
+    "source_sha256": "69bb48e3dda2c1dc80cfc3fc20b9551bcab247ed487af88a6d2796a009a8b2a9",
+    "published_sha256": "696fbeb8ce9c9a9f0e16ca201962db7f77a4b706c344786efa8d0f9fcabea79e",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/refine.py",
+    "source": "outputs/Transync测试/analysis_20261102/refine.py",
+    "source_sha256": "50d0aa0cbd3ff7ed91b31632dc4588809122d0aec03c2002cfae860ff785fd21",
+    "published_sha256": "265ba83ef985228968796acf856d40a20024445dcaf4ef74f46f4b71b847fced",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/separate_source.py",
+    "source": "outputs/Transync测试/analysis_20261102/separate_source.py",
+    "source_sha256": "91d19ca0064409647ad41037545e4f12d36f70aac21f919355f71f3fbd097262",
+    "published_sha256": "5ad829279f1265b82ef9060a473f3fc8d1126c8f0e37555c8b116a6267ccc8f8",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/speaker.py",
+    "source": "outputs/Transync测试/analysis_20261102/speaker.py",
+    "source_sha256": "ca999f5c9d240a66a9b02cf5a9ab4398e31f743e60c6d03a6eff5f18497c260e",
+    "published_sha256": "4f877dd8d66d16050ea3eb5fec7f484169d8eb3105965eb1415e614a58b05292",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/transync/loss10_analysis.py",
+    "source": "outputs/Transync测试/analysis_20261102/loss10_analysis.py",
+    "source_sha256": "6ce56cbccff7a68a1c5783a7ff966467c04b2cd58bbcbe770192edad3f86ec16",
+    "published_sha256": "a4c103ca5291aa5e6af7477226ec228900bb306f47686c2ffd2cf65a409bdae9",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/analysis/iflytek/analyze.py",
+    "source": "outputs/讯飞同传测试/评测结果_20261104/_support/analyze.py",
+    "source_sha256": "775983318bd8d29b80b5cf530334cfcfa099c1f38de6f535a6280a47b2623ae6",
+    "published_sha256": "210138c76c1a80e012b44f0915a352724ab787c5b6836092ad9f19b056d0f45b",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/admin_launcher.py",
+    "source": "outputs/weak-network-panel-v2-20261102/admin_launcher.py",
+    "source_sha256": "5cf31f235e569244ac4e59ec6625faa1e8c34e6f2ed0fee4dc0db49f04146921",
+    "published_sha256": "bee9146e949a7f7dc5457cb5d7a947b3ead7a02e0d4d369b8c0e8ad024ef70e6",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/app-icon.svg",
+    "source": "outputs/weak-network-panel-v2-20261102/app-icon.svg",
+    "source_sha256": "6541c373fb62cdb612965ec75ec1272f793b219be3a06bb7e9c64cf42fd13d30",
+    "published_sha256": "84288ae2888e75675e2fefb7a4bb8da6c1d0693b6fd07a3b1d7d2d76cb870d45",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/build.py",
+    "source": "outputs/weak-network-panel-v2-20261102/build.py",
+    "source_sha256": "0bc17f69720731bda30735c81934fd4f643a21f0b0b4af348cc3e7c2c6a36dfe",
+    "published_sha256": "306220fee08465c948577d09c46fee27330c8e6303cc69d60a58b559a8e375bc",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/catalog.py",
+    "source": "outputs/weak-network-panel-v2-20261102/catalog.py",
+    "source_sha256": "bb56433edd0e2927d725cbfc4515236544fa7751d533d8cf703aeab9d03760a7",
+    "published_sha256": "852a049c1fa519bdb750a369a1f3935b978aa7c2775c89414ed573d60177ba1a",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/collector_client.py",
+    "source": "outputs/weak-network-panel-v2-20261102/collector_client.py",
+    "source_sha256": "1a540933c66c4e1790e6fefe99e91c9f29d8c6df8e75b8b382a77e0a4d1ca810",
+    "published_sha256": "9cf84dba7fa5566e7d1a4558e3594bc6555988759299133d2b35df1f3e1b4ca8",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/common.py",
+    "source": "outputs/weak-network-panel-v2-20261102/common.py",
+    "source_sha256": "a0d20ed302323690177aee48badd8bed7dda5f1c34f9bfe7596b60502ec9d319",
+    "published_sha256": "090f8e29223c05906d58b7a7f57b00403240bba599932b02a814f05f9ae3d490",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/control_manager.py",
+    "source": "outputs/weak-network-panel-v2-20261102/control_manager.py",
+    "source_sha256": "154d1eb938f3d2cd9828aff29aadd483e6343e5fb2d849d1dab6ddc7221b8e0e",
+    "published_sha256": "09d15075efa97c46c722441c51389447af1b42c3279bf9d6c67a03dcc94e2ec8",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/diagnostics.py",
+    "source": "outputs/weak-network-panel-v2-20261102/diagnostics.py",
+    "source_sha256": "ac1a102a31e96a9d4d1a37f61bff4694ff57f79cc8e4e3cb658d08957af5c870",
+    "published_sha256": "c27a4ef1461b37dc6baf6f4c8d4b1f179bf15338ccde23c9bc5a1f05294a0f25",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/index.html",
+    "source": "outputs/weak-network-panel-v2-20261102/index.html",
+    "source_sha256": "aa53a1600b990b19dc34c7ddbd916528b85aa34dc30425f0c87b46db0ff16350",
+    "published_sha256": "f07e2aa248b810de90d8a047d0e38ed7e10e56da101c76b70baa5e8faaa971a9",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/inspect_engine.py",
+    "source": "outputs/weak-network-panel-v2-20261102/inspect_engine.py",
+    "source_sha256": "b8e596b1f46f88d870ab569889cb15d52cf5780be8c81dba3f464a588020a392",
+    "published_sha256": "8a649e3eaff775ee4aa39b8bd0b1bc99c2ff5afbdfc1fe58b743ac5002d59d88",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/launcher.py",
+    "source": "outputs/weak-network-panel-v2-20261102/launcher.py",
+    "source_sha256": "fe9862744b91ce2f88d0d2ef6a7974c1ae41f27001f24dffd08c5bcdf50bc106",
+    "published_sha256": "8876e1c819d09ceb0326dbc16e3f63c1eed66fb3a2b326fb2ab8a3c8f9d97e37",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/NativeCollector.cs",
+    "source": "outputs/weak-network-panel-v2-20261102/NativeCollector.cs",
+    "source_sha256": "9a5522e419f50e16106c433d35258c0510fa1403042bcd9a8b3927795115bf42",
+    "published_sha256": "8ccda7edf54c6d13d48c2a151764a6878d9501908725c1f3926e2b6129e1d08d",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/netbalancer.py",
+    "source": "outputs/weak-network-panel-v2-20261102/netbalancer.py",
+    "source_sha256": "5d7a908b4eb1d4e543b5c4939bd11e5353d2147561b4183f8a41c5374a8d7310",
+    "published_sha256": "4c80a51ea29955cbdfe5dc165e89e6ce9e7150f2093c244682a453850528c328",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/NetBalancerReadback.cs",
+    "source": "outputs/weak-network-panel-v2-20261102/NetBalancerReadback.cs",
+    "source_sha256": "e62cf625fce26efcb16baca89da1301294b406e7d2f9f0e6ee2a79a087df93f2",
+    "published_sha256": "bbffbec0a4fee6cbd404d0aeb8eab312175e46d78e56be942f59ae2dfaae58ba",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/panel.css",
+    "source": "outputs/weak-network-panel-v2-20261102/panel.css",
+    "source_sha256": "83496d3afb1791504402a9c3ba336f6bc324dd49a83c7e3fd3f9ec00730844dc",
+    "published_sha256": "5e7a6956f08ca5439e4a9e47fb1d28cffa9a60b4e4b074226daa482331defbf9",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/panel.js",
+    "source": "outputs/weak-network-panel-v2-20261102/panel.js",
+    "source_sha256": "b0770bced21f4372b21d605ad4841e08a0e440a929eb12c66ee64b6f6d90acee",
+    "published_sha256": "ae781e1be76aef9714fad65d640c9a51208b23707f09c528b209048bf6b9d817",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/recovery.py",
+    "source": "outputs/weak-network-panel-v2-20261102/recovery.py",
+    "source_sha256": "208426250ece2f2fdadee9072f92bed68956b4cf84db5f041cc71da0c3103b8c",
+    "published_sha256": "f7f2bf2573f1bbb5cd3977c98da40d925d05bee48551b68d14fd18de716f2a1a",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/selftest.py",
+    "source": "outputs/weak-network-panel-v2-20261102/selftest.py",
+    "source_sha256": "f2da2c7ff121431e4923dfa5a2395f0d1cc798d11ff0d6fd08cb5a23469b56f8",
+    "published_sha256": "c81251ead7b079ce0b8bc411e98a385e9c7118ee656350a2fafbbd31e0dbee56",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/server.py",
+    "source": "outputs/weak-network-panel-v2-20261102/server.py",
+    "source_sha256": "b9bfa8313319b4c337dfdd04e3f5f1ee02a0e366382e11b4379b03c8d78e4d05",
+    "published_sha256": "b07fde0d4a711c258985a3ce4c5fae11f2c92e1526b8bfc546c09d34031778ef",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/control_live_checks.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/control_live_checks.py",
+    "source_sha256": "9d216895456250aca6eab58b97eb66298e54b0bbf395f39ba07a1a8c75d5b751",
+    "published_sha256": "5bb09773f2e26a02586cbee08817709fcb195a7ba0fc823778527947622ae540",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/drop_live_checks.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/drop_live_checks.py",
+    "source_sha256": "8e67f8b87f48833fa57653e9c0568e87d79cf5f4699025136450c9b8d90b70e5",
+    "published_sha256": "bb202ab52789ad67da2c248d5fe5d730f40cdae0e38401c624d705c92a69fc0d",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/InspectVendor.cs",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/InspectVendor.cs",
+    "source_sha256": "cd6b31c73befd5e4fcacbf15ab01fb5295eed5c6eee229e6905238db33ad3bbe",
+    "published_sha256": "098e57a395f6871c7cfc7696c40ff5291fba4537df83bc0f7679215b4b907b75",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/tests/inspect_nb.ps1",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/inspect_nb.ps1",
+    "source_sha256": "2afd03821a590c247d477985bd60638f0aea5ecb070fcbe0b828752eb295eef5",
+    "published_sha256": "cc8f841915c30c2bec44afd219d72908a2dbd50ca2baac5686e3ef2e88a5a0ee",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/tests/lease_owner.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/lease_owner.py",
+    "source_sha256": "286c16e83e746ec83b53e18762064f3386757e04ea9bbbd3ccd8ab4e9975a993",
+    "published_sha256": "196a9362a808f248e67ae58729fdadf74c9184ba12587e92c3a66b9ed8694961",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/live_checks.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/live_checks.py",
+    "source_sha256": "094b6b44226d2dd31f812a2df5baf63733139a2fd2d01175bc961829c1498997",
+    "published_sha256": "bfd6821b685b82651a75bf713ceb9cad585a76efb246ea5a38cf285f8f955341",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/query_nb.ps1",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/query_nb.ps1",
+    "source_sha256": "abda78f9b964d368697341d6fd174e576575ba4ef50b8fefb02dfc3e77df65ff",
+    "published_sha256": "a555bf143744f31424e882c5a715f8848b9bdc37090a30194a690b1caa0474bf",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/tests/report_packet_loss.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/report_packet_loss.py",
+    "source_sha256": "da4ded4ac688c6f31b5847384cc861edf3745aa4f14084ee4b36e269bcc1960a",
+    "published_sha256": "a9ed8a32091f79dcdbd8741e48ebb306e519371dc5f30a3c7db7526a942789fe",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/test_drop.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/test_drop.py",
+    "source_sha256": "24f6f393ddce64c52e79fa533d746e9d893607f64f9e91e0965cef6e7be82868",
+    "published_sha256": "49b29ed9dd5a1603db2c5a571286ce1dfaffefae0ea8008bb90933b927a37569",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/test_packet_loss.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/test_packet_loss.py",
+    "source_sha256": "7e6fc24f2eb4dabf8cabcb22ff2efbf3a5a406706b40f2238f6bde9068815abd",
+    "published_sha256": "bb894468e152ff00c8128cbf38b0890c63a9cec37cef956e01661804a728a606",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/test_panel.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/test_panel.py",
+    "source_sha256": "a022e23ea19efdc3c8e0cb34e546e32a68098e265a6d4ae7d76468791f17119a",
+    "published_sha256": "93e295073aa88ec25402bacfe374d619185bf7b956f54c1fb5262dabe8840d21",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/UdpSequenceProbe.cs",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/UdpSequenceProbe.cs",
+    "source_sha256": "2a18e3c0ad147e3155bd0f5be0ec9e0777b323aed1fc626350cb525e761eb3e8",
+    "published_sha256": "2848bba85a524d5e55bfefca570a844de047477d9d234a212ecac7551b0ef04c",
+    "changes": "现行源码，无运行时配置。"
+  },
+  {
+    "file": "scripts/weak-network/tests/udp_sequence_peer.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/udp_sequence_peer.py",
+    "source_sha256": "8c132fee786db4268878700643e068543e7c8180dce62d275abc6c23c950fbae",
+    "published_sha256": "ddd5f96e6ab46827d139e91291b0833ea2810cdeca80e6088cdb2511a969952e",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/verify_live_reader.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/verify_live_reader.py",
+    "source_sha256": "6499ca9af313608a15e2db6cd0e1fec2163424e7ff14fcead0b0505c86b73f82",
+    "published_sha256": "87295ba75034dfabecaadfbfeadf911cd70aa9076e624168959d49948b711877",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  },
+  {
+    "file": "scripts/weak-network/tests/verify_packet_loss.py",
+    "source": "outputs/weak-network-panel-v2-20261102/tests/verify_packet_loss.py",
+    "source_sha256": "58d5098db850f1d6bd85128d6d3961dc56424b2e3c1f8774679172d6dfb6952d",
+    "published_sha256": "c6decb75d156ab3341edd56a83a3494185d5a93448ca60c3797f56b6d721416e",
+    "changes": "路径及运行时改为环境变量；分析算法保持原文。"
+  }
+]

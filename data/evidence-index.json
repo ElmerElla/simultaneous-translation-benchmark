@@ -1,0 +1,660 @@
+[
+  {
+    "product": "Transync AI",
+    "case_id": "N01",
+    "video_id": "transync-normal",
+    "original_pts_s": 48.904,
+    "image": "evidence/images/transync-n01.png",
+    "label": "首次启动·克隆开启",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Transync AI",
+    "case_id": "N02",
+    "video_id": "transync-normal",
+    "original_pts_s": 81.129,
+    "image": "evidence/images/transync-n02.png",
+    "label": "同进程新会话·克隆开启",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Transync AI",
+    "case_id": "N03",
+    "video_id": "transync-normal",
+    "original_pts_s": 124.454,
+    "image": "evidence/images/transync-n03.png",
+    "label": "同进程新会话·默认音色",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Transync AI",
+    "case_id": "W01",
+    "video_id": "transync-network",
+    "original_pts_s": 39.194,
+    "image": "evidence/images/transync-w01.png",
+    "label": "上行100ms+下行100ms",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Transync AI",
+    "case_id": "W02",
+    "video_id": "transync-network",
+    "original_pts_s": 64.0,
+    "image": "evidence/images/transync-w02.png",
+    "label": "中断10秒期间的输入",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Transync AI",
+    "case_id": "W03",
+    "video_id": "transync-network",
+    "original_pts_s": 82.8,
+    "image": "evidence/images/transync-w03.png",
+    "label": "撤销中断后同文重播",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Transync AI",
+    "case_id": "W04",
+    "video_id": "transync-loss10",
+    "original_pts_s": 30,
+    "image": "evidence/images/transync-w04.png",
+    "label": "上下行各10%概率丢包·克隆开启",
+    "image_crop": {
+      "x": 10,
+      "y": 245,
+      "w": 940,
+      "h": 755
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "N01",
+    "video_id": "parley-v01",
+    "original_pts_s": 29,
+    "image": "evidence/images/parley-n01.png",
+    "label": "豆包/系统音色VV女声/首次",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 885,
+      "h": 680
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "N02",
+    "video_id": "parley-v01",
+    "original_pts_s": 54,
+    "image": "evidence/images/parley-n02.png",
+    "label": "豆包/系统音色/再次输入",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 885,
+      "h": 680
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "C01",
+    "video_id": "parley-v03",
+    "original_pts_s": 25,
+    "image": "evidence/images/parley-c01.png",
+    "label": "豆包/实时克隆输入声音",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 885,
+      "h": 680
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "W01",
+    "video_id": "parley-v02",
+    "original_pts_s": 32,
+    "image": "evidence/images/parley-w01.png",
+    "label": "豆包/上下行各100ms配置",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 750,
+      "h": 680
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "R01",
+    "video_id": "parley-v02",
+    "original_pts_s": 54,
+    "image": "evidence/images/parley-r01.png",
+    "label": "中断期间/撤销附近短段",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 750,
+      "h": 680
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "R02",
+    "video_id": "parley-v02",
+    "original_pts_s": 76,
+    "image": "evidence/images/parley-r02.png",
+    "label": "恢复后重播合并输出",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 885,
+      "h": 680
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "W04",
+    "video_id": "parley-v02",
+    "original_pts_s": 104,
+    "image": "evidence/images/parley-w04.png",
+    "label": "豆包/上下行各10%概率丢包配置",
+    "image_crop": {
+      "x": 350,
+      "y": 190,
+      "w": 885,
+      "h": 680
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "N01",
+    "video_id": "palabra-v01",
+    "original_pts_s": 59,
+    "image": "evidence/images/palabra-n01.png",
+    "label": "首次录次",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "N02",
+    "video_id": "palabra-v03",
+    "original_pts_s": 40,
+    "image": "evidence/images/palabra-n02.png",
+    "label": "正常录制",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "C01",
+    "video_id": "palabra-v04",
+    "original_pts_s": 43,
+    "image": "evidence/images/palabra-c01.png",
+    "label": "文件标称音色克隆",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "W01",
+    "video_id": "palabra-v02",
+    "original_pts_s": 46,
+    "image": "evidence/images/palabra-w01.png",
+    "label": "上下行各100ms配置",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "W02",
+    "video_id": "palabra-v02",
+    "original_pts_s": 70,
+    "image": "evidence/images/palabra-w02.png",
+    "label": "中断后短残段",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "W03",
+    "video_id": "palabra-v02",
+    "original_pts_s": 100,
+    "image": "evidence/images/palabra-w03.png",
+    "label": "恢复后重新播放",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Palabra",
+    "case_id": "W04",
+    "video_id": "palabra-v02",
+    "original_pts_s": 132,
+    "image": "evidence/images/palabra-w04.png",
+    "label": "上下行各10%概率丢包配置",
+    "image_crop": {
+      "x": 10,
+      "y": 190,
+      "w": 890,
+      "h": 600
+    }
+  },
+  {
+    "product": "Maestra Live",
+    "case_id": "N01",
+    "video_id": "maestra-v01",
+    "original_pts_s": 38,
+    "image": "evidence/images/maestra-n01.png",
+    "label": "首次录次/Puck",
+    "image_crop": {
+      "x": 20,
+      "y": 175,
+      "w": 1860,
+      "h": 630
+    }
+  },
+  {
+    "product": "Maestra Live",
+    "case_id": "N02",
+    "video_id": "maestra-v03",
+    "original_pts_s": 30,
+    "image": "evidence/images/maestra-n02.png",
+    "label": "既有正常录次/Puck",
+    "image_crop": {
+      "x": 20,
+      "y": 175,
+      "w": 1860,
+      "h": 825
+    }
+  },
+  {
+    "product": "Maestra Live",
+    "case_id": "W01",
+    "video_id": "maestra-v02",
+    "original_pts_s": 33,
+    "image": "evidence/images/maestra-w01.png",
+    "label": "DevTools延迟100ms配置",
+    "image_crop": {
+      "x": 20,
+      "y": 175,
+      "w": 1200,
+      "h": 630
+    }
+  },
+  {
+    "product": "Maestra Live",
+    "case_id": "W02",
+    "video_id": "maestra-v02",
+    "original_pts_s": 68.5,
+    "image": "evidence/images/maestra-w02.png",
+    "label": "Offline撤销后新段",
+    "image_crop": {
+      "x": 20,
+      "y": 175,
+      "w": 1200,
+      "h": 630
+    }
+  },
+  {
+    "product": "Maestra Live",
+    "case_id": "W04",
+    "video_id": "maestra-v02",
+    "original_pts_s": 100,
+    "image": "evidence/images/maestra-w04.png",
+    "label": "DevTools 10%丢包配置",
+    "image_crop": {
+      "x": 20,
+      "y": 175,
+      "w": 1200,
+      "h": 630
+    }
+  },
+  {
+    "product": "JotMe",
+    "case_id": "N01",
+    "video_id": "jotme-v03",
+    "original_pts_s": 39,
+    "image": "evidence/images/jotme-n01.png",
+    "label": "首次录次",
+    "image_crop": {
+      "x": 30,
+      "y": 235,
+      "w": 680,
+      "h": 560
+    }
+  },
+  {
+    "product": "JotMe",
+    "case_id": "N02",
+    "video_id": "jotme-v03",
+    "original_pts_s": 70,
+    "image": "evidence/images/jotme-n02.png",
+    "label": "同进程重播",
+    "image_crop": {
+      "x": 30,
+      "y": 235,
+      "w": 680,
+      "h": 560
+    }
+  },
+  {
+    "product": "JotMe",
+    "case_id": "W01",
+    "video_id": "jotme-v02",
+    "original_pts_s": 23,
+    "image": "evidence/images/jotme-w01.png",
+    "label": "上下行各100ms配置",
+    "image_crop": {
+      "x": 30,
+      "y": 235,
+      "w": 680,
+      "h": 560
+    }
+  },
+  {
+    "product": "JotMe",
+    "case_id": "R01",
+    "video_id": "jotme-v02",
+    "original_pts_s": 52,
+    "image": "evidence/images/jotme-r01.png",
+    "label": "中断与重播合并新段",
+    "image_crop": {
+      "x": 30,
+      "y": 235,
+      "w": 680,
+      "h": 560
+    }
+  },
+  {
+    "product": "JotMe",
+    "case_id": "W04",
+    "video_id": "jotme-v01",
+    "original_pts_s": 37,
+    "image": "evidence/images/jotme-w04.png",
+    "label": "上下行各10%概率丢包配置",
+    "image_crop": {
+      "x": 30,
+      "y": 235,
+      "w": 680,
+      "h": 560
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "N01",
+    "video_id": "wordly-v01",
+    "original_pts_s": 28,
+    "image": "evidence/images/wordly-n01.png",
+    "label": "首次字幕录次",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "N03",
+    "video_id": "wordly-v01",
+    "original_pts_s": 82.8,
+    "image": "evidence/images/wordly-n03.png",
+    "label": "开启播音后的录次",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "N04",
+    "video_id": "wordly-v01",
+    "original_pts_s": 100,
+    "image": "evidence/images/wordly-n04.png",
+    "label": "正常录像后段10%配置",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "B01",
+    "video_id": "wordly-v02",
+    "original_pts_s": 27,
+    "image": "evidence/images/wordly-b01.png",
+    "label": "弱网录像/No throttling基线1",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "B02",
+    "video_id": "wordly-v02",
+    "original_pts_s": 61,
+    "image": "evidence/images/wordly-b02.png",
+    "label": "弱网录像/No throttling基线2",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "W01a",
+    "video_id": "wordly-v02",
+    "original_pts_s": 96,
+    "image": "evidence/images/wordly-w01a.png",
+    "label": "DevTools 100ms/首次输入",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "W01b",
+    "video_id": "wordly-v02",
+    "original_pts_s": 118,
+    "image": "evidence/images/wordly-w01b.png",
+    "label": "DevTools 100ms/继续重播",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "Wordly",
+    "case_id": "W04",
+    "video_id": "wordly-v02",
+    "original_pts_s": 149,
+    "image": "evidence/images/wordly-w04.png",
+    "label": "DevTools 10%/末次输入",
+    "image_crop": {
+      "x": 25,
+      "y": 835,
+      "w": 1060,
+      "h": 155
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "N01",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 54,
+    "image": "evidence/images/iflytek-n01.png",
+    "label": "首次输入",
+    "image_crop": {
+      "x": 30,
+      "y": 350,
+      "w": 610,
+      "h": 440
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "N02",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 84,
+    "image": "evidence/images/iflytek-n02.png",
+    "label": "正常再次输入",
+    "image_crop": {
+      "x": 30,
+      "y": 350,
+      "w": 440,
+      "h": 440
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "S100",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 120,
+    "image": "evidence/images/iflytek-s100.png",
+    "label": "客户端上下行各100ms配置",
+    "image_crop": {
+      "x": 30,
+      "y": 350,
+      "w": 610,
+      "h": 440
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "Soff",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 142,
+    "image": "evidence/images/iflytek-soff.png",
+    "label": "客户端中断相关输入",
+    "image_crop": {
+      "x": 30,
+      "y": 210,
+      "w": 610,
+      "h": 480
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "Sdrop",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 182,
+    "image": "evidence/images/iflytek-sdrop.png",
+    "label": "客户端上下行各10%丢包配置",
+    "image_crop": {
+      "x": 30,
+      "y": 210,
+      "w": 610,
+      "h": 480
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "R100",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 240,
+    "image": "evidence/images/iflytek-r100.png",
+    "label": "收听页100ms配置",
+    "image_crop": {
+      "x": 30,
+      "y": 210,
+      "w": 1450,
+      "h": 530
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "Roff",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 266,
+    "image": "evidence/images/iflytek-roff.png",
+    "label": "收听页Offline相关输入",
+    "image_crop": {
+      "x": 30,
+      "y": 210,
+      "w": 1450,
+      "h": 530
+    }
+  },
+  {
+    "product": "讯飞同传",
+    "case_id": "Rdrop",
+    "video_id": "iflytek-v01",
+    "original_pts_s": 308,
+    "image": "evidence/images/iflytek-rdrop.png",
+    "label": "收听页WebRTC丢包10%配置",
+    "image_crop": {
+      "x": 30,
+      "y": 210,
+      "w": 1450,
+      "h": 530
+    }
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-06",
+  "products": 7,
+  "scenes": 47,
+  "timestamp_records_recomputed": 49,
+  "video_count": 19,
+  "frame_count_checked": 49432,
+  "all_frames_opaque_outside_approved_regions": true,
+  "non_test_audio_ranges_muted": true,
+  "key_image_ocr_count": 47,
+  "configured_privacy_marker_hits_in_key_images": 0,
+  "benchmark_unit_tests": {
+    "count": 6,
+    "passed": true
+  },
+  "packet_counting_tests": {
+    "count": 6,
+    "passed": true,
+    "scope": "仅现行弱网源码的纯统计逻辑；未改变网络状态。"
+  },
+  "browser_checks": {
+    "html_rendering": true,
+    "video_playback": true,
+    "evidence_link_seeks_to_original_pts": true,
+    "observed_seek_s": 48.904
+  },
+  "source_media_hashes_match_recorded_manifests": true,
+  "media_validation": {
+    "products": 7,
+    "scenes": 47,
+    "videos": 19,
+    "media_hashes_checked": true
+  },
+  "limits": [
+    "没有新增全程人工逐秒试听或逐帧人工审片。",
+    "OCR/ASR与自动检查不证明绝对不存在遗漏。",
+    "没有复跑产品测试或网络损伤测试。"
+  ]
+}
