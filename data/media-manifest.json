@@ -858,5 +858,42 @@
     "audio_streams_retained": 2,
     "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
     "review_status": "reviewed"
+  },
+  {
+    "id": "parley-qwen-normal-20261111",
+    "product": "parley",
+    "file": "parley-qwen-normal-20261111.mp4",
+    "release_tag": "parley-retest-20261111",
+    "original_sha256": "791aa4fcd9cf0c0f10d573e69a373abfafaaa4c21dfbda9d13fdf95ae9eb1032",
+    "public_sha256": "531e060d9a1d0d02976f74dae063ddf6b19eb3a2b64d4230fae5f7f956443d7b",
+    "original_duration_s": 51.233,
+    "public_duration_s": 51.233,
+    "size_bytes": 950073,
+    "original_video_pts_at_public_zero_s": 0.0,
+    "retained_original_interval_s": [
+      0,
+      51.233
+    ],
+    "time_mapping": "原视频 PTS 对应公开秒数。不变速、不拼接。",
+    "redaction": "固定裁切字幕区域，区间外黑屏，去除原件元数据。",
+    "revealed_regions": [
+      {
+        "x": 885,
+        "y": 236,
+        "w": 550,
+        "h": 290,
+        "from_s": 3.6,
+        "until_s": 49.4
+      }
+    ],
+    "retained_test_audio_intervals_s": [
+      [
+        5.6,
+        47.8
+      ]
+    ],
+    "audio_streams_retained": 1,
+    "audio_note": "保留一条混音，测试时间外静音。",
+    "review_status": "reviewed"
   }
 ]

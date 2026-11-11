@@ -371,14 +371,76 @@
     "name": "Parley Voice",
     "analysis_date": "2026-11-03",
     "summary": {
-      "翻译事实覆盖": "Parley Voice 的正常录像 V01（N01、N02）已排除，本批无已采用的正常录次。\n保留的豆包模式场景中，100 ms、10% 配置录次的字幕与辅助译音各保留 4/5，F1 的动作或对象发生变化。实时克隆录次为 3 项完整、1 项部分、1 项错误，预算金额保留但缺少上限限定。恢复与重播合并段的归属未确认。",
-      "音色克隆": "V01 提供的系统音色对照已排除。本次保留实时克隆录次 C01。该录次的无重叠 F4–F5 英文尾句与原声参考的 CAMPPlus 原始余弦为 0.5450，仅描述该短样本。",
-      "实时性能": "保留录次的录像首显／首响，单位秒：克隆 3.7／4.6，100 ms 配置 4.0／4.6，10% 配置 4.1／4.4。以原声声学起点计，重叠首响采用同源抵消辅助估计。正常首显、首响、启动阶段与末响数据随 V01 排除。音画通路未标定。",
-      "译音质量": "C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。V01 的系统音色尾段已排除，主观音质缺少盲听评分。",
+      "翻译事实覆盖": "11 月 11 日千问 Live 补录中，首次会话与同会话再次输入的英文字幕、译声均保留 S01 五项事实。\n保留的豆包模式场景中，100 ms、10% 配置录次的字幕与辅助译音各保留 4/5，F1 的动作或对象发生变化。实时克隆录次为 3 项完整、1 项部分、1 项错误，预算金额保留但缺少上限限定。恢复与重播合并段的归属未确认。",
+      "音色克隆": "千问 Live 补录两轮均启用实时克隆，无默认音色对照。本次保留实时克隆录次 C01。该录次的无重叠 F4–F5 英文尾句与原声参考的 CAMPPlus 原始余弦为 0.5450，仅描述该短样本。",
+      "实时性能": "千问 Live 首轮首显／首响约 4.4／4.5 秒，再次输入约 4.2／4.1 秒。字幕尾句位于录像 18.200／38.700 秒，译声结束约在 25.76／47.73 秒。原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。\n豆包历史录次首显／首响约为克隆 3.7／4.6 秒，100 ms 配置 4.0／4.6 秒，10% 配置 4.1／4.4 秒。",
+      "译音质量": "C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。新录像的三个标记音轨解码后是同一混音。两轮均可核对五项事实，暂无独立译音声纹、峰值和主观音质评分。",
       "弱网表现": "100ms及10%概率丢包配置均有完整输出，但F1语义错译；本地工具控制parley.exe，设置上下行各100ms或10%，实际业务损伤未独立验证。\n约42～53秒中断显示期间已有残段声/字幕；38.4秒输入早于应用，54.8秒又重播。恢复合并段出现可用时间、从现在到周五等无来源内容。\n中断作用覆盖、旧缓存与新输入归属受限，不报告严格完整恢复耗时。",
-      "记录状态": "当前采用 5 组克隆与弱网场景。正常录像 V01 的 N01、N02，以及以其为基线的音色和译音对照均排除。\n断网恢复与实际业务丢包率未独立验证。正常表现暂无可采用样本。"
+      "记录状态": "采用两组千问 Live 正常录次与五组豆包历史录次。旧正常录像 V01 的 N01、N02 及基于它的音色对照仍标记排除。断网恢复与实际业务丢包率未独立验证。"
     },
     "cases": [
+      {
+        "id": "N03",
+        "video": "V04",
+        "frame": 750,
+        "pts_s": 25,
+        "label": "千问 Live · 首次开启翻译会话",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10:00 a.m. next Tuesday.",
+          "The budget cap is 30,000 yuan.",
+          "Not 130,000 yuan.",
+          "The release will only occur if the test passes.",
+          "If any issues are found, it will be postponed until Friday."
+        ],
+        "note": "录像开始时客户端已打开。界面显示实时克隆输入声音，线路为新加坡。 录像混音的英文辅助转写保留五项事实。",
+        "evidence_image": "evidence/images/parley-n03.png",
+        "video_id": "parley-qwen-normal-20261111"
+      },
+      {
+        "id": "N04",
+        "video": "V04",
+        "frame": 1320,
+        "pts_s": 44,
+        "label": "千问 Live · 同会话再次输入",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "quotes": [
+          "Please confirm the test results by 10:00 a.m. next Tuesday.",
+          "The budget limit is 30,000 yuan.",
+          "Not 130,000 yuan.",
+          "The release will only occur if the test passes.",
+          "If any issues are found, it will be postponed until Friday."
+        ],
+        "note": "同一会话再次输入 S01。两轮内容接在同一字幕气泡内，只核对新增英文。 录像混音的英文辅助转写保留五项事实。",
+        "evidence_image": "evidence/images/parley-n04.png",
+        "video_id": "parley-qwen-normal-20261111"
+      },
       {
         "id": "N01",
         "video": "V01",
@@ -652,6 +714,36 @@
     ],
     "timing": [
       {
+        "scene": "N03",
+        "video": "V04",
+        "label": "千问 Live · 首次开启翻译会话",
+        "source_pts_s": 5.7,
+        "subtitle_pts_s": 10.1,
+        "target_audio_pts_s": 10.19,
+        "subtitle_delay_s": 4.4,
+        "audio_delay_s": 4.49,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 302,
+        "first_present_frame": 303,
+        "stable_subtitle_pts_s": 10.2,
+        "note": "原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。"
+      },
+      {
+        "scene": "N04",
+        "video": "V04",
+        "label": "千问 Live · 同会话再次输入",
+        "source_pts_s": 26.73,
+        "subtitle_pts_s": 30.933,
+        "target_audio_pts_s": 30.81,
+        "subtitle_delay_s": 4.203,
+        "audio_delay_s": 4.08,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 927,
+        "first_present_frame": 928,
+        "stable_subtitle_pts_s": 30.967,
+        "note": "原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。"
+      },
+      {
         "scene": "N01",
         "video": "V01",
         "source_template_pts_s": 8.258875,
@@ -780,40 +872,32 @@
       }
     ],
     "startup": {
-      "summary": "程序窗口3～4秒出现，主界面4～5秒；会话就绪7～8秒之间，输入8.3秒开始。",
-      "interval_semantics": "状态发生于前一截图之后、后一截图之前/当时；不是精确点击时间或单独可比较的纯网络连接耗时。",
-      "stages": [
-        {
-          "stage": "程序窗口出现",
-          "video": "V01",
-          "after_pts_s": 3,
-          "by_pts_s": 4,
-          "note": "3秒桌面，4秒Parley透明加载窗口出现。"
-        },
-        {
-          "stage": "主界面出现",
-          "video": "V01",
-          "after_pts_s": 4,
-          "by_pts_s": 5,
-          "note": "4秒加载、5秒准备好了就开始配置页可见；不等于会话已连接。"
-        },
-        {
-          "stage": "会话准备中",
-          "video": "V01",
-          "after_pts_s": 5,
-          "by_pts_s": 6,
-          "note": "5秒开始入口，6秒正在准备双向同传。"
-        },
-        {
-          "stage": "会话可接收输入",
-          "video": "V01",
-          "after_pts_s": 7,
-          "by_pts_s": 8,
-          "note": "7秒仍准备中，8秒显示正在聆听与计时。"
-        }
-      ]
+      "summary": "录像起点客户端已打开。约 1.33 秒显示会话准备中，3.53 秒进入监听，界面状态转换约 2.2 秒。进程启动耗时无法从此录像测得。",
+      "video": "V04",
+      "preparing_pts_s": 1.333,
+      "listening_pts_s": 3.533
     },
     "completion": [
+      {
+        "scene": "N03",
+        "video": "V04",
+        "source_pts_s": 5.7,
+        "subtitle_tail_pts_s": 18.2,
+        "last_absent_frame": 545,
+        "first_present_frame": 546,
+        "audio_end_pts_s": 25.76,
+        "audio_end_method": "末词波形与英文转写定位，尾音以 10 ms RMS 约 −50 dBFS 为界。"
+      },
+      {
+        "scene": "N04",
+        "video": "V04",
+        "source_pts_s": 26.73,
+        "subtitle_tail_pts_s": 38.7,
+        "last_absent_frame": 1160,
+        "first_present_frame": 1161,
+        "audio_end_pts_s": 47.73,
+        "audio_end_method": "末词波形与英文转写定位，尾音以 10 ms RMS 约 −50 dBFS 为界。"
+      },
       {
         "status": "adjacent_frame_candidate",
         "subtitle_tail_pts_s": 21.666666666666668,
@@ -924,7 +1008,8 @@
         "frames/V02_controls_contact_1.jpg"
       ]
     ],
-    "limits": []
+    "limits": [],
+    "retest_date": "2026-11-11"
   },
   {
     "slug": "palabra",

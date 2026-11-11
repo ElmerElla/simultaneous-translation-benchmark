@@ -34,7 +34,7 @@ class TimingAndEvidenceTests(unittest.TestCase):
         self.assertTrue(any(r['audio_delay_s'] is None for r in rows))
 
     def test_every_published_case_has_an_existing_in_range_evidence_frame(self):
-        self.assertEqual(benchmark.validate()['scenes'], 47)
+        self.assertEqual(benchmark.validate()['scenes'], 49)
 
 
 if __name__ == '__main__':

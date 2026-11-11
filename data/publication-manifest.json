@@ -10,8 +10,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "1ce04beef9a0b2ca6f94968566c6db3cb227a9634878079a3dfbe4e36edc6671",
-      "size_bytes": 3520
+      "sha256": "f0548808d6186276f66590a38464623e9e27835acb1fd35339dd695d9ac8e42e",
+      "size_bytes": 3699
     },
     {
       "path": "data/audio-manifest.json",
@@ -20,23 +20,23 @@
     },
     {
       "path": "data/comparison.csv",
-      "sha256": "6579ed963682acaa67f6c82de0fca5669691e3fe191fdee8596fb9a36452b87f",
-      "size_bytes": 19531
+      "sha256": "35280a7926ff2b832227554967f47ebe9fd7bd20d94d046bb8b4c496c659cb4f",
+      "size_bytes": 19818
     },
     {
       "path": "data/evidence-index.csv",
-      "sha256": "1924a2dc47f5193742c68f2f297dfee4f56055ec734cc165db42542a824d73bc",
-      "size_bytes": 6300
+      "sha256": "d5dab70bf30ad3e37ed8ba0f89b1281e746b3048e557ef24d444fbc961409940",
+      "size_bytes": 6623
     },
     {
       "path": "data/evidence-index.json",
-      "sha256": "70ffeda40fa01d60660198b13c1f3db4290dbd5fc17ce387a19d5b8185e36437",
-      "size_bytes": 14604
+      "sha256": "deb2019bfc724ed8f4462575c540630dbacb62acdb993a582a095766f18c62b7",
+      "size_bytes": 15283
     },
     {
       "path": "data/media-manifest.json",
-      "sha256": "b212a3391bdc9d1244e369353f6a400b5e29adf53c4589c9e66d56c561ccb6fc",
-      "size_bytes": 25546
+      "sha256": "6f136a01e33e9f9db941cdcea2a4085f02f2c671d91e8af9f576d456b8741ad9",
+      "size_bytes": 26702
     },
     {
       "path": "data/reference.json",
@@ -45,13 +45,13 @@
     },
     {
       "path": "data/results.json",
-      "sha256": "b691e0be6823af02acedc65531c7b8cc5086c6c3aad71b38e6b1becf560064e7",
-      "size_bytes": 148743
+      "sha256": "576869f85a33f5ed68d5ae0d7dde244f9d1379738d1dce20d09f6c233c48ec7f",
+      "size_bytes": 152232
     },
     {
       "path": "data/scenario-review.csv",
-      "sha256": "1ad7a62370a429d34bf9d91c5aafd9146a3aa8ec7e599f258e47d0c7ff2adb50",
-      "size_bytes": 19127
+      "sha256": "df77b2bd018ed79e5cd63761cb0b9193656aa55308725a8daaef84fbc3a30785",
+      "size_bytes": 20028
     },
     {
       "path": "data/source-code-manifest.json",
@@ -230,8 +230,8 @@
     },
     {
       "path": "data/timing.csv",
-      "sha256": "7d5f65506a97b8ad08f40ba995459b9bd4a9cf762af64cfe4332a0545614033d",
-      "size_bytes": 9397
+      "sha256": "73f4078dbbba78de8a2868ea35e1e838f935cbcf853183b96c55b83982e83d04",
+      "size_bytes": 9819
     },
     {
       "path": "data/verification.json",
@@ -245,23 +245,23 @@
     },
     {
       "path": "docs/data-review-20261111.md",
-      "sha256": "4e062ff4bf2e9b3176c684c533213e84f41519dd0363964052ba9c6228ceadb4",
-      "size_bytes": 4874
+      "sha256": "c6728c56d69f1a13f04424e2111927b817a8943e40d532e8db1747790b5c3574",
+      "size_bytes": 6599
     },
     {
       "path": "docs/privacy.md",
-      "sha256": "52aec998d56a9639b5f08ef99a09c4ba19520dc24744e9cbe7db5f1f56500117",
-      "size_bytes": 5272
+      "sha256": "71cb968c0b2ef2b3a22f0f796f0d3d7a2c87422d2920e253eddd70be411e544b",
+      "size_bytes": 5413
     },
     {
       "path": "docs/report.md",
-      "sha256": "f006f801c3dab71983b0911f58408fdfc20d563caaf371028959071c349a29a7",
-      "size_bytes": 56665
+      "sha256": "9a72b59a4a7ac0a74682365871f465b02386d5b8808c6119dbf9d668927a1b91",
+      "size_bytes": 58297
     },
     {
       "path": "docs/reproducibility.md",
-      "sha256": "82b083d9d336fadf7da8cf604cf54ae753776bdf46d33c13649724de2e05b594",
-      "size_bytes": 5732
+      "sha256": "a759231cfbc8ef4b4f094880001b8e24dc2e5450f7c78e5ca2f22f220fe2b802",
+      "size_bytes": 6029
     },
     {
       "path": "evidence/images/iflytek-n01.png",
@@ -404,6 +404,16 @@
       "size_bytes": 108476
     },
     {
+      "path": "evidence/images/parley-n03.png",
+      "sha256": "1a8c79e596f8eeb126adaa52ca0cb0cf34c924c2717bf3210099965d4cd25bf7",
+      "size_bytes": 35928
+    },
+    {
+      "path": "evidence/images/parley-n04.png",
+      "sha256": "7d37ff5ab5ccf44bc03f2502b1cd8464632656988b18e5b7a4da2f943a675daa",
+      "size_bytes": 67937
+    },
+    {
       "path": "evidence/images/parley-r01.png",
       "sha256": "b6c421562e1e240380a5d1bdcc28a5e48434bbc52b21ea4ab840e17cb76d6894",
       "size_bytes": 87304
@@ -500,8 +510,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "63316aea81facec7a4833bea323546a23cd94f4c96b43ed4d7470d951d2630f5",
-      "size_bytes": 81401
+      "sha256": "62d7b576ce2fa9b65bb04e7e227c8bbeb0b5d65376019a45fdfe6190b981a553",
+      "size_bytes": 84035
     },
     {
       "path": "requirements-analysis.txt",
@@ -605,13 +615,13 @@
     },
     {
       "path": "scripts/benchmark.py",
-      "sha256": "42ce564669a59effbd9b309a6b7bec77274004421f718de8e4928530d2c888ca",
-      "size_bytes": 7170
+      "sha256": "b47cacdfb7dbff43e333ab95faff8f48eae820f57ad6d58f4f89759e066ac2bc",
+      "size_bytes": 7178
     },
     {
       "path": "scripts/build_report.py",
-      "sha256": "fb95b053fc9b59bd77a104a94124b23cc3d2e2a5ba3a405fff17c1ea53b15a57",
-      "size_bytes": 9023
+      "sha256": "f0595ac41a61c424caf6b183fd6e1903028e9037b90340a0055e6145e3529c5b",
+      "size_bytes": 9134
     },
     {
       "path": "scripts/build_scenario_review.py",
@@ -790,7 +800,7 @@
     },
     {
       "path": "tests/test_benchmark.py",
-      "sha256": "477ec5ef5b3bac1aaf50d4c7fc44f46331e67e37e711a20b3e85cca0e7353cb9",
+      "sha256": "a4714f1246564bec603335021032dbce2af7e0e8a3748f092c515398e59e21bf",
       "size_bytes": 1709
     },
     {
@@ -888,12 +898,17 @@
   "media_release_tag": "v1.0-20261106",
   "repository_revision": {
     "date": "2026-11-11",
-    "change": "当前评测排除 Parley Voice 的正常录像 V01（N01、N02）及依赖该录像的音色和译音对照。",
-    "adopted_scenes": 45,
-    "adopted_videos": 18,
-    "existing_measurements_unchanged": true,
-    "new_product_tests_performed": false,
-    "release_assets_updated": false,
-    "release_note": "v1.1 Release 和原始工作簿包含已排除录像的历史记录。"
+    "change": "新增 Parley Voice 千问 Live 正常补录 N03、N04；旧 V01 的两轮继续标记排除。",
+    "adopted_scenes": 47,
+    "adopted_videos": 19,
+    "supplemental_media_release_tag": "parley-retest-20261111",
+    "supplemental_media": [
+      {
+        "file": "parley-qwen-normal-20261111.mp4",
+        "sha256": "531e060d9a1d0d02976f74dae063ddf6b19eb3a2b64d4230fae5f7f956443d7b",
+        "size_bytes": 950073
+      }
+    ],
+    "release_note": "v1.0/v1.1 素材包和历史工作簿保留原有记录。"
   }
 }

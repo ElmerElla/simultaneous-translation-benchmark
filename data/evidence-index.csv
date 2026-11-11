@@ -6,6 +6,8 @@ Transync AI,W01,transync-network,39.194,evidence/images/transync-w01.png,上行1
 Transync AI,W02,transync-network,64.0,evidence/images/transync-w02.png,中断10秒期间的输入,"{'x': 10, 'y': 245, 'w': 940, 'h': 755}"
 Transync AI,W03,transync-network,82.8,evidence/images/transync-w03.png,撤销中断后同文重播,"{'x': 10, 'y': 245, 'w': 940, 'h': 755}"
 Transync AI,W04,transync-loss10,30,evidence/images/transync-w04.png,上下行各10%概率丢包·克隆开启,"{'x': 10, 'y': 245, 'w': 940, 'h': 755}"
+Parley Voice,N03,parley-qwen-normal-20261111,25,evidence/images/parley-n03.png,千问 Live · 首次开启翻译会话,"{'x': 885, 'y': 236, 'w': 550, 'h': 290}"
+Parley Voice,N04,parley-qwen-normal-20261111,44,evidence/images/parley-n04.png,千问 Live · 同会话再次输入,"{'x': 885, 'y': 236, 'w': 550, 'h': 290}"
 Parley Voice,N01,parley-v01,29,evidence/images/parley-n01.png,豆包/系统音色VV女声/首次,"{'x': 350, 'y': 190, 'w': 885, 'h': 680}"
 Parley Voice,N02,parley-v01,54,evidence/images/parley-n02.png,豆包/系统音色/再次输入,"{'x': 350, 'y': 190, 'w': 885, 'h': 680}"
 Parley Voice,C01,parley-v03,25,evidence/images/parley-c01.png,豆包/实时克隆输入声音,"{'x': 350, 'y': 190, 'w': 885, 'h': 680}"

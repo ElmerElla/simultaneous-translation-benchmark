@@ -6,7 +6,7 @@
 
 **[阅读完整中文测试报告](docs/report.md)** · **[查看当前对比数据](data/comparison.csv)** · **[下载历史工作簿](测试结论.xlsx)**
 
-当前采用七款软件的 45 组场景、18 段录像。Parley Voice 正常录像 V01 的 N01、N02，以及依赖 V01 的音色和译音对照，已从当前评测移出。
+当前采用七款软件的 47 组场景、19 段录像。2026-11-11 新增 Parley Voice 千问 Live 正常补录的 N03、N04。旧豆包正常录像 V01 仍标记排除。
 
 固定语料的 `5/5` 是五项事实覆盖，不能解释为总体准确率。各行条件和音轨不同，不给跨软件综合排名；弱网配置值不等于实际业务损伤。产品版本未完整留档，结论仅适用于本批录像。
 
@@ -15,13 +15,15 @@
 | 测试方法、总览、七款详情和当前采用的证据 | [完整报告](docs/report.md) |
 | 历史综合对比原表，包含已排除的 V01 | [测试结论.xlsx](测试结论.xlsx) / [隐私清理校验](data/workbook-verification.json) |
 | 结构化判定和时间戳，含排除标记 | [results.json](data/results.json) / [timing.csv](data/timing.csv) |
-| 逐轮判定与证据路径 | [复核记录](docs/data-review-20261111.md) / [45 组采用场景](data/scenario-review.csv) |
+| 逐轮判定与证据路径 | [复核记录](docs/data-review-20261111.md) / [47 组采用场景](data/scenario-review.csv) |
 | 七份历史明细工作簿的可见工作表值 | [CSV 留档](data/tables/) |
 | 视频原件/公开副本校验值与遮挡规则 | [证据清单](data/media-manifest.json) |
 | 离线核对、复算、分析与弱网工具代码 | [复现说明](docs/reproducibility.md) / [脚本](scripts/) |
 | 隐私处理、裁切说明与复核边界 | [隐私说明](docs/privacy.md) |
 
 v1.1 Release 的离线包是历史快照，包含已排除的 V01。当前结论以本页链接的仓库报告和逐轮表为准。[历史离线包](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.1-20261106)
+
+[千问 Live 正常补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)。
 
 历史素材共有 **19 段脱敏 MP4、47 张截图、2 份独立测试参考 WAV**，包括已排除的 V01。各软件的翻译播报保留在视频音轨中。[素材下载页](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106) · [S01 测试输入](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/s01-input.wav) · [音色克隆参考](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/clone-reference.wav)
 

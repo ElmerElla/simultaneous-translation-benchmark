@@ -99,6 +99,34 @@
   },
   {
     "product": "Parley Voice",
+    "case_id": "N03",
+    "video_id": "parley-qwen-normal-20261111",
+    "original_pts_s": 25,
+    "image": "evidence/images/parley-n03.png",
+    "label": "千问 Live · 首次开启翻译会话",
+    "image_crop": {
+      "x": 885,
+      "y": 236,
+      "w": 550,
+      "h": 290
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "N04",
+    "video_id": "parley-qwen-normal-20261111",
+    "original_pts_s": 44,
+    "image": "evidence/images/parley-n04.png",
+    "label": "千问 Live · 同会话再次输入",
+    "image_crop": {
+      "x": 885,
+      "y": 236,
+      "w": 550,
+      "h": 290
+    }
+  },
+  {
+    "product": "Parley Voice",
     "case_id": "N01",
     "video_id": "parley-v01",
     "original_pts_s": 29,

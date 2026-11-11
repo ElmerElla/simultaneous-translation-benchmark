@@ -46,7 +46,8 @@ def render(markdown,products,media):
                 for m in media:
                     if m['product']!=p['slug']:continue
                     case=next(c for c in p['cases'] if c['video_id']==m['id'])
-                    parts.append(f'<figure class="video-card"><figcaption><strong>{m["id"]}</strong> <span>{m["public_duration_s"]:.1f} 秒 · 脱敏浏览副本</span></figcaption><video id="video-{m["id"]}" controls playsinline preload="none" poster="{case["evidence_image"]}" src="media/{m["file"]}"></video><a href="{DOWNLOAD}{m["file"]}">单独下载视频</a></figure>')
+                    download = DOWNLOAD.replace("v1.0-20261106/", m.get("release_tag", "v1.0-20261106") + "/")
+                    parts.append(f'<figure class="video-card"><figcaption><strong>{m["id"]}</strong> <span>{m["public_duration_s"]:.1f} 秒 · 脱敏浏览副本</span></figcaption><video id="video-{m["id"]}" controls playsinline preload="none" poster="{case["evidence_image"]}" src="media/{m["file"]}"></video><a href="{download}{m["file"]}">单独下载视频</a></figure>')
                 parts.append('</div>')
             i+=1;continue
         if line.startswith('|'):
