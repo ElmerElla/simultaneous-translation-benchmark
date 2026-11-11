@@ -33,6 +33,8 @@ def review_rows(root=ROOT):
     for product in products:
         slug, name = product['slug'], product['name']
         for case in product['cases']:
+            if case.get('adopted') is False:
+                continue
             ident = case['id']
             frame = evidence[name, ident]
             assert (frame['image'], frame['video_id'], frame['original_pts_s']) == (

@@ -10,8 +10,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "533ca30fe4a6fe29dd52c7a644878022fb8841fa36e7ca11ee95a08d5215bc40",
-      "size_bytes": 4227
+      "sha256": "1ce04beef9a0b2ca6f94968566c6db3cb227a9634878079a3dfbe4e36edc6671",
+      "size_bytes": 3520
     },
     {
       "path": "data/audio-manifest.json",
@@ -20,8 +20,8 @@
     },
     {
       "path": "data/comparison.csv",
-      "sha256": "569b11426c3660788c958930ef336dc269f30dd2254ba2a7a54b31abf69ca738",
-      "size_bytes": 20590
+      "sha256": "6579ed963682acaa67f6c82de0fca5669691e3fe191fdee8596fb9a36452b87f",
+      "size_bytes": 19531
     },
     {
       "path": "data/evidence-index.csv",
@@ -45,13 +45,13 @@
     },
     {
       "path": "data/results.json",
-      "sha256": "7c21497729ab5efc20ff471725ac2afb758faa968b341e5c055a65953e53d773",
-      "size_bytes": 149552
+      "sha256": "b691e0be6823af02acedc65531c7b8cc5086c6c3aad71b38e6b1becf560064e7",
+      "size_bytes": 148743
     },
     {
       "path": "data/scenario-review.csv",
-      "sha256": "bc49707e97e05afacc41fd5425922eb9da5c6b453cc79a9e4c373906a3414654",
-      "size_bytes": 19857
+      "sha256": "1ad7a62370a429d34bf9d91c5aafd9146a3aa8ec7e599f258e47d0c7ff2adb50",
+      "size_bytes": 19127
     },
     {
       "path": "data/source-code-manifest.json",
@@ -230,8 +230,8 @@
     },
     {
       "path": "data/timing.csv",
-      "sha256": "258cc3b8b402a20f4864c4a6a36816edb3761c0206667b8b98226a2f4bc81ead",
-      "size_bytes": 9041
+      "sha256": "7d5f65506a97b8ad08f40ba995459b9bd4a9cf762af64cfe4332a0545614033d",
+      "size_bytes": 9397
     },
     {
       "path": "data/verification.json",
@@ -245,8 +245,8 @@
     },
     {
       "path": "docs/data-review-20261111.md",
-      "sha256": "53ac425edd9cf0eda7dd0ea37e94fed21d7a183faca5101205a61bfbd8a1f1b7",
-      "size_bytes": 5320
+      "sha256": "4e062ff4bf2e9b3176c684c533213e84f41519dd0363964052ba9c6228ceadb4",
+      "size_bytes": 4874
     },
     {
       "path": "docs/privacy.md",
@@ -255,8 +255,8 @@
     },
     {
       "path": "docs/report.md",
-      "sha256": "3b11403a312fdd71a1cd9e003254ef5f574c8076a839c72ceb8a56d86f6fea6f",
-      "size_bytes": 58919
+      "sha256": "f006f801c3dab71983b0911f58408fdfc20d563caaf371028959071c349a29a7",
+      "size_bytes": 56665
     },
     {
       "path": "docs/reproducibility.md",
@@ -500,8 +500,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "0c46dcc0045965f5a31e7c4530339e74ba25fe1c8ec6045afa486eaa2eb5a3c4",
-      "size_bytes": 84516
+      "sha256": "63316aea81facec7a4833bea323546a23cd94f4c96b43ed4d7470d951d2630f5",
+      "size_bytes": 81401
     },
     {
       "path": "requirements-analysis.txt",
@@ -610,13 +610,13 @@
     },
     {
       "path": "scripts/build_report.py",
-      "sha256": "c5dac3982fda72516bc72d4cbbd51fb911142294ee531fc8ae41d7891c7df861",
-      "size_bytes": 8671
+      "sha256": "fb95b053fc9b59bd77a104a94124b23cc3d2e2a5ba3a405fff17c1ea53b15a57",
+      "size_bytes": 9023
     },
     {
       "path": "scripts/build_scenario_review.py",
-      "sha256": "a3dbe26d1055fc1fd60de507fd1c3f15738434ea5b437f1591a4875d00a7be80",
-      "size_bytes": 3208
+      "sha256": "83f2c5888a17d8e16cf5e74b92a6c42b2ef3ba1b6083747a2aaaeee3c66fbb3d",
+      "size_bytes": 3278
     },
     {
       "path": "scripts/weak-network/NativeCollector.cs",
@@ -888,10 +888,12 @@
   "media_release_tag": "v1.0-20261106",
   "repository_revision": {
     "date": "2026-11-11",
-    "change": "复核七款原始记录与公开数据，新增47组逐轮复核表及复核记录，细化Parley Voice的F1解释和讯飞同传收听页的独立判定。",
+    "change": "当前评测排除 Parley Voice 的正常录像 V01（N01、N02）及依赖该录像的音色和译音对照。",
+    "adopted_scenes": 45,
+    "adopted_videos": 18,
+    "existing_measurements_unchanged": true,
     "new_product_tests_performed": false,
-    "existing_scene_and_timing_records_unchanged": true,
     "release_assets_updated": false,
-    "release_note": "v1.1 Release保留2026-11-06离线快照。repository_files对应当前仓库内容。"
+    "release_note": "v1.1 Release 和原始工作簿包含已排除录像的历史记录。"
   }
 }
