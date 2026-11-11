@@ -371,12 +371,12 @@
     "name": "Parley Voice",
     "analysis_date": "2026-11-03",
     "summary": {
-      "翻译事实覆盖": "11 月 11 日千问 Live 补录中，首次会话与同会话再次输入的英文字幕、译声均保留 S01 五项事实。\n保留的豆包模式场景中，100 ms、10% 配置录次的字幕与辅助译音各保留 4/5，F1 的动作或对象发生变化。实时克隆录次为 3 项完整、1 项部分、1 项错误，预算金额保留但缺少上限限定。恢复与重播合并段的归属未确认。",
+      "翻译事实覆盖": "千问 Live 正常两轮及 100 ms 配置、10% 丢包配置、解除中断后重播三轮，英文字幕和录入译声均为 5/5。约 10 秒中断轮至重播前无新输出。豆包历史克隆 C01 仍为 3 项完整、1 项部分、1 项错误。",
       "音色克隆": "千问 Live 补录两轮均启用实时克隆，无默认音色对照。本次保留实时克隆录次 C01。该录次的无重叠 F4–F5 英文尾句与原声参考的 CAMPPlus 原始余弦为 0.5450，仅描述该短样本。",
-      "实时性能": "千问 Live 首轮首显／首响约 4.4／4.5 秒，再次输入约 4.2／4.1 秒。字幕尾句位于录像 18.200／38.700 秒，译声结束约在 25.76／47.73 秒。原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。\n豆包历史录次首显／首响约为克隆 3.7／4.6 秒，100 ms 配置 4.0／4.6 秒，10% 配置 4.1／4.4 秒。",
-      "译音质量": "C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。新录像的三个标记音轨解码后是同一混音。两轮均可核对五项事实，暂无独立译音声纹、峰值和主观音质评分。",
-      "弱网表现": "100ms及10%概率丢包配置均有完整输出，但F1语义错译；本地工具控制parley.exe，设置上下行各100ms或10%，实际业务损伤未独立验证。\n约42～53秒中断显示期间已有残段声/字幕；38.4秒输入早于应用，54.8秒又重播。恢复合并段出现可用时间、从现在到周五等无来源内容。\n中断作用覆盖、旧缓存与新输入归属受限，不报告严格完整恢复耗时。",
-      "记录状态": "采用两组千问 Live 正常录次与五组豆包历史录次。旧正常录像 V01 的 N01、N02 及基于它的音色对照仍标记排除。断网恢复与实际业务丢包率未独立验证。"
+      "实时性能": "千问 Live 首轮首显／首响约 4.4／4.5 秒，再次输入约 4.2／4.1 秒。字幕尾句位于录像 18.200／38.700 秒，译声结束约在 25.76／47.73 秒。原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。\n千问 Live 弱网录像首显／首响约为 100 ms 配置 5.0／5.2 秒、重播后 4.8／4.5 秒、10% 丢包配置 4.6／4.7 秒。重播差值从重播原声起点算。",
+      "译音质量": "C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。两段千问 Live 补录的三个标记音轨均解码为同一混音。译声内容由混音辅助转写核对，暂无独立译音声纹、峰值和主观音质评分。",
+      "弱网表现": "100 ms 配置与 10% 丢包配置各观察到一次完整字幕和译声。约 10 秒中断配置在录像 40.13–50.27 秒显示倒计时；输入从 37.17 秒开始，53.22 秒同稿重播前无新字幕或译声。重播后出现一套完整输出，自动补译和严格恢复耗时无法单独确认。\n弱网工作台提示检测到可能的本机中转，业务覆盖待验证。各条件仅一轮，实测业务延迟和丢包率未独立采集。",
+      "记录状态": "当前采用两组千问 Live 正常录次、四组千问 Live 弱网录次及豆包克隆 C01。历史豆包正常录像 V01 和弱网录像 V02 保留在历史记录。"
     },
     "cases": [
       {
@@ -595,7 +595,9 @@
           ""
         ],
         "evidence_image": "evidence/images/parley-w01.png",
-        "video_id": "parley-v02"
+        "video_id": "parley-v02",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "id": "R01",
@@ -633,7 +635,9 @@
           ""
         ],
         "evidence_image": "evidence/images/parley-r01.png",
-        "video_id": "parley-v02"
+        "video_id": "parley-v02",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "id": "R02",
@@ -671,7 +675,9 @@
           ""
         ],
         "evidence_image": "evidence/images/parley-r02.png",
-        "video_id": "parley-v02"
+        "video_id": "parley-v02",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "id": "W04",
@@ -709,7 +715,105 @@
           ""
         ],
         "evidence_image": "evidence/images/parley-w04.png",
-        "video_id": "parley-v02"
+        "video_id": "parley-v02",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
+      },
+      {
+        "id": "W05",
+        "video": "V05",
+        "frame": 870,
+        "pts_s": 29,
+        "label": "千问 Live · 上下行各 100 ms 配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "弱网工作台约 5.27 秒显示 parley.exe 上下行各 100 ms，31.80 秒显示控制对象为无。本轮完整输出在配置显示期间结束。",
+        "evidence_image": "evidence/images/parley-w05.png",
+        "video_id": "parley-qwen-network-20261111"
+      },
+      {
+        "id": "R03",
+        "video": "V05",
+        "frame": 1470,
+        "pts_s": 49,
+        "label": "千问 Live · 约 10 秒中断",
+        "subtitle": [
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到"
+        ],
+        "audio": [
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到",
+          "本轮未观察到"
+        ],
+        "note": "本轮原声从 37.17 秒开始，工具在约 40 秒显示连接中断，50.27 秒显示控制对象为无。53.22 秒重播前无本轮新字幕或译声。截图中的字幕来自上一轮。",
+        "evidence_image": "evidence/images/parley-r03.png",
+        "video_id": "parley-qwen-network-20261111"
+      },
+      {
+        "id": "R04",
+        "video": "V05",
+        "frame": 2160,
+        "pts_s": 72,
+        "label": "千问 Live · 解除中断后同稿重播",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "解除配置约 3.0 秒后重播同稿，随后观察到一套完整新输出。差值从重播原声起点计算，录像无法唯一排除前轮残留或确定自动恢复耗时。",
+        "evidence_image": "evidence/images/parley-r04.png",
+        "video_id": "parley-qwen-network-20261111"
+      },
+      {
+        "id": "W06",
+        "video": "V05",
+        "frame": 2910,
+        "pts_s": 97,
+        "label": "千问 Live · 上下行各 10% 概率丢包配置",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "约 75.80 秒显示对 parley.exe 配置上下行各 10% 概率丢包。F1 追加在上一气泡尾部，F2–F5 出现在下一气泡。工具标明实际丢弃比例未采集。",
+        "evidence_image": "evidence/images/parley-w06.png",
+        "video_id": "parley-qwen-network-20261111"
       }
     ],
     "timing": [
@@ -822,7 +926,9 @@
         "fragment_boundary_screenshots": [
           "frames\\W01_fragment_00394.png",
           "frames\\W01_fragment_00395.png"
-        ]
+        ],
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "scene": "W02",
@@ -843,7 +949,9 @@
         "fragment_boundary_screenshots": [
           "frames\\W02_fragment_01556.png",
           "frames\\W02_fragment_01557.png"
-        ]
+        ],
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "scene": "W03",
@@ -852,7 +960,9 @@
         "source_pts_s": 54.8055,
         "audio_asr_candidate_wav_s": null,
         "label": "恢复后重播",
-        "note": "输入跨越中断且同文重播；该时间差只描述事件，不能当严格恢复延迟或单轮完成指标。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。"
+        "note": "输入跨越中断且同文重播；该时间差只描述事件，不能当严格恢复延迟或单轮完成指标。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "scene": "W04",
@@ -868,7 +978,64 @@
         "subtitle_pts_s": 85.367,
         "subtitle_delay_s": 4.0715,
         "label": "10%配置",
-        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。"
+        "note": "录像观察；该条件样本有限，未校准OBS音画通路。 首显前有短暂单词碎片，另列稳定短语首显；重叠首响为抵消波形辅助估计。",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
+      },
+      {
+        "scene": "W05",
+        "video": "V05",
+        "label": "千问 Live · 上下行各 100 ms 配置",
+        "source_pts_s": 7.93,
+        "note": "弱网工作台约 5.27 秒显示 parley.exe 上下行各 100 ms，31.80 秒显示控制对象为无。本轮完整输出在配置显示期间结束。 原声以连续首句声学活动定位。英文首响由混音转写与波形估计；音画通路未标定。",
+        "subtitle_pts_s": 12.9,
+        "target_audio_pts_s": 13.1,
+        "subtitle_delay_s": 4.97,
+        "audio_delay_s": 5.17,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 386,
+        "first_present_frame": 387,
+        "stable_subtitle_pts_s": 12.933
+      },
+      {
+        "scene": "R03",
+        "video": "V05",
+        "label": "千问 Live · 约 10 秒中断",
+        "source_pts_s": 37.17,
+        "note": "本轮原声从 37.17 秒开始，工具在约 40 秒显示连接中断，50.27 秒显示控制对象为无。53.22 秒重播前无本轮新字幕或译声。截图中的字幕来自上一轮。",
+        "subtitle_pts_s": null,
+        "target_audio_pts_s": null,
+        "observation_end_pts_s": 53.22
+      },
+      {
+        "scene": "R04",
+        "video": "V05",
+        "label": "千问 Live · 解除中断后同稿重播",
+        "source_pts_s": 53.22,
+        "note": "解除配置约 3.0 秒后重播同稿，随后观察到一套完整新输出。差值从重播原声起点计算，录像无法唯一排除前轮残留或确定自动恢复耗时。 原声以连续首句声学活动定位。英文首响由混音转写与波形估计；音画通路未标定。",
+        "subtitle_pts_s": 58.0,
+        "target_audio_pts_s": 57.68,
+        "subtitle_delay_s": 4.78,
+        "audio_delay_s": 4.46,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1739,
+        "first_present_frame": 1740,
+        "stable_subtitle_pts_s": 58.0
+      },
+      {
+        "scene": "W06",
+        "video": "V05",
+        "label": "千问 Live · 上下行各 10% 概率丢包配置",
+        "source_pts_s": 77.51,
+        "note": "约 75.80 秒显示对 parley.exe 配置上下行各 10% 概率丢包。F1 追加在上一气泡尾部，F2–F5 出现在下一气泡。工具标明实际丢弃比例未采集。 原声以连续首句声学活动定位。英文首响由混音转写与波形估计；音画通路未标定。",
+        "subtitle_pts_s": 82.067,
+        "target_audio_pts_s": 82.21,
+        "subtitle_delay_s": 4.557,
+        "audio_delay_s": 4.7,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 2461,
+        "first_present_frame": 2462,
+        "stable_subtitle_pts_s": 82.1
       }
     ],
     "startup": {
@@ -944,7 +1111,9 @@
         "source_pts_s": 9.135499999999999,
         "audio_end_pts_s": 31.689,
         "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
-        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "status": "adjacent_frame_candidate",
@@ -957,7 +1126,9 @@
         "audio_end_pts_s": null,
         "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
         "note": "中断残段/恢复重播合并文本的尾部事件；不代表准确补译或可归属单轮完整输出。",
-        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "status": "adjacent_frame_candidate",
@@ -970,7 +1141,9 @@
         "audio_end_pts_s": null,
         "audio_end_method": "未录得独立本轮译音，或中断/同文重播重叠，无法分离完成时刻。",
         "note": "中断残段/恢复重播合并文本的尾部事件；不代表准确补译或可归属单轮完整输出。",
-        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
       },
       {
         "status": "adjacent_frame_candidate",
@@ -982,7 +1155,39 @@
         "source_pts_s": 81.2955,
         "audio_end_pts_s": 102.18900000000001,
         "audio_end_method": "原混音无重叠尾词，10ms RMS −50dBFS；−42/−35候选保留；约0.1秒尺度，非绝对同步标定。",
-        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。"
+        "review": "已视觉复核尾句前后相邻帧；尾词首次显全不代表以后不再修改。",
+        "adopted": false,
+        "exclusion_reason": "2026-11-11 千问 Live 弱网补录替代本录像的当前对比数据。"
+      },
+      {
+        "scene": "W05",
+        "video": "V05",
+        "source_pts_s": 7.93,
+        "subtitle_tail_pts_s": 20.633,
+        "last_absent_frame": 618,
+        "first_present_frame": 619,
+        "audio_end_pts_s": 29.64,
+        "audio_end_method": "末词转写和尾部 10 ms RMS 约 −50 dBFS 复核。"
+      },
+      {
+        "scene": "R04",
+        "video": "V05",
+        "source_pts_s": 53.22,
+        "subtitle_tail_pts_s": 65.767,
+        "last_absent_frame": 1972,
+        "first_present_frame": 1973,
+        "audio_end_pts_s": 72.56,
+        "audio_end_method": "末词转写和尾部 10 ms RMS 约 −50 dBFS 复核。"
+      },
+      {
+        "scene": "W06",
+        "video": "V05",
+        "source_pts_s": 77.51,
+        "subtitle_tail_pts_s": 90.067,
+        "last_absent_frame": 2701,
+        "first_present_frame": 2702,
+        "audio_end_pts_s": 98.38,
+        "audio_end_method": "末词转写和尾部 10 ms RMS 约 −50 dBFS 复核。"
       }
     ],
     "network": [
@@ -1009,7 +1214,37 @@
       ]
     ],
     "limits": [],
-    "retest_date": "2026-11-11"
+    "retest_date": "2026-11-11",
+    "network_retest": {
+      "date": "2026-11-11",
+      "video": "V05",
+      "control_target": "parley.exe",
+      "settings": [
+        {
+          "mode": "附加延迟",
+          "up_ms": 100,
+          "down_ms": 100,
+          "active_pts_s": 5.267,
+          "cleared_pts_s": 31.8
+        },
+        {
+          "mode": "连接中断",
+          "configured_duration_s": 10,
+          "confirmed_countdown_pts_s": 40.133,
+          "cleared_pts_s": 50.267,
+          "input_pts_s": 37.17,
+          "next_replay_pts_s": 53.22
+        },
+        {
+          "mode": "概率丢包",
+          "up_pct": 10,
+          "down_pct": 10,
+          "active_pts_s": 75.8,
+          "observed_active_through_pts_s": 99.0
+        }
+      ],
+      "scope": "弱网工作台提示检测到可能的本机中转，业务覆盖待验证。各条件仅一轮，实测业务延迟和丢包率未独立采集。"
+    }
   },
   {
     "slug": "palabra",

@@ -684,5 +684,61 @@
       "w": 1450,
       "h": 530
     }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "W05",
+    "video_id": "parley-qwen-network-20261111",
+    "original_pts_s": 29,
+    "image": "evidence/images/parley-w05.png",
+    "label": "千问 Live · 上下行各 100 ms 配置",
+    "image_crop": {
+      "x": 0,
+      "y": 0,
+      "w": 840,
+      "h": 582
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "R03",
+    "video_id": "parley-qwen-network-20261111",
+    "original_pts_s": 49,
+    "image": "evidence/images/parley-r03.png",
+    "label": "千问 Live · 约 10 秒中断",
+    "image_crop": {
+      "x": 0,
+      "y": 0,
+      "w": 840,
+      "h": 582
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "R04",
+    "video_id": "parley-qwen-network-20261111",
+    "original_pts_s": 72,
+    "image": "evidence/images/parley-r04.png",
+    "label": "千问 Live · 解除中断后同稿重播",
+    "image_crop": {
+      "x": 0,
+      "y": 0,
+      "w": 840,
+      "h": 582
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "W06",
+    "video_id": "parley-qwen-network-20261111",
+    "original_pts_s": 97,
+    "image": "evidence/images/parley-w06.png",
+    "label": "千问 Live · 上下行各 10% 概率丢包配置",
+    "image_crop": {
+      "x": 0,
+      "y": 0,
+      "w": 840,
+      "h": 582
+    }
   }
 ]

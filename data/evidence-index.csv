@@ -48,3 +48,7 @@ Wordly,W04,wordly-v02,149,evidence/images/wordly-w04.png,DevTools 10%/末次输�
 讯飞同传,R100,iflytek-v01,240,evidence/images/iflytek-r100.png,收听页100ms配置,"{'x': 30, 'y': 210, 'w': 1450, 'h': 530}"
 讯飞同传,Roff,iflytek-v01,266,evidence/images/iflytek-roff.png,收听页Offline相关输入,"{'x': 30, 'y': 210, 'w': 1450, 'h': 530}"
 讯飞同传,Rdrop,iflytek-v01,308,evidence/images/iflytek-rdrop.png,收听页WebRTC丢包10%配置,"{'x': 30, 'y': 210, 'w': 1450, 'h': 530}"
+Parley Voice,W05,parley-qwen-network-20261111,29,evidence/images/parley-w05.png,千问 Live · 上下行各 100 ms 配置,"{'x': 0, 'y': 0, 'w': 840, 'h': 582}"
+Parley Voice,R03,parley-qwen-network-20261111,49,evidence/images/parley-r03.png,千问 Live · 约 10 秒中断,"{'x': 0, 'y': 0, 'w': 840, 'h': 582}"
+Parley Voice,R04,parley-qwen-network-20261111,72,evidence/images/parley-r04.png,千问 Live · 解除中断后同稿重播,"{'x': 0, 'y': 0, 'w': 840, 'h': 582}"
+Parley Voice,W06,parley-qwen-network-20261111,97,evidence/images/parley-w06.png,千问 Live · 上下行各 10% 概率丢包配置,"{'x': 0, 'y': 0, 'w': 840, 'h': 582}"

@@ -895,5 +895,62 @@
     "audio_streams_retained": 1,
     "audio_note": "保留一条混音，测试时间外静音。",
     "review_status": "reviewed"
+  },
+  {
+    "id": "parley-qwen-network-20261111",
+    "product": "parley",
+    "file": "parley-qwen-network-20261111.mp4",
+    "release_tag": "parley-network-retest-20261111",
+    "original_sha256": "c5d9706935b36c743e78fc374c5ff4c9531cecae9d15fec7d66ebb2100382b17",
+    "public_sha256": "af77630f44465a9d67e4a696ac69d9406589e8a9890f066abaeb35bf190c1cc1",
+    "original_duration_s": 100.7,
+    "public_duration_s": 100.7,
+    "size_bytes": 2145510,
+    "original_video_pts_at_public_zero_s": 0.0,
+    "retained_original_interval_s": [
+      0,
+      100.7
+    ],
+    "time_mapping": "原视频 PTS 对应公开秒数。不变速、不剪接时间轴。",
+    "redaction": "仅合成字幕区和弱网工具底部读数，遮挡第二气泡本机时间，末尾黑屏，移除原件元数据。",
+    "revealed_regions": [
+      {
+        "x": 450,
+        "y": 218,
+        "w": 554,
+        "h": 478,
+        "from_s": 0,
+        "until_s": 100
+      },
+      {
+        "x": 1048,
+        "y": 642,
+        "w": 840,
+        "h": 104,
+        "from_s": 0,
+        "until_s": 100
+      }
+    ],
+    "retained_test_audio_intervals_s": [
+      [
+        7.85,
+        29.72
+      ],
+      [
+        37.1,
+        50.26
+      ],
+      [
+        53.13,
+        72.63
+      ],
+      [
+        77.43,
+        98.46
+      ]
+    ],
+    "audio_streams_retained": 1,
+    "audio_note": "保留一条混音，四轮测试区间外静音。",
+    "review_status": "reviewed"
   }
 ]

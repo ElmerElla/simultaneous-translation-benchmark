@@ -48,6 +48,10 @@ def review_rows(root=ROOT):
             if (slug, ident) in EVENT_IDS or (slug == 'transync' and ident in ('W02', 'W03')):
                 first_caption = first_voice = None
                 note = '中断与重播交叠，具体事件见 timing.csv。'
+            elif (slug, ident) == ('parley', 'R03'):
+                note = '工具撤销后至重播前未观察到新输出。'
+            elif (slug, ident) == ('parley', 'R04'):
+                note = '从重播原声起点计，无法单独量化自动恢复。'
             elif slug == 'iflytek' and ident.startswith('R'):
                 note = '首显来自客户端。录入译声无法唯一归属到受控收听页。'
             elif (slug, ident) == ('wordly', 'N01'):

@@ -6,7 +6,7 @@
 
 **[阅读完整中文测试报告](docs/report.md)** · **[查看当前对比数据](data/comparison.csv)** · **[下载历史工作簿](测试结论.xlsx)**
 
-当前采用七款软件的 47 组场景、19 段录像。2026-11-11 新增 Parley Voice 千问 Live 正常补录的 N03、N04。旧豆包正常录像 V01 仍标记排除。
+当前采用七款软件的 47 组场景、19 段录像。2026-11-11 纳入 Parley Voice 千问 Live 的正常与弱网补录。原豆包正常与弱网录像 V01、V02 作为历史记录。
 
 固定语料的 `5/5` 是五项事实覆盖，不能解释为总体准确率。各行条件和音轨不同，不给跨软件综合排名；弱网配置值不等于实际业务损伤。产品版本未完整留档，结论仅适用于本批录像。
 
@@ -23,7 +23,7 @@
 
 v1.1 Release 的离线包是历史快照，包含已排除的 V01。当前结论以本页链接的仓库报告和逐轮表为准。[历史离线包](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.1-20261106)
 
-[千问 Live 正常补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)。
+[千问 Live 弱网补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)。
 
 历史素材共有 **19 段脱敏 MP4、47 张截图、2 份独立测试参考 WAV**，包括已排除的 V01。各软件的翻译播报保留在视频音轨中。[素材下载页](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106) · [S01 测试输入](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/s01-input.wav) · [音色克隆参考](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/clone-reference.wav)
 

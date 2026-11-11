@@ -2,7 +2,7 @@
 
 测试记录分析日期：2026-11-02—2026-11-04 · 发布整理日期：2026-11-06 · 环境：Windows
 
-本报告汇总既有测试录像和最终评测记录，覆盖 Transync AI、Parley Voice、Palabra、Maestra Live、JotMe、Wordly、讯飞同传。当前采用 47 组场景、19 段录像，含 2026-11-11 补录的 Parley Voice 千问 Live 正常测试。原豆包正常录像 V01（N01、N02）仍标记排除。产品具体构建版本未完整留档，结论只适用于录像所示设置与样本，不代表产品当前所有版本。
+本报告汇总既有测试录像和最终评测记录，覆盖 Transync AI、Parley Voice、Palabra、Maestra Live、JotMe、Wordly、讯飞同传。当前采用 47 组场景、19 段录像，含 2026-11-11 补录的 Parley Voice 千问 Live 正常和弱网测试。原豆包正常与弱网录像 V01、V02 作为历史记录。产品具体构建版本未完整留档，结论只适用于录像所示设置与样本，不代表产品当前所有版本。
 
 ## 如何阅读
 
@@ -148,8 +148,7 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 
 ### 翻译事实覆盖
 
-11 月 11 日千问 Live 补录中，首次会话与同会话再次输入的英文字幕、译声均保留 S01 五项事实。
-保留的豆包模式场景中，100 ms、10% 配置录次的字幕与辅助译音各保留 4/5，F1 的动作或对象发生变化。实时克隆录次为 3 项完整、1 项部分、1 项错误，预算金额保留但缺少上限限定。恢复与重播合并段的归属未确认。
+千问 Live 正常两轮及 100 ms 配置、10% 丢包配置、解除中断后重播三轮，英文字幕和录入译声均为 5/5。约 10 秒中断轮至重播前无新输出。豆包历史克隆 C01 仍为 3 项完整、1 项部分、1 项错误。
 
 ### 音色克隆
 
@@ -159,21 +158,20 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 
 录像起点客户端已打开。约 1.33 秒显示会话准备中，3.53 秒进入监听，界面状态转换约 2.2 秒。进程启动耗时无法从此录像测得。
 千问 Live 首轮首显／首响约 4.4／4.5 秒，再次输入约 4.2／4.1 秒。字幕尾句位于录像 18.200／38.700 秒，译声结束约在 25.76／47.73 秒。原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。
-豆包历史录次首显／首响约为克隆 3.7／4.6 秒，100 ms 配置 4.0／4.6 秒，10% 配置 4.1／4.4 秒。
+千问 Live 弱网录像首显／首响约为 100 ms 配置 5.0／5.2 秒、重播后 4.8／4.5 秒、10% 丢包配置 4.6／4.7 秒。重播差值从重播原声起点算。
 
 ### 译音质量
 
-C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。新录像的三个标记音轨解码后是同一混音。两轮均可核对五项事实，暂无独立译音声纹、峰值和主观音质评分。
+C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。两段千问 Live 补录的三个标记音轨均解码为同一混音。译声内容由混音辅助转写核对，暂无独立译音声纹、峰值和主观音质评分。
 
 ### 弱网表现
 
-100ms及10%概率丢包配置均有完整输出，但F1语义错译；本地工具控制parley.exe，设置上下行各100ms或10%，实际业务损伤未独立验证。
-约42～53秒中断显示期间已有残段声/字幕；38.4秒输入早于应用，54.8秒又重播。恢复合并段出现可用时间、从现在到周五等无来源内容。
-中断作用覆盖、旧缓存与新输入归属受限，不报告严格完整恢复耗时。
+100 ms 配置与 10% 丢包配置各观察到一次完整字幕和译声。约 10 秒中断配置在录像 40.13–50.27 秒显示倒计时；输入从 37.17 秒开始，53.22 秒同稿重播前无新字幕或译声。重播后出现一套完整输出，自动补译和严格恢复耗时无法单独确认。
+弱网工作台提示检测到可能的本机中转，业务覆盖待验证。各条件仅一轮，实测业务延迟和丢包率未独立采集。
 
 ### 测试状态与证据缺口
 
-采用两组千问 Live 正常录次与五组豆包历史录次。旧正常录像 V01 的 N01、N02 及基于它的音色对照仍标记排除。断网恢复与实际业务丢包率未独立验证。
+当前采用两组千问 Live 正常录次、四组千问 Live 弱网录次及豆包克隆 C01。历史豆包正常录像 V01 和弱网录像 V02 保留在历史记录。
 
 ### 场景与证据
 
@@ -182,10 +180,10 @@ C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%�
 | N03 千问 Live · 首次开启翻译会话 | 5/5 | 5/5 | parley-qwen-normal-20261111 · 25.000s | [截图](../evidence/images/parley-n03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4#t=25) |
 | N04 千问 Live · 同会话再次输入 | 5/5 | 5/5 | parley-qwen-normal-20261111 · 44.000s | [截图](../evidence/images/parley-n04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4#t=44) |
 | C01 豆包/实时克隆输入声音 | 错误 / 部分 / 正确 / 正确 / 正确 | 错误 / 部分 / 正确 / 正确 / 正确 | parley-v03 · 25.000s | [截图](../evidence/images/parley-c01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v03.mp4#t=25) |
-| W01 豆包/上下行各100ms配置 | 错误 / 正确 / 正确 / 正确 / 正确 | 错误 / 正确 / 正确 / 正确 / 正确 | parley-v02 · 32.000s | [截图](../evidence/images/parley-w01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v02.mp4#t=32) |
-| R01 中断期间/撤销附近短段 | 部分 / 遗漏 / 遗漏 / 遗漏 / 遗漏 | 部分 / 遗漏 / 遗漏 / 遗漏 / 遗漏 | parley-v02 · 54.000s | [截图](../evidence/images/parley-r01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v02.mp4#t=54) |
-| R02 恢复后重播合并输出 | 部分 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | parley-v02 · 76.000s | [截图](../evidence/images/parley-r02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v02.mp4#t=76) |
-| W04 豆包/上下行各10%概率丢包配置 | 错误 / 正确 / 正确 / 正确 / 正确 | 错误 / 正确 / 正确 / 正确 / 正确 | parley-v02 · 104.000s | [截图](../evidence/images/parley-w04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v02.mp4#t=104) |
+| W05 千问 Live · 上下行各 100 ms 配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 29.000s | [截图](../evidence/images/parley-w05.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=29) |
+| R03 千问 Live · 约 10 秒中断 | 未观察到 | 未观察到 | parley-qwen-network-20261111 · 49.000s | [截图](../evidence/images/parley-r03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=49) |
+| R04 千问 Live · 解除中断后同稿重播 | 5/5 | 5/5 | parley-qwen-network-20261111 · 72.000s | [截图](../evidence/images/parley-r04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=72) |
+| W06 千问 Live · 上下行各 10% 概率丢包配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 97.000s | [截图](../evidence/images/parley-w06.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=97) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -207,29 +205,30 @@ C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%�
 
 ![Parley Voice C01 脱敏证据](../evidence/images/parley-c01.png)
 
-**W01 · 豆包/上下行各100ms配置 · parley-v02 / 32.000s**
+**W05 · 千问 Live · 上下行各 100 ms 配置 · 29.000s**
 
-F1改成向HR部门提交书面说明，新增无来源内容；其他4项关键事实保留。
+弱网工作台约 5.27 秒显示 parley.exe 上下行各 100 ms，31.80 秒显示控制对象为无。本轮完整输出在配置显示期间结束。
 
-![Parley Voice W01 脱敏证据](../evidence/images/parley-w01.png)
+![Parley Voice W05 脱敏证据](../evidence/images/parley-w05.png)
 
-**R01 · 中断期间/撤销附近短段 · parley-v02 / 54.000s**
+**R03 · 千问 Live · 约 10 秒中断 · 49.000s**
 
-输入38.4秒先于约42秒中断应用；在控制仍显示中断时已有声音/字幕残段，作用覆盖未证实。不能把旧完整段计入。
+本轮原声从 37.17 秒开始，工具在约 40 秒显示连接中断，50.27 秒显示控制对象为无。53.22 秒重播前无本轮新字幕或译声。截图中的字幕来自上一轮。
 
-![Parley Voice R01 脱敏证据](../evidence/images/parley-r01.png)
+![Parley Voice R03 脱敏证据](../evidence/images/parley-r03.png)
 
-**R02 · 恢复后重播合并输出 · parley-v02 / 76.000s**
+**R04 · 千问 Live · 解除中断后同稿重播 · 72.000s**
 
-54.8秒重播后输出混有From now until Friday、be available等无来源时间与动作；恢复补译和新输入归属不清，F1记部分。
+解除配置约 3.0 秒后重播同稿，随后观察到一套完整新输出。差值从重播原声起点计算，录像无法唯一排除前轮残留或确定自动恢复耗时。
 
-![Parley Voice R02 脱敏证据](../evidence/images/parley-r02.png)
+![Parley Voice R04 脱敏证据](../evidence/images/parley-r04.png)
 
-**W04 · 豆包/上下行各10%概率丢包配置 · parley-v02 / 104.000s**
+**W06 · 千问 Live · 上下行各 10% 概率丢包配置 · 97.000s**
 
-F1又改成向小组提交书面说明，4项关键事实仍保留。丢包作用覆盖和实际比例未验证。
+约 75.80 秒显示对 parley.exe 配置上下行各 10% 概率丢包。F1 追加在上一气泡尾部，F2–F5 出现在下一气泡。工具标明实际丢弃比例未采集。
 
-![Parley Voice W04 脱敏证据](../evidence/images/parley-w04.png)
+![Parley Voice W06 脱敏证据](../evidence/images/parley-w06.png)
+
 
 ## Palabra
 

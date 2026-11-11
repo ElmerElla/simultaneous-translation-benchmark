@@ -2,7 +2,7 @@
 
 ## 可以直接复算什么
 
-`scripts/benchmark.py` 采用命令行参数读入媒体，不含个人绝对路径。`validate` 检查七款产品、49 组证据和 20 段公开视频清单（含历史排除记录）；`recompute` 从已复核的原件时间戳重新计算首显/首响延迟，并与最终记录核对。它不会执行网络损伤、登录产品或下载模型。
+`scripts/benchmark.py` 采用命令行参数读入媒体，不含个人绝对路径。`validate` 检查七款产品、53 组证据和 21 段公开视频清单（含历史排除记录）；`recompute` 从已复核的原件时间戳重新计算首显/首响延迟，并与最终记录核对。它不会执行网络损伤、登录产品或下载模型。
 
 ```console
 python scripts/benchmark.py validate
@@ -61,4 +61,4 @@ python -m unittest discover -s scripts/weak-network/tests -p test_packet_loss.py
 
 本仓库用于分享本次测试记录，不代表被测厂商。软件界面、商标及第三方工具归各自权利人所有。未将第三方模型、安装包或商业组件重新分发；也未替用户设定新的开源许可证。
 
-补录的脱敏 MP4 单独提供。验证完整清单时，请与历史媒体放在同一个 media/ 目录。[千问 Live 补录](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)
+补录的脱敏 MP4 单独提供。验证完整清单时，请与历史媒体放在同一个 media/ 目录。[千问 Live 弱网补录](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)
