@@ -1,7 +1,7 @@
 {
   "release_tag": "v1.1-20261106",
   "policy": "最终采用材料白名单；不上传废稿、旧表、备份、日志、配置、缓存、模型、安装包或未脱敏原件。",
-  "text_files_scanned": 107,
+  "text_files_scanned": 110,
   "repository_files": [
     {
       "path": ".gitignore",
@@ -10,8 +10,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "c31700ffe3d002d22440d2c3b42f33b636f76f6529f2a792ff42e06ea75d9a84",
-      "size_bytes": 3858
+      "sha256": "533ca30fe4a6fe29dd52c7a644878022fb8841fa36e7ca11ee95a08d5215bc40",
+      "size_bytes": 4227
     },
     {
       "path": "data/audio-manifest.json",
@@ -47,6 +47,11 @@
       "path": "data/results.json",
       "sha256": "7c21497729ab5efc20ff471725ac2afb758faa968b341e5c055a65953e53d773",
       "size_bytes": 149552
+    },
+    {
+      "path": "data/scenario-review.csv",
+      "sha256": "bc49707e97e05afacc41fd5425922eb9da5c6b453cc79a9e4c373906a3414654",
+      "size_bytes": 19857
     },
     {
       "path": "data/source-code-manifest.json",
@@ -239,14 +244,19 @@
       "size_bytes": 760
     },
     {
+      "path": "docs/data-review-20261111.md",
+      "sha256": "53ac425edd9cf0eda7dd0ea37e94fed21d7a183faca5101205a61bfbd8a1f1b7",
+      "size_bytes": 5320
+    },
+    {
       "path": "docs/privacy.md",
       "sha256": "52aec998d56a9639b5f08ef99a09c4ba19520dc24744e9cbe7db5f1f56500117",
       "size_bytes": 5272
     },
     {
       "path": "docs/report.md",
-      "sha256": "4115a64fa45b79a666e7d34744894c826cc5f31d70580664501bd047c45741dd",
-      "size_bytes": 58285
+      "sha256": "3b11403a312fdd71a1cd9e003254ef5f574c8076a839c72ceb8a56d86f6fea6f",
+      "size_bytes": 58919
     },
     {
       "path": "docs/reproducibility.md",
@@ -490,8 +500,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "89b062eb02800d121e72c218de33046bd61419be41627d26f29c8f53b9d88184",
-      "size_bytes": 83845
+      "sha256": "0c46dcc0045965f5a31e7c4530339e74ba25fe1c8ec6045afa486eaa2eb5a3c4",
+      "size_bytes": 84516
     },
     {
       "path": "requirements-analysis.txt",
@@ -602,6 +612,11 @@
       "path": "scripts/build_report.py",
       "sha256": "c5dac3982fda72516bc72d4cbbd51fb911142294ee531fc8ae41d7891c7df861",
       "size_bytes": 8671
+    },
+    {
+      "path": "scripts/build_scenario_review.py",
+      "sha256": "a3dbe26d1055fc1fd60de507fd1c3f15738434ea5b437f1591a4875d00a7be80",
+      "size_bytes": 3208
     },
     {
       "path": "scripts/weak-network/NativeCollector.cs",
@@ -872,11 +887,11 @@
   ],
   "media_release_tag": "v1.0-20261106",
   "repository_revision": {
-    "date": "2026-11-06",
-    "change": "七款软件按指标说明证据缺口；同步综合对比工作簿、对比数据及报告。",
+    "date": "2026-11-11",
+    "change": "复核七款原始记录与公开数据，新增47组逐轮复核表及复核记录，细化Parley Voice的F1解释和讯飞同传收听页的独立判定。",
     "new_product_tests_performed": false,
     "existing_scene_and_timing_records_unchanged": true,
     "release_assets_updated": false,
-    "release_note": "v1.1 Release 保留修订前快照；repository_files 对应当前仓库内容。"
+    "release_note": "v1.1 Release保留2026-11-06离线快照。repository_files对应当前仓库内容。"
   }
 }

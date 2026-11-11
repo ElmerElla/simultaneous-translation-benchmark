@@ -200,7 +200,7 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 
 **N01 · 豆包/系统音色VV女声/首次 · parley-v01 / 29.000s**
 
-F1动作与对象从确认测试结果变成发送修订版，时间虽然保留仍记错误。
+F1 同时核对截止时间和要求的动作。字幕截图及译声辅助转写均保留了「下周二上午十点前」，但都把「确认测试结果」译成「把修订版发给我」。因此截止时间正确，F1 整项判为错误。
 
 ![Parley Voice N01 脱敏证据](../evidence/images/parley-n01.png)
 
@@ -640,18 +640,18 @@ DevTools页面配置：100ms、约37～47秒Offline、随后10% Packet Loss；�
 
 ### 场景与证据
 
-| 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
-| --- | --- | --- | --- | --- |
-| N01 首次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 54.000s | [截图](../evidence/images/iflytek-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=54) |
-| N02 正常再次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 84.000s | [截图](../evidence/images/iflytek-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=84) |
-| S100 客户端上下行各100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 120.000s | [截图](../evidence/images/iflytek-s100.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=120) |
-| Soff 客户端中断相关输入 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | iflytek-v01 · 142.000s | [截图](../evidence/images/iflytek-soff.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=142) |
-| Sdrop 客户端上下行各10%丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 182.000s | [截图](../evidence/images/iflytek-sdrop.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=182) |
-| R100 收听页100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 240.000s | [截图](../evidence/images/iflytek-r100.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=240) |
-| Roff 收听页Offline相关输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 266.000s | [截图](../evidence/images/iflytek-roff.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=266) |
-| Rdrop 收听页WebRTC丢包10%配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 本轮未观察到 / 正确 | iflytek-v01 · 308.000s | [截图](../evidence/images/iflytek-rdrop.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=308) |
+| 场景 | 客户端字幕事实 | 收听页字幕事实 | 录像译声事实 | 原录像 PTS | 复核入口 |
+| --- | --- | --- | --- | --- | --- |
+| N01 首次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 54.000s | [截图](../evidence/images/iflytek-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=54) |
+| N02 正常再次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 84.000s | [截图](../evidence/images/iflytek-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=84) |
+| S100 客户端上下行各100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 120.000s | [截图](../evidence/images/iflytek-s100.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=120) |
+| Soff 客户端中断相关输入 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | iflytek-v01 · 142.000s | [截图](../evidence/images/iflytek-soff.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=142) |
+| Sdrop 客户端上下行各10%丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 182.000s | [截图](../evidence/images/iflytek-sdrop.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=182) |
+| R100 收听页100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 240.000s | [截图](../evidence/images/iflytek-r100.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=240) |
+| Roff 收听页Offline相关输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 266.000s | [截图](../evidence/images/iflytek-roff.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=266) |
+| Rdrop 收听页WebRTC丢包10%配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 正确 / 正确 / 正确 / 本轮未观察到 / 正确 | iflytek-v01 · 308.000s | [截图](../evidence/images/iflytek-rdrop.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=308) |
 
-事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
+事实顺序为 F1—F5。收听页字幕与录像译声分别判定。R100、Roff、Rdrop 的录音无法唯一归属到受控窗口。
 
 **N01 · 首次输入 · iflytek-v01 / 54.000s**
 

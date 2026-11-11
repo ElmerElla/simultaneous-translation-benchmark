@@ -15,6 +15,7 @@
 | 测试方法、总览、七款详情、47 组截图 | [完整报告](docs/report.md) |
 | 最终综合对比原表（保留内容、格式及公开来源批注） | [测试结论.xlsx](测试结论.xlsx) / [隐私清理校验](data/workbook-verification.json) |
 | 结构化最终判定和原件时间戳 | [results.json](data/results.json) / [timing.csv](data/timing.csv) |
+| 2026-11-11 七款数据复核、逐轮判定与证据路径 | [复核记录](docs/data-review-20261111.md) / [47 组场景复核表](data/scenario-review.csv) |
 | 七份最终明细工作簿的可见工作表值 | [CSV 结果表](data/tables/) |
 | 视频原件/公开副本校验值与遮挡规则 | [证据清单](data/media-manifest.json) |
 | 离线核对、复算、分析与弱网工具代码 | [复现说明](docs/reproducibility.md) / [脚本](scripts/) |
@@ -22,7 +23,7 @@
 
 下载 v1.1 Release 中的 `benchmark-report-offline.zip`，完整解压后打开 `report.html`，可直接阅读并播放视频，也包含 Excel、截图、代码和数据，无需登录产品或联网加载外部脚本。
 
-2026-11-06 修订：仓库内的 Excel、对比数据和完整报告已按软件、指标分别说明缺少的证据，未新增实测或改变原有结果。v1.1 Release 保留修订前的离线快照，最新说明请使用本页的仓库文件链接。
+2026-11-11 复核：已把 47 组场景和原始计时、截图及录像对齐。Parley Voice 正常两轮的字幕和译声各为 4/5，复核记录拆开说明 F1 的截止时间与动作。讯飞同传的客户端字幕、收听页字幕及录音分别展示。场景判定、原始计时与工作簿数值经核对一致。v1.1 Release 保留 2026-11-06 的离线快照，最新说明和数据以仓库文件为准。
 
 已公开 **19 段脱敏 MP4、47 张截图、2 份独立测试参考 WAV**。单独视频和音频保留在 [v1.0 素材下载页](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106)：[S01 测试输入](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/s01-input.wav)、[音色克隆参考](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/clone-reference.wav)。各软件的翻译播报保留在视频音轨中；中间分析音频不另行发布。视频不存入 Git 历史。
 
@@ -35,6 +36,7 @@ Excel 仅清空作者/修改人身份和本机工作目录属性；单元格、�
 ```console
 python scripts/benchmark.py validate
 python scripts/benchmark.py recompute
+python scripts/build_scenario_review.py
 python -m unittest discover -s tests -v
 ```
 
