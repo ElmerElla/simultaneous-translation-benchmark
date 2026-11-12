@@ -373,12 +373,60 @@
     "summary": {
       "翻译事实覆盖": "千问 Live 正常两轮及 100 ms 配置、10% 丢包配置、解除中断后重播三轮，英文字幕和录入译声均为 5/5。约 10 秒中断轮至重播前无新输出。豆包历史克隆 C01 仍为 3 项完整、1 项部分、1 项错误。",
       "音色克隆": "千问 Live 补录两轮均启用实时克隆，无默认音色对照。本次保留实时克隆录次 C01。该录次的无重叠 F4–F5 英文尾句与原声参考的 CAMPPlus 原始余弦为 0.5450，仅描述该短样本。",
-      "实时性能": "千问 Live 首轮首显／首响约 4.4／4.5 秒，再次输入约 4.2／4.1 秒。字幕尾句位于录像 18.200／38.700 秒，译声结束约在 25.76／47.73 秒。原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。\n千问 Live 弱网录像首显／首响约为 100 ms 配置 5.0／5.2 秒、重播后 4.8／4.5 秒、10% 丢包配置 4.6／4.7 秒。重播差值从重播原声起点算。",
-      "译音质量": "C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。两段千问 Live 补录的三个标记音轨均解码为同一混音。译声内容由混音辅助转写核对，暂无独立译音声纹、峰值和主观音质评分。",
+      "实时性能": "千问 Live 11 月 12 日上海线路首轮首显／首响约 3.4／3.8 秒，同会话再次输入约 4.5／5.0 秒。11 月 11 日新加坡线路样本分别为 4.4／4.5 与 4.2／4.1 秒。\n千问 Live 弱网录像首显／首响约为 100 ms 配置 5.0／5.2 秒、重播后 4.8／4.5 秒、10% 丢包配置 4.6／4.7 秒。重播差值从重播原声起点算。",
+      "译音质量": "C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。11 月 12 日正常复测可用单独的英文译音轨核对两轮事实，未做主观音质或声纹重测。",
       "弱网表现": "100 ms 配置与 10% 丢包配置各观察到一次完整字幕和译声。约 10 秒中断配置在录像 40.13–50.27 秒显示倒计时；输入从 37.17 秒开始，53.22 秒同稿重播前无新字幕或译声。重播后出现一套完整输出，自动补译和严格恢复耗时无法单独确认。\n弱网工作台提示检测到可能的本机中转，业务覆盖待验证。各条件仅一轮，实测业务延迟和丢包率未独立采集。",
-      "记录状态": "当前采用两组千问 Live 正常录次、四组千问 Live 弱网录次及豆包克隆 C01。历史豆包正常录像 V01 和弱网录像 V02 保留在历史记录。"
+      "记录状态": "当前采用 11 月 12 日千问 Live 正常两轮、11 月 11 日千问 Live 弱网四轮及豆包克隆 C01。旧正常与弱网录像仍可供对照。"
     },
     "cases": [
+      {
+        "id": "N05",
+        "video": "V06",
+        "frame": 780,
+        "pts_s": 26,
+        "label": "千问 Live · 上海线路首次开启会话",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "从桌面打开客户端。上海线路，开启实时克隆。首轮把「确认测试结果」的动作和对象分两段输出，合读保留截止时间及对象。独立译音保留五项事实。",
+        "evidence_image": "evidence/images/parley-n05.png",
+        "video_id": "parley-qwen-normal-retest-20261112"
+      },
+      {
+        "id": "N06",
+        "video": "V06",
+        "frame": 1500,
+        "pts_s": 50,
+        "label": "千问 Live · 上海线路同会话再次输入",
+        "subtitle": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "audio": [
+          "正确",
+          "正确",
+          "正确",
+          "正确",
+          "正确"
+        ],
+        "note": "只核对同一气泡中新追加的英文。独立译音保留五项事实。相对同日上一次复测，首显、首响基本持平，末响从原声起点计约晚 1.2 秒。",
+        "evidence_image": "evidence/images/parley-n06.png",
+        "video_id": "parley-qwen-normal-retest-20261112"
+      },
       {
         "id": "N03",
         "video": "V04",
@@ -408,7 +456,9 @@
         ],
         "note": "录像开始时客户端已打开。界面显示实时克隆输入声音，线路为新加坡。 录像混音的英文辅助转写保留五项事实。",
         "evidence_image": "evidence/images/parley-n03.png",
-        "video_id": "parley-qwen-normal-20261111"
+        "video_id": "parley-qwen-normal-20261111",
+        "adopted": false,
+        "exclusion_reason": "11 月 12 日 22:58 正常复测成为本期采用样本；11 月 11 日录次保留用于比较。"
       },
       {
         "id": "N04",
@@ -439,7 +489,9 @@
         ],
         "note": "同一会话再次输入 S01。两轮内容接在同一字幕气泡内，只核对新增英文。 录像混音的英文辅助转写保留五项事实。",
         "evidence_image": "evidence/images/parley-n04.png",
-        "video_id": "parley-qwen-normal-20261111"
+        "video_id": "parley-qwen-normal-20261111",
+        "adopted": false,
+        "exclusion_reason": "11 月 12 日 22:58 正常复测成为本期采用样本；11 月 11 日录次保留用于比较。"
       },
       {
         "id": "N01",
@@ -818,6 +870,36 @@
     ],
     "timing": [
       {
+        "scene": "N05",
+        "video": "V06",
+        "label": "千问 Live · 上海线路首次开启会话",
+        "source_pts_s": 10.06,
+        "subtitle_pts_s": 13.433,
+        "target_audio_pts_s": 13.9,
+        "subtitle_delay_s": 3.373,
+        "audio_delay_s": 3.84,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 402,
+        "first_present_frame": 403,
+        "stable_subtitle_pts_s": 13.533,
+        "note": "首显用相邻帧复核，首响取独立译音轨连续发声起点。原声与译音均为录像观测，音画通路未标定。"
+      },
+      {
+        "scene": "N06",
+        "video": "V06",
+        "label": "千问 Live · 上海线路同会话再次输入",
+        "source_pts_s": 31.419,
+        "subtitle_pts_s": 35.933,
+        "target_audio_pts_s": 36.459,
+        "subtitle_delay_s": 4.514,
+        "audio_delay_s": 5.04,
+        "subtitle_status": "相邻帧已复核",
+        "last_absent_frame": 1077,
+        "first_present_frame": 1078,
+        "stable_subtitle_pts_s": 35.967,
+        "note": "首显用相邻帧复核，首响取独立译音轨连续发声起点。原声与译音均为录像观测，音画通路未标定。"
+      },
+      {
         "scene": "N03",
         "video": "V04",
         "label": "千问 Live · 首次开启翻译会话",
@@ -830,7 +912,9 @@
         "last_absent_frame": 302,
         "first_present_frame": 303,
         "stable_subtitle_pts_s": 10.2,
-        "note": "原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。"
+        "note": "原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。",
+        "adopted": false,
+        "exclusion_reason": "11 月 12 日 22:58 正常复测成为本期采用样本；11 月 11 日录次保留用于比较。"
       },
       {
         "scene": "N04",
@@ -845,7 +929,9 @@
         "last_absent_frame": 927,
         "first_present_frame": 928,
         "stable_subtitle_pts_s": 30.967,
-        "note": "原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。"
+        "note": "原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。",
+        "adopted": false,
+        "exclusion_reason": "11 月 12 日 22:58 正常复测成为本期采用样本；11 月 11 日录次保留用于比较。"
       },
       {
         "scene": "N01",
@@ -1039,12 +1125,34 @@
       }
     ],
     "startup": {
-      "summary": "录像起点客户端已打开。约 1.33 秒显示会话准备中，3.53 秒进入监听，界面状态转换约 2.2 秒。进程启动耗时无法从此录像测得。",
-      "video": "V04",
-      "preparing_pts_s": 1.333,
-      "listening_pts_s": 3.533
+      "summary": "客户端窗口约 5.63 秒出现，6.70 秒显示配置页，间隔约 1.1 秒。7.67 秒进入音频准备，8.97 秒进入监听，间隔约 1.3 秒。",
+      "video": "V06",
+      "window_pts_s": 5.633,
+      "configuration_pts_s": 6.7,
+      "preparing_pts_s": 7.667,
+      "listening_pts_s": 8.967
     },
     "completion": [
+      {
+        "scene": "N05",
+        "video": "V06",
+        "source_pts_s": 10.06,
+        "subtitle_tail_pts_s": 23.433,
+        "last_absent_frame": 702,
+        "first_present_frame": 703,
+        "audio_end_pts_s": 30.09,
+        "audio_end_method": "独立译音轨末词及末尾 10 ms RMS 波形核对。"
+      },
+      {
+        "scene": "N06",
+        "video": "V06",
+        "source_pts_s": 31.419,
+        "subtitle_tail_pts_s": 43.9,
+        "last_absent_frame": 1316,
+        "first_present_frame": 1317,
+        "audio_end_pts_s": 53.4,
+        "audio_end_method": "独立译音轨末词及末尾 10 ms RMS 波形核对。"
+      },
       {
         "scene": "N03",
         "video": "V04",
@@ -1053,7 +1161,9 @@
         "last_absent_frame": 545,
         "first_present_frame": 546,
         "audio_end_pts_s": 25.76,
-        "audio_end_method": "末词波形与英文转写定位，尾音以 10 ms RMS 约 −50 dBFS 为界。"
+        "audio_end_method": "末词波形与英文转写定位，尾音以 10 ms RMS 约 −50 dBFS 为界。",
+        "adopted": false,
+        "exclusion_reason": "11 月 12 日 22:58 正常复测成为本期采用样本；11 月 11 日录次保留用于比较。"
       },
       {
         "scene": "N04",
@@ -1063,7 +1173,9 @@
         "last_absent_frame": 1160,
         "first_present_frame": 1161,
         "audio_end_pts_s": 47.73,
-        "audio_end_method": "末词波形与英文转写定位，尾音以 10 ms RMS 约 −50 dBFS 为界。"
+        "audio_end_method": "末词波形与英文转写定位，尾音以 10 ms RMS 约 −50 dBFS 为界。",
+        "adopted": false,
+        "exclusion_reason": "11 月 12 日 22:58 正常复测成为本期采用样本；11 月 11 日录次保留用于比较。"
       },
       {
         "status": "adjacent_frame_candidate",
@@ -1214,7 +1326,7 @@
       ]
     ],
     "limits": [],
-    "retest_date": "2026-11-11",
+    "retest_date": "2026-11-12",
     "network_retest": {
       "date": "2026-11-11",
       "video": "V05",

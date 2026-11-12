@@ -66,8 +66,8 @@ def validate(root=ROOT, media_dir=None):
     images = load(root / 'data/evidence-index.json')
     assert len(products) == 7
     assert len({p['slug'] for p in products}) == 7
-    assert len(media) == 21 and len({m['id'] for m in media}) == len(media)
-    assert len(images) == sum(len(p['cases']) for p in products) == 53
+    assert len(media) == 22 and len({m['id'] for m in media}) == len(media)
+    assert len(images) == sum(len(p['cases']) for p in products) == 55
     by_id = {m['id']: m for m in media}
     for product in products:
         for case in product['cases']:

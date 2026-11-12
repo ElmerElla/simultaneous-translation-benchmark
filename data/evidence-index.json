@@ -99,6 +99,34 @@
   },
   {
     "product": "Parley Voice",
+    "case_id": "N05",
+    "video_id": "parley-qwen-normal-retest-20261112",
+    "original_pts_s": 26,
+    "image": "evidence/images/parley-n05.png",
+    "label": "千问 Live · 上海线路首次开启会话",
+    "image_crop": {
+      "x": 674,
+      "y": 270,
+      "w": 560,
+      "h": 260
+    }
+  },
+  {
+    "product": "Parley Voice",
+    "case_id": "N06",
+    "video_id": "parley-qwen-normal-retest-20261112",
+    "original_pts_s": 50,
+    "image": "evidence/images/parley-n06.png",
+    "label": "千问 Live · 上海线路同会话再次输入",
+    "image_crop": {
+      "x": 674,
+      "y": 270,
+      "w": 560,
+      "h": 260
+    }
+  },
+  {
+    "product": "Parley Voice",
     "case_id": "N03",
     "video_id": "parley-qwen-normal-20261111",
     "original_pts_s": 25,

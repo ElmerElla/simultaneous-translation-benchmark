@@ -952,5 +952,47 @@
     "audio_streams_retained": 1,
     "audio_note": "保留一条混音，四轮测试区间外静音。",
     "review_status": "reviewed"
+  },
+  {
+    "id": "parley-qwen-normal-retest-20261112",
+    "product": "parley",
+    "file": "parley-qwen-normal-retest-20261112.mp4",
+    "release_tag": "parley-normal-retest-20261112",
+    "original_sha256": "dd66b8cb54a4a565bd0c46870ff1cc7ff0b77323fd00875defc6eed8bc4455a3",
+    "public_sha256": "a80f3ff7f7c1a8d6a65097243be0fa6c70d38d818f1ad73ffce32c1c9c74881d",
+    "original_duration_s": 54.433,
+    "public_duration_s": 54.433,
+    "size_bytes": 1539705,
+    "original_video_pts_at_public_zero_s": 0.0,
+    "retained_original_interval_s": [
+      0,
+      54.433
+    ],
+    "time_mapping": "原视频 PTS 对应公开秒数。不变速、不拼接。",
+    "redaction": "固定裁切字幕及测试界面中央区域，配置页出现前黑屏，移除原件元数据。",
+    "revealed_regions": [
+      {
+        "x": 674,
+        "y": 270,
+        "w": 560,
+        "h": 260,
+        "from_s": 6.7,
+        "until_s": 54.433
+      }
+    ],
+    "retained_test_audio_intervals_s": [
+      [
+        9.94,
+        30.18
+      ],
+      [
+        31.32,
+        53.5
+      ]
+    ],
+    "audio_streams_retained": 2,
+    "audio_clip_stream": 1,
+    "audio_note": "默认音轨合成独立原声和英文译声的测试区间，另提供独立英文译声。输入区间外原声静音。",
+    "review_status": "reviewed"
   }
 ]

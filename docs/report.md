@@ -2,7 +2,7 @@
 
 测试记录分析日期：2026-11-02—2026-11-04 · 发布整理日期：2026-11-06 · 环境：Windows
 
-本报告汇总既有测试录像和最终评测记录，覆盖 Transync AI、Parley Voice、Palabra、Maestra Live、JotMe、Wordly、讯飞同传。当前采用 47 组场景、19 段录像，含 2026-11-11 补录的 Parley Voice 千问 Live 正常和弱网测试。原豆包正常与弱网录像 V01、V02 作为历史记录。产品具体构建版本未完整留档，结论只适用于录像所示设置与样本，不代表产品当前所有版本。
+本报告汇总既有测试录像和最终评测记录，覆盖 Transync AI、Parley Voice、Palabra、Maestra Live、JotMe、Wordly、讯飞同传。当前采用 47 组场景、19 段录像，含 Parley Voice 千问 Live 2026-11-12 正常复测和 2026-11-11 弱网补录。原豆包正常与弱网录像 V01、V02 作为历史记录。产品具体构建版本未完整留档，结论只适用于录像所示设置与样本，不代表产品当前所有版本。
 
 ## 如何阅读
 
@@ -33,7 +33,7 @@ S01：请在下周二上午十点前确认测试结果，预算上限是三万�
 | 软件 | 正常场景的五事实核对 | 首次首显 / 首响（秒） | 主要限制 |
 | --- | --- | --- | --- |
 | Transync AI | 最终字幕和对应译音 5/5 | 4.8 / 18.3 | 再次输入首响较早；不能用少量录次推算稳定性 |
-| Parley Voice | 最终字幕和对应译声 5/5 | 4.4 / 4.5 | 千问 Live 首次会话，实时克隆开启 |
+| Parley Voice | 最终字幕和对应译声 5/5 | 3.4 / 3.8 | 千问 Live 上海线路，首次会话，实时克隆开启 |
 | Palabra | 最终字幕 5/5；部分译音币种未确认 | 14.3 / 14.8 | 新历史块整段出现；克隆开关未在录像展示 |
 | Maestra Live | 最终字幕及对应独立译音 5/5 | 3.7 / 16.0 | 首显常是未完成的中间稿 |
 | JotMe | 正常和 100ms 录次 3/5，金额错误 | 3.9 / 5.1 | 单独 10% 录次 5/5，不能归因为丢包改善 |
@@ -156,13 +156,14 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 
 ### 实时性能
 
-录像起点客户端已打开。约 1.33 秒显示会话准备中，3.53 秒进入监听，界面状态转换约 2.2 秒。进程启动耗时无法从此录像测得。
-千问 Live 首轮首显／首响约 4.4／4.5 秒，再次输入约 4.2／4.1 秒。字幕尾句位于录像 18.200／38.700 秒，译声结束约在 25.76／47.73 秒。原声起点以首句连续声学活动定位，排除短暂杂音。译声首响由混音与英文转写交叉定位，约 ±0.2 秒。录像音画通路未标定。
+客户端窗口约 5.63 秒出现，6.70 秒显示配置页，间隔约 1.1 秒。7.67 秒进入音频准备，8.97 秒进入监听，间隔约 1.3 秒。
+千问 Live 11 月 12 日上海线路首轮首显／首响约 3.4／3.8 秒，同会话再次输入约 4.5／5.0 秒。11 月 11 日新加坡线路样本分别为 4.4／4.5 与 4.2／4.1 秒。
 千问 Live 弱网录像首显／首响约为 100 ms 配置 5.0／5.2 秒、重播后 4.8／4.5 秒、10% 丢包配置 4.6／4.7 秒。重播差值从重播原声起点算。
+相较同日 22:17 复测，首轮首显和首响均早约 1.2 秒，再次输入首显和首响基本持平，译声末尾约晚 1.2 秒。[复测对照](parley-normal-retest-20261112.md)
 
 ### 译音质量
 
-C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。两段千问 Live 补录的三个标记音轨均解码为同一混音。译声内容由混音辅助转写核对，暂无独立译音声纹、峰值和主观音质评分。
+C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%，段间停顿约 0.16–0.65 秒。独立尾段转写保留发布条件与周五延期。11 月 12 日正常复测可用单独的英文译音轨核对两轮事实，未做主观音质或声纹重测。
 
 ### 弱网表现
 
@@ -171,14 +172,14 @@ C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%�
 
 ### 测试状态与证据缺口
 
-当前采用两组千问 Live 正常录次、四组千问 Live 弱网录次及豆包克隆 C01。历史豆包正常录像 V01 和弱网录像 V02 保留在历史记录。
+当前采用 11 月 12 日千问 Live 正常两轮、11 月 11 日千问 Live 弱网四轮及豆包克隆 C01。旧正常与弱网录像仍可供对照。
 
 ### 场景与证据
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N03 千问 Live · 首次开启翻译会话 | 5/5 | 5/5 | parley-qwen-normal-20261111 · 25.000s | [截图](../evidence/images/parley-n03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4#t=25) |
-| N04 千问 Live · 同会话再次输入 | 5/5 | 5/5 | parley-qwen-normal-20261111 · 44.000s | [截图](../evidence/images/parley-n04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4#t=44) |
+| N05 千问 Live · 上海线路首次开启会话 | 5/5 | 5/5 | parley-qwen-normal-retest-20261112 · 26.000s | [截图](../evidence/images/parley-n05.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4#t=26) |
+| N06 千问 Live · 上海线路同会话再次输入 | 5/5 | 5/5 | parley-qwen-normal-retest-20261112 · 50.000s | [截图](../evidence/images/parley-n06.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4#t=50) |
 | C01 豆包/实时克隆输入声音 | 错误 / 部分 / 正确 / 正确 / 正确 | 错误 / 部分 / 正确 / 正确 / 正确 | parley-v03 · 25.000s | [截图](../evidence/images/parley-c01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v03.mp4#t=25) |
 | W05 千问 Live · 上下行各 100 ms 配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 29.000s | [截图](../evidence/images/parley-w05.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=29) |
 | R03 千问 Live · 约 10 秒中断 | 未观察到 | 未观察到 | parley-qwen-network-20261111 · 49.000s | [截图](../evidence/images/parley-r03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=49) |
@@ -187,17 +188,17 @@ C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%�
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
-**N03 · 千问 Live · 首次开启翻译会话 · 25.000s**
+**N05 · 千问 Live · 上海线路首次开启会话 · 26.000s**
 
-录像开始时客户端已打开。界面显示实时克隆输入声音，线路为新加坡。 录像混音的英文辅助转写保留五项事实。
+从桌面打开客户端。上海线路，开启实时克隆。首轮把「确认测试结果」的动作和对象分两段输出，合读保留截止时间及对象。独立译音保留五项事实。
 
-![Parley Voice N03 脱敏证据](../evidence/images/parley-n03.png)
+![Parley Voice N05 脱敏证据](../evidence/images/parley-n05.png)
 
-**N04 · 千问 Live · 同会话再次输入 · 44.000s**
+**N06 · 千问 Live · 上海线路同会话再次输入 · 50.000s**
 
-同一会话再次输入 S01。两轮内容接在同一字幕气泡内，只核对新增英文。 录像混音的英文辅助转写保留五项事实。
+只核对同一气泡中新追加的英文。独立译音保留五项事实。相对同日上一次复测，首显、首响基本持平，末响从原声起点计约晚 1.2 秒。
 
-![Parley Voice N04 脱敏证据](../evidence/images/parley-n04.png)
+![Parley Voice N06 脱敏证据](../evidence/images/parley-n06.png)
 
 **C01 · 豆包/实时克隆输入声音 · parley-v03 / 25.000s**
 
