@@ -423,7 +423,7 @@
           "正确",
           "正确"
         ],
-        "note": "只核对同一气泡中新追加的英文。独立译音保留五项事实。相对同日上一次复测，首显、首响基本持平，末响从原声起点计约晚 1.2 秒。",
+        "note": "只核对同一气泡中新追加的英文。独立译音保留五项事实。",
         "evidence_image": "evidence/images/parley-n06.png",
         "video_id": "parley-qwen-normal-retest-20261112"
       },

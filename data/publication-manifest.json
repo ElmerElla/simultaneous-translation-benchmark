@@ -45,13 +45,13 @@
     },
     {
       "path": "data/results.json",
-      "sha256": "2f7e749bc7a6ddd10522a1d708366784c13e1226a8e8c9d6757135c99d960f25",
-      "size_bytes": 165933
+      "sha256": "2ab81cc9df80da5234385ec374716d7780305e5a459e932636c8978344c554e2",
+      "size_bytes": 165832
     },
     {
       "path": "data/scenario-review.csv",
-      "sha256": "df64dc4f89925e8e529db387ba081059b8e21aa6e637fc218bf69529390bad81",
-      "size_bytes": 20595
+      "sha256": "c825608c433a826420c7275a39092e9a38477e4829b9bc09763d891eb74cacc5",
+      "size_bytes": 20494
     },
     {
       "path": "data/source-code-manifest.json",
@@ -250,8 +250,8 @@
     },
     {
       "path": "docs/parley-normal-retest-20261112.md",
-      "sha256": "a097a8f8bbad4b036baef12ea7726769c97b23ab83cbd75e5f22e6c79266ef87",
-      "size_bytes": 2163
+      "sha256": "a694ee3a61f8aa016e4cee12763369ace11ab890f111b1d9dda5f43561c6fde6",
+      "size_bytes": 1931
     },
     {
       "path": "docs/privacy.md",
@@ -260,8 +260,8 @@
     },
     {
       "path": "docs/report.md",
-      "sha256": "0a1bfb7f42de1f49a5523268685cdca4f7329199c75d38ee1feb146f459597a5",
-      "size_bytes": 58481
+      "sha256": "a2c47591f88c1a805f1969d93abc7690adb9bacf43679eeb6295e0b0426dc7c2",
+      "size_bytes": 58313
     },
     {
       "path": "docs/reproducibility.md",
@@ -545,8 +545,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "549475a645765e7d6bd792f32755f0d312d8473827e1b5c90610c5f63b44a8ba",
-      "size_bytes": 84501
+      "sha256": "1008f0fe668444bc04017aea1be40a558a4f10fe1c3606bf5ef82fa1af1c0f7f",
+      "size_bytes": 84333
     },
     {
       "path": "requirements-analysis.txt",
