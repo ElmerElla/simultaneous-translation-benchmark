@@ -39,6 +39,11 @@
       "size_bytes": 29590
     },
     {
+      "path": "data/parley-doubao-pause-20261114.json",
+      "sha256": "3f2c3f0693790b3bc39ac910ae6c491b2d43e89d3da3647bc53faa726e99655e",
+      "size_bytes": 862
+    },
+    {
       "path": "data/parley-parameters-20261114.json",
       "sha256": "c6038ff6045d6b275195c242114cfac427a009bcd77d7029bf21e81724e3a278",
       "size_bytes": 2426
@@ -254,6 +259,11 @@
       "size_bytes": 8715
     },
     {
+      "path": "docs/parley-doubao-pause-20261114.md",
+      "sha256": "72f21d397bb370751c6a596069ab37376a501112e6083a611b6ecdbf9dae0826",
+      "size_bytes": 1438
+    },
+    {
       "path": "docs/parley-normal-retest-20261112.md",
       "sha256": "a694ee3a61f8aa016e4cee12763369ace11ab890f111b1d9dda5f43561c6fde6",
       "size_bytes": 1931
@@ -270,8 +280,8 @@
     },
     {
       "path": "docs/report.md",
-      "sha256": "e6a97b93b868fd0a05de848c1174c3f152bfc13e0b1e0ebf03c044da7c1361bb",
-      "size_bytes": 59659
+      "sha256": "c46aa6974eb22675d6aea5fb473728f6317c118c8659993fee7206108042510f",
+      "size_bytes": 61101
     },
     {
       "path": "docs/reproducibility.md",
@@ -565,8 +575,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "0f7ed7fe3731a8259109dba8c7e52b0e314a33c9f13bbe05c666dc7a0062df0e",
-      "size_bytes": 85923
+      "sha256": "06cc4a56d4eb2120717e2c74dcbf5b1dec41d85dd524d0ca7dcc555964b4d25b",
+      "size_bytes": 87523
     },
     {
       "path": "requirements-analysis.txt",
@@ -953,7 +963,7 @@
   "media_release_tag": "v1.0-20261106",
   "repository_revision": {
     "date": "2026-11-14",
-    "change": "补充千问与豆包版本2完整录次参数及两张脱敏截图；47组采用场景不变。",
+    "change": "新增Mac豆包短句停顿辅助示例及脱敏视频链接；千问数据不变",
     "adopted_scenes": 47,
     "adopted_videos": 19,
     "supplemental_media": [

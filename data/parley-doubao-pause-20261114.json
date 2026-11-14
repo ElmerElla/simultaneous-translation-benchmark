@@ -1,0 +1,36 @@
+{
+  "platform": "macOS",
+  "scope": "辅助短句示例，千问及Windows采用样本不变",
+  "original_sha256": "ec69fc6b72b5c11bc302503d1e9fa72b74e776621e2cd759284a6ca26922c4ed",
+  "public_sha256": "120a31a707b4c149c68092a62a59e7ac3c2e650c5f7f8cc2a42b7bfe800ad159",
+  "file": "parley-doubao-pause-20261114.mp4",
+  "size_bytes": 281518,
+  "release_tag": "parley-doubao-pause-20261114",
+  "duration_s": 12.91,
+  "crop": {
+    "x": 630,
+    "y": 90,
+    "w": 600,
+    "h": 300
+  },
+  "examples": [
+    {
+      "source_s": 4.03,
+      "subtitle_interval_s": [
+        5.7,
+        5.75
+      ],
+      "subtitle_delay_s": 1.7,
+      "audio_delay_s": null
+    },
+    {
+      "source_s": 4.94,
+      "subtitle_interval_s": [
+        8.3,
+        8.4
+      ],
+      "subtitle_delay_s": 3.4,
+      "audio_delay_s": 3.37
+    }
+  ]
+}
