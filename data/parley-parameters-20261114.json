@@ -1,0 +1,71 @@
+{
+  "sha256": "e6bbdef093407aabdac368526d9a941fd032b068e963aa037aac7760414b9854",
+  "duration_s": 53.1,
+  "rows": [
+    {
+      "scene": "首次输入",
+      "source_pts_s": 8.189,
+      "last_absent_frame": 399,
+      "first_subtitle_frame": 400,
+      "subtitle_pts_s": 13.333333333333334,
+      "stable_phrase_pts_s": 13.633333333333333,
+      "target_audio_pts_s": 13.759,
+      "audio_end_pts_s": 30.239,
+      "subtitle_delay_s": 5.144,
+      "audio_delay_s": 5.57,
+      "audio_completion_elapsed_s": 22.05,
+      "adopted": false,
+      "evidence_image": "evidence/images/parley-doubao2-1.png",
+      "evidence_pts_s": 28,
+      "subtitle_facts": [
+        "正确",
+        "正确",
+        "正确",
+        "正确",
+        "正确"
+      ],
+      "audio_facts_review": "独立译音辅助转写保留五项事实，未做人耳验收。第二轮尾句前的 Next 为辅助转写待确认词。"
+    },
+    {
+      "scene": "同会话再次输入",
+      "source_pts_s": 31.109,
+      "last_absent_frame": 1075,
+      "first_subtitle_frame": 1076,
+      "subtitle_pts_s": 35.86666666666667,
+      "stable_phrase_pts_s": 36.166666666666664,
+      "target_audio_pts_s": 36.239,
+      "audio_end_pts_s": 52.159,
+      "subtitle_delay_s": 4.758,
+      "audio_delay_s": 5.13,
+      "audio_completion_elapsed_s": 21.05,
+      "adopted": false,
+      "evidence_image": "evidence/images/parley-doubao2-2.png",
+      "evidence_pts_s": 51,
+      "subtitle_facts": [
+        "正确",
+        "正确",
+        "正确",
+        "正确",
+        "正确"
+      ],
+      "audio_facts_review": "独立译音辅助转写保留五项事实，未做人耳验收。第二轮尾句前的 Next 为辅助转写待确认词。"
+    }
+  ],
+  "decision": "千问首轮首显及首响较快；豆包版本2再次输入整段完成较快。不同音色设置、各两轮样本。",
+  "source_file": "冷启动、正常翻译_豆包2.mkv",
+  "scope": "补充比较，不替换七款横评的采用场景；逐录次保留完整数据，不拼接最佳值。",
+  "qwen_reference": [
+    {
+      "scene": "N05",
+      "subtitle_delay_s": 3.373,
+      "audio_delay_s": 3.84,
+      "audio_completion_elapsed_s": 20.03
+    },
+    {
+      "scene": "N06",
+      "subtitle_delay_s": 4.514,
+      "audio_delay_s": 5.04,
+      "audio_completion_elapsed_s": 21.981
+    }
+  ]
+}

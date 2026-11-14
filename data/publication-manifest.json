@@ -10,8 +10,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "66c816ed33f8447e54c7396789cda091f7166e7cd00e44cdacb7705f752c4010",
-      "size_bytes": 4181
+      "sha256": "1aee4fa0626d9b9c69a96f9a4e1a557ca9d27027bf853cd6184cc3c99155a1ac",
+      "size_bytes": 4432
     },
     {
       "path": "data/audio-manifest.json",
@@ -20,8 +20,8 @@
     },
     {
       "path": "data/comparison.csv",
-      "sha256": "a15dfc091099958a415abdfd3283dad088ee0160d5bf9623cf5eca520e4ea26c",
-      "size_bytes": 19500
+      "sha256": "e83bd95f48fae3ee46301b6c5dd8c41891663e77c931e34d7559b6c498426126",
+      "size_bytes": 19710
     },
     {
       "path": "data/evidence-index.csv",
@@ -39,14 +39,19 @@
       "size_bytes": 29590
     },
     {
+      "path": "data/parley-parameters-20261114.json",
+      "sha256": "c6038ff6045d6b275195c242114cfac427a009bcd77d7029bf21e81724e3a278",
+      "size_bytes": 2426
+    },
+    {
       "path": "data/reference.json",
       "sha256": "e42252a56cbd0d86c1a086b699919f02ec9eb9d5a9089463551763dc023c5728",
       "size_bytes": 543
     },
     {
       "path": "data/results.json",
-      "sha256": "2ab81cc9df80da5234385ec374716d7780305e5a459e932636c8978344c554e2",
-      "size_bytes": 165832
+      "sha256": "424b22fa348cd07c5128240f479435ba9ed1cffa17262485b5174c0c3daa44bc",
+      "size_bytes": 166043
     },
     {
       "path": "data/scenario-review.csv",
@@ -254,14 +259,19 @@
       "size_bytes": 1931
     },
     {
+      "path": "docs/parley-parameters-20261114.md",
+      "sha256": "e04c0b341919ee2c4a9428861d225c08b0fdf088c3b21c3e8b6e6b4a600eea18",
+      "size_bytes": 2914
+    },
+    {
       "path": "docs/privacy.md",
       "sha256": "16b19e780dedb529299ced9c170cbf97a89fdee6bdf7e3e6e94bbcae57882c66",
       "size_bytes": 5551
     },
     {
       "path": "docs/report.md",
-      "sha256": "a2c47591f88c1a805f1969d93abc7690adb9bacf43679eeb6295e0b0426dc7c2",
-      "size_bytes": 58313
+      "sha256": "e6a97b93b868fd0a05de848c1174c3f152bfc13e0b1e0ebf03c044da7c1361bb",
+      "size_bytes": 59659
     },
     {
       "path": "docs/reproducibility.md",
@@ -394,39 +404,19 @@
       "size_bytes": 340875
     },
     {
-      "path": "evidence/images/parley-n05.png",
-      "sha256": "4ebd08c16481ba4ef9fb020953281e65c84d88c2fc58f903d7fbe9449d70058f",
-      "size_bytes": 36126
-    },
-    {
-      "path": "evidence/images/parley-n06.png",
-      "sha256": "20874ce2d5a99ae801c36c8422bb77cf5b4e5b1aed149aca5fc414bdb27ddbf1",
-      "size_bytes": 66153
-    },
-    {
-      "path": "evidence/images/parley-w06.png",
-      "sha256": "efa1791f9b6d64061f5dd3497b5f2cd584853634f497a24a9661647535186a44",
-      "size_bytes": 154635
-    },
-    {
-      "path": "evidence/images/parley-w05.png",
-      "sha256": "87ed6cef246c47c8bab64d0e87507e8370640ac761637eed90f81b6c035a123a",
-      "size_bytes": 75507
-    },
-    {
-      "path": "evidence/images/parley-r04.png",
-      "sha256": "5ead238804d87a144e24760f1bb7abc900a8d01daba4a2e103daf3448886abe6",
-      "size_bytes": 112377
-    },
-    {
-      "path": "evidence/images/parley-r03.png",
-      "sha256": "67c54660982d5a99362b110a1796fed5d1d1730af038f85d406591bbdb5eec15",
-      "size_bytes": 69338
-    },
-    {
       "path": "evidence/images/parley-c01.png",
       "sha256": "50b008a06dfa11acfa6b65efe0243e24ee86ff156a4d7f034edf1cfcdb9e7967",
       "size_bytes": 63445
+    },
+    {
+      "path": "evidence/images/parley-doubao2-1.png",
+      "sha256": "3056c051ee782250fd4122759c998706c5ccb2f96eb9d54b6d611b8254dec433",
+      "size_bytes": 25279
+    },
+    {
+      "path": "evidence/images/parley-doubao2-2.png",
+      "sha256": "6770ec7c1bf02a89e1f9e49917fb6ce529efe28b6ea470a4d7019036b92686a3",
+      "size_bytes": 63020
     },
     {
       "path": "evidence/images/parley-n01.png",
@@ -449,6 +439,16 @@
       "size_bytes": 67937
     },
     {
+      "path": "evidence/images/parley-n05.png",
+      "sha256": "4ebd08c16481ba4ef9fb020953281e65c84d88c2fc58f903d7fbe9449d70058f",
+      "size_bytes": 36126
+    },
+    {
+      "path": "evidence/images/parley-n06.png",
+      "sha256": "20874ce2d5a99ae801c36c8422bb77cf5b4e5b1aed149aca5fc414bdb27ddbf1",
+      "size_bytes": 66153
+    },
+    {
       "path": "evidence/images/parley-r01.png",
       "sha256": "b6c421562e1e240380a5d1bdcc28a5e48434bbc52b21ea4ab840e17cb76d6894",
       "size_bytes": 87304
@@ -459,6 +459,16 @@
       "size_bytes": 133976
     },
     {
+      "path": "evidence/images/parley-r03.png",
+      "sha256": "67c54660982d5a99362b110a1796fed5d1d1730af038f85d406591bbdb5eec15",
+      "size_bytes": 69338
+    },
+    {
+      "path": "evidence/images/parley-r04.png",
+      "sha256": "5ead238804d87a144e24760f1bb7abc900a8d01daba4a2e103daf3448886abe6",
+      "size_bytes": 112377
+    },
+    {
       "path": "evidence/images/parley-w01.png",
       "sha256": "46bfb7f157aa83da3d185436222fdd560e588890987f70acf4c3961b195fd872",
       "size_bytes": 59107
@@ -467,6 +477,16 @@
       "path": "evidence/images/parley-w04.png",
       "sha256": "68bb45b62ae5083b2f6b8daa147e355445f010516e8cf97b38262cd12476f3ca",
       "size_bytes": 186945
+    },
+    {
+      "path": "evidence/images/parley-w05.png",
+      "sha256": "87ed6cef246c47c8bab64d0e87507e8370640ac761637eed90f81b6c035a123a",
+      "size_bytes": 75507
+    },
+    {
+      "path": "evidence/images/parley-w06.png",
+      "sha256": "efa1791f9b6d64061f5dd3497b5f2cd584853634f497a24a9661647535186a44",
+      "size_bytes": 154635
     },
     {
       "path": "evidence/images/transync-n01.png",
@@ -545,8 +565,8 @@
     },
     {
       "path": "report.html",
-      "sha256": "1008f0fe668444bc04017aea1be40a558a4f10fe1c3606bf5ef82fa1af1c0f7f",
-      "size_bytes": 84333
+      "sha256": "0f7ed7fe3731a8259109dba8c7e52b0e314a33c9f13bbe05c666dc7a0062df0e",
+      "size_bytes": 85923
     },
     {
       "path": "requirements-analysis.txt",
@@ -655,8 +675,8 @@
     },
     {
       "path": "scripts/build_report.py",
-      "sha256": "f0595ac41a61c424caf6b183fd6e1903028e9037b90340a0055e6145e3529c5b",
-      "size_bytes": 9134
+      "sha256": "ac64232130ef8d9a26d30767fde027b2d799f3798793e11c43377141bbb77882",
+      "size_bytes": 9314
     },
     {
       "path": "scripts/build_scenario_review.py",
@@ -932,8 +952,8 @@
   ],
   "media_release_tag": "v1.0-20261106",
   "repository_revision": {
-    "date": "2026-11-12",
-    "change": "采用千问 Live 11 月 12 日正常复测 N05、N06，保留 11 月 11 日正常样本作历史对照。",
+    "date": "2026-11-14",
+    "change": "补充千问与豆包版本2完整录次参数及两张脱敏截图；47组采用场景不变。",
     "adopted_scenes": 47,
     "adopted_videos": 19,
     "supplemental_media": [
@@ -957,5 +977,6 @@
       }
     ],
     "release_note": "v1.0/v1.1 素材包和历史工作簿保留原有记录。"
-  }
+  },
+  "supplemental_parameter_comparison": "data/parley-parameters-20261114.json"
 }

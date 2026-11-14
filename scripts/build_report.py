@@ -20,6 +20,7 @@ def inline(text):
             return f'<a class="seek" href="media/{filename}" data-video="{bare[:-4]}" data-time="{point}">{label}</a>'
         if url=='reproducibility.md':url='docs/reproducibility.md'
         if url=='privacy.md':url='docs/privacy.md'
+        if url=='parley-parameters-20261114.md':url='docs/parley-parameters-20261114.md'
         if url=='../测试结论.xlsx':url='测试结论.xlsx'
         return f'<a href="{url}">{label}</a>'
     return re.sub(r'\[([^\]]+)\]\(([^)]+)\)',link,text)

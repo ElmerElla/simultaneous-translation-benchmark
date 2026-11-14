@@ -41,3 +41,7 @@ python -m unittest discover -s tests -v
 ```
 
 视频哈希核对：把 Release MP4 放到 `media/` 后运行 `python scripts/benchmark.py validate --media-dir media`。
+
+## 11 月 14 日参数补充
+
+[千问与豆包版本2完整对照](docs/parley-parameters-20261114.md)：千问首轮响应较快，豆包版本2再次输入整段完成较快；保留全部录次数据及配置差异，原47组采用场景不变。
