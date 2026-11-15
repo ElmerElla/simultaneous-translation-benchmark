@@ -1,0 +1,74 @@
+{
+  "title": "Parley 豆包正常翻译",
+  "date": "2026-11-16",
+  "primary_normal_translation": true,
+  "recordings": [
+    {
+      "id": "01",
+      "source_file": "正常翻译_豆包01.mp4",
+      "original_sha256": "7ccf1b4ac2f9a45ba015092ec653c7b124a6d2f0691dc1e60dec54791675bf82",
+      "file": "parley-doubao-normal-01-20261116.mp4",
+      "duration_s": 11.308,
+      "segments": [
+        {
+          "text": "你好",
+          "translation": "Hello",
+          "source_pts_s": 4.78,
+          "subtitle_pts_interval_s": [
+            6.5,
+            6.6
+          ],
+          "subtitle_delay_s": 1.8,
+          "target_audio_pts_s": 6.48,
+          "audio_delay_s": 1.7,
+          "content": "正确"
+        }
+      ],
+      "public_sha256": "5530ea009e0eeab66929f003f65e5347ff6cf25d8ba2d4667167fbd715aa02be",
+      "size_bytes": 249382,
+      "release_tag": "parley-doubao-normal-20261116",
+      "platform": "macOS",
+      "video_url": "https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-normal-20261116/parley-doubao-normal-01-20261116.mp4"
+    },
+    {
+      "id": "02",
+      "source_file": "正常翻译_豆包02.mp4",
+      "original_sha256": "ec69fc6b72b5c11bc302503d1e9fa72b74e776621e2cd759284a6ca26922c4ed",
+      "file": "parley-doubao-normal-02-20261116.mp4",
+      "duration_s": 12.91,
+      "segments": [
+        {
+          "text": "你好",
+          "translation": "Hello",
+          "source_pts_s": 4.03,
+          "subtitle_pts_interval_s": [
+            5.7,
+            5.75
+          ],
+          "subtitle_delay_s": 1.7,
+          "audio_delay_s": null,
+          "content": "正确"
+        },
+        {
+          "text": "请问今天下午的会议几点开始",
+          "translation": "What time does this afternoon meeting start?",
+          "source_pts_s": 4.94,
+          "subtitle_pts_interval_s": [
+            8.3,
+            8.4
+          ],
+          "subtitle_delay_s": 3.4,
+          "target_audio_pts_s": 8.31,
+          "audio_delay_s": 3.37,
+          "content": "正确"
+        }
+      ],
+      "public_sha256": "120a31a707b4c149c68092a62a59e7ac3c2e650c5f7f8cc2a42b7bfe800ad159",
+      "size_bytes": 281518,
+      "release_tag": "parley-doubao-normal-20261116",
+      "platform": "macOS",
+      "video_url": "https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-normal-20261116/parley-doubao-normal-02-20261116.mp4"
+    }
+  ],
+  "timing_note": "从对应中文语段起点计时；字幕保留抽样边界，混音首响约0.1–0.2秒定位精度，02第一段译音与中文重叠未确认。"
+}

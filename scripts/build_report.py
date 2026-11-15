@@ -44,6 +44,9 @@ def render(markdown,products,media):
             if text in by_name:
                 p=by_name[text]
                 parts.append('<div class="video-list">')
+                for normal in p.get('normal_translation', {}).get('recordings', []):
+                    parts.append(f'<figure class="video-card"><figcaption><strong>正常翻译 {normal["id"]}</strong></figcaption><video controls playsinline preload="none" src="{normal["video_url"]}"></video><a href="{normal["video_url"]}">播放或下载正常翻译 {normal["id"]}</a></figure>')
+
                 for m in media:
                     if m['product']!=p['slug']:continue
                     case=next(c for c in p['cases'] if c['video_id']==m['id'])
