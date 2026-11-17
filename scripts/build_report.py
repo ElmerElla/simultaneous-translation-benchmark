@@ -6,7 +6,6 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 REPO='https://github.com/ElmerElla/simultaneous-translation-benchmark'
-DOWNLOAD=REPO+'/releases/download/v1.0-20261106/'
 
 
 def inline(text):
@@ -14,13 +13,13 @@ def inline(text):
     text=re.sub(r'`([^`]+)`',r'<code>\1</code>',text)
     text=re.sub(r'\*\*([^*]+)\*\*',r'<strong>\1</strong>',text)
     def link(m):
-        label,url=m.groups();url=url.replace('../evidence/','evidence/')
-        if url.startswith(DOWNLOAD):
-            filename=url[len(DOWNLOAD):];bare=filename.split('#')[0];point=filename.split('#t=')[-1] if '#t=' in filename else '0'
+        label,url=m.groups();url=url.replace('../evidence/','evidence/').replace('../media/','media/').replace('../data/','data/')
+        if url.startswith(REPO+'/releases/download/'):
+            url='media/'+url.rsplit('/',1)[-1]
+        if url.startswith('media/') and '.mp4' in url:
+            filename=url[len('media/'):];bare=filename.split('#')[0];point=filename.split('#t=')[-1] if '#t=' in filename else '0'
             return f'<a class="seek" href="media/{filename}" data-video="{bare[:-4]}" data-time="{point}">{label}</a>'
-        if url=='reproducibility.md':url='docs/reproducibility.md'
-        if url=='privacy.md':url='docs/privacy.md'
-        if url=='parley-parameters-20261114.md':url='docs/parley-parameters-20261114.md'
+        if '/' not in url and url.endswith('.md'):url='docs/'+url
         if url=='../测试结论.xlsx':url='测试结论.xlsx'
         return f'<a href="{url}">{label}</a>'
     return re.sub(r'\[([^\]]+)\]\(([^)]+)\)',link,text)
@@ -44,15 +43,16 @@ def render(markdown,products,media):
             if text in by_name:
                 p=by_name[text]
                 parts.append('<div class="video-list">')
-                for normal in p.get('normal_translation', {}).get('recordings', []):
-                    parts.append(f'<figure class="video-card"><figcaption><strong>正常翻译 {normal["id"]}</strong></figcaption><video controls playsinline preload="none" src="{normal["video_url"]}"></video><a href="{normal["video_url"]}">播放或下载正常翻译 {normal["id"]}</a></figure>')
-
-                for m in media:
-                    if m['product']!=p['slug']:continue
+                product_media = [m for m in media if m['product']==p['slug']]
+                product_media.sort(key=lambda m: next(i for i,c in enumerate(p['cases']) if c['video_id']==m['id']))
+                for m in product_media:
                     case=next(c for c in p['cases'] if c['video_id']==m['id'])
-                    download = DOWNLOAD.replace("v1.0-20261106/", m.get("release_tag", "v1.0-20261106") + "/")
-                    parts.append(f'<figure class="video-card"><figcaption><strong>{m["id"]}</strong> <span>{m["public_duration_s"]:.1f} 秒 · 脱敏浏览副本</span></figcaption><video id="video-{m["id"]}" controls playsinline preload="none" poster="{case["evidence_image"]}" src="media/{m["file"]}"></video><a href="{download}{m["file"]}">单独下载视频</a></figure>')
+                    parts.append(f'<figure class="video-card"><figcaption><strong>{m["id"]}</strong> <span>{m["public_duration_s"]:.1f} 秒 · 脱敏浏览副本</span></figcaption><video id="video-{m["id"]}" controls playsinline preload="none" poster="{case["evidence_image"]}" src="media/{m["file"]}"></video><a href="media/{m["file"]}">单独下载视频</a></figure>')
                 parts.append('</div>')
+            if text.startswith('豆包 Mac 短句与停顿补充示例'):
+                for normal in by_name['Parley Voice'].get('normal_translation', {}).get('recordings', []):
+                    url='media/'+normal['file']
+                    parts.append(f'<figure class="video-card"><figcaption><strong>豆包 Mac 补充示例 {normal["id"]}</strong></figcaption><video id="video-{normal["file"][:-4]}" controls playsinline preload="none" src="{url}"></video><a href="{url}">播放或下载示例 {normal["id"]}</a></figure>')
             i+=1;continue
         if line.startswith('|'):
             rows=[]

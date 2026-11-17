@@ -6,9 +6,9 @@
 
 **[阅读完整中文测试报告](docs/report.md)** · **[查看当前对比数据](data/comparison.csv)** · **[下载历史工作簿](测试结论.xlsx)**
 
-**[正常翻译：豆包01、02数据与视频](docs/parley-normal-20261116.md)**
+**[豆包 Mac 短句与停顿补充示例：01、02数据与视频](docs/parley-normal-20261116.md)**
 
-当前采用七款软件的 47 组场景、19 段录像。Parley Voice 正常翻译主要展示豆包01、02；原千问正常记录保留，弱网采用2026-11-11录次。原豆包正常与弱网录像 V01、V02 作为历史记录。
+当前采用七款软件的 47 组场景、19 段录像。Parley Voice 正常对比采用千问 Live 最新版本测试（2026-11-12）：首轮首显／首响3.4／3.8秒，再次4.5／5.0秒；弱网采用2026-11-11录次。豆包 Mac 两段短句仅在下方补充描述，最低约1.7秒，不纳入竞品对比表。具体构建号未完整留档。原豆包正常与弱网录像 V01、V02 作为历史记录。
 
 固定语料的 `5/5` 是五项事实覆盖，不能解释为总体准确率。各行条件和音轨不同，不给跨软件综合排名；弱网配置值不等于实际业务损伤。产品版本未完整留档，结论仅适用于本批录像。
 
@@ -25,9 +25,9 @@
 
 v1.1 Release 的离线包是历史快照，包含已排除的 V01。当前结论以本页链接的仓库报告和逐轮表为准。[历史离线包](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.1-20261106)
 
-[11 月 12 日正常复测与对照](docs/parley-normal-retest-20261112.md) · [脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4) · [千问 Live 弱网补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)。
+[11 月 12 日正常复测与对照](docs/parley-normal-retest-20261112.md) · [脱敏录像](media/parley-qwen-normal-retest-20261112.mp4) · [千问 Live 弱网补录脱敏录像](media/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录脱敏录像](media/parley-qwen-normal-20261111.mp4)。
 
-历史素材共有 **19 段脱敏 MP4、47 张截图、2 份独立测试参考 WAV**，包括已排除的 V01。各软件的翻译播报保留在视频音轨中。[素材下载页](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106) · [S01 测试输入](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/s01-input.wav) · [音色克隆参考](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/clone-reference.wav)
+历史素材共有 **19 段脱敏 MP4、47 张截图、2 份独立测试参考 WAV**，包括已排除的 V01。各软件的翻译播报保留在视频音轨中。[素材下载页](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106) · [S01 测试输入](media/s01-input.wav) · [音色克隆参考](media/clone-reference.wav)
 
 Excel 仅清空作者/修改人身份和本机工作目录属性；单元格、样式、绘图及公开来源批注保持原样。表内价格、政策和未实测功能描述是当时资料记录，不能当作最新报价或新增实测结论；实测范围与限制以报告为准。
 
@@ -42,8 +42,12 @@ python scripts/build_scenario_review.py
 python -m unittest discover -s tests -v
 ```
 
-视频哈希核对：把 Release MP4 放到 `media/` 后运行 `python scripts/benchmark.py validate --media-dir media`。
+视频哈希核对：仓库已随附 `media/`，运行 `python scripts/benchmark.py validate --media-dir media`。
 
 ## 11 月 14 日参数补充
 
-[千问与豆包版本2完整对照](docs/parley-parameters-20261114.md)：千问首轮响应较快，豆包版本2再次输入整段完成较快；保留全部录次数据及配置差异，原47组采用场景不变。
+[11月14日历史参数记录](docs/parley-parameters-20261114.md)：保留千问与豆包的完整原始计时；豆包只作独立描述，不参与竞品对比，原47组采用场景不变。
+
+## 仓库内视频
+
+脱敏视频已直接收录于 [media/](media/)，不再仅依赖 Release。克隆仓库即可随附视频阅读 [HTML报告](report.html)。Mac示例使用既有脱敏副本，原始计时及文件哈希保持不变。

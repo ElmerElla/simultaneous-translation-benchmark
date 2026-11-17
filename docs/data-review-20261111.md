@@ -56,7 +56,7 @@ C01 克隆尾音与参考原声的声纹余弦值为 0.5450，峰值为 0.908，
 
 首显和字幕尾句由 30 fps 相邻帧确定。三条标为混音、原音、译音的音轨解码后 SHA-256 相同。对中文首句的连续声学活动以波形定位，排除点击等短脉冲。英文五项事实由本地 Faster-Whisper Small 对混音全程和分段转写交叉核对，并与画面分开计分。重叠首响采用约值（约 ±0.2 秒），原件的音画通路未校准。新录次没有独立译音，也没有测量默认音色、主观音质、网络损伤或听众端延迟。
 
-[补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4) · [N03 字幕截图](../evidence/images/parley-n03.png) · [N04 字幕截图](../evidence/images/parley-n04.png) · [录像原件与公开副本摘要](../data/media-manifest.json)
+[补录脱敏录像](../media/parley-qwen-normal-20261111.mp4) · [N03 字幕截图](../evidence/images/parley-n03.png) · [N04 字幕截图](../evidence/images/parley-n04.png) · [录像原件与公开副本摘要](../data/media-manifest.json)
 
 ## 11 月 11 日 Parley Voice 弱网场景补录
 
@@ -75,4 +75,4 @@ C01 克隆尾音与参考原声的声纹余弦值为 0.5450，峰值为 0.908，
 
 10% 配置约在 75.80 秒出现，至少到 99 秒仍显示有效。丢包轮的首句追加在旧气泡末尾，第二气泡续写其余四项事实。弱网工作台提示检测到可能的本机中转，业务覆盖待验证。各条件仅一轮，实测业务延迟和丢包率未独立采集。
 
-[弱网补录脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4) · [逐轮结果](../data/scenario-review.csv) · [录像校验清单](../data/media-manifest.json)
+[弱网补录脱敏录像](../media/parley-qwen-network-20261111.mp4) · [逐轮结果](../data/scenario-review.csv) · [录像校验清单](../data/media-manifest.json)

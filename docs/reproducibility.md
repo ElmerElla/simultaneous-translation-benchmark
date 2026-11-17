@@ -61,4 +61,4 @@ python -m unittest discover -s scripts/weak-network/tests -p test_packet_loss.py
 
 本仓库用于分享本次测试记录，不代表被测厂商。软件界面、商标及第三方工具归各自权利人所有。未将第三方模型、安装包或商业组件重新分发；也未替用户设定新的开源许可证。
 
-补录的脱敏 MP4 单独提供。验证完整清单时，请与历史媒体放在同一个 media/ 目录。[11 月 12 日正常复测](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4) · [千问 Live 弱网补录](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-retest-20261111/parley-qwen-normal-20261111.mp4)
+仓库 `media/` 已随附22段清单内脱敏MP4、两段Mac补充示例及一份历史停顿副本（与示例02内容相同），另含两份公开参考WAV。`validate --media-dir media` 核对22段清单内视频；两段Mac示例的SHA256另见 `data/parley-normal-20261116.json`。[11 月 12 日正常复测](../media/parley-qwen-normal-retest-20261112.mp4) · [千问 Live 弱网补录](../media/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录](../media/parley-qwen-normal-20261111.mp4)

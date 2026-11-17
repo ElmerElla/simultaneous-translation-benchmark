@@ -1,6 +1,6 @@
-# Parley Voice 千问 Live 正常复测
+# Parley Voice 千问 Live 最新版本测试（2026-11-12）
 
-2026-11-12 22:58 录制。千问 Live、上海线路、实时音色克隆。两轮为同会话的相同 S01 中译英输入。字幕和独立英文译声均保留全部五项事实。首轮把「确认」及「测试结果」分段输出，合读保留截止时间和动作对象。
+2026-11-12 22:58 录制。本报告最新采用的正常测试录次，具体构建号未完整留档；原始计时保持不变。千问 Live、上海线路、实时音色克隆。两轮为同会话的相同 S01 中译英输入。字幕和独立英文译声均保留全部五项事实。首轮把「确认」及「测试结果」分段输出，合读保留截止时间和动作对象。
 
 | 录像 | 首次会话首显 / 首响 | 同会话再次输入首显 / 首响 | 首次 / 再次译声结束 |
 | --- | --- | --- | --- |
@@ -16,4 +16,4 @@
 
 表中为原录像时间，单位秒。客户端窗口约 5.63 秒出现，6.70 秒显示配置页，间隔约 1.1 秒。7.67 秒进入音频准备，8.97 秒进入监听，间隔约 1.3 秒。 首显用相邻帧复核，首响取独立译音轨连续发声起点。原声与译音均为录像观测，音画通路未标定。 两条独立音轨经解码与内容核对。公开副本的默认音轨合成测试原声和译声，第二条音轨仅保留英文译声。
 
-[脱敏录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4) · [首轮截图](../evidence/images/parley-n05.png) · [再次输入截图](../evidence/images/parley-n06.png) · [采用场景表](../data/scenario-review.csv)
+[脱敏录像](../media/parley-qwen-normal-retest-20261112.mp4) · [首轮截图](../evidence/images/parley-n05.png) · [再次输入截图](../evidence/images/parley-n06.png) · [采用场景表](../data/scenario-review.csv)

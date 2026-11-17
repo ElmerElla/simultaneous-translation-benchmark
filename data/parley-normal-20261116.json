@@ -1,7 +1,7 @@
 {
-  "title": "Parley 豆包正常翻译",
+  "title": "Parley 豆包 Mac 短句与停顿补充示例",
   "date": "2026-11-16",
-  "primary_normal_translation": true,
+  "primary_normal_translation": false,
   "recordings": [
     {
       "id": "01",
@@ -28,7 +28,7 @@
       "size_bytes": 249382,
       "release_tag": "parley-doubao-normal-20261116",
       "platform": "macOS",
-      "video_url": "https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-normal-20261116/parley-doubao-normal-01-20261116.mp4"
+      "video_url": "../media/parley-doubao-normal-01-20261116.mp4"
     },
     {
       "id": "02",
@@ -67,8 +67,9 @@
       "size_bytes": 281518,
       "release_tag": "parley-doubao-normal-20261116",
       "platform": "macOS",
-      "video_url": "https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-normal-20261116/parley-doubao-normal-02-20261116.mp4"
+      "video_url": "../media/parley-doubao-normal-02-20261116.mp4"
     }
   ],
-  "timing_note": "从对应中文语段起点计时；字幕保留抽样边界，混音首响约0.1–0.2秒定位精度，02第一段译音与中文重叠未确认。"
+  "timing_note": "从对应中文语段起点计时；字幕保留抽样边界，混音首响约0.1–0.2秒定位精度，02第一段译音与中文重叠未确认。",
+  "comparison_scope": "仅作补充示例，不纳入竞品对比或固定S01评分。"
 }

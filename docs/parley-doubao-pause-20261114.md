@@ -9,4 +9,4 @@
 
 以上为原录像时间，以相邻抽样画面给出边界区间，不冒充逐帧精确值；原声与英文语音由混音波形和本地辅助转写交叉定位，未做人耳验收，音画通路未标定。短句在停顿后较早显示译文，与长段连续输入需要更长等待的现象一致；停顿可能帮助系统确定分句，但此处句长、平台和输入内容同时不同，不能证明停顿必然降低延迟。需同稿有/无停顿重复试验才能判断因果。
 
-[播放脱敏辅助录像](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-pause-20261114/parley-doubao-pause-20261114.mp4)
+[播放脱敏辅助录像](../media/parley-doubao-pause-20261114.mp4)

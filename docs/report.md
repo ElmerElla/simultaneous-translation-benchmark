@@ -1,6 +1,6 @@
 # 七款同声传译软件测试报告
 
-测试记录分析日期：2026-11-02—2026-11-04 · 发布整理日期：2026-11-06 · 环境：Windows
+测试记录分析日期：2026-11-02—2026-11-04 · 发布整理日期：2026-11-06 · 环境：Windows（豆包补充示例为 Mac） · 本次说明更新：2026-11-17
 
 本报告汇总既有测试录像和最终评测记录，覆盖 Transync AI、Parley Voice、Palabra、Maestra Live、JotMe、Wordly、讯飞同传。当前采用 47 组场景、19 段录像，含 Parley Voice 千问 Live 2026-11-12 正常复测和 2026-11-11 弱网补录。原豆包正常与弱网录像 V01、V02 作为历史记录。产品具体构建版本未完整留档，结论只适用于录像所示设置与样本，不代表产品当前所有版本。
 
@@ -33,7 +33,7 @@ S01：请在下周二上午十点前确认测试结果，预算上限是三万�
 | 软件 | 正常场景的五事实核对 | 首次首显 / 首响（秒） | 主要限制 |
 | --- | --- | --- | --- |
 | Transync AI | 最终字幕和对应译音 5/5 | 4.8 / 18.3 | 再次输入首响较早；不能用少量录次推算稳定性 |
-| Parley Voice | 豆包01问候翻译正确；02两句保留原意 | 约1.8 / 1.7 | 正常翻译以豆包01、02展示；02明细见下方 |
+| Parley Voice | 千问 Live 最新版本测试，两轮字幕及译音均5/5 | 3.4 / 3.8 | 2026-11-12上海线路；再次输入4.5 / 5.0秒；构建号未留档 |
 | Palabra | 最终字幕 5/5；部分译音币种未确认 | 14.3 / 14.8 | 新历史块整段出现；克隆开关未在录像展示 |
 | Maestra Live | 最终字幕及对应独立译音 5/5 | 3.7 / 16.0 | 首显常是未完成的中间稿 |
 | JotMe | 正常和 100ms 录次 3/5，金额错误 | 3.9 / 5.1 | 单独 10% 录次 5/5，不能归因为丢包改善 |
@@ -92,13 +92,13 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N01 首次启动·克隆开启 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-normal · 48.904s | [截图](../evidence/images/transync-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-normal.mp4#t=48.904) |
-| N02 同进程新会话·克隆开启 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-normal · 81.129s | [截图](../evidence/images/transync-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-normal.mp4#t=81.129) |
-| N03 同进程新会话·默认音色 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-normal · 124.454s | [截图](../evidence/images/transync-n03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-normal.mp4#t=124.454) |
-| W01 上行100ms+下行100ms | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-network · 39.194s | [截图](../evidence/images/transync-w01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-network.mp4#t=39.194) |
-| W02 中断10秒期间的输入 | 归属不唯一，见说明 | 归属不唯一，见说明 | transync-network · 64.000s | [截图](../evidence/images/transync-w02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-network.mp4#t=64.0) |
-| W03 撤销中断后同文重播 | 归属不唯一，见说明 | 归属不唯一，见说明 | transync-network · 82.800s | [截图](../evidence/images/transync-w03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-network.mp4#t=82.8) |
-| W04 上下行各10%概率丢包·克隆开启 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确（抵消辅助） / 正确（抵消辅助） / 正确 / 正确 / 正确 | transync-loss10 · 30.000s | [截图](../evidence/images/transync-w04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/transync-loss10.mp4#t=30) |
+| N01 首次启动·克隆开启 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-normal · 48.904s | [截图](../evidence/images/transync-n01.png) · [视频](../media/transync-normal.mp4#t=48.904) |
+| N02 同进程新会话·克隆开启 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-normal · 81.129s | [截图](../evidence/images/transync-n02.png) · [视频](../media/transync-normal.mp4#t=81.129) |
+| N03 同进程新会话·默认音色 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-normal · 124.454s | [截图](../evidence/images/transync-n03.png) · [视频](../media/transync-normal.mp4#t=124.454) |
+| W01 上行100ms+下行100ms | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | transync-network · 39.194s | [截图](../evidence/images/transync-w01.png) · [视频](../media/transync-network.mp4#t=39.194) |
+| W02 中断10秒期间的输入 | 归属不唯一，见说明 | 归属不唯一，见说明 | transync-network · 64.000s | [截图](../evidence/images/transync-w02.png) · [视频](../media/transync-network.mp4#t=64.0) |
+| W03 撤销中断后同文重播 | 归属不唯一，见说明 | 归属不唯一，见说明 | transync-network · 82.800s | [截图](../evidence/images/transync-w03.png) · [视频](../media/transync-network.mp4#t=82.8) |
+| W04 上下行各10%概率丢包·克隆开启 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确（抵消辅助） / 正确（抵消辅助） / 正确 / 正确 / 正确 | transync-loss10 · 30.000s | [截图](../evidence/images/transync-w04.png) · [视频](../media/transync-loss10.mp4#t=30) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -146,22 +146,11 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 
 ## Parley Voice
 
-### 正常翻译：豆包01、02
+### 正常翻译：千问 Live 最新版本测试
 
-| 正常翻译录次 | 内容 | 字幕延迟 | 译音首响延迟 | 翻译结果 |
-| --- | --- | ---: | ---: | --- |
-| 豆包01 | 你好 → Hello | 约1.8秒 | 约1.7秒 | 正确 |
-| 豆包02·第一句 | 你好 → Hello | 约1.7秒 | 未确认（混音重叠） | 正确 |
-| 豆包02·第二句 | 今天下午会议几点开始 | 约3.4秒 | 约3.37秒 | 正确 |
+正常翻译与竞品对比以2026-11-12录制的千问 Live 最新版本测试为准：首轮字幕首显／译音首响约3.4／3.8秒，同会话再次输入约4.5／5.0秒，两轮字幕及独立译音均保留S01全部五项事实。这里“最新版本”指本报告最新采用的测试录次，具体构建号未完整留档。
 
-01为单句问候；02为问候后停顿约0.5秒，再询问会议时间。字幕和译文保留原意。停顿有助于分句，短句可较早显示译文；本次不据此承诺固定延迟。
-
-[播放正常翻译01](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-normal-20261116/parley-doubao-normal-01-20261116.mp4)
-
-[播放正常翻译02](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-doubao-normal-20261116/parley-doubao-normal-02-20261116.mp4)
-
-字幕延迟从本句中文开始算起，首显约有0.1秒抽样误差。02第一句译音与后续中文重叠，不报告确定首响。设备为Mac；声音内容通过混音波形与辅助转写核对。
-
+[播放千问最新版本测试录像](../media/parley-qwen-normal-retest-20261112.mp4) · [完整原始计时](parley-normal-retest-20261112.md)
 
 ### 翻译事实覆盖
 
@@ -178,20 +167,25 @@ OBS录像离线观测；下列均从S01最早声学活动起算，顺序为“�
 千问 Live 弱网录像首显／首响约为 100 ms 配置 5.0／5.2 秒、重播后 4.8／4.5 秒、10% 丢包配置 4.6／4.7 秒。重播差值从重播原声起点算。
 11 月 11 日新加坡线路的两轮数据可在复测对照中查看。[复测对照](parley-normal-retest-20261112.md)
 
-#### 11 月 14 日千问与豆包版本2补充比较
+### 豆包 Mac 短句与停顿补充示例（01、02）
 
-| 配置与录次 | 字幕首显延迟 | 译音首响延迟 | 原声开始至译音播完 | 字幕事实 |
-| --- | ---: | ---: | ---: | --- |
-| 千问 Live · 上海 · 实时克隆 · 首次 N05 | 3.37 秒 | 3.84 秒 | 20.03 秒 | 5/5 |
-| 千问 Live · 上海 · 实时克隆 · 再次 N06 | 4.51 秒 | 5.04 秒 | 21.98 秒 | 5/5 |
-| 豆包版本2 · 上海 · VV女声 · 首次 | 5.14 秒 | 5.57 秒 | 22.05 秒 | 5/5 |
-| 豆包版本2 · 上海 · VV女声 · 再次 | 4.76 秒 | 5.13 秒 | 21.05 秒 | 5/5 |
+以下仅说明短句及停顿场景，不纳入上方竞品对比表，也不替换千问最新版本测试。两段均为 Mac 录像，本次观测最低约1.7秒，不能代表长句或持续说话的延迟。
 
-千问首次输入的字幕首显和译音首响分别早约 1.77、1.73 秒；再次输入首响接近，豆包版本2从原声开始至整段译音播完短约 0.93 秒。只比较这些录次，不把千问首响和豆包完成时间合成一组结果。
+**示例01：单句问候。** 原声“你好”译为“Hello”，字幕延迟约1.8秒，译音首响约1.7秒，含义正确。短句说完后的停顿有助于系统确定分句，可更早输出译文，延迟会更低；具体数值仍取决于句长、输入节奏及当次条件。
 
-两种配置均为上海线路，但千问启用实时克隆，豆包采用系统 VV 女声，各只有两轮。字幕均保留五项事实；豆包译音仅由独立音轨辅助转写核对，未做人耳音质验收。第二轮辅助转写在尾句前出现 Next，是否为实际新增词待确认。音画通路未标定，约 0.1–0.2 秒尺度的差异需谨慎解释。
+[播放豆包 Mac 示例01](../media/parley-doubao-normal-01-20261116.mp4)
 
-[完整对照与脱敏截图](parley-parameters-20261114.md) · [结构化参数](../data/parley-parameters-20261114.json)
+**示例02：问候后停顿，再问会议时间。** “你好”后停顿约0.5秒，再说“请问今天下午的会议几点开始？”。问候字幕延迟约1.7秒；后一句字幕延迟约3.4秒、译音首响约3.37秒，译文保留原意。停顿有助于更早分句，短句延迟可更低，但不表示后面的长句也固定为1.7秒。
+
+[播放豆包 Mac 示例02](../media/parley-doubao-normal-02-20261116.mp4)
+
+延迟从对应中文语段的原声起点算起，字幕首显有约0.1秒抽样误差。02问候译音与后续中文混音重叠，首响未唯一确认。内容由混音波形和辅助转写核对，未做人耳音质验收，音画通路未标定。这两段示例没有同稿有／无停顿对照，不能单独量化停顿带来的降幅，也不承诺固定延迟。
+
+#### 历史版本与参数补充
+
+11月11日历史千问录次首显／首响为4.4／4.5秒、4.2／4.1秒，保留作旧版描述；新旧线路和采集条件不同，不能把差值全部归因于版本更新。
+
+11月14日豆包“版本2”历史参数仅作记录：首轮首显／首响5.14／5.57秒、再次4.76／5.13秒；原声至译音播完分别22.05／21.05秒。该录次与上方Mac短句示例的内容和设置不同，不纳入竞品对比，不据此作快慢结论。[历史参数与脱敏截图](parley-parameters-20261114.md) · [结构化参数](../data/parley-parameters-20261114.json)
 
 ### 译音质量
 
@@ -210,13 +204,13 @@ C01 克隆录次的无重叠 F4–F5 尾句峰值 0.908，满幅数字削波 0%�
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N05 千问 Live · 上海线路首次开启会话 | 5/5 | 5/5 | parley-qwen-normal-retest-20261112 · 26.000s | [截图](../evidence/images/parley-n05.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4#t=26) |
-| N06 千问 Live · 上海线路同会话再次输入 | 5/5 | 5/5 | parley-qwen-normal-retest-20261112 · 50.000s | [截图](../evidence/images/parley-n06.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-normal-retest-20261112/parley-qwen-normal-retest-20261112.mp4#t=50) |
-| C01 豆包/实时克隆输入声音 | 错误 / 部分 / 正确 / 正确 / 正确 | 错误 / 部分 / 正确 / 正确 / 正确 | parley-v03 · 25.000s | [截图](../evidence/images/parley-c01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/parley-v03.mp4#t=25) |
-| W05 千问 Live · 上下行各 100 ms 配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 29.000s | [截图](../evidence/images/parley-w05.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=29) |
-| R03 千问 Live · 约 10 秒中断 | 未观察到 | 未观察到 | parley-qwen-network-20261111 · 49.000s | [截图](../evidence/images/parley-r03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=49) |
-| R04 千问 Live · 解除中断后同稿重播 | 5/5 | 5/5 | parley-qwen-network-20261111 · 72.000s | [截图](../evidence/images/parley-r04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=72) |
-| W06 千问 Live · 上下行各 10% 概率丢包配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 97.000s | [截图](../evidence/images/parley-w06.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/parley-network-retest-20261111/parley-qwen-network-20261111.mp4#t=97) |
+| N05 千问 Live · 上海线路首次开启会话 | 5/5 | 5/5 | parley-qwen-normal-retest-20261112 · 26.000s | [截图](../evidence/images/parley-n05.png) · [视频](../media/parley-qwen-normal-retest-20261112.mp4#t=26) |
+| N06 千问 Live · 上海线路同会话再次输入 | 5/5 | 5/5 | parley-qwen-normal-retest-20261112 · 50.000s | [截图](../evidence/images/parley-n06.png) · [视频](../media/parley-qwen-normal-retest-20261112.mp4#t=50) |
+| C01 豆包/实时克隆输入声音 | 错误 / 部分 / 正确 / 正确 / 正确 | 错误 / 部分 / 正确 / 正确 / 正确 | parley-v03 · 25.000s | [截图](../evidence/images/parley-c01.png) · [视频](../media/parley-v03.mp4#t=25) |
+| W05 千问 Live · 上下行各 100 ms 配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 29.000s | [截图](../evidence/images/parley-w05.png) · [视频](../media/parley-qwen-network-20261111.mp4#t=29) |
+| R03 千问 Live · 约 10 秒中断 | 未观察到 | 未观察到 | parley-qwen-network-20261111 · 49.000s | [截图](../evidence/images/parley-r03.png) · [视频](../media/parley-qwen-network-20261111.mp4#t=49) |
+| R04 千问 Live · 解除中断后同稿重播 | 5/5 | 5/5 | parley-qwen-network-20261111 · 72.000s | [截图](../evidence/images/parley-r04.png) · [视频](../media/parley-qwen-network-20261111.mp4#t=72) |
+| W06 千问 Live · 上下行各 10% 概率丢包配置 | 5/5 | 5/5 | parley-qwen-network-20261111 · 97.000s | [截图](../evidence/images/parley-w06.png) · [视频](../media/parley-qwen-network-20261111.mp4#t=97) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -306,13 +300,13 @@ CAMPPlus 192维声纹；同一原声参考与无重叠F2～F5英文片段比较�
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N01 首次录次 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v01 · 59.000s | [截图](../evidence/images/palabra-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v01.mp4#t=59) |
-| N02 正常录制 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 未确认 / 未确认 / 正确 / 正确 | palabra-v03 · 40.000s | [截图](../evidence/images/palabra-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v03.mp4#t=40) |
-| C01 文件标称音色克隆 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v04 · 43.000s | [截图](../evidence/images/palabra-c01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v04.mp4#t=43) |
-| W01 上下行各100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v02 · 46.000s | [截图](../evidence/images/palabra-w01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v02.mp4#t=46) |
-| W02 中断后短残段 | 错误 / 遗漏 / 遗漏 / 遗漏 / 部分 | 错误 / 遗漏 / 遗漏 / 遗漏 / 部分 | palabra-v02 · 70.000s | [截图](../evidence/images/palabra-w02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v02.mp4#t=70) |
-| W03 恢复后重新播放 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v02 · 100.000s | [截图](../evidence/images/palabra-w03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v02.mp4#t=100) |
-| W04 上下行各10%概率丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 未确认 / 未确认 / 正确 / 正确 | palabra-v02 · 132.000s | [截图](../evidence/images/palabra-w04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/palabra-v02.mp4#t=132) |
+| N01 首次录次 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v01 · 59.000s | [截图](../evidence/images/palabra-n01.png) · [视频](../media/palabra-v01.mp4#t=59) |
+| N02 正常录制 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 未确认 / 未确认 / 正确 / 正确 | palabra-v03 · 40.000s | [截图](../evidence/images/palabra-n02.png) · [视频](../media/palabra-v03.mp4#t=40) |
+| C01 文件标称音色克隆 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v04 · 43.000s | [截图](../evidence/images/palabra-c01.png) · [视频](../media/palabra-v04.mp4#t=43) |
+| W01 上下行各100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v02 · 46.000s | [截图](../evidence/images/palabra-w01.png) · [视频](../media/palabra-v02.mp4#t=46) |
+| W02 中断后短残段 | 错误 / 遗漏 / 遗漏 / 遗漏 / 部分 | 错误 / 遗漏 / 遗漏 / 遗漏 / 部分 | palabra-v02 · 70.000s | [截图](../evidence/images/palabra-w02.png) · [视频](../media/palabra-v02.mp4#t=70) |
+| W03 恢复后重新播放 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | palabra-v02 · 100.000s | [截图](../evidence/images/palabra-w03.png) · [视频](../media/palabra-v02.mp4#t=100) |
+| W04 上下行各10%概率丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 未确认 / 未确认 / 正确 / 正确 | palabra-v02 · 132.000s | [截图](../evidence/images/palabra-w04.png) · [视频](../media/palabra-v02.mp4#t=132) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -400,11 +394,11 @@ DevTools页面配置：100ms、约37～47秒Offline、随后10% Packet Loss；�
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N01 首次录次/Puck | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v01 · 38.000s | [截图](../evidence/images/maestra-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/maestra-v01.mp4#t=38) |
-| N02 既有正常录次/Puck | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v03 · 30.000s | [截图](../evidence/images/maestra-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/maestra-v03.mp4#t=30) |
-| W01 DevTools延迟100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v02 · 33.000s | [截图](../evidence/images/maestra-w01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/maestra-v02.mp4#t=33) |
-| W02 Offline撤销后新段 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v02 · 68.500s | [截图](../evidence/images/maestra-w02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/maestra-v02.mp4#t=68.5) |
-| W04 DevTools 10%丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v02 · 100.000s | [截图](../evidence/images/maestra-w04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/maestra-v02.mp4#t=100) |
+| N01 首次录次/Puck | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v01 · 38.000s | [截图](../evidence/images/maestra-n01.png) · [视频](../media/maestra-v01.mp4#t=38) |
+| N02 既有正常录次/Puck | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v03 · 30.000s | [截图](../evidence/images/maestra-n02.png) · [视频](../media/maestra-v03.mp4#t=30) |
+| W01 DevTools延迟100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v02 · 33.000s | [截图](../evidence/images/maestra-w01.png) · [视频](../media/maestra-v02.mp4#t=33) |
+| W02 Offline撤销后新段 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v02 · 68.500s | [截图](../evidence/images/maestra-w02.png) · [视频](../media/maestra-v02.mp4#t=68.5) |
+| W04 DevTools 10%丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | maestra-v02 · 100.000s | [截图](../evidence/images/maestra-w04.png) · [视频](../media/maestra-v02.mp4#t=100) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -481,11 +475,11 @@ DevTools页面配置：100ms、约37～47秒Offline、随后10% Packet Loss；�
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N01 首次录次 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v03 · 39.000s | [截图](../evidence/images/jotme-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/jotme-v03.mp4#t=39) |
-| N02 同进程重播 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v03 · 70.000s | [截图](../evidence/images/jotme-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/jotme-v03.mp4#t=70) |
-| W01 上下行各100ms配置 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v02 · 23.000s | [截图](../evidence/images/jotme-w01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/jotme-v02.mp4#t=23) |
-| R01 中断与重播合并新段 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v02 · 52.000s | [截图](../evidence/images/jotme-r01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/jotme-v02.mp4#t=52) |
-| W04 上下行各10%概率丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | jotme-v01 · 37.000s | [截图](../evidence/images/jotme-w04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/jotme-v01.mp4#t=37) |
+| N01 首次录次 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v03 · 39.000s | [截图](../evidence/images/jotme-n01.png) · [视频](../media/jotme-v03.mp4#t=39) |
+| N02 同进程重播 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v03 · 70.000s | [截图](../evidence/images/jotme-n02.png) · [视频](../media/jotme-v03.mp4#t=70) |
+| W01 上下行各100ms配置 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v02 · 23.000s | [截图](../evidence/images/jotme-w01.png) · [视频](../media/jotme-v02.mp4#t=23) |
+| R01 中断与重播合并新段 | 正确 / 错误 / 错误 / 正确 / 正确 | 正确 / 错误 / 错误 / 正确 / 正确 | jotme-v02 · 52.000s | [截图](../evidence/images/jotme-r01.png) · [视频](../media/jotme-v02.mp4#t=52) |
+| W04 上下行各10%概率丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | jotme-v01 · 37.000s | [截图](../evidence/images/jotme-w04.png) · [视频](../media/jotme-v01.mp4#t=37) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -562,14 +556,14 @@ DevTools页面配置：100ms、约37～47秒Offline、随后10% Packet Loss；�
 
 | 场景 | 本轮最终字幕事实 | 对应译音事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- |
-| N01 首次字幕录次 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v01 · 28.000s | [截图](../evidence/images/wordly-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v01.mp4#t=28) |
-| N03 开启播音后的录次 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 正确 / 正确 / 正确 / 正确 / 正确 | wordly-v01 · 82.800s | [截图](../evidence/images/wordly-n03.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v01.mp4#t=82.8) |
-| N04 正常录像后段10%配置 | 部分 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v01 · 100.000s | [截图](../evidence/images/wordly-n04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v01.mp4#t=100) |
-| B01 弱网录像/No throttling基线1 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | wordly-v02 · 27.000s | [截图](../evidence/images/wordly-b01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v02.mp4#t=27) |
-| B02 弱网录像/No throttling基线2 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | wordly-v02 · 61.000s | [截图](../evidence/images/wordly-b02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v02.mp4#t=61) |
-| W01a DevTools 100ms/首次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v02 · 96.000s | [截图](../evidence/images/wordly-w01a.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v02.mp4#t=96) |
-| W01b DevTools 100ms/继续重播 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v02 · 118.000s | [截图](../evidence/images/wordly-w01b.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v02.mp4#t=118) |
-| W04 DevTools 10%/末次输入 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v02 · 149.000s | [截图](../evidence/images/wordly-w04.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/wordly-v02.mp4#t=149) |
+| N01 首次字幕录次 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v01 · 28.000s | [截图](../evidence/images/wordly-n01.png) · [视频](../media/wordly-v01.mp4#t=28) |
+| N03 开启播音后的录次 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 正确 / 正确 / 正确 / 正确 / 正确 | wordly-v01 · 82.800s | [截图](../evidence/images/wordly-n03.png) · [视频](../media/wordly-v01.mp4#t=82.8) |
+| N04 正常录像后段10%配置 | 部分 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v01 · 100.000s | [截图](../evidence/images/wordly-n04.png) · [视频](../media/wordly-v01.mp4#t=100) |
+| B01 弱网录像/No throttling基线1 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | wordly-v02 · 27.000s | [截图](../evidence/images/wordly-b01.png) · [视频](../media/wordly-v02.mp4#t=27) |
+| B02 弱网录像/No throttling基线2 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | wordly-v02 · 61.000s | [截图](../evidence/images/wordly-b02.png) · [视频](../media/wordly-v02.mp4#t=61) |
+| W01a DevTools 100ms/首次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v02 · 96.000s | [截图](../evidence/images/wordly-w01a.png) · [视频](../media/wordly-v02.mp4#t=96) |
+| W01b DevTools 100ms/继续重播 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v02 · 118.000s | [截图](../evidence/images/wordly-w01b.png) · [视频](../media/wordly-v02.mp4#t=118) |
+| W04 DevTools 10%/末次输入 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | wordly-v02 · 149.000s | [截图](../evidence/images/wordly-w04.png) · [视频](../media/wordly-v02.mp4#t=149) |
 
 事实顺序为 F1—F5。下方列出证据截图；每条详细备注及收听页状态见 `data/results.json`。
 
@@ -665,14 +659,14 @@ DevTools页面配置：100ms、约37～47秒Offline、随后10% Packet Loss；�
 
 | 场景 | 客户端字幕事实 | 收听页字幕事实 | 录像译声事实 | 原录像 PTS | 复核入口 |
 | --- | --- | --- | --- | --- | --- |
-| N01 首次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 54.000s | [截图](../evidence/images/iflytek-n01.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=54) |
-| N02 正常再次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 84.000s | [截图](../evidence/images/iflytek-n02.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=84) |
-| S100 客户端上下行各100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 120.000s | [截图](../evidence/images/iflytek-s100.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=120) |
-| Soff 客户端中断相关输入 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | iflytek-v01 · 142.000s | [截图](../evidence/images/iflytek-soff.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=142) |
-| Sdrop 客户端上下行各10%丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 182.000s | [截图](../evidence/images/iflytek-sdrop.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=182) |
-| R100 收听页100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 240.000s | [截图](../evidence/images/iflytek-r100.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=240) |
-| Roff 收听页Offline相关输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 266.000s | [截图](../evidence/images/iflytek-roff.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=266) |
-| Rdrop 收听页WebRTC丢包10%配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 正确 / 正确 / 正确 / 本轮未观察到 / 正确 | iflytek-v01 · 308.000s | [截图](../evidence/images/iflytek-rdrop.png) · [视频](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/download/v1.0-20261106/iflytek-v01.mp4#t=308) |
+| N01 首次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 54.000s | [截图](../evidence/images/iflytek-n01.png) · [视频](../media/iflytek-v01.mp4#t=54) |
+| N02 正常再次输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 84.000s | [截图](../evidence/images/iflytek-n02.png) · [视频](../media/iflytek-v01.mp4#t=84) |
+| S100 客户端上下行各100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 120.000s | [截图](../evidence/images/iflytek-s100.png) · [视频](../media/iflytek-v01.mp4#t=120) |
+| Soff 客户端中断相关输入 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 / 本轮未观察到 | iflytek-v01 · 142.000s | [截图](../evidence/images/iflytek-soff.png) · [视频](../media/iflytek-v01.mp4#t=142) |
+| Sdrop 客户端上下行各10%丢包配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 182.000s | [截图](../evidence/images/iflytek-sdrop.png) · [视频](../media/iflytek-v01.mp4#t=182) |
+| R100 收听页100ms配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 240.000s | [截图](../evidence/images/iflytek-r100.png) · [视频](../media/iflytek-v01.mp4#t=240) |
+| Roff 收听页Offline相关输入 | 正确 / 正确 / 正确 / 正确 / 正确 | 正确 / 正确 / 正确 / 正确 / 正确 | 部分 / 正确 / 正确 / 正确 / 正确 | iflytek-v01 · 266.000s | [截图](../evidence/images/iflytek-roff.png) · [视频](../media/iflytek-v01.mp4#t=266) |
+| Rdrop 收听页WebRTC丢包10%配置 | 正确 / 正确 / 正确 / 正确 / 正确 | 未确认 / 未确认 / 未确认 / 未确认 / 未确认 | 正确 / 正确 / 正确 / 本轮未观察到 / 正确 | iflytek-v01 · 308.000s | [截图](../evidence/images/iflytek-rdrop.png) · [视频](../media/iflytek-v01.mp4#t=308) |
 
 事实顺序为 F1—F5。收听页字幕与录像译声分别判定。R100、Roff、Rdrop 的录音无法唯一归属到受控窗口。
 
