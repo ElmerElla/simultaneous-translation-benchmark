@@ -1,0 +1,41 @@
+﻿Original table row number,A,B,C,D,E,F,G,H,I,J,K
+1,,,,,,,,,,,
+2,Delay and impaired network observation,,,,,,,,,,
+3,,,,,,,,,,,
+4,"The time is the original PTS of the video (seconds); WAV sampling 0 corresponds to PTS −0.021 seconds. The above table is based on the acoustic starting point, and the ASR first word caliber is also listed.",,,,,,,,,,
+5,,,,,,,,,,,
+6,serial number,scene,Source Acoustic WAV Seconds,Source Acoustics PTS Seconds,Seconds of English first subtitle PTS,Translated speech first audible translated speech PTS seconds,First display delay seconds,First ring delay seconds,PTS seconds at the end of translated speech,Observations,Measurement limits
+7,N01,First boot·Clone enabled,15.145,15.123999999999999,19.933333333333334,33.374000000000002,4.809333333333335,18.250000000000004,48.903999999999996,full output,The first sound uses the passive tone overlap area; only 1 times start the sample for the first time.
+8,N02,A new session and clone of the same process is opened,59.615000000000002,59.594000000000001,64.5,66.528999999999996,4.905999999999999,6.934999999999995,81.129000000000005,full output,"The first sound overlaps with the Chinese source sound, and is offset by the same source waveform to assist in positioning. The error is about ±0.1 seconds."
+9,N03,New session in the same process·Default timbre,95.515000000000001,95.494,101.16666666666667,111.59399999999999,5.672666666666672,16.099999999999994,124.45399999999999,full output,90～91 turn off the sound cloning in seconds and select deep male voice-A.
+10,W01,Uplink 100ms+Downlink 100ms,16.565000000000001,16.544,22.633333333333333,24.4356875,6.089333333333332,7.8916875,39.194000000000003,full output,"The first sound overlaps, and the positioning is assisted by homologous cancellation; the network value is the tool setting."
+11,W02,Interrupt input during 10 seconds,53.005000000000003,52.984000000000002,,,,,,Not getting a complete output that can be uniquely attributed,"The old subtitles are retained; after restoration, the same text is replayed, and the fragments cannot be uniquely attributed to the original input."
+12,W03,Replay the same text after canceling the interruption,68.545000000000002,68.524000000000001,,,,,,Restore only part of the content,"A new subtitle 30,000 yuan appears near 78 seconds, and sounds near 78.526 seconds; it stops near 84.13 seconds, without waiting for the complete broadcast."
+13,W04,10% probability for uplink and downlink packet loss and cloning enabled,8.31,8.289,14.266666666666667,16.387375,5.977666666666668,8.098374999999999,29.654,Full output (single configuration observation),"10% is the uplink and downlink configuration probability. The measured discard ratio and service coverage have not been verified; cloning is enabled, the first sentence/budget overlaps, and the same origin is used to offset the auxiliary positioning. Not a cold start."
+14,,,,,,,,,,,
+15,First session readiness and interruption recovery,,,,,,,,,,
+16,event,meaning,Start PTS seconds,End PTS seconds,seconds,,,,,,Evidence and limitations
+17,Ready for first session,Start button acceptance→Pause button/Start transcribing,13.3,14.133333333333333,0.8333333333333321,,,,,,"The start button transfers the loading frame 399; the ready frame 424. It is the time it takes to get the task ready, not the time it takes to create the process."
+18,interrupt status,The tool shows that the actual control object connection is interrupted,54.8,65.033333333333331,10.233333333333334,,,,,,"Frame 1643 has no interrupt → 1644 interrupt; frame 1950 has no interrupt → 1951 has no interrupt. Configure 10 seconds, and the UI displays for about 10.23 seconds."
+19,Replay after recovery,The original sound starts again,68.524000000000001,,,,,,,,"The same S01 is replayed without clearing the old subtitles, so the new fragments cannot be uniquely attributed."
+20,Reconnection prompt,"Network fluctuation, reconnecting in progress",73,,,,,,,,"The prompt will be visible in 73~76 seconds, including 1 times/3 times in total. The sampling observation time is 1 seconds."
+21,New clip subtitles,"30,000 yuan",78,,,,,,,,The new segment 00:53 below is observed in 78 seconds. The entire paragraphs 00:02 above are old content.
+22,new clip sound,"30,000 yuan",78.525687500000004,,,,,,,,"Overlap with the source sound, and ASR review after waveform cancellation. The first sentence has not been translated."
+23,New clip final subtitles,Amount of fragments + release conditions + Friday extension,82,,,,,,,,"The complete facts are only F4/F5, F2 is only the amount; F1/F3 is missing."
+24,Stop session,"The user clicks to end, but the queue has not been observed yet.",84.13,,,,,,,,"About 84.13 seconds. It is not yet possible to conclude that the audio of F4/F5 would not have been broadcast, and the end-of-sentence wait time of 30 seconds was not met."
+25,,,,,,,,,,,
+26,"Timing caliber comparison: starting from the first word of ASR ""please""",,,,,,,,,,
+27,serial number,Source initial word,First Word PTS Seconds,First display delay seconds,First ring delay seconds,,,,,,Caliber description
+28,N01,please,15.869,4.064333333333334,17.505000000000003,,,,,,The starting point of the main table is the earliest acoustic activity of S01 (including the leading low-energy sound segment). This table takes the time of the first word of Whisper. The first word may extend toward silence and cannot be used as a precise phonetic boundary.
+29,N02,please,60.338999999999999,4.161000000000001,6.189999999999998,,,,,,
+30,N03,please,96.048999999999992,5.117666666666679,15.545000000000002,,,,,,
+31,W01,please,17.308999999999997,5.324333333333335,7.126687500000003,,,,,,
+32,W04,please,9.018999999999998,5.247666666666669,7.368375,,,,,,"W04 is calculated from the first word of ASR: 5.25 seconds for the first subtitle and 7.37 seconds for the first sound. The difference from the acoustic starting point of the main table is 0.730 seconds, due to the leading low-energy sound segment and ASR alignment; not an accurate speech boundary."
+33,Delay difference and broadcast span (both in seconds),,,,,,,,,,
+34,serial number,scene,First display delay,first audible translated speech delay,first sound − first subtitle,Translated speech span,From the source sound to the end of the translated speech,The first word caliber appears,First word caliber first sound,Effective number of samples,explain
+35,N01,First boot·Clone enabled,4.809333333333335,18.250000000000004,13.440666666666669,15.529999999999994,33.78,4.064333333333334,17.505000000000003,1,The initial and final span of the translated speech includes internal pauses. Each row is an observation for a different condition and is not used for the overall mean or success rate.
+36,N02,A new session and clone of the same process is opened,4.905999999999999,6.934999999999995,2.0289999999999964,14.600000000000009,21.535000000000004,4.161000000000001,6.189999999999998,1,The initial and final span of the translated speech includes internal pauses. Each row is an observation for a different condition and is not used for the overall mean or success rate.
+37,N03,New session in the same process·Default timbre,5.672666666666672,16.099999999999994,10.427333333333323,12.86,28.959999999999994,5.117666666666679,15.545000000000002,1,The initial and final span of the translated speech includes internal pauses. Each row is an observation for a different condition and is not used for the overall mean or success rate.
+38,W01,Uplink 100ms+Downlink 100ms,6.089333333333332,7.8916875,1.8023541666666674,14.758312500000002,22.650000000000002,5.324333333333335,7.126687500000003,1,The initial and final span of the translated speech includes internal pauses. Each row is an observation for a different condition and is not used for the overall mean or success rate.
+39,W04,10% probability for uplink and downlink packet loss and cloning enabled,5.977666666666668,8.098374999999999,2.120708333333331,13.266625000000001,21.365000000000002,5.247666666666669,7.368375,1,"It is the same clone as N02: first subtitle observation difference + 1.072 seconds, first audible translated speech + 1.163 seconds. A single sample with different initialization states cannot be attributed to the net impact of packet loss."
+40,,,,,,,,,,,

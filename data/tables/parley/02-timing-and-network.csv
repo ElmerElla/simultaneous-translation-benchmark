@@ -1,0 +1,66 @@
+﻿Original table row number,A,B,C,D,E,F,G,H,I
+1,,,,,,,,,
+2,Time and impaired network,,,,,,,,
+3,,,,,,,,,
+4,All absolute moments are PTS seconds of the original video; waiting = first subtitle/first sound - source sound of this round; unconfirmed does not equal 0 seconds,,,,,,,,
+5,,,,,,,,,
+6,scene,video,Conditions/admissions,Source sound starting point seconds,First displayed seconds,First ring seconds,Wait seconds for first subtitle,First ring wait seconds,limit
+7,N01,V01,First time recording,8.298874999999999,12,12.539,3.701125000000001,4.240125000000001,"Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation. The main first subtitle uses the complete English word fragment that appears first; the stable phrase time is saved separately."
+8,N02,V01,Normal/Enter again,33.678875,37.43333333333333,37.979,3.754458333333332,4.300125000000001,"Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation. The main first subtitle uses the complete English word fragment that appears first; the stable phrase time is saved separately."
+9,C01,V03,file nominal clone,4.0955,7.8,8.668999999999999,3.7044999999999995,4.573499999999998,"Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation."
+10,W01,V02,100ms configuration,9.135499999999999,13.166666666666666,13.748999999999999,4.0311666666666675,4.6135,"Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation. The main first subtitle uses the complete English word fragment that appears first; the stable phrase time is saved separately."
+11,W02,V02,Interrupt related input,38.4455,51.9,50.359,13.454499999999996,11.913499999999999,"The input spans the interruption and the same text is replayed; this time difference only describes the event and cannot be used as a strict recovery delay or a single-round completion indicator. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation. The main first subtitle uses the complete English word fragment that appears first; the stable phrase time is saved separately."
+12,W03,V02,Replay after recovery,54.8055,,,Unconfirmed,Unconfirmed,"The input spans the interruption and the same text is replayed; this time difference only describes the event and cannot be used as a strict recovery delay or a single-round completion indicator. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation."
+13,W04,V02,10% configuration,81.2955,85.367,85.649,4.0715,4.353499999999997,"Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated. There are brief word fragments before the first subtitle, and another stable phrase appears first; the overlapping first sounds are offset waveforms to assist in estimation."
+14,,,,,,,,,
+15,,,,,,,,,
+16,,,,,,,,,
+17,Network configuration and actual observations,,,,,,,,
+18,,,,,,,,,
+19,Configuration,Recording range,Visible control objects/status,Judgments and Limitations,evidence,,,,
+20,100ms,V02 is about 4~32 seconds,Control parley.exe; 100ms for up and down lines,Complete output but new HR submission instructions for F1; do not treat the configuration as RTT,frames/V02_controls_contact_1.jpg,,,,
+21,10 seconds interrupt,V02 is about 42~53 seconds,The connection interruption countdown is 10 seconds; then the control object becomes nil,"38.4 seconds are entered earlier than the application; fragments still appear during the interruption display, 54.8 seconds are entered again, coverage and recovery are limited",frames/V02_controls_contact_1.jpg,,,,
+22,10% packet loss,V02 is about 80~104 seconds,Control parley.exe; 10% probability of packet loss in upstream and downstream,"Complete facts of item 4, mistranslation of F1; actual business discard ratio not collected",frames/V02_controls_contact_1.jpg,,,,
+23,,,,,,,,,
+24,,,,,,,,,
+25,Starting and timing caliber,,,,,,,,
+26,,,,,,,,,
+27,first time/startup,,,,,,,,"Name is marked by video; unproven exit and restart 3 times per condition. Program opens, session connections, and post-typing responses are not mixed into the same metric."
+28,Starting point of source sound,,,,,,,,"The original sound of this round 10ms RMS is about −50dBFS, the earliest confirmable activity; −55/−42dBFS candidates are retained. Not player seconds or ASR first word time."
+29,Subtitles first subtitleed,,,,,,,,"Adjacent frame review; first readable English word fragment, not equal to a complete sentence. Parley stable phrase time save."
+30,The first sound of translated speech,,,,,,,,"The clean segment is directly waveformed; the overlapping segment is used as subsampling alignment and offset assistance; the threshold candidate is retained, and the offset sound does not contribute to the main voiceprint or sound quality."
+31,Accuracy,,,,,,,,"Sampling 0 corresponds to video PTS−0.021 seconds; 30fps is not an absolute synchronization accuracy. Summarized in approximately 0.1 seconds, overlapping first sounds are estimates; OBS paths are not calibrated."
+32,,,,,,,,,
+33,,,,,,,,,
+34,"Program opening, session readiness, and input responses are logged separately",,,,,,,,
+35,,,,,,,,,
+36,stage,video,Seconds of the previous screenshot,The next screenshot seconds,,,,,Boundaries and Limitations
+37,The program window appears,V01,3,4,,,,,"3 seconds desktop, 4 seconds Parley transparent loading window appears."
+38,The main interface appears,V01,4,5,,,,,It loads in 4 seconds and starts when ready in 5 seconds. The configuration page is visible; it does not mean that the session is connected.
+39,Session in preparation,V01,5,6,,,,,"The entrance starts at 5 seconds, and two-way simultaneous interpretation is being prepared at 6 seconds."
+40,Session can receive input,V01,7,8,,,,,"7 seconds are still in preparation, 8 seconds show listening and timing."
+41,,,,,,,,,
+42,,,,,,,,,
+43,,,,,,,,,
+44,The first full display of the last sentence and the last sound of the translated speech: it does not mean that the overall wording is correct or that the queue has been cleared.,,,,,,,,
+45,,,,,,,,,
+46,scene,video,Observation object,Source sound starting point seconds,The last sentence is displayed in full seconds,translated speech last ringing seconds,Display full wait seconds,Wait seconds for last ring,Vesting/subsequent change restrictions
+47,N01,V01,The last sentence of this round/attributable translated speech,8.298874999999999,21.666666666666668,29.139,13.367791666666669,20.840125,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+48,N02,V01,The last sentence of this round/attributable translated speech,33.678875,47.13333333333333,54.019,13.454458333333335,20.340125,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+49,C01,V03,The last sentence of this round/attributable translated speech,4.0955,17.633333333333333,23.849,13.537833333333332,19.7535,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+50,W01,V02,The last sentence of this round/attributable translated speech,9.135499999999999,22.766666666666666,31.689,13.631166666666667,22.5535,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+51,W02,V02,The last sentence of this round/attributable translated speech,38.4455,52.5,,14.054499999999997,Unconfirmed,Interrupt stump/resume tail events of replayed merged text; does not represent an accurate complement or can be attributed to a single round of complete output. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+52,W03,V02,The last sentence of this round/attributable translated speech,54.8055,68.56666666666666,,13.76116666666666,Unconfirmed,Interrupt stump/resume tail events of replayed merged text; does not represent an accurate complement or can be attributed to a single round of complete output. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+53,W04,V02,The last sentence of this round/attributable translated speech,81.2955,95.03333333333333,102.18900000000001,13.737833333333327,20.893500000000003,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+54,,,,,,,,,
+55,,,,,,,,,
+56,,,,,,,,,
+57,,,,,,,,,
+58,,,,,,,,,
+59,,,,,,,,,
+60,,,,,,,,,
+61,,,,,,,,,
+62,,,,,,,,,
+63,,,,,,,,,
+64,,,,,,,,,
+65,,,,,,,,,

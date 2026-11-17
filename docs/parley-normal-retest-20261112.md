@@ -1,19 +1,19 @@
-# Parley Voice 千问 Live 最新版本测试（2026-11-12）
+# Parley Voice Qwen Live latest version test (2026-11-12)
 
-2026-11-12 22:58 录制。本报告最新采用的正常测试录次，具体构建号未完整留档；原始计时保持不变。千问 Live、上海线路、实时音色克隆。两轮为同会话的相同 S01 中译英输入。字幕和独立英文译声均保留全部五项事实。首轮把「确认」及「测试结果」分段输出，合读保留截止时间和动作对象。
+2026-11-12 22:58 recording. The latest normal test records used in this report, the specific build number has not been fully documented; the original timing remains unchanged. Qwen Live, Shanghai line, real-time sound cloning. The two rounds are the same S01 Chinese-English input from the same session. Both the subtitles and the independent English dub retain all five facts. In the first round, the "confirmation" and "test results" are output in segments, and the deadline and action objects are retained in the combined reading.
 
-| 录像 | 首次会话首显 / 首响 | 同会话再次输入首显 / 首响 | 首次 / 再次译声结束 |
+|Video|First session first subtitle / first audible translated speech|Enter first subtitle/first audible translated speech again in the same session|End of first/second translation|
 | --- | --- | --- | --- |
-| 11 月 12 日 22:58 上海，本次 | 3.4 / 3.8 秒 | 4.5 / 5.0 秒 | 20.0 / 22.0 秒 |
-| 11 月 11 日新加坡，历史发布 | 4.4 / 4.5 秒 | 4.2 / 4.1 秒 | 20.1 / 21.0 秒 |
+|November 12 22:58 Shanghai, this time|3.4 / 3.8 seconds|4.5 / 5.0 seconds|20.0 / 22.0 seconds|
+|November 11 Singapore, historical release|4.4 / 4.5 seconds|4.2 / 4.1 seconds|20.1 / 21.0 seconds|
 
-时间从各轮中文原声起算。本次用于当前对比。11 月 11 日录像保留作历史对照，两轮仍各为 5/5。新旧线路与采集条件有别，每个条件只有一段录像，差值限于本次观测。
+The time starts from the original Chinese sound of each round. This time it is used for current comparison. The video of 11 on month 11 is retained for historical comparison. The two rounds are still 5/5. The old and new lines and collection conditions are different. There is only one video for each condition, and the difference is limited to this observation.
 
-| 本次事件 | 原声起点 | 英文首显 | 译声首响 | 字幕尾句 | 译声末尾 |
+|This event|original sound starting point|First appearance in English|The first sound of translation|Ending sentence of subtitles|End of translation|
 | --- | ---: | ---: | ---: | ---: | ---: |
-| N05 | 约 10.06 | 13.433 | 约 13.90 | 23.433 | 约 30.09 |
-| N06 | 约 31.419 | 35.933 | 约 36.459 | 43.900 | 约 53.40 |
+| N05 |About 10.06| 13.433 |About 13.90| 23.433 |About 30.09|
+| N06 |About 31.419| 35.933 |About 36.459| 43.900 |About 53.40|
 
-表中为原录像时间，单位秒。客户端窗口约 5.63 秒出现，6.70 秒显示配置页，间隔约 1.1 秒。7.67 秒进入音频准备，8.97 秒进入监听，间隔约 1.3 秒。 首显用相邻帧复核，首响取独立译音轨连续发声起点。原声与译音均为录像观测，音画通路未标定。 两条独立音轨经解码与内容核对。公开副本的默认音轨合成测试原声和译声，第二条音轨仅保留英文译声。
+The table shows the original recording time in seconds. The client window appears in approximately 5.63 seconds, and the configuration page appears in 6.70 seconds, with an interval of approximately 1.1 seconds. It enters audio preparation at 7.67 seconds and enters monitoring at 8.97 seconds, with an interval of about 1.3 seconds. The first subtitle uses adjacent frames for review, and the first sound takes the starting point of continuous sound from the independent translation track. Both the original sound and the translated speech are video observations, and the audio and video channels have not been calibrated. Two independent audio tracks are decoded and checked for content. The default audio track of the public copy synthesizes the test original voice and the translated voice, and the second audio track only retains the English translated voice.
 
-[脱敏录像](../media/parley-qwen-normal-retest-20261112.mp4) · [首轮截图](../evidence/images/parley-n05.png) · [再次输入截图](../evidence/images/parley-n06.png) · [采用场景表](../data/scenario-review.csv)
+[Redacted video](../media/parley-qwen-normal-retest-20261112.mp4) · [First round screenshots](../evidence/images/parley-n05.png) · [Enter the screenshot again](../evidence/images/parley-n06.png) · [Use scene table](../data/scenario-review.csv)

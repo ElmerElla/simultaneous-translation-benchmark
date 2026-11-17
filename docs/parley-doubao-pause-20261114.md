@@ -1,12 +1,12 @@
-### 豆包短句与停顿辅助示例（Mac，2026-11-14）
+### Doubao phrase and pause auxiliary examples (Mac, 2026-11-14)
 
-此录像为Mac补充示例，不替换千问Windows数据，也不纳入固定S01五项事实评分。“你好”后约有0.5秒停顿，再输入“请问今天下午的会议几点开始？”；最终字幕为“Hello, what time does this afternoon meeting start?”，问候、今天下午、会议开始时间的含义保留。
+This video is a supplementary example for Mac. It does not replace Qwen Windows data, nor does it include the fixed S01 five-item fact score. After "Hello", pause for about 0.5 seconds, then enter "What time does this afternoon meeting start?"; the final subtitle is "Hello, what time does this afternoon meeting start?", and the meaning of greeting, this afternoon, and the meeting start time are retained.
 
-| 示例 | 原声起点 | 新英文首显 | 字幕延迟 | 译音首响延迟 |
+|Example|original sound starting point|New English debut|subtitle delay|Translated speech first sound delay|
 | --- | --- | --- | --- | --- |
-| 你好，随后停顿 | 约4.03秒 | 5.70–5.75秒之间 | 约1.7秒 | 混音与后续中文重叠，未唯一确认 |
-| 请问今天下午的会议几点开始 | 约4.94秒 | 8.30–8.40秒之间 | 约3.4秒 | 约3.37秒（8.31秒开始） |
+|Hello, then pause|About 4.03 seconds|Between 5.70–5.75 seconds|About 1.7 seconds|The remix overlaps with the subsequent Chinese version and is not uniquely confirmed|
+|What time will the meeting start this afternoon?|About 4.94 seconds|Between 8.30–8.40 seconds|About 3.4 seconds|About 3.37 seconds (starting at 8.31 seconds)|
 
-以上为原录像时间，以相邻抽样画面给出边界区间，不冒充逐帧精确值；原声与英文语音由混音波形和本地辅助转写交叉定位，未做人耳验收，音画通路未标定。短句在停顿后较早显示译文，与长段连续输入需要更长等待的现象一致；停顿可能帮助系统确定分句，但此处句长、平台和输入内容同时不同，不能证明停顿必然降低延迟。需同稿有/无停顿重复试验才能判断因果。
+The above is the original recording time, and the boundary interval is given by adjacent sampling frames, and does not pretend to be an accurate value frame by frame; the original sound and the English voice are cross-positioned by the mixing waveform and local auxiliary transcription, and no human ear acceptance is performed, and the audio and video channels are not calibrated. The translation of short sentences is displayed earlier after a pause, which is consistent with the phenomenon that long paragraphs of continuous input require longer waiting; the pause may help the system determine the sentence segmentation, but the sentence length, platform and input content are different at the same time, which cannot prove that the pause will necessarily reduce the delay. It is necessary to repeat the experiment with/without pauses on the same manuscript to determine cause and effect.
 
-[播放脱敏辅助录像](../media/parley-doubao-pause-20261114.mp4)
+[Play redacted assistance video](../media/parley-doubao-pause-20261114.mp4)

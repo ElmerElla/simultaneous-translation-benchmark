@@ -1,302 +1,301 @@
 {
-  "release_tag": "v1.1-20261106",
-  "policy": "最终采用材料白名单；不上传废稿、旧表、备份、日志、配置、缓存、模型、安装包或未脱敏原件。",
-  "text_files_scanned": 110,
+  "policy": "Reviewed public material only. Repository documentation and data labels are English. Original media bytes are unchanged; historical Release attachment hashes describe their frozen packages.",
+  "text_files_scanned": 117,
   "repository_files": [
     {
       "path": ".gitignore",
-      "sha256": "78d4279902d753e0ac84f23d9be1915fb61642efbc1b1f5266a5f3351607abc8",
-      "size_bytes": 166
+      "sha256": "737f68ae80976d46eedfe6dd75262ce870273e155a92f5b83001629126553bc2",
+      "size_bytes": 985
     },
     {
-      "path": "README.md",
-      "sha256": "370de8b261bd1d071fe91c3ed954138b3a77a7cec017bc4e6035a1bfcf40268a",
-      "size_bytes": 4532
+      "path": "benchmark-results.xlsx",
+      "sha256": "523463dd1ddaea9a161d40b41d793f44f00758965af537da4ff5597ba24ef1c5",
+      "size_bytes": 24953
     },
     {
       "path": "data/audio-manifest.json",
-      "sha256": "8dae912ecc5dbcd6c5d4cb3e3a4f70e4faaf674ddd3e6b0ea5f4fb5ece2a9cea",
-      "size_bytes": 653
+      "sha256": "9e9dfa04fad2b492728c277c1f44ee917d132aeae022074d6ea0b4fa8346ebb3",
+      "size_bytes": 689
     },
     {
       "path": "data/comparison.csv",
-      "sha256": "0385618a02e0feaebceaac0046351e37ddea9dda4330f8d243fa03f98ec6d13f",
-      "size_bytes": 19247
+      "sha256": "01b3b3da197da641cd87655a2cea2074fa3c68b87d1a38537f87a54f02106596",
+      "size_bytes": 30876
     },
     {
       "path": "data/evidence-index.csv",
-      "sha256": "ee054398dba76e6932a1b1382640f82341105fe356e20e1425836a7fead85c45",
-      "size_bytes": 7626
+      "sha256": "1b20d789d63f971a3a3b7595d7c253b62374642e13c4e33f3f6935bc78f33a83",
+      "size_bytes": 8534
     },
     {
       "path": "data/evidence-index.json",
-      "sha256": "9e6e67c6434b183ee5b3ea44845cc8488f21e58a4e5fdb29987d3fac3f34b7f1",
-      "size_bytes": 17354
+      "sha256": "6836d057df3cbd1d0f962af6105f2a974684b4489ed067c9ff65da6c9d5d0450",
+      "size_bytes": 18262
     },
     {
       "path": "data/media-manifest.json",
-      "sha256": "ec787f7d8012e1541532d82d4fb2d82bf91529d37eb64e68251d20d399e8484c",
-      "size_bytes": 29590
+      "sha256": "c62b0bec3b4dedabe124400a0f6a541047116ae55fd63d04504b33e4d4a6a095",
+      "size_bytes": 32983
     },
     {
       "path": "data/parley-doubao-pause-20261114.json",
-      "sha256": "3f2c3f0693790b3bc39ac910ae6c491b2d43e89d3da3647bc53faa726e99655e",
-      "size_bytes": 862
+      "sha256": "25f58a0b80b0f8bbc0804aa5e5090007693eead4633f36594a67d56e844dd7a6",
+      "size_bytes": 890
     },
     {
       "path": "data/parley-normal-20261116.json",
-      "sha256": "76a9fc59f5e015038f8631b551acad61d87c914d1485cd471a8f1f4f333a9083",
-      "size_bytes": 2646
+      "sha256": "995989b9b0ae5f8f07ed931bf25078dd013b02ec3b1fe6ed71dad0e5de96f701",
+      "size_bytes": 2866
     },
     {
       "path": "data/parley-parameters-20261114.json",
-      "sha256": "c6038ff6045d6b275195c242114cfac427a009bcd77d7029bf21e81724e3a278",
-      "size_bytes": 2426
+      "sha256": "59093bc37ea37737d69aa51c06725b88904271af163d4eaf18b7df1bb7122d72",
+      "size_bytes": 2827
     },
     {
       "path": "data/reference.json",
-      "sha256": "e42252a56cbd0d86c1a086b699919f02ec9eb9d5a9089463551763dc023c5728",
-      "size_bytes": 543
+      "sha256": "3ae3454ae8b83f84e504dd40f2a9c5ba58f87151512b24abd1d117d159db317f",
+      "size_bytes": 836
     },
     {
       "path": "data/results.json",
-      "sha256": "946453c9cb678b6664f4cf6e368062e21a53620694ba264fbe2872dc2319df83",
-      "size_bytes": 168619
+      "sha256": "fae1f8e2648cb6a1880c1ad2a0239e4dbc2f538e4a3a27e1082a6a613d1ff5fd",
+      "size_bytes": 205877
     },
     {
       "path": "data/scenario-review.csv",
-      "sha256": "c825608c433a826420c7275a39092e9a38477e4829b9bc09763d891eb74cacc5",
-      "size_bytes": 20494
+      "sha256": "6091a0b66d81e6b990ddf9bc00f3607e543af49d53813a47cfb51a3cd342b6ed",
+      "size_bytes": 28085
     },
     {
       "path": "data/source-code-manifest.json",
-      "sha256": "851c277a43ba6fb2c20fbceab6304a967e765c7a5f54ab305533eeeb04468ee0",
-      "size_bytes": 21472
+      "sha256": "46c4ed27ed262f40e81ce453f48c0858493d3e04b750ef4497e790ab31b36595",
+      "size_bytes": 23452
     },
     {
-      "path": "data/tables/iflytek/01-四项结果.csv",
-      "sha256": "045950b17a624f2e05ef6f43a6eee9f20b25e45ebce3ac45a85f075e04ba94bf",
-      "size_bytes": 4161
+      "path": "data/tables/iflytek/01-four-metrics.csv",
+      "sha256": "195b3b29d6dd7278786a8e7df4f9d64fb3bedca8ff134d522ad4e7db47c56dbf",
+      "size_bytes": 6816
     },
     {
-      "path": "data/tables/iflytek/02-时间与弱网.csv",
-      "sha256": "ea44006943c65f8da0eac5432d723c24519c00e121735a067bb99dd09143b740",
-      "size_bytes": 6191
+      "path": "data/tables/iflytek/02-timing-and-network.csv",
+      "sha256": "aa82b4f17a93863066fa098e0d758f33339f151dd679e19e8453238e743b2e85",
+      "size_bytes": 9069
     },
     {
-      "path": "data/tables/iflytek/03-事实与译音.csv",
-      "sha256": "ff11d273f8f06f3cc4095a9651286cd84084c342a13513d3ed4ece46483c1df6",
-      "size_bytes": 13095
+      "path": "data/tables/iflytek/03-facts-and-speech.csv",
+      "sha256": "844fba1be3269b6925f3f25131782cacde6faf77b5e304de0a014852d14422d4",
+      "size_bytes": 19347
     },
     {
-      "path": "data/tables/iflytek/04-方法与证据.csv",
-      "sha256": "5b183fd78a45381e4af9cd50a9c2b4636bd8a7433e1d8c2ebbafcaf2ad9c2b1d",
-      "size_bytes": 6627
+      "path": "data/tables/iflytek/04-methods-and-evidence.csv",
+      "sha256": "dcfe9fe4cc9d311c8429b6388fe8b36e5bf451e0ddcf0255e73cb7ab4e513c69",
+      "size_bytes": 9892
     },
     {
-      "path": "data/tables/jotme/01-五项结果.csv",
-      "sha256": "664ab2bbbb25173fbd7edfa61d206587644459f58d8e0f3f4ff98ee69bbe19e3",
-      "size_bytes": 2867
+      "path": "data/tables/jotme/01-five-metrics.csv",
+      "sha256": "ddf052de21432baaf9095ce03c2d5a7f353eb4d8f0989ee4bacacde8a566cee5",
+      "size_bytes": 4457
     },
     {
-      "path": "data/tables/jotme/02-时间与弱网.csv",
-      "sha256": "0e3d38747c1dacbc0669d499266c8d80085e2bece060a4ac7bbd22528d5f068f",
-      "size_bytes": 5179
+      "path": "data/tables/jotme/02-timing-and-network.csv",
+      "sha256": "ea1c0b45c3699a146d813af3cb44638f4a5dbe3295558e0b355d2b4a00a036e3",
+      "size_bytes": 7748
     },
     {
-      "path": "data/tables/jotme/03-事实与译音.csv",
-      "sha256": "dac4001d5528ead393be8a0089df420d19b9793ad3a508edc8beb3b365dd17de",
-      "size_bytes": 7067
+      "path": "data/tables/jotme/03-facts-and-speech.csv",
+      "sha256": "628b6705e39117779d4f383c2c04e95ed727bd16abf790a7153bb4cf18de89a5",
+      "size_bytes": 8496
     },
     {
-      "path": "data/tables/jotme/04-音色与方法.csv",
-      "sha256": "279af040951bc9ffa7df38beb1c0d6da2f349296f148b30175d624c2fd59f21c",
-      "size_bytes": 422
+      "path": "data/tables/jotme/04-voice-and-method.csv",
+      "sha256": "83251443138a976931a6b7d821f379ad621ca4dbbfc47a49413a4c852034ef97",
+      "size_bytes": 581
     },
     {
-      "path": "data/tables/jotme/05-方法与证据.csv",
-      "sha256": "e56facd8bfe48726d1dcc14fa63b73950fd34bc00cab841a56033aeaa3bd7cff",
-      "size_bytes": 5756
+      "path": "data/tables/jotme/05-methods-and-evidence.csv",
+      "sha256": "27248644a10794f9421f3d0e2c08650f078aba7b58f9d3c086a4060a8740d7db",
+      "size_bytes": 7173
     },
     {
-      "path": "data/tables/maestra/01-五项结果.csv",
-      "sha256": "9379eddc2f8a023995d97d3374daf0d08517dec89b9c6b5214579c0124ac8b9a",
-      "size_bytes": 2847
+      "path": "data/tables/maestra/01-five-metrics.csv",
+      "sha256": "e8e5eafdb72e374b8a01d987be4b99630d779ea6fdb60cd7a26bd52fd5b581b0",
+      "size_bytes": 4480
     },
     {
-      "path": "data/tables/maestra/02-时间与弱网.csv",
-      "sha256": "ffe23ef1014461c80f0cdd85dc76222410f71c9cf39fcc28ca970d7d4fafb39a",
-      "size_bytes": 4684
+      "path": "data/tables/maestra/02-timing-and-network.csv",
+      "sha256": "6778f1cb64f13ebcfe64ef3923740fe929f5fba1a0cf2ca6c245d6d71d90596b",
+      "size_bytes": 6824
     },
     {
-      "path": "data/tables/maestra/03-事实与译音.csv",
-      "sha256": "5cb3b88bce29971522ee70c1e64020e0a37bac51a3f7fe0931130ad8d78b1d2e",
-      "size_bytes": 7257
+      "path": "data/tables/maestra/03-facts-and-speech.csv",
+      "sha256": "590a7f0f1e2cfcf09cb9d40a8c2123f610f43ada8a514ae7007aabeb6d689528",
+      "size_bytes": 8741
     },
     {
-      "path": "data/tables/maestra/04-音色与方法.csv",
-      "sha256": "96e968797b7db187adecb268e3bfa5858baa38c40f5e6cdd84a211a84aac0654",
-      "size_bytes": 427
+      "path": "data/tables/maestra/04-voice-and-method.csv",
+      "sha256": "775175ec78537f988b6edc575cdbc97608e73867b2bcd51147de5ce7d8df197e",
+      "size_bytes": 589
     },
     {
-      "path": "data/tables/maestra/05-方法与证据.csv",
-      "sha256": "25a9accefb09a7c08f9de6365912da6dbe99f5857c2a7a0cb10cf29539e6dd15",
-      "size_bytes": 6075
+      "path": "data/tables/maestra/05-methods-and-evidence.csv",
+      "sha256": "12476abaccb19ff3ef2955717d5b0eb528aeee2258f94388032e780757ddaae2",
+      "size_bytes": 7499
     },
     {
-      "path": "data/tables/palabra/01-五项结果.csv",
-      "sha256": "a9e0b30c11078839be6d30c878ec2ad2bfefe3d3052b051f5644f3bb0ed86ea4",
-      "size_bytes": 3185
+      "path": "data/tables/palabra/01-five-metrics.csv",
+      "sha256": "5dc590d49afd8fcf177f25d3f462ae2e349a5049752a1250ff332cf85ddd2e72",
+      "size_bytes": 4733
     },
     {
-      "path": "data/tables/palabra/02-时间与弱网.csv",
-      "sha256": "345558c5b820ce303dad5bfd451389ba4abef9ab110dcd2c658cccf80957a11d",
-      "size_bytes": 5841
+      "path": "data/tables/palabra/02-timing-and-network.csv",
+      "sha256": "99f9040dcfee49415ddc7fdd55acf5ffce7750caff1d1379ca897beecac342f5",
+      "size_bytes": 8902
     },
     {
-      "path": "data/tables/palabra/03-事实与译音.csv",
-      "sha256": "42c88cf6e6ffd356b7a13fd0475970b1785f4a123a65150b7248515a82596881",
-      "size_bytes": 8340
+      "path": "data/tables/palabra/03-facts-and-speech.csv",
+      "sha256": "c0c0ae0b146930aae030c6cc22aeca386ff3002805497cdd3f849dd9dbe9b769",
+      "size_bytes": 10261
     },
     {
-      "path": "data/tables/palabra/04-音色与方法.csv",
-      "sha256": "66c926e9fab5e1269f98f2f994c498050bd9e45fe1c73235d805e0409521a701",
-      "size_bytes": 1295
+      "path": "data/tables/palabra/04-voice-and-method.csv",
+      "sha256": "d4585e0b62e56dc6b4bad167355594de076a5ccc11185cdeaecf3d5a922fa221",
+      "size_bytes": 1665
     },
     {
-      "path": "data/tables/palabra/05-方法与证据.csv",
-      "sha256": "4c03d924cebda75f66901621ff42f0a6eb41fb520d2f40489e5886cc6f7b63de",
-      "size_bytes": 6694
+      "path": "data/tables/palabra/05-methods-and-evidence.csv",
+      "sha256": "0404d66f58d1d30711bab82384b615e39e8318682c6ed7ec114a556aedf6b1dc",
+      "size_bytes": 8365
     },
     {
-      "path": "data/tables/parley/01-五项结果.csv",
-      "sha256": "4f7fd1f12516bfd2b8b4a0177cfe402f02e370544b31aeb0abdaac07cb1f9dd9",
-      "size_bytes": 3381
+      "path": "data/tables/parley/01-five-metrics.csv",
+      "sha256": "339c6de15f5f9b6be56953f4ed5e289246adc5b8d2b83710c1a1b4649cfa3785",
+      "size_bytes": 5116
     },
     {
-      "path": "data/tables/parley/02-时间与弱网.csv",
-      "sha256": "cf681292a26572ff82f914a41455ff87304c1d8ab75ac87355ee8245f50ce75f",
-      "size_bytes": 6674
+      "path": "data/tables/parley/02-timing-and-network.csv",
+      "sha256": "df2ff4dd472ec6aab8e3cdd814d237822ae17247847588a246fab534157f0085",
+      "size_bytes": 10029
     },
     {
-      "path": "data/tables/parley/03-事实与译音.csv",
-      "sha256": "63804aa8924eddd6dd97d62eeaab5c6551629d092a280a7e0814f8728a46d349",
-      "size_bytes": 8472
+      "path": "data/tables/parley/03-facts-and-speech.csv",
+      "sha256": "507fa5891d7d7ef69d6820107ea98a49ee85600946fd42bb9bf079a5d7127204",
+      "size_bytes": 10297
     },
     {
-      "path": "data/tables/parley/04-音色与方法.csv",
-      "sha256": "ef0a7db995f764059697bab192a75693ed4513f6aa5cedbb8edd7122ec1426fe",
-      "size_bytes": 1318
+      "path": "data/tables/parley/04-voice-and-method.csv",
+      "sha256": "1bcf7392ca57d2dbdf9e21eb373f4e8ef94dda9099e519e3d226d8685ca5b75e",
+      "size_bytes": 1627
     },
     {
-      "path": "data/tables/parley/05-方法与证据.csv",
-      "sha256": "058d1dd0b2f8a1a601fc2e0be090573a1ce8aa993f0fb0b606f967ae8e9ec92d",
-      "size_bytes": 6583
+      "path": "data/tables/parley/05-methods-and-evidence.csv",
+      "sha256": "bb878a3bd2e074abc49da073f1d47b6499c579b2678d021545cfa88e6af632ee",
+      "size_bytes": 8161
     },
     {
-      "path": "data/tables/transync/01-五项结果.csv",
-      "sha256": "34eed6bcc771f97aaec497e6fec6bc22a8f38eba6e026ffbb6399ed59fa59d7e",
-      "size_bytes": 8287
+      "path": "data/tables/transync/01-five-metrics.csv",
+      "sha256": "315cb30ed9d3c46737b3c28f9aee9f8c6bd65ff86d3d3abc5e18491f35062e06",
+      "size_bytes": 13002
     },
     {
-      "path": "data/tables/transync/02-时间与弱网.csv",
-      "sha256": "be17c986974e861364fde490f229681efff9c6ee1f2773196a278736d23dce4c",
-      "size_bytes": 5944
+      "path": "data/tables/transync/02-timing-and-network.csv",
+      "sha256": "a27dabb985d75673e0704c53ef886d422d888c10faae9ba50d314aaf9927ec38",
+      "size_bytes": 8304
     },
     {
-      "path": "data/tables/transync/03-事实与译音.csv",
-      "sha256": "b8c79ec8eea676a464591dc082f7a2d89b44173da7bceed6306397c575513dc1",
-      "size_bytes": 10570
+      "path": "data/tables/transync/03-facts-and-speech.csv",
+      "sha256": "5d810139240908a65b6aa322b236c7b84563a3a69b256b32ebb8c31b4919b7dc",
+      "size_bytes": 14875
     },
     {
-      "path": "data/tables/transync/04-音色与方法.csv",
-      "sha256": "8ef8692f61fa87262162f73973a47f0046a29ec8d1eea09ffc02b46bf050b2e8",
-      "size_bytes": 2450
+      "path": "data/tables/transync/04-voice-and-method.csv",
+      "sha256": "0a3e9bc7f7d05d699b83e38080bcaac49cd00efe129e8473f78621a798fe9303",
+      "size_bytes": 3324
     },
     {
-      "path": "data/tables/transync/05-方法与证据.csv",
-      "sha256": "2282b8b0f289742aac3bc778803158e731bc0087da39f383e9e0fb002e3c2ab5",
-      "size_bytes": 9014
+      "path": "data/tables/transync/05-methods-and-evidence.csv",
+      "sha256": "b3776459bec21fdb870e99732fda2d080f97044ce880fbe6de492736b8f942d4",
+      "size_bytes": 12610
     },
     {
-      "path": "data/tables/wordly/01-五项结果.csv",
-      "sha256": "fbda103141e32872e01528a04611f0cd3b54ed30217c3201006b3b1e49c1399d",
-      "size_bytes": 3048
+      "path": "data/tables/wordly/01-five-metrics.csv",
+      "sha256": "bae03717734fc8fa08ab6a56eecdcc40888484dceeb110be50b9c0e36c6a12d2",
+      "size_bytes": 4940
     },
     {
-      "path": "data/tables/wordly/02-时间与弱网.csv",
-      "sha256": "73ed985d4e9e8b45c97a73384bac196ecd15236f0b28161c6e0775f6c3a77b77",
-      "size_bytes": 6662
+      "path": "data/tables/wordly/02-timing-and-network.csv",
+      "sha256": "13f4f489a619bd81c5e59980bdec6595321362a62401f781e4c08629129e7c7f",
+      "size_bytes": 10172
     },
     {
-      "path": "data/tables/wordly/03-事实与译音.csv",
-      "sha256": "ad16c9a9eafc21de550dba68cc5c29daa2a86de53baa8eabd69ba2789d9e755a",
-      "size_bytes": 9398
+      "path": "data/tables/wordly/03-facts-and-speech.csv",
+      "sha256": "3193fca3d21d06fec4dbb10f2dc466ba62c015848f6c9702245e226439bd519e",
+      "size_bytes": 11560
     },
     {
-      "path": "data/tables/wordly/04-音色与方法.csv",
-      "sha256": "279af040951bc9ffa7df38beb1c0d6da2f349296f148b30175d624c2fd59f21c",
-      "size_bytes": 422
+      "path": "data/tables/wordly/04-voice-and-method.csv",
+      "sha256": "83251443138a976931a6b7d821f379ad621ca4dbbfc47a49413a4c852034ef97",
+      "size_bytes": 581
     },
     {
-      "path": "data/tables/wordly/05-方法与证据.csv",
-      "sha256": "acf6b8293679b5f68084bb45657a6d9593306026f246bb4b06dafe63b35c5e54",
-      "size_bytes": 6360
+      "path": "data/tables/wordly/05-methods-and-evidence.csv",
+      "sha256": "74044a845e6cf51fe254d12441a5a1893fc22f97d41dd3073d1313c56eb3a0f0",
+      "size_bytes": 7867
     },
     {
       "path": "data/timing.csv",
-      "sha256": "7144cd14b183f77a11878cface775b90abe27138785e3b38e97047b1d510c08a",
-      "size_bytes": 11395
+      "sha256": "a1c3b3d0967c71d6b37aca2366c5c5c03184bb63d31e0c06e43eb9dcfeeb333f",
+      "size_bytes": 17437
     },
     {
       "path": "data/verification.json",
-      "sha256": "f15beff24959f6be5186c2fcdbe908e2b160e244da79ea211bdb198bb3e52519",
-      "size_bytes": 1125
+      "sha256": "11fee46093057ca1f804cfd7ac0bd1107a042d617d827353b9da5dc6002443f5",
+      "size_bytes": 1236
     },
     {
       "path": "data/workbook-verification.json",
-      "sha256": "fa3680338cc3799f8ea6774c6537aac86fc0c18868accf1f3bf1218853e4a9de",
-      "size_bytes": 760
+      "sha256": "32a52cd86a9c4ec5598ac10b2743fd61a75f4b150ee78bdfed0bf2847af96704",
+      "size_bytes": 933
     },
     {
       "path": "docs/data-review-20261111.md",
-      "sha256": "92a5fb7472e86c5011d213c6d12e5a69b14d792cf602af9fe920acd1b30444b0",
-      "size_bytes": 8715
+      "sha256": "37f13780963de2104c85e485d5707c0cf7ad8f0588194a7c27b45f5d9cf1931d",
+      "size_bytes": 12177
     },
     {
       "path": "docs/parley-doubao-pause-20261114.md",
-      "sha256": "72f21d397bb370751c6a596069ab37376a501112e6083a611b6ecdbf9dae0826",
-      "size_bytes": 1438
-    },
-    {
-      "path": "docs/parley-normal-20261116.md",
-      "sha256": "0530d75e809a463c3697c741afa7ef13d14aca2944bb03619b99737991eb5167",
-      "size_bytes": 1509
-    },
-    {
-      "path": "docs/parley-normal-retest-20261112.md",
-      "sha256": "a694ee3a61f8aa016e4cee12763369ace11ab890f111b1d9dda5f43561c6fde6",
+      "sha256": "c2646eced94010813f7be4c5562985fee94b8f14940b967aaecd94060c40bd6a",
       "size_bytes": 1931
     },
     {
+      "path": "docs/parley-normal-20261116.md",
+      "sha256": "b14614e9f36e3ef067531cc288be3dbb4b6dae6fe902924b51ba917797e58fa9",
+      "size_bytes": 2720
+    },
+    {
+      "path": "docs/parley-normal-retest-20261112.md",
+      "sha256": "ca32e9b04157cbcfff22e03354203ec809b1554daa8669be6e1ae97a4b63dac8",
+      "size_bytes": 2815
+    },
+    {
       "path": "docs/parley-parameters-20261114.md",
-      "sha256": "e04c0b341919ee2c4a9428861d225c08b0fdf088c3b21c3e8b6e6b4a600eea18",
-      "size_bytes": 2914
+      "sha256": "d02747dcfa23d1d85ecb1a1e33385122b63659be2055f6ea70cb7fd2cd5f5a69",
+      "size_bytes": 3953
     },
     {
       "path": "docs/privacy.md",
-      "sha256": "16b19e780dedb529299ced9c170cbf97a89fdee6bdf7e3e6e94bbcae57882c66",
-      "size_bytes": 5551
+      "sha256": "020ab087942ccf73fffb703507829ad7a649eb45ddc3f3fcfcf1561175028f57",
+      "size_bytes": 7667
     },
     {
       "path": "docs/report.md",
-      "sha256": "64a1fe5f8e1710779d4721978a54c27dde03a0a6c2e2d0706f54936cc83414e9",
-      "size_bytes": 60851
+      "sha256": "21f9faff51771c29168e5b3ad039c31e8a6fc3f449770350ba718395df8c289d",
+      "size_bytes": 79869
     },
     {
       "path": "docs/reproducibility.md",
-      "sha256": "d6e6f767f5c6b1832d83a4bb629d97efbc33cb3670fb849a33bdb21b12cd0abe",
-      "size_bytes": 6395
+      "sha256": "1345d814cad6a8e2d573f32a713f2a45953f600204ca3991f44fde46aab7c0d4",
+      "size_bytes": 8148
     },
     {
       "path": "evidence/images/iflytek-n01.png",
@@ -589,9 +588,149 @@
       "size_bytes": 73979
     },
     {
+      "path": "media/clone-reference.wav",
+      "sha256": "b129ba82395663933f9558aa94e2efe12d22146be1eb26ba639c0d1c36ee815f",
+      "size_bytes": 714830
+    },
+    {
+      "path": "media/iflytek-v01.mp4",
+      "sha256": "a671a246fd1c8915ba199b24cbc509b46290cbebdfe933e049929c5109f46113",
+      "size_bytes": 9412972
+    },
+    {
+      "path": "media/jotme-v01.mp4",
+      "sha256": "1983c0c6cc43c61e525985608d3b3f76c4fe3e749e8e0c7d32104629b44a2721",
+      "size_bytes": 1069304
+    },
+    {
+      "path": "media/jotme-v02.mp4",
+      "sha256": "189c50e8807ec8be7e35a5d79765eae25e0be7712577e14c9f7c12be507b2f80",
+      "size_bytes": 2308789
+    },
+    {
+      "path": "media/jotme-v03.mp4",
+      "sha256": "acc41ac65749efbbed05320bd3b38990ecbf6abe52fcde5195f9d74e87b4538c",
+      "size_bytes": 2080216
+    },
+    {
+      "path": "media/maestra-v01.mp4",
+      "sha256": "074b26e86d6abd5e4b982d287f9b67c3befddfba06bd9df559bbafdf3ab6fffc",
+      "size_bytes": 1054378
+    },
+    {
+      "path": "media/maestra-v02.mp4",
+      "sha256": "cb595f0790dd24482969003afb7433619b2a383f65a5d094bdf7618b125bb752",
+      "size_bytes": 4438229
+    },
+    {
+      "path": "media/maestra-v03.mp4",
+      "sha256": "248d1a93512a855640473c1e48647e814cd5d6a63ebcf9ba767e47616cc86583",
+      "size_bytes": 1218503
+    },
+    {
+      "path": "media/palabra-v01.mp4",
+      "sha256": "95325601d82f068671ea8671d9b6d4db0f811923d04b6e87cdd8448d077d2ca8",
+      "size_bytes": 2425501
+    },
+    {
+      "path": "media/palabra-v02.mp4",
+      "sha256": "e52740fc4d8dc7f4c125f571ce2a8fbeb80f04df16a58eb7c0fb943728cb3867",
+      "size_bytes": 9051272
+    },
+    {
+      "path": "media/palabra-v03.mp4",
+      "sha256": "99818c33bebabf3e0307fcdfa4af5009349c7e9579e209254c7231c0a28e8bfc",
+      "size_bytes": 2293171
+    },
+    {
+      "path": "media/palabra-v04.mp4",
+      "sha256": "31989953e514ae4151882beff5ad0f24043c90f68b5cffc2e35904e3b75d0271",
+      "size_bytes": 2400378
+    },
+    {
+      "path": "media/parley-doubao-normal-01-20261116.mp4",
+      "sha256": "5530ea009e0eeab66929f003f65e5347ff6cf25d8ba2d4667167fbd715aa02be",
+      "size_bytes": 249382
+    },
+    {
+      "path": "media/parley-doubao-normal-02-20261116.mp4",
+      "sha256": "120a31a707b4c149c68092a62a59e7ac3c2e650c5f7f8cc2a42b7bfe800ad159",
+      "size_bytes": 281518
+    },
+    {
+      "path": "media/parley-doubao-pause-20261114.mp4",
+      "sha256": "120a31a707b4c149c68092a62a59e7ac3c2e650c5f7f8cc2a42b7bfe800ad159",
+      "size_bytes": 281518
+    },
+    {
+      "path": "media/parley-qwen-network-20261111.mp4",
+      "sha256": "af77630f44465a9d67e4a696ac69d9406589e8a9890f066abaeb35bf190c1cc1",
+      "size_bytes": 2145510
+    },
+    {
+      "path": "media/parley-qwen-normal-20261111.mp4",
+      "sha256": "531e060d9a1d0d02976f74dae063ddf6b19eb3a2b64d4230fae5f7f956443d7b",
+      "size_bytes": 950073
+    },
+    {
+      "path": "media/parley-qwen-normal-retest-20261112.mp4",
+      "sha256": "a80f3ff7f7c1a8d6a65097243be0fa6c70d38d818f1ad73ffce32c1c9c74881d",
+      "size_bytes": 1539705
+    },
+    {
+      "path": "media/parley-v01.mp4",
+      "sha256": "0c2d4cb6d00ea9ffb24955255ce95f7cc18ffdde893a0b0ecd3037f1eeb5f5c6",
+      "size_bytes": 1295311
+    },
+    {
+      "path": "media/parley-v02.mp4",
+      "sha256": "ec7d709b78740c54cce024dc905f5ef190a7a36b277d77819e3e471a244a3d3f",
+      "size_bytes": 2724825
+    },
+    {
+      "path": "media/parley-v03.mp4",
+      "sha256": "7867248c37f2a7d7af2388cca737139c08e383c8ee831110a32c6c7466abde63",
+      "size_bytes": 627259
+    },
+    {
+      "path": "media/s01-input.wav",
+      "sha256": "60b32d31f3b3e07450dc17e0bfc44336bde561c3533821b30d0947eac892ddeb",
+      "size_bytes": 432206
+    },
+    {
+      "path": "media/transync-loss10.mp4",
+      "sha256": "31050d926e39de623761e4a0916980a56786625f5b36c191ffef1ccc1a480a17",
+      "size_bytes": 904931
+    },
+    {
+      "path": "media/transync-network.mp4",
+      "sha256": "adbcee46d973375a158284842057e10e517c43f351d34e99d0b7ce45bb06fb7f",
+      "size_bytes": 1988093
+    },
+    {
+      "path": "media/transync-normal.mp4",
+      "sha256": "db62944d198607ae5b24600393c33db95e3a524319ed232dc221c37d1afa05f9",
+      "size_bytes": 4395801
+    },
+    {
+      "path": "media/wordly-v01.mp4",
+      "sha256": "08b3e9af1d45d09a8e72acbc21468f6d62788e1c4e5015c616ff05e646c07e25",
+      "size_bytes": 2537520
+    },
+    {
+      "path": "media/wordly-v02.mp4",
+      "sha256": "7569359fc51ec7f41cdbd769b5843f98c9be4ea06e5b1d601e7cca233614143f",
+      "size_bytes": 4376604
+    },
+    {
+      "path": "README.md",
+      "sha256": "b23b3ba1fed32ecc22478b432b6a4cf5c34e67f5b3ad227ab45d8cf66abc08d5",
+      "size_bytes": 4734
+    },
+    {
       "path": "report.html",
-      "sha256": "680a78ed5b7b74737850fab33267e63d1160fd985e25ea25cd5fa1cdd5709b13",
-      "size_bytes": 88305
+      "sha256": "ca99fe18d4f249566090e29806edc2dffe861a2d945564f4fe4ba39f6f39b20d",
+      "size_bytes": 110416
     },
     {
       "path": "requirements-analysis.txt",
@@ -695,28 +834,18 @@
     },
     {
       "path": "scripts/benchmark.py",
-      "sha256": "b2b4c9f8165be609afd909f54210d6b0c8fa5e4dea2244d90866ec07d19be22c",
-      "size_bytes": 7178
+      "sha256": "266cc4bb0e70a007b109bc2bab40ae1e2487f866cfcfa83220b062c78f50adbc",
+      "size_bytes": 7184
     },
     {
       "path": "scripts/build_report.py",
-      "sha256": "be9e46f5c21da03b1f7b5c1656bfd3493f431a12d8a22c3b3fccfcb6fec255c2",
-      "size_bytes": 9703
+      "sha256": "a15aab18c3ab67de8fbfc245ad1e191d8ad7e8c12dd1dc8f4bd8cf1bd526e5e3",
+      "size_bytes": 9997
     },
     {
       "path": "scripts/build_scenario_review.py",
-      "sha256": "bc2df69716f5afc1a99a15d91bb8fa1b54de14a5688014bab3af1281b397a416",
-      "size_bytes": 3547
-    },
-    {
-      "path": "scripts/weak-network/NativeCollector.cs",
-      "sha256": "8ccda7edf54c6d13d48c2a151764a6878d9501908725c1f3926e2b6129e1d08d",
-      "size_bytes": 20029
-    },
-    {
-      "path": "scripts/weak-network/NetBalancerReadback.cs",
-      "sha256": "bbffbec0a4fee6cbd404d0aeb8eab312175e46d78e56be942f59ae2dfaae58ba",
-      "size_bytes": 3347
+      "sha256": "6c7012216cdc864dfd88eec2c8b9cfe0a2ce39499226d4e321c86dd81b8e969e",
+      "size_bytes": 3903
     },
     {
       "path": "scripts/weak-network/admin_launcher.py",
@@ -774,9 +903,19 @@
       "size_bytes": 1618
     },
     {
+      "path": "scripts/weak-network/NativeCollector.cs",
+      "sha256": "8ccda7edf54c6d13d48c2a151764a6878d9501908725c1f3926e2b6129e1d08d",
+      "size_bytes": 20029
+    },
+    {
       "path": "scripts/weak-network/netbalancer.py",
       "sha256": "4c80a51ea29955cbdfe5dc165e89e6ce9e7150f2093c244682a453850528c328",
       "size_bytes": 12146
+    },
+    {
+      "path": "scripts/weak-network/NetBalancerReadback.cs",
+      "sha256": "bbffbec0a4fee6cbd404d0aeb8eab312175e46d78e56be942f59ae2dfaae58ba",
+      "size_bytes": 3347
     },
     {
       "path": "scripts/weak-network/panel.css",
@@ -804,16 +943,6 @@
       "size_bytes": 11675
     },
     {
-      "path": "scripts/weak-network/tests/InspectVendor.cs",
-      "sha256": "098e57a395f6871c7cfc7696c40ff5291fba4537df83bc0f7679215b4b907b75",
-      "size_bytes": 4374
-    },
-    {
-      "path": "scripts/weak-network/tests/UdpSequenceProbe.cs",
-      "sha256": "2848bba85a524d5e55bfefca570a844de047477d9d234a212ecac7551b0ef04c",
-      "size_bytes": 3638
-    },
-    {
       "path": "scripts/weak-network/tests/control_live_checks.py",
       "sha256": "5bb09773f2e26a02586cbee08817709fcb195a7ba0fc823778527947622ae540",
       "size_bytes": 3348
@@ -827,6 +956,11 @@
       "path": "scripts/weak-network/tests/inspect_nb.ps1",
       "sha256": "cc8f841915c30c2bec44afd219d72908a2dbd50ca2baac5686e3ef2e88a5a0ee",
       "size_bytes": 3175
+    },
+    {
+      "path": "scripts/weak-network/tests/InspectVendor.cs",
+      "sha256": "098e57a395f6871c7cfc7696c40ff5291fba4537df83bc0f7679215b4b907b75",
+      "size_bytes": 4374
     },
     {
       "path": "scripts/weak-network/tests/lease_owner.py",
@@ -869,6 +1003,11 @@
       "size_bytes": 3586
     },
     {
+      "path": "scripts/weak-network/tests/UdpSequenceProbe.cs",
+      "sha256": "2848bba85a524d5e55bfefca570a844de047477d9d234a212ecac7551b0ef04c",
+      "size_bytes": 3638
+    },
+    {
       "path": "scripts/weak-network/tests/verify_live_reader.py",
       "sha256": "87295ba75034dfabecaadfbfeadf911cd70aa9076e624168959d49948b711877",
       "size_bytes": 1724
@@ -880,13 +1019,13 @@
     },
     {
       "path": "tests/test_benchmark.py",
-      "sha256": "ce09d8508c20e74a35eb9f55112195aad4743ac3ae620649ec069c83dd32dfdc",
-      "size_bytes": 1709
+      "sha256": "eb77021b0ec9537de39bc56428500ec2a314ae23e8978798bdb9ebcbffc57b07",
+      "size_bytes": 1726
     },
     {
-      "path": "测试结论.xlsx",
-      "sha256": "af9b6d49ab62398c3615518693c6d66b784a07fefa269610fac77b7fa214a734",
-      "size_bytes": 27155
+      "path": "tests/test_english_publication.py",
+      "sha256": "ca7f2059b82f01fc284d736d69589266fd283bec71eb62ba64211ee8a0498807",
+      "size_bytes": 2133
     }
   ],
   "release_media": [
@@ -978,7 +1117,7 @@
   "media_release_tag": "v1.0-20261106",
   "repository_revision": {
     "date": "2026-11-16",
-    "change": "正常翻译主要展示豆包01、02，千问原始计时保留",
+    "change": "The normal translation mainly displays Doubao 01 and 02, while Qwen\u2019s original timing is retained.",
     "adopted_scenes": 47,
     "adopted_videos": 19,
     "supplemental_media": [
@@ -1001,7 +1140,9 @@
         "release_tag": "parley-normal-retest-20261112"
       }
     ],
-    "release_note": "v1.0/v1.1 素材包和历史工作簿保留原有记录。"
+    "release_note": "v1.0/v1.1 material packages and historical workbooks retain original records."
   },
-  "supplemental_parameter_comparison": "data/parley-parameters-20261114.json"
+  "supplemental_parameter_comparison": "data/parley-parameters-20261114.json",
+  "historical_release_tag": "v1.1-20261106",
+  "repository_snapshot_date": "2026-11-17"
 }

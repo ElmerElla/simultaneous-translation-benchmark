@@ -1,0 +1,66 @@
+﻿Original table row number,A,B,C,D,E,F,G,H,I
+1,,,,,,,,,
+2,Time and impaired network,,,,,,,,
+3,,,,,,,,,
+4,All absolute moments are PTS seconds of the original video; waiting = first subtitle/first sound - source sound of this round; unconfirmed does not equal 0 seconds,,,,,,,,
+5,,,,,,,,,
+6,scene,video,Conditions/admissions,Source sound starting point seconds,First displayed seconds,First ring seconds,Wait seconds for first subtitle,First ring wait seconds,limit
+7,N01,V01,First time recording,10.9936875,14.733,27.029,3.7393125000000005,16.0353125,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+8,N02,V03,Normal/Enter again,3.74,6.733,20.94,2.9929999999999994,17.200000000000003,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+9,W01,V02,100ms configuration,6.1922500000000005,9.867,21.929,3.6747500000000004,15.736749999999997,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+10,W02,V02,Interrupt related input,35.8984375,47.5,56.819,11.6015625,20.920562500000003,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+11,W04,V02,10% configuration,71.7925625,78.1,89.379,6.307437499999992,17.586437500000002,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+12,,,,,,,,,
+13,,,,,,,,,
+14,,,,,,,,,
+15,Network configuration and actual observations,,,,,,,,
+16,,,,,,,,,
+17,Configuration,Recording range,Visible control objects/status,Judgments and Limitations,evidence,,,,
+18,100ms,V02 is about 3~37 seconds,Current page DevTools selection delay 100ms,The complete output of this section; 100ms is the equivalent proof of configuration delay instead of 100ms for uplink and downlink.,frames/V02_overview_contact_1.jpg,,,,
+19,About 10 seconds Offline,V02 is about 37~47 seconds,Offline state and WebSocket/GET ERR_INTERNET_DISCONNECTED appears,"After cancellation, new subtitles and translated speech are completed for 5 items; other analysis request 400 errors are not considered as translation failures.",frames/V02_controls_contact_1.jpg,,,,
+20,10% packet loss,V02 about 71 seconds later,DevTools WebRTC Packet Loss 10% configuration; backend Settings displays Packet Loss 10%,There are complete subtitles/translated speechs; packet capture is not available to verify actual translation link coverage,frames/V02_facts_05700.png,,,,
+21,,,,,,,,,
+22,,,,,,,,,
+23,Starting and timing caliber,,,,,,,,
+24,,,,,,,,,
+25,first time/startup,,,,,,,,"Name is marked by video; unproven exit and restart 3 times per condition. Program opens, session connections, and post-typing responses are not mixed into the same metric."
+26,Starting point of source sound,,,,,,,,"The original sound of this round 10ms RMS is about −50dBFS, the earliest confirmable activity; −55/−42dBFS candidates are retained. Not player seconds or ASR first word time."
+27,Subtitles first subtitleed,,,,,,,,"Adjacent frame review; first readable English word fragment, not equal to a complete sentence. Parley stable phrase time save."
+28,The first sound of translated speech,,,,,,,,"The clean segment is directly waveformed; the overlapping segment is used as subsampling alignment and offset assistance; the threshold candidate is retained, and the offset sound does not contribute to the main voiceprint or sound quality."
+29,Accuracy,,,,,,,,"Sampling 0 corresponds to video PTS−0.021 seconds; 30fps is not an absolute synchronization accuracy. Summarized in approximately 0.1 seconds, overlapping first sounds are estimates; OBS paths are not calibrated."
+30,,,,,,,,,
+31,,,,,,,,,
+32,"Program opening, session readiness, and input responses are logged separately",,,,,,,,
+33,,,,,,,,,
+34,stage,video,Seconds of the previous screenshot,The next screenshot seconds,,,,,Boundaries and Limitations
+35,Browser opens,V01,1,2,,,,,"1 seconds desktop, 2 seconds Chrome user selection; not Maestra page startup is completed."
+36,Product home page display,V01,5,6,,,,,"In 5 seconds, the address bar will be transferred to the product, and the page will still be in Google; in 6 seconds, the Maestra homepage will be visible."
+37,Session connected,V01,8,9,,,,,"The homepage is still configured in 8 seconds, and is connected in 9 seconds."
+38,Session can receive input,V01,10,10.5,,,,,"10 seconds connecting, 10.5 seconds showing you can start talking now."
+39,,,,,,,,,
+40,,,,,,,,,
+41,,,,,,,,,
+42,The first full display of the last sentence and the last sound of the translated speech: it does not mean that the overall wording is correct or that the queue has been cleared.,,,,,,,,
+43,,,,,,,,,
+44,scene,video,Observation object,Source sound starting point seconds,The last sentence is displayed in full seconds,translated speech last ringing seconds,Display full wait seconds,Wait seconds for last ring,Vesting/subsequent change restrictions
+45,N01,V01,The last sentence of this round/attributable translated speech,10.9936875,25.233333333333334,38.649,14.239645833333334,27.6553125,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+46,N02,V03,The last sentence of this round/attributable translated speech,3.74,18.3,33.498999999999995,14.56,29.758999999999993,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+47,W01,V02,The last sentence of this round/attributable translated speech,6.1922500000000005,20.4,33.549,14.207749999999997,27.356749999999998,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+48,W02,V02,The last sentence of this round/attributable translated speech,35.8984375,55.36666666666667,68.509,19.468229166666667,32.6105625,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+49,W04,V02,The last sentence of this round/attributable translated speech,71.7925625,88,100.919,16.207437499999997,29.126437499999994,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+50,,,,,,,,,
+51,,,,,,,,,
+52,,,,,,,,,
+53,,,,,,,,,
+54,,,,,,,,,
+55,,,,,,,,,
+56,,,,,,,,,
+57,,,,,,,,,
+58,,,,,,,,,
+59,,,,,,,,,
+60,,,,,,,,,
+61,,,,,,,,,
+62,,,,,,,,,
+63,,,,,,,,,
+64,,,,,,,,,
+65,,,,,,,,,

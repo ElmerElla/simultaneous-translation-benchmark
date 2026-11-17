@@ -3,7 +3,7 @@
   "duration_s": 53.1,
   "rows": [
     {
-      "scene": "首次输入",
+      "scene": "first time entry",
       "source_pts_s": 8.189,
       "last_absent_frame": 399,
       "first_subtitle_frame": 400,
@@ -18,16 +18,16 @@
       "evidence_image": "evidence/images/parley-doubao2-1.png",
       "evidence_pts_s": 28,
       "subtitle_facts": [
-        "正确",
-        "正确",
-        "正确",
-        "正确",
-        "正确"
+        "Correct",
+        "Correct",
+        "Correct",
+        "Correct",
+        "Correct"
       ],
-      "audio_facts_review": "独立译音辅助转写保留五项事实，未做人耳验收。第二轮尾句前的 Next 为辅助转写待确认词。"
+      "audio_facts_review": "The independent translated speech-assisted transcription retains five facts and has not been subject to human ear acceptance. Next before the last sentence of the second round is the word to be confirmed in auxiliary transcription."
     },
     {
-      "scene": "同会话再次输入",
+      "scene": "Enter again in the same session",
       "source_pts_s": 31.109,
       "last_absent_frame": 1075,
       "first_subtitle_frame": 1076,
@@ -42,18 +42,18 @@
       "evidence_image": "evidence/images/parley-doubao2-2.png",
       "evidence_pts_s": 51,
       "subtitle_facts": [
-        "正确",
-        "正确",
-        "正确",
-        "正确",
-        "正确"
+        "Correct",
+        "Correct",
+        "Correct",
+        "Correct",
+        "Correct"
       ],
-      "audio_facts_review": "独立译音辅助转写保留五项事实，未做人耳验收。第二轮尾句前的 Next 为辅助转写待确认词。"
+      "audio_facts_review": "The independent translated speech-assisted transcription retains five facts and has not been subject to human ear acceptance. Next before the last sentence of the second round is the word to be confirmed in auxiliary transcription."
     }
   ],
-  "decision": "千问首轮首显及首响较快；豆包版本2再次输入整段完成较快。不同音色设置、各两轮样本。",
-  "source_file": "冷启动、正常翻译_豆包2.mkv",
-  "scope": "补充比较，不替换七款横评的采用场景；逐录次保留完整数据，不拼接最佳值。",
+  "decision": "The first round of Qwen has a faster first subtitle and first sound; the Doubao version 2 completes the entire section faster by re-entering it. Different tone settings, two rounds of samples each.",
+  "source_file": "Cold start, normal translation_Dubao2.mkv",
+  "scope": "Supplementary comparison does not replace the adoption scenarios of the seven Hengping reviews; the complete data is retained record by record and the best values ​​are not spliced.",
   "qwen_reference": [
     {
       "scene": "N05",

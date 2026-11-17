@@ -1,8 +1,8 @@
-# 代码、数据与复现范围
+# Code, data and reproduction scope
 
-## 可以直接复算什么
+## What can be directly recalculated?
 
-`scripts/benchmark.py` 采用命令行参数读入媒体，不含个人绝对路径。`validate` 检查七款产品、55 组证据和 22 段公开视频清单（含历史排除记录）；`recompute` 从已复核的原件时间戳重新计算首显/首响延迟，并与最终记录核对。它不会执行网络损伤、登录产品或下载模型。
+`scripts/benchmark.py`Use command line parameters to read media, excluding personal absolute paths.`validate`Check seven products, 55 group evidence and 22 public video list (including historical exclusion records);`recompute`First appearance/first audible translated speech delay is recalculated from the reviewed original timestamp and reconciled with the final record. It does not perform network damage, log in to products, or download models.
 
 ```console
 python scripts/benchmark.py validate
@@ -11,54 +11,54 @@ python scripts/benchmark.py recompute --output timing-recomputed.csv
 python -m unittest discover -s tests -v
 ```
 
-`stats` 需要 ffmpeg 和 NumPy，对指定公开视频的音频区间做信号检查：
+`stats`Requires ffmpeg and NumPy to perform signal check on the audio interval of the specified public video:
 
 ```console
 python scripts/benchmark.py stats --media-dir media --video parley-v01 --start 20 --end 28
 ```
 
-输出峰值、满幅样本占比和指定能量阈值下的首个活动窗口。公开视频是 AAC 浏览副本，这些值不能冒充原件测量或主观音质评分。讯飞视频保留两条音轨：默认英文译音、第二轨中文测试输入；其他六款经原记录核对的重复音轨仅保留第一条。
+Output peak value, full sample ratio, and first active window at specified energy threshold. Public videos are AAC view copies, and these values ​​cannot pass for original measurements or subjective sound quality ratings. iFLYTEK Video retains two audio tracks: the default English translated speech and the second track Chinese test input; only the first track of the other six duplicate audio tracks that has been verified by the original record is retained.
 
-## 实际使用过的分析源码
+## Actual used analysis source code
 
-- `scripts/analysis/shared-five/`：JotMe、Palabra、Maestra Live、Wordly、Parley 共用的抽轨、OCR、ASR、混音抵消、字幕边界、输出完成、音质和声纹分析。
-- `scripts/analysis/transync/`：Transync 原件采集、边界复核、混音辅助、声纹和有效 10% 丢包补录分析。
-- `scripts/analysis/iflytek/`：讯飞的选轨、客户端/收听页逐事实核对及声音质量分析。
+- `scripts/analysis/shared-five/`：JotMe, Palabra, Maestra Live, Wordly, Parley share common extraction tracks, OCR, ASR, mix cancellation, subtitle boundaries, output completion, sound quality and voiceprint analysis.
+- `scripts/analysis/transync/`: Transync original capture, boundary review, mixing assistance, voiceprint and effective 10% packet loss re-recording analysis.
+- `scripts/analysis/iflytek/`: iFLYTEK’s track selection, client/listening page fact-checking and sound quality analysis.
 
-这些是**历史分析源码**，保留原算法和人工选定的时间区间，不是全自动产品测试运行器。所需的历史工作区、中间音频、模型以及人工判定不全在公开仓库中；不能只克隆仓库就完整重现此前人工视觉复核。第三方模型不重新分发。
+These are **historical analysis source code**, which retain the original algorithm and manually selected time intervals, and are not a fully automatic product test runner. The required historical workspace, intermediate audio, models, and human judgment are not all in the public repository; you cannot just clone the repository and fully reproduce the previous human visual review. Third-party models are not redistributed.
 
-源码出处及改动校验值见 `data/source-code-manifest.json`。本机项目路径已改为 `BENCHMARK_WORKSPACE` 环境变量，Python 运行时可用 `BENCHMARK_PYTHON` 指定。五款共用脚本期望历史结构 `outputs/<产品测试目录>/评测结果_20261103/`；讯飞为 `评测结果_20261104/`；Transync 脚本仍依赖其 `analysis_20261102/` 的相邻文件结构，需要放入相应准备好的工作区使用。运行前请阅读脚本入口；部分脚本会写分析产物，需使用自己的工作区副本。
+For the source code source and modification check value, see`data/source-code-manifest.json`. The native project path has been changed to`BENCHMARK_WORKSPACE`Environment variables, available when Python is running`BENCHMARK_PYTHON`specified. Five shared script expectations history structure`outputs/<product test directory>/evaluation results_20261103/`; iFLYTEK is`Evaluation results_20261104/`;Transync scripts still rely on its`analysis_20261102/`The adjacent file structure needs to be placed in the corresponding prepared workspace for use. Please read the script entry before running; some scripts will write analysis products and you need to use your own copy of the workspace.
 
-依赖包括 NumPy、SciPy、soundfile、OpenCV、rapidocr_onnxruntime、faster-whisper、onnxruntime、kaldi-native-fbank 和 Pillow，版本快照见 `requirements-analysis.txt`。OCR/ASR 是辅助，最终事实判断和边界仍需人工核对。模型路径显式指定或按历史布局提供；不将个人目录、模型缓存或认证文件加入仓库。
+Dependencies include NumPy, SciPy, soundfile, OpenCV, rapidocr_onnxruntime, faster-whisper, onnxruntime, kaldi-native-fbank and Pillow. See the version snapshot`requirements-analysis.txt`. OCR/ASR is an auxiliary, and the final factual judgment and boundaries still need to be manually checked. Model paths are specified explicitly or provided by historical layout; personal directories, model caches, or certification files are not added to the repository.
 
-公开 MP4 隐去了桌面和部分设置区域，压缩后波形也有变化；它们适于查看证据，不适于宣称已完整复现原件 OCR、声纹和精确声学起点。完整复现实验需保有原件且已核对其 SHA-256。
+Public MP4 hides the desktop and part of the settings area, and the waveforms also change after compression; they are suitable for viewing evidence, not suitable for claiming to have fully reproduced the original OCR, voiceprint and precise acoustic starting point. To completely reproduce the experiment, you must keep the original and have its SHA-256 verified.
 
-## 弱网工具源码
+## Impaired network tool source code
 
-`scripts/weak-network/` 仅收录现行 v2 的源码及测试，不包含 `data/`、`logs/`、`backups/`、会话令牌、可执行程序或驱动。工具使用 Windows 与 NetBalancer；路径可通过 `NETBALANCER_CMD` 指定，Python 默认使用启动它的当前解释器。
+`scripts/weak-network/`Only the source code and tests of the current v2 are included, excluding`data/`、`logs/`、`backups/`, session token, executable program or driver. Tools use Windows and NetBalancer; paths are available via`NETBALANCER_CMD`Specified, Python defaults to using the current interpreter that started it.
 
-本轮只做源码静态检查及纯统计逻辑测试，**没有启动采集器、后台服务或管理员组件，也没有改变任何程序的网络状态**。完整网络工具验收需要单独在隔离目标上执行，包括配置回读、方向、手动/定时恢复及外部配置冲突处理，不能把本次归档验证当成这些验收已重新通过。
+This round only does source code static inspection and pure statistical logic testing. **No collector, background service or administrator component is started, nor is the network status of any program changed**. Complete network tool acceptance needs to be performed separately on the isolation target, including configuration readback, direction, manual/scheduled recovery, and external configuration conflict handling. This archive verification cannot be regarded as these acceptances having been re-passed.
 
-仅运行纯计数逻辑测试：
+Run only pure counting logic tests:
 
 ```console
 python -m unittest discover -s scripts/weak-network/tests -p test_packet_loss.py -v
 ```
 
-其他 `live_checks`、`selftest`、`verify_*` 脚本可能启动进程、发包或改变隔离探针配置，请先阅读源码和原工具行为，不能在日常网络或生产进程上盲目运行。
+other`live_checks`、`selftest`、`verify_*`Scripts may start processes, send packages, or change isolation probe configurations. Please read the source code and original tool behavior first, and do not blindly run it on daily networks or production processes.
 
-## 数据来源与筛选
+## Data sources and filtering
 
-`data/tables/` 仅来自每款软件的最终结果工作簿的可见工作表。CSV 为单元格值快照，公式、样式和本机超链接不保留。`data/comparison.csv` 只导出最终比较表中的测试结论，未导入价格、个人消费/余额或过时产品资料。
+`data/tables/`Only the visible worksheets from the final result workbook for each software. CSV is a snapshot of cell values; formulas, styles, and native hyperlinks are not preserved.`data/comparison.csv`Only the test conclusions in the final comparison table are exported, and prices, personal consumption/balance, or outdated product information are not imported.
 
-2026-11-06 对证据缺口的说明修订同步至综合对比 Excel、`data/comparison.csv`、`data/results.json` 和完整报告。`data/tables/` 保留各产品明细工作簿当时的导出值；其中的概括状态应结合最新版综合对比的逐指标说明阅读。修订没有新增场景、改写时间戳或改变事实判定；v1.1 Release 仍为修订前快照。
+2026-11-06 The revision of the explanation of the evidence gap is synchronized to the comprehensive comparison Excel,`data/comparison.csv`、`data/results.json`and full report.`data/tables/`The exported values ​​of each product detail workbook at that time are retained; the summary status should be read in conjunction with the indicator-by-index description of the latest version of the comprehensive comparison. The revision does not add new scenes, rewrite timestamps, or change factual determinations; v1.1 Release is still a pre-revision snapshot.
 
-根目录的 [测试结论.xlsx](../测试结论.xlsx) 是最终综合对比原表的隐私清理副本，保留其内容、格式和公开来源批注。仅两个包部件中的身份/本机目录属性发生变化，其余 12 个包部件与原件逐字节一致；88 个单元格读取值核对一致。表内价格、政策、未实测功能是历史资料，实测判断及其局限以报告为准。校验记录见 `data/workbook-verification.json`。
+root directory[benchmark-results.xlsx](../benchmark-results.xlsx)is a privacy-cleaned copy of the original comprehensive comparison table, retaining its content, formatting, and public source annotations. Only the identity/native directory attributes in two package parts have changed, and the remaining 12 package parts are consistent with the originals byte by byte; the read values ​​of 88 cells are consistent. The prices, policies, and untested functions in the table are historical data, and actual measured judgments and limitations are subject to the report. See the verification record`data/workbook-verification.json`。
 
-`data/results.json` 是最终已复核的场景、时间、备注和结论；原始 OCR 轨迹、早期 ASR/抵消候选不公开。新增复算程序只核对这些已确认时间戳的算术一致性，不能证明人工判断本身绝对正确。
+`data/results.json`Scenarios, timings, notes and conclusions are final reviewed; original OCR trajectories, early ASR/offset candidates are not public. The new recalculation program only checks the arithmetic consistency of these confirmed timestamps and cannot prove that the manual judgment itself is absolutely correct.
 
-## 授权与第三方内容
+## Licensing and Third Party Content
 
-本仓库用于分享本次测试记录，不代表被测厂商。软件界面、商标及第三方工具归各自权利人所有。未将第三方模型、安装包或商业组件重新分发；也未替用户设定新的开源许可证。
+This repository is used to share the test records and does not represent the manufacturer being tested. The software interface, trademarks and third-party tools belong to their respective rights holders. No third-party models, installation packages, or commercial components are redistributed; no new open source licenses are set for users.
 
-仓库 `media/` 已随附22段清单内脱敏MP4、两段Mac补充示例及一份历史停顿副本（与示例02内容相同），另含两份公开参考WAV。`validate --media-dir media` 核对22段清单内视频；两段Mac示例的SHA256另见 `data/parley-normal-20261116.json`。[11 月 12 日正常复测](../media/parley-qwen-normal-retest-20261112.mp4) · [千问 Live 弱网补录](../media/parley-qwen-network-20261111.mp4) · [千问 Live 正常补录](../media/parley-qwen-normal-20261111.mp4)
+storehouse`media/`Supplied with the redacted MP4 in the 22 segment list, two additional Mac examples and a copy of the historical pause (same content as example 02), and two public reference WAVs.`validate --media-dir media`Check the video in the 22 segment list; see also SHA256 for the two Mac examples`data/parley-normal-20261116.json`。[Normal retest on November 12](../media/parley-qwen-normal-retest-20261112.mp4) · [Qwen Live impaired network supplementary recording](../media/parley-qwen-network-20261111.mp4) · [Qwen Live normal supplementary recording](../media/parley-qwen-normal-20261111.mp4)

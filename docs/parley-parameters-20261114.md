@@ -1,30 +1,30 @@
-# Parley 历史参数记录（不纳入竞品对比）
+# Parley historical parameter records (not included in competitive product comparison)
 
-2026-11-14的历史补充记录；2026-11-17调整为独立描述，豆包不纳入竞品对比。千问 N05/N06 继续作为七款横评当前采用的正常录次，豆包版本2作为补充，不增加或替换原有47组采用场景。版本2为用户录屏名称，未核实构建号。保留完整两轮数据，不按指标摘取不同录次的最小值。
+The historical supplementary records of 2026-11-14; 2026-11-17 are adjusted to independent descriptions, and the Doubaos are not included in the comparison of competing products. Qwen N05/N06 will continue to be used as the normal recording number currently used by the seven Hengping models, and the Doubao version 2 will be used as a supplement, and the original 47 group will not be added or replaced. Version 2 is the name of the user's screen recording, and the build number has not been verified. Keep the complete two rounds of data, and extract the minimum value of different admissions according to indicators.
 
-千问最新采用录次的原始精度保持不变：N05首显／首响3.37／3.84秒、原声至译音播完20.03秒；N06为4.51／5.04秒、21.98秒；两轮字幕事实均5/5。
+The original accuracy of the latest recordings adopted by Qwen remains unchanged: N05 first subtitle/first sound 3.37/3.84 seconds, original sound to dubbing completion 20.03 seconds; N06 is 4.51/5.04 seconds, 21.98 seconds; both rounds of subtitles are actually 5/5 seconds.
 
-豆包版本2仅为历史描述：首次首显／首响5.14／5.57秒、原声至译音播完22.05秒；再次为4.76／5.13秒、21.05秒；两轮字幕事实均5/5。短句最低约1.7秒的Mac示例另见[两段视频与说明](parley-normal-20261116.md)。本页不作跨配置快慢比较。
+The Doubao version 2 is only a historical description: 5.14/5.57 seconds for the first subtitle/first sound, 22.05 seconds after the original sound is played to the dubbing; 4.76/5.13 seconds again, 21.05 seconds; both rounds of subtitles are actually 5/5 seconds. Mac examples of short sentences that take as little as 1.7 seconds See also[Two videos and instructions](parley-normal-20261116.md). This page does not compare speed across configurations.
 
-两种配置均为上海线路，但千问启用实时克隆，豆包采用系统 VV 女声，各只有两轮。字幕均保留五项事实；豆包译音仅由独立音轨辅助转写核对，未做人耳音质验收。第二轮辅助转写在尾句前出现 Next，是否为实际新增词待确认。音画通路未标定，约 0.1–0.2 秒尺度的差异需谨慎解释。
+Both configurations are Shanghai lines, but Qwen enables real-time cloning, and Doubao uses system VV female voice, each with only two rounds. The subtitles all retain five facts; the Doubao translated speech is only assisted by an independent audio track and is transcribed and checked, without human ear sound quality acceptance. In the second round of auxiliary transcription, Next appears before the last sentence. Whether it is an actual new word needs to be confirmed. The audio and video channels are not calibrated, and the difference in scale of about 0.1–0.2 seconds needs to be interpreted with caution.
 
-## 豆包版本2原录像时间点
+## Doubao version 2 original recording time point
 
-| 录次 | 原声起点 | 英文首显 | 稳定首句 | 译音首响 | 译音结束 | 截图时间 |
+|record|original sound starting point|First appearance in English|Stable first sentence|The first sound of translated speech|End of translated speech|Screenshot time|
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 首次 | 8.189 | 13.333 | 13.633 | 13.759 | 30.239 | 28.000 |
-| 再次 | 31.109 | 35.867 | 36.167 | 36.239 | 52.159 | 51.000 |
+|first| 8.189 | 13.333 | 13.633 | 13.759 | 30.239 | 28.000 |
+|again| 31.109 | 35.867 | 36.167 | 36.239 | 52.159 | 51.000 |
 
-单位秒，原始PTS；30 fps，从0计数的首显帧为400、1076，前一帧尚无本轮完整英文单词。第二轮只统计旧气泡后追加的新英文。声音以独立原音、译音轨10 ms RMS辅助定位，WAV第0采样对应-0.021秒，已修正。完整小数见[结构化数据](../data/parley-parameters-20261114.json)。
+Unit second, original PTS; 30 fps, the first subtitleed frames counted from 0 are 400, 1076, there is no complete English word of this round in the previous frame. In the second round, only the new English words added after the old bubbles are counted. The sound is positioned with independent original and translated audio track 10 ms RMS, and the WAV 0 sample corresponds to -0.021 seconds, which has been corrected. Complete decimals see[structured data](../data/parley-parameters-20261114.json)。
 
-## 脱敏字幕证据
+## Desensitized subtitle evidence
 
-首次录次，原录像28秒：
+First recording, original video 28 seconds:
 
-![豆包版本2首次字幕，五项事实均保留](../evidence/images/parley-doubao2-1.png)
+![Doubao version 2 is subtitled for the first time, all five facts are retained](../evidence/images/parley-doubao2-1.png)
 
-同会话再次输入，原录像51秒；仅核对下方追加英文：
+Enter again in the same session, the original video is 51 seconds; just check and add English below:
 
-![豆包版本2再次字幕，五项事实均保留](../evidence/images/parley-doubao2-2.png)
+![The Doubao version 2 is subtitled again, all five facts are retained](../evidence/images/parley-doubao2-2.png)
 
-截图仅保留测试字幕区域。原录像冷启动、正常翻译_豆包2.mkv长53.100秒，SHA256为e6bbdef093407aabdac368526d9a941fd032b068e963aa037aac7760414b9854，原件仅留本地，未上传未脱敏原件。此次补充不提供新公开视频或人工试听结论；此前较慢豆包录次也继续仅留本地。千问公开视频及完整计时见[11月12日复测](parley-normal-retest-20261112.md)。
+The screenshot only retains the test subtitle area. Cold start of original video, normal translation_Doubao 2.mkv is 53.100 seconds long, SHA256 is e6bbdef093407aabdac368526d9a941fd032b068e963aa037aac7760414b9854, the original is only kept locally, and the unredacted original is not uploaded. This supplement does not provide new public videos or manual audition conclusions; the previously slow Doubao recordings will continue to be local only. Qwen public video and complete timing see you[November 12 retest](parley-normal-retest-20261112.md)。

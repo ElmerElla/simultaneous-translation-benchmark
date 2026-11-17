@@ -5,7 +5,7 @@
     "video_id": "transync-normal",
     "original_pts_s": 48.904,
     "image": "evidence/images/transync-n01.png",
-    "label": "首次启动·克隆开启",
+    "label": "First boot·Clone enabled",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -19,7 +19,7 @@
     "video_id": "transync-normal",
     "original_pts_s": 81.129,
     "image": "evidence/images/transync-n02.png",
-    "label": "同进程新会话·克隆开启",
+    "label": "A new session and clone of the same process is opened",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -33,7 +33,7 @@
     "video_id": "transync-normal",
     "original_pts_s": 124.454,
     "image": "evidence/images/transync-n03.png",
-    "label": "同进程新会话·默认音色",
+    "label": "New session in the same process·Default timbre",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -47,7 +47,7 @@
     "video_id": "transync-network",
     "original_pts_s": 39.194,
     "image": "evidence/images/transync-w01.png",
-    "label": "上行100ms+下行100ms",
+    "label": "Uplink 100ms+Downlink 100ms",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -61,7 +61,7 @@
     "video_id": "transync-network",
     "original_pts_s": 64.0,
     "image": "evidence/images/transync-w02.png",
-    "label": "中断10秒期间的输入",
+    "label": "Interrupt input during 10 seconds",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -75,7 +75,7 @@
     "video_id": "transync-network",
     "original_pts_s": 82.8,
     "image": "evidence/images/transync-w03.png",
-    "label": "撤销中断后同文重播",
+    "label": "Replay the same text after canceling the interruption",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -89,7 +89,7 @@
     "video_id": "transync-loss10",
     "original_pts_s": 30,
     "image": "evidence/images/transync-w04.png",
-    "label": "上下行各10%概率丢包·克隆开启",
+    "label": "10% probability for uplink and downlink packet loss and cloning enabled",
     "image_crop": {
       "x": 10,
       "y": 245,
@@ -103,7 +103,7 @@
     "video_id": "parley-qwen-normal-retest-20261112",
     "original_pts_s": 26,
     "image": "evidence/images/parley-n05.png",
-    "label": "千问 Live · 上海线路首次开启会话",
+    "label": "Qwen Live · Shanghai line opens session for the first time",
     "image_crop": {
       "x": 674,
       "y": 270,
@@ -117,7 +117,7 @@
     "video_id": "parley-qwen-normal-retest-20261112",
     "original_pts_s": 50,
     "image": "evidence/images/parley-n06.png",
-    "label": "千问 Live · 上海线路同会话再次输入",
+    "label": "Qwen Live·Shanghai line re-enter in the same session",
     "image_crop": {
       "x": 674,
       "y": 270,
@@ -131,7 +131,7 @@
     "video_id": "parley-qwen-normal-20261111",
     "original_pts_s": 25,
     "image": "evidence/images/parley-n03.png",
-    "label": "千问 Live · 首次开启翻译会话",
+    "label": "Qwen Live · Start a translation session for the first time",
     "image_crop": {
       "x": 885,
       "y": 236,
@@ -145,7 +145,7 @@
     "video_id": "parley-qwen-normal-20261111",
     "original_pts_s": 44,
     "image": "evidence/images/parley-n04.png",
-    "label": "千问 Live · 同会话再次输入",
+    "label": "Qwen Live · Enter again in the same session",
     "image_crop": {
       "x": 885,
       "y": 236,
@@ -159,7 +159,7 @@
     "video_id": "parley-v01",
     "original_pts_s": 29,
     "image": "evidence/images/parley-n01.png",
-    "label": "豆包/系统音色VV女声/首次",
+    "label": "Doubao/system sound VV female voice/first time",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -173,7 +173,7 @@
     "video_id": "parley-v01",
     "original_pts_s": 54,
     "image": "evidence/images/parley-n02.png",
-    "label": "豆包/系统音色/再次输入",
+    "label": "Doubao/system tone/enter again",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -187,7 +187,7 @@
     "video_id": "parley-v03",
     "original_pts_s": 25,
     "image": "evidence/images/parley-c01.png",
-    "label": "豆包/实时克隆输入声音",
+    "label": "Doubao/real-time cloning of input sounds",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -201,7 +201,7 @@
     "video_id": "parley-v02",
     "original_pts_s": 32,
     "image": "evidence/images/parley-w01.png",
-    "label": "豆包/上下行各100ms配置",
+    "label": "Doubao/100ms configuration for uplink and downlink",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -215,7 +215,7 @@
     "video_id": "parley-v02",
     "original_pts_s": 54,
     "image": "evidence/images/parley-r01.png",
-    "label": "中断期间/撤销附近短段",
+    "label": "During interruption/cancel nearby short segment",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -229,7 +229,7 @@
     "video_id": "parley-v02",
     "original_pts_s": 76,
     "image": "evidence/images/parley-r02.png",
-    "label": "恢复后重播合并输出",
+    "label": "Replay merged output after recovery",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -243,7 +243,7 @@
     "video_id": "parley-v02",
     "original_pts_s": 104,
     "image": "evidence/images/parley-w04.png",
-    "label": "豆包/上下行各10%概率丢包配置",
+    "label": "Doubao/10% probability packet loss configuration for each uplink and downlink",
     "image_crop": {
       "x": 350,
       "y": 190,
@@ -257,7 +257,7 @@
     "video_id": "palabra-v01",
     "original_pts_s": 59,
     "image": "evidence/images/palabra-n01.png",
-    "label": "首次录次",
+    "label": "First time recording",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -271,7 +271,7 @@
     "video_id": "palabra-v03",
     "original_pts_s": 40,
     "image": "evidence/images/palabra-n02.png",
-    "label": "正常录制",
+    "label": "Normal recording",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -285,7 +285,7 @@
     "video_id": "palabra-v04",
     "original_pts_s": 43,
     "image": "evidence/images/palabra-c01.png",
-    "label": "文件标称音色克隆",
+    "label": "File Nominal Sound Clone",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -299,7 +299,7 @@
     "video_id": "palabra-v02",
     "original_pts_s": 46,
     "image": "evidence/images/palabra-w01.png",
-    "label": "上下行各100ms配置",
+    "label": "Upstream and downstream 100ms configuration",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -313,7 +313,7 @@
     "video_id": "palabra-v02",
     "original_pts_s": 70,
     "image": "evidence/images/palabra-w02.png",
-    "label": "中断后短残段",
+    "label": "Short stub after interruption",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -327,7 +327,7 @@
     "video_id": "palabra-v02",
     "original_pts_s": 100,
     "image": "evidence/images/palabra-w03.png",
-    "label": "恢复后重新播放",
+    "label": "Play again after recovery",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -341,7 +341,7 @@
     "video_id": "palabra-v02",
     "original_pts_s": 132,
     "image": "evidence/images/palabra-w04.png",
-    "label": "上下行各10%概率丢包配置",
+    "label": "10% probability packet loss configuration for each uplink and downlink",
     "image_crop": {
       "x": 10,
       "y": 190,
@@ -355,7 +355,7 @@
     "video_id": "maestra-v01",
     "original_pts_s": 38,
     "image": "evidence/images/maestra-n01.png",
-    "label": "首次录次/Puck",
+    "label": "First recording/Puck",
     "image_crop": {
       "x": 20,
       "y": 175,
@@ -369,7 +369,7 @@
     "video_id": "maestra-v03",
     "original_pts_s": 30,
     "image": "evidence/images/maestra-n02.png",
-    "label": "既有正常录次/Puck",
+    "label": "Existing normal recording times/Puck",
     "image_crop": {
       "x": 20,
       "y": 175,
@@ -383,7 +383,7 @@
     "video_id": "maestra-v02",
     "original_pts_s": 33,
     "image": "evidence/images/maestra-w01.png",
-    "label": "DevTools延迟100ms配置",
+    "label": "DevTools delay 100ms configuration",
     "image_crop": {
       "x": 20,
       "y": 175,
@@ -397,7 +397,7 @@
     "video_id": "maestra-v02",
     "original_pts_s": 68.5,
     "image": "evidence/images/maestra-w02.png",
-    "label": "Offline撤销后新段",
+    "label": "New paragraph after Offline cancellation",
     "image_crop": {
       "x": 20,
       "y": 175,
@@ -411,7 +411,7 @@
     "video_id": "maestra-v02",
     "original_pts_s": 100,
     "image": "evidence/images/maestra-w04.png",
-    "label": "DevTools 10%丢包配置",
+    "label": "DevTools 10% packet loss configuration",
     "image_crop": {
       "x": 20,
       "y": 175,
@@ -425,7 +425,7 @@
     "video_id": "jotme-v03",
     "original_pts_s": 39,
     "image": "evidence/images/jotme-n01.png",
-    "label": "首次录次",
+    "label": "First time recording",
     "image_crop": {
       "x": 30,
       "y": 235,
@@ -439,7 +439,7 @@
     "video_id": "jotme-v03",
     "original_pts_s": 70,
     "image": "evidence/images/jotme-n02.png",
-    "label": "同进程重播",
+    "label": "Same process replay",
     "image_crop": {
       "x": 30,
       "y": 235,
@@ -453,7 +453,7 @@
     "video_id": "jotme-v02",
     "original_pts_s": 23,
     "image": "evidence/images/jotme-w01.png",
-    "label": "上下行各100ms配置",
+    "label": "Upstream and downstream 100ms configuration",
     "image_crop": {
       "x": 30,
       "y": 235,
@@ -467,7 +467,7 @@
     "video_id": "jotme-v02",
     "original_pts_s": 52,
     "image": "evidence/images/jotme-r01.png",
-    "label": "中断与重播合并新段",
+    "label": "Interrupt and replay merge new segments",
     "image_crop": {
       "x": 30,
       "y": 235,
@@ -481,7 +481,7 @@
     "video_id": "jotme-v01",
     "original_pts_s": 37,
     "image": "evidence/images/jotme-w04.png",
-    "label": "上下行各10%概率丢包配置",
+    "label": "10% probability packet loss configuration for each uplink and downlink",
     "image_crop": {
       "x": 30,
       "y": 235,
@@ -495,7 +495,7 @@
     "video_id": "wordly-v01",
     "original_pts_s": 28,
     "image": "evidence/images/wordly-n01.png",
-    "label": "首次字幕录次",
+    "label": "First subtitle recording",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -509,7 +509,7 @@
     "video_id": "wordly-v01",
     "original_pts_s": 82.8,
     "image": "evidence/images/wordly-n03.png",
-    "label": "开启播音后的录次",
+    "label": "Enable recording after broadcasting",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -523,7 +523,7 @@
     "video_id": "wordly-v01",
     "original_pts_s": 100,
     "image": "evidence/images/wordly-n04.png",
-    "label": "正常录像后段10%配置",
+    "label": "Normal recording rear section 10% configuration",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -537,7 +537,7 @@
     "video_id": "wordly-v02",
     "original_pts_s": 27,
     "image": "evidence/images/wordly-b01.png",
-    "label": "弱网录像/No throttling基线1",
+    "label": "Impaired network video/No throttling baseline 1",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -551,7 +551,7 @@
     "video_id": "wordly-v02",
     "original_pts_s": 61,
     "image": "evidence/images/wordly-b02.png",
-    "label": "弱网录像/No throttling基线2",
+    "label": "Impaired network video/No throttling baseline 2",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -565,7 +565,7 @@
     "video_id": "wordly-v02",
     "original_pts_s": 96,
     "image": "evidence/images/wordly-w01a.png",
-    "label": "DevTools 100ms/首次输入",
+    "label": "DevTools 100ms/First time input",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -579,7 +579,7 @@
     "video_id": "wordly-v02",
     "original_pts_s": 118,
     "image": "evidence/images/wordly-w01b.png",
-    "label": "DevTools 100ms/继续重播",
+    "label": "DevTools 100ms/Continue Replay",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -593,7 +593,7 @@
     "video_id": "wordly-v02",
     "original_pts_s": 149,
     "image": "evidence/images/wordly-w04.png",
-    "label": "DevTools 10%/末次输入",
+    "label": "DevTools 10%/last input",
     "image_crop": {
       "x": 25,
       "y": 835,
@@ -602,12 +602,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "N01",
     "video_id": "iflytek-v01",
     "original_pts_s": 54,
     "image": "evidence/images/iflytek-n01.png",
-    "label": "首次输入",
+    "label": "first time entry",
     "image_crop": {
       "x": 30,
       "y": 350,
@@ -616,12 +616,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "N02",
     "video_id": "iflytek-v01",
     "original_pts_s": 84,
     "image": "evidence/images/iflytek-n02.png",
-    "label": "正常再次输入",
+    "label": "Enter again normally",
     "image_crop": {
       "x": 30,
       "y": 350,
@@ -630,12 +630,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "S100",
     "video_id": "iflytek-v01",
     "original_pts_s": 120,
     "image": "evidence/images/iflytek-s100.png",
-    "label": "客户端上下行各100ms配置",
+    "label": "Client upstream and downstream 100ms configuration",
     "image_crop": {
       "x": 30,
       "y": 350,
@@ -644,12 +644,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "Soff",
     "video_id": "iflytek-v01",
     "original_pts_s": 142,
     "image": "evidence/images/iflytek-soff.png",
-    "label": "客户端中断相关输入",
+    "label": "Client interrupt related input",
     "image_crop": {
       "x": 30,
       "y": 210,
@@ -658,12 +658,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "Sdrop",
     "video_id": "iflytek-v01",
     "original_pts_s": 182,
     "image": "evidence/images/iflytek-sdrop.png",
-    "label": "客户端上下行各10%丢包配置",
+    "label": "Client upstream and downstream packet loss configuration of 10%",
     "image_crop": {
       "x": 30,
       "y": 210,
@@ -672,12 +672,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "R100",
     "video_id": "iflytek-v01",
     "original_pts_s": 240,
     "image": "evidence/images/iflytek-r100.png",
-    "label": "收听页100ms配置",
+    "label": "Listening page 100ms configuration",
     "image_crop": {
       "x": 30,
       "y": 210,
@@ -686,12 +686,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "Roff",
     "video_id": "iflytek-v01",
     "original_pts_s": 266,
     "image": "evidence/images/iflytek-roff.png",
-    "label": "收听页Offline相关输入",
+    "label": "Listen to page Offline related input",
     "image_crop": {
       "x": 30,
       "y": 210,
@@ -700,12 +700,12 @@
     }
   },
   {
-    "product": "讯飞同传",
+    "product": "iFLYTEK Simultaneous Interpretation",
     "case_id": "Rdrop",
     "video_id": "iflytek-v01",
     "original_pts_s": 308,
     "image": "evidence/images/iflytek-rdrop.png",
-    "label": "收听页WebRTC丢包10%配置",
+    "label": "Listening page WebRTC packet loss 10% configuration",
     "image_crop": {
       "x": 30,
       "y": 210,
@@ -719,7 +719,7 @@
     "video_id": "parley-qwen-network-20261111",
     "original_pts_s": 29,
     "image": "evidence/images/parley-w05.png",
-    "label": "千问 Live · 上下行各 100 ms 配置",
+    "label": "Qwen Live · Uplink and downlink each 100 ms configuration",
     "image_crop": {
       "x": 0,
       "y": 0,
@@ -733,7 +733,7 @@
     "video_id": "parley-qwen-network-20261111",
     "original_pts_s": 49,
     "image": "evidence/images/parley-r03.png",
-    "label": "千问 Live · 约 10 秒中断",
+    "label": "Qwen Live · Interrupted for about 10 seconds",
     "image_crop": {
       "x": 0,
       "y": 0,
@@ -747,7 +747,7 @@
     "video_id": "parley-qwen-network-20261111",
     "original_pts_s": 72,
     "image": "evidence/images/parley-r04.png",
-    "label": "千问 Live · 解除中断后同稿重播",
+    "label": "Qwen Live · Replay the same article after the interruption is lifted",
     "image_crop": {
       "x": 0,
       "y": 0,
@@ -761,7 +761,7 @@
     "video_id": "parley-qwen-network-20261111",
     "original_pts_s": 97,
     "image": "evidence/images/parley-w06.png",
-    "label": "千问 Live · 上下行各 10% 概率丢包配置",
+    "label": "Qwen Live · 10% probability packet loss configuration for uplink and downlink",
     "image_crop": {
       "x": 0,
       "y": 0,

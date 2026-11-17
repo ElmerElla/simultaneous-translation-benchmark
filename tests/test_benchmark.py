@@ -14,7 +14,7 @@ class TimingAndEvidenceTests(unittest.TestCase):
         self.assertEqual(benchmark.latency(5.0, 5.0), 0)
 
     def test_unconfirmed_facts_are_not_errors(self):
-        counts = benchmark.fact_counts(['正确', '正确（抵消辅助）', '部分', '未确认', '本轮未观察到'])
+        counts = benchmark.fact_counts(['Correct', 'Correct (cancellation-assisted)', 'Partial', 'Unconfirmed', 'Not observed in this run'])
         self.assertEqual(counts, dict(confirmed=2, partial=1, error=0, omitted=0, unconfirmed=2))
 
     def test_absolute_and_parent_paths_cannot_escape_media_directory(self):

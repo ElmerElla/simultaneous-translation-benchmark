@@ -13,8 +13,8 @@
       0,
       128.5
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -40,7 +40,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -57,8 +57,8 @@
       0,
       86.0
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -84,7 +84,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -101,8 +101,8 @@
       0,
       34.2
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -120,7 +120,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -137,8 +137,8 @@
       0,
       58.0
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 350,
@@ -160,7 +160,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -177,8 +177,8 @@
       0,
       105.2
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 350,
@@ -216,7 +216,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -233,8 +233,8 @@
       0,
       27.033
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 350,
@@ -252,7 +252,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -269,8 +269,8 @@
       0,
       61.4
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -288,7 +288,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -305,8 +305,8 @@
       0,
       134.966
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -336,7 +336,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -353,8 +353,8 @@
       0,
       41.633
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -372,7 +372,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -389,8 +389,8 @@
       0,
       45.033
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 10,
@@ -408,7 +408,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -425,8 +425,8 @@
       0,
       39.533
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 20,
@@ -444,7 +444,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -461,8 +461,8 @@
       0,
       110.0
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 20,
@@ -488,7 +488,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -505,8 +505,8 @@
       0,
       34.7
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 20,
@@ -524,7 +524,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -541,8 +541,8 @@
       0,
       41.666
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 30,
@@ -560,7 +560,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -577,8 +577,8 @@
       0,
       67.233
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 30,
@@ -604,7 +604,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -621,8 +621,8 @@
       0,
       72.0
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 30,
@@ -644,7 +644,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -661,8 +661,8 @@
       0,
       103.2
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 505,
@@ -700,7 +700,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -717,8 +717,8 @@
       0,
       149.566
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 505,
@@ -760,7 +760,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -777,8 +777,8 @@
       0,
       308.6
     ],
-    "time_mapping": "原视频PTS≈公开视频秒数；不变速、不拼接。压缩浏览副本不用于帧级重测。",
-    "redaction": "背景全遮挡，仅保留白名单矩形；x/y/w/h为原1920×1080坐标；时间为原PTS。",
+    "time_mapping": "Original video PTS ≈ public video seconds; no speed or splicing. Compressed browse copies are not used for frame-level retests.",
+    "redaction": "The background is completely blocked, only the whitelist rectangle is retained; x/y/w/h are the original 1920×1080 coordinates; the time is the original PTS.",
     "revealed_regions": [
       {
         "x": 30,
@@ -856,7 +856,7 @@
       ]
     ],
     "audio_streams_retained": 2,
-    "audio_note": "只保留测试相关区间，区间外静音；AAC为浏览编码，原始质量指标来自原件。",
+    "audio_note": "Only the test-related intervals are retained, and there is silence outside the interval; AAC is browsing encoding, and the original quality index comes from the original.",
     "review_status": "reviewed"
   },
   {
@@ -874,8 +874,8 @@
       0,
       51.233
     ],
-    "time_mapping": "原视频 PTS 对应公开秒数。不变速、不拼接。",
-    "redaction": "固定裁切字幕区域，区间外黑屏，去除原件元数据。",
+    "time_mapping": "The PTS of the original video corresponds to the number of public seconds. No speed, no splicing.",
+    "redaction": "Fixed cropping of subtitle area, black screen outside the interval, and removal of original metadata.",
     "revealed_regions": [
       {
         "x": 885,
@@ -893,7 +893,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "保留一条混音，测试时间外静音。",
+    "audio_note": "Keep a mix and mute it outside the test time.",
     "review_status": "reviewed"
   },
   {
@@ -911,8 +911,8 @@
       0,
       100.7
     ],
-    "time_mapping": "原视频 PTS 对应公开秒数。不变速、不剪接时间轴。",
-    "redaction": "仅合成字幕区和弱网工具底部读数，遮挡第二气泡本机时间，末尾黑屏，移除原件元数据。",
+    "time_mapping": "The PTS of the original video corresponds to the number of public seconds. No speed, no splicing of the timeline.",
+    "redaction": "Only the subtitle area and the bottom reading of the impaired network tool are synthesized, the second bubble local time is blocked, the screen is black at the end, and the original metadata is removed.",
     "revealed_regions": [
       {
         "x": 450,
@@ -950,7 +950,7 @@
       ]
     ],
     "audio_streams_retained": 1,
-    "audio_note": "保留一条混音，四轮测试区间外静音。",
+    "audio_note": "Keep one mix and mute outside the four-round test interval.",
     "review_status": "reviewed"
   },
   {
@@ -968,8 +968,8 @@
       0,
       54.433
     ],
-    "time_mapping": "原视频 PTS 对应公开秒数。不变速、不拼接。",
-    "redaction": "固定裁切字幕及测试界面中央区域，配置页出现前黑屏，移除原件元数据。",
+    "time_mapping": "The PTS of the original video corresponds to the number of public seconds. No speed, no splicing.",
+    "redaction": "Fixed cropping of subtitles and the central area of ​​the test interface, black screen before the configuration page appears, and removal of original metadata.",
     "revealed_regions": [
       {
         "x": 674,
@@ -992,7 +992,7 @@
     ],
     "audio_streams_retained": 2,
     "audio_clip_stream": 1,
-    "audio_note": "默认音轨合成独立原声和英文译声的测试区间，另提供独立英文译声。输入区间外原声静音。",
+    "audio_note": "The default audio track synthesizes the test interval of independent original sound and English dubbing, and independent English dubbing is also provided. The original sound outside the input range is muted.",
     "review_status": "reviewed"
   }
 ]

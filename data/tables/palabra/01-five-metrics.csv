@@ -1,0 +1,25 @@
+﻿Original table row number,A,B,C,D
+1,,,,
+2,Palabra five test results,,,
+3,,,,
+4,2026-11-03 · Video offline review · S01 Chinese→English · The same five frameworks as Transync,,,
+5,,,,
+6,Evaluation items,Actual measurement results and judgment,Conclusion scope,Review tips
+7,Translation accuracy,"Normal 2 lines, nominal clone, 100ms configuration and replay after recovery: the final new subtitles are all 5/5 fact. There are 5 items in the first time, nominal clone, 100ms and replay translated speech verification; yen/yuan ambiguity appears in the translated speech of normal recording and 10% configuration, two items of each currency are not confirmed, and the other 3 items are reserved.
+After interrupting the input, the new paragraph is only ""Please postpone it from next Tuesday to Friday."": 0/5 complete facts, 1 partial item, and the remaining errors or omissions; the old complete blocks are not counted. The complete new output was seen after 71.8 seconds of clear replay.","Most records are factually complete; after interruption, only fragments are incorrect.",5/5 only covers key facts for this S01; not overall accuracy.
+8,Voice cloning,"CAMPPlus 192 dimensional voiceprint; comparison of the same original reference and non-overlapping English fragments F2~F5: nominal clone 0.5822, normal recording 0.1979, original cosine difference 0.3844.
+This sample claims that the cloned clip is closer to the original sound; the normal and clone switches are not shown in the video, so it cannot be strictly proven that ""turning on cloning"" makes a difference. Cross-language short samples, no subjective blind listening; similarity is not a restored percentage.",Nominal clone samples are closer to the original sound,Raw cosines are not reduction percentages; see details for cross-language short snippet and switch evidence limitations.
+9,Real-time performance,"First display/first sound, in seconds; both are measured from the original acoustic starting point of the current round.
+First time 14.3/14.8; normal 14.4/14.9; nominal clone 14.7/15.4; 100ms 14.5/15.1; 10% 16.4/15.9.
+The subtitles appear in the entire paragraph in the new historical block and cannot be counted as having the old block earlier. Single video observation; the audio and video channels are not calibrated, and there is no stable mean or P95.
+Startup in stages: the main interface appears in 12 to 15 seconds; the session is ready in 30 to 31 seconds, and it starts after 32.0 seconds.
+It takes 14.3 seconds to input the full span of the first last sentence; it takes 26.3 seconds to input the final span of the translated speech. Just because the last sentence is complete for the first time does not mean that it will not be revised or repeated later.",New historical blocks appear in about 14~16 seconds,Single observation; OBS pathway not calibrated; first subtitle does not equal complete sentence.
+10,Translated speech quality,"Non-overlapping F2~F5 fragment peaks: normal 0.049, nominal clone 0.387; 100ms complete translated speech 0.273, 10% complete translated speech 0.285, full clipping is 0%.
+The volume difference between normal and nominal clone recordings is obvious, and the loudness has not been calibrated; the intermittent interval caused by the energy threshold at low volume does not directly indicate freezing. Subtitles and independent transcription support intelligibility; normal and 10% recorded translated speech currencies are subject to human listening. Naturalness and rhythm were not scored by blind listening.",Normal recording volume is low; packet loss recording currency is not confirmed,The three tracks are actually the same; no naturalness/rhythm blind listening ratings were made.
+11,Impaired-network behavior,"Complete new subtitles appear under the 100ms and 10% configurations; the local tool controls Palabra.ai.exe and configures the upper and lower lines to 100ms or 10% respectively. The actual business packet loss ratio has not been verified.
+It was interrupted for about 54~64 seconds, and the input 51.2 seconds started; after the cancellation, only the short period of Tuesday with errors appearing was postponed to Friday. The complete output will be output after 71.8 seconds of replay, and the replay result cannot be automatically filled in as the previous cache.",Complete output after replay does not equal cache auto-filling,"Only visible configuration; no independent verification of full-link impairment, no stable success rate reported."
+12,,,,
+13,Status: Video analysis completed; insufficient evidence for some items,,,
+14,Measurements not covered by the existing video remain unconfirmed; no online measurements will be added.,,,
+15,,,,
+16,,,,

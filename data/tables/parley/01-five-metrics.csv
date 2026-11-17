@@ -1,0 +1,26 @@
+﻿Original table row number,A,B,C,D
+1,,,,
+2,Parley Voice five test results,,,
+3,,,,
+4,2026-11-03 · Video offline review · S01 Chinese→English · The same five frameworks as Transync,,,
+5,,,,
+6,Evaluation items,Actual measurement results and judgment,Conclusion scope,Review tips
+7,Translation accuracy,"This batch of interfaces are Doubao simultaneous interpretation. Normally twice and 100ms, 10% configuration recording, final subtitles/auxiliary translation complete facts 4/5 each: F1 changed ""confirm test results"" to ""send revised version"", or ""submit written explanation to HR/team""; the remaining amount, negation, release conditions and Friday extension are retained.
+The clone segment F1 is still wrong. F2 only has the budget amount and lacks the ""upper limit"". It is 3/5 complete, 1 partial item, and 1 wrong item. The merged segment of recovery and replay contains unsourced content such as ""be available"" and ""From now until Friday"", which cannot be classified as an accurate and complete translation.",The action/object of the first sentence was replaced; the clone segment still lacks the budget limit,5/5 only covers key facts for this S01; not overall accuracy.
+8,Voice cloning,"Video clear system sound VV female voice and real-time clone input voice. CAMPPlus 192 dimension, the same original sound reference, no overlap F4 ~ F5 English last sentence: clone 0.5450, system tone 0.0264, original cosine difference 0.5186.
+The clone characteristics of this sample are closer to the original sound. Only about 6 second final sentences, cross-language short samples, which do not represent complete sentences or long-term stability; no offset sounds are used to dominate the voiceprint. The similarity is not a restoration percentage, and there is no subjective blind listening score.",This sample clone is closer to the original sound,Raw cosines are not reduction percentages; see details for cross-language short snippet and switch evidence limitations.
+9,Real-time performance,"First display/first sound, in seconds; both are measured from the original acoustic starting point of the current round.
+First time 3.7/4.2; Again 3.8/4.3; Clone 3.7/4.6; 100ms 4.0/4.6; 10% 4.1/4.4.
+The first subtitle contains short fragments of complete English words, and the stable phrase time is saved separately; the translated speech ends earlier than the original sound, and the first sound is estimated using homologous cancellation. Single video observation; the audio and video channels are not calibrated, and there is no stable mean or P95.
+Startup in stages: The program window appears in 3 to 4 seconds, the main interface appears in 4 to 5 seconds; the session is ready in 7 to 8 seconds, and the input starts in 8.3 seconds.
+It takes 13.4 seconds to input the full range of the first last sentence; it takes 20.8 seconds to input the last sound of the translated speech. Just because the last sentence is complete for the first time does not mean that it will not be revised or repeated later.",The earliest English fragments and stable phrases are preserved separately,Single observation; OBS pathway not calibrated; first subtitle does not equal complete sentence.
+10,Translated speech quality,"No overlapping F4~F5 peak value at the end: system timbre 0.561, clone 0.908, full digital clipping average 0%; pause below the threshold for about 0.16~0.65 seconds. Independent tail paragraph transcription retains release conditions and Friday extensions.
+The overlapping areas such as the first sentence and amount of money are only checked with auxiliary transcription, and subtle distortions cannot be fully evaluated; no numerical overload does not mean naturalness. No naturalness, rhythm or MOS ratings were done.","Clean final sentences are not overloaded, and the evaluation of overlapping areas is limited.",The three tracks are actually the same; no naturalness/rhythm blind listening ratings were made.
+11,Impaired-network behavior,"Both the 100ms and 10% probability packet loss configurations have complete output, but the semantics of F1 are mistranslated; local tools control parley.exe and set upstream and downstream 100ms or 10%. The actual business damage has not been independently verified.
+There are fragments of audio/subtitles during the interrupted display period of about 42~53 seconds; 38.4 seconds are input earlier than the application, and 54.8 seconds are replayed. Recover unsourced content such as available times for merged segments, from now to Friday.
+Interruption coverage, old cache and new input ownership are limited, and strict complete recovery time is not reported.","The new section of the impaired network is still mistranslated, and the interruption coverage and attribution are unclear.","Only visible configuration; no independent verification of full-link impairment, no stable success rate reported."
+12,,,,
+13,Status: Video analysis completed; insufficient evidence for some items,,,
+14,Measurements not covered by the existing video remain unconfirmed; no online measurements will be added.,,,
+15,,,,
+16,,,,

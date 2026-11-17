@@ -1,0 +1,25 @@
+﻿Original table row number,A,B,C,D,E
+1,,,,,
+2,timbre and method,,,,
+3,,,,,
+4,CAMPPlus original cosine is only used for relative comparison of this sample; it is not converted into a restoration percentage.,,,,
+5,,,,,
+6,refer to,control fragment,original cosine,sampling,limit
+7,The same S01 input original sound,normal_F2_F5,0.19786186516284943,V03 WAV 31～39.2 seconds; normal recording F2 to F5,"The switches of the normal and nominal clones are not pictured; only these two segments can be compared, and the switches cannot be strictly attributed."
+8,The same S01 input original sound,clone_F2_F5,0.5822165012359619,V04 WAV 33.5～42.5 seconds; file nominal tone clone F2 to F5,"The switches of the normal and nominal clones are not pictured; only these two segments can be compared, and the switches cannot be strictly attributed."
+9,,,,,
+10,clone minus control,,0.3843546360731125,,
+11,,,,,
+12,,,,,
+13,Model,,,3D-Speaker CAMPPlus iic/speech_campplus_sv_zh-cn_16k-common; 192 dimension; weight SHA256 see speaker_results.json.,
+14,preprocessing,,,16kHz mono; 80 dimensional FBANK; dither=0; global demeaning; full segment embedding; raw cosine.,
+15,Enter the original sound,,,"The clean S01 source sound in the current Maestra first recording; matches the same source waveform as other recordings, without using synthesized or offset sounds for reference.",
+16,explain,,,"Cross-language, short clips, volume differences and sample content affect the absolute score. No universal identity threshold, no subjective blind listening, no inference of long-term stability.",
+17,,,,,
+18,,,,,
+19,,,,,
+20,,,,,
+21,,,,,
+22,,,,,
+23,,,,,
+24,,,,,

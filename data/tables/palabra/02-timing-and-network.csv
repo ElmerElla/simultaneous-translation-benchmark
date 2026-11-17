@@ -1,0 +1,66 @@
+﻿Original table row number,A,B,C,D,E,F,G,H,I
+1,,,,,,,,,
+2,Time and impaired network,,,,,,,,
+3,,,,,,,,,
+4,All absolute moments are PTS seconds of the original video; waiting = first subtitle/first sound - source sound of this round; unconfirmed does not equal 0 seconds,,,,,,,,
+5,,,,,,,,,
+6,scene,video,Conditions/admissions,Source sound starting point seconds,First displayed seconds,First ring seconds,Wait seconds for first subtitle,First ring wait seconds,limit
+7,N01,V01,First time recording,32.0153125,46.333,46.829,14.317687499999998,14.8136875,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+8,N02,V03,Normal/Enter again,12.559125,26.967,27.489,14.407874999999999,14.929875000000001,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+9,C01,V04,file nominal clone,14.827625,29.533,30.249,14.705375000000002,15.421375,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+10,W01,V02,100ms configuration,18.0588125,32.6,33.129,14.541187500000003,15.0701875,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+11,W02,V02,Interrupt related input,51.1859375,69.733,66.469,18.547062500000003,15.283062499999993,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+12,W03,V02,Replay after recovery,71.7858125,86.067,86.559,14.281187499999987,14.773187499999992,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+13,W04,V02,10% configuration,102.4265,118.8,118.319,16.373499999999993,15.892499999999998,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+14,,,,,,,,,
+15,,,,,,,,,
+16,,,,,,,,,
+17,Network configuration and actual observations,,,,,,,,
+18,,,,,,,,,
+19,Configuration,Recording range,Visible control objects/status,Judgments and Limitations,evidence,,,,
+20,100ms,V02 is about 10~45 seconds,Control Palabra.ai.exe; 100ms for up and down lines,There are complete subtitles and translated speechs of the 5 facts; it is not a measured RTT,frames/V02_controls_contact_1.jpg,,,,
+21,10 seconds interrupt,V02 is about 54~64 seconds,Control Palabra.ai.exe; connection interruption countdown,The source sound has started for 51.2 seconds; then only a short segment of the error is output; the complete new output can be seen after 71.8 seconds of replay,frames/V02_controls_contact_1.jpg,,,,
+22,10% packet loss,V02 is about 105~130 seconds,Control Palabra.ai.exe; 10% for up and down lines,The subtitles are complete; the translated speech currency is ambiguous; the tool indicates that the business coverage needs to be verified,frames/V02_controls_contact_1.jpg,,,,
+23,,,,,,,,,
+24,,,,,,,,,
+25,Starting and timing caliber,,,,,,,,
+26,,,,,,,,,
+27,first time/startup,,,,,,,,"Name is marked by video; unproven exit and restart 3 times per condition. Program opens, session connections, and post-typing responses are not mixed into the same metric."
+28,Starting point of source sound,,,,,,,,"The original sound of this round 10ms RMS is about −50dBFS, the earliest confirmable activity; −55/−42dBFS candidates are retained. Not player seconds or ASR first word time."
+29,Subtitles first subtitleed,,,,,,,,"Adjacent frame review; first readable English word fragment, not equal to a complete sentence. Parley stable phrase time save."
+30,The first sound of translated speech,,,,,,,,"The clean segment is directly waveformed; the overlapping segment is used as subsampling alignment and offset assistance; the threshold candidate is retained, and the offset sound does not contribute to the main voiceprint or sound quality."
+31,Accuracy,,,,,,,,"Sampling 0 corresponds to video PTS−0.021 seconds; 30fps is not an absolute synchronization accuracy. Summarized in approximately 0.1 seconds, overlapping first sounds are estimates; OBS paths are not calibrated."
+32,,,,,,,,,
+33,,,,,,,,,
+34,"Program opening, session readiness, and input responses are logged separately",,,,,,,,
+35,,,,,,,,,
+36,stage,video,Seconds of the previous screenshot,The next screenshot seconds,,,,,Boundaries and Limitations
+37,The program window appears,V01,3,6,,,,,"The desktop is white for 3 seconds, and the program window is white for 6 seconds; the screen is still white for 12 seconds, and the main interface Start is visible for 15 seconds."
+38,The main interface appears,V01,12,15,,,,,"Start can only request a connection; Please wait for 18~30 seconds, and there is a prompt that the connection takes a long time."
+39,Session can receive input,V01,30,31,,,,,"Please wait for 30 seconds, and Speak and empty history bar will be displayed for 31 seconds."
+40,,,,,,,,,
+41,,,,,,,,,
+42,,,,,,,,,
+43,The first full display of the last sentence and the last sound of the translated speech: it does not mean that the overall wording is correct or that the queue has been cleared.,,,,,,,,
+44,,,,,,,,,
+45,scene,video,Observation object,Source sound starting point seconds,The last sentence is displayed in full seconds,translated speech last ringing seconds,Display full wait seconds,Wait seconds for last ring,Vesting/subsequent change restrictions
+46,N01,V01,The last sentence of this round/attributable translated speech,32.0153125,46.333,58.299,14.317687499999998,26.2836875,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+47,N02,V03,The last sentence of this round/attributable translated speech,12.559125,26.967,38.869,14.407874999999999,26.309874999999998,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+48,C01,V04,The last sentence of this round/attributable translated speech,14.827625,29.533,42.339,14.705375000000002,27.511375,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+49,W01,V02,The last sentence of this round/attributable translated speech,18.0588125,32.6,45.309000000000005,14.541187500000003,27.250187500000006,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+50,W02,V02,The last sentence of this round/attributable translated speech,51.1859375,69.733,68.709,18.547062500000003,17.5230625,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+51,W03,V02,The last sentence of this round/attributable translated speech,71.7858125,86.067,99.169,14.281187499999987,27.38318749999999,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+52,W04,V02,The last sentence of this round/attributable translated speech,102.4265,118.8,130.769,16.373499999999993,28.3425,The new history block appears in its entirety; the last sentence in the adjacent frame is reviewed for the first time and is not timed according to the old block Friday. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+53,,,,,,,,,
+54,,,,,,,,,
+55,,,,,,,,,
+56,,,,,,,,,
+57,,,,,,,,,
+58,,,,,,,,,
+59,,,,,,,,,
+60,,,,,,,,,
+61,,,,,,,,,
+62,,,,,,,,,
+63,,,,,,,,,
+64,,,,,,,,,
+65,,,,,,,,,

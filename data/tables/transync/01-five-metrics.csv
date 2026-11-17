@@ -1,0 +1,65 @@
+﻿Original table row number,A,B,C,D
+1,,,,
+2,Transync five test results,,,
+3,,,,
+4,2026-11-02 · Chinese→English · S01 two-sentence short material · Jetstream 2.5 · OBS video offline measurement,,,
+5,,,,
+6,Evaluation items,Actual measurement results,in conclusion,evidence boundaries
+7,Real-time performance,"Main aperture: measured in seconds from the earliest acoustic activity of S01.
+N01 first launch/clone: ​​4.81 first show, 18.25 first audible translated speech.
+N02 same process/clone: ​​first subtitle 4.91, first sound 6.94.
+N03 default tone: first subtitle 5.67, first sound 16.10.
+W01 Uplink and downlink are 100ms each: first subtitle 6.09, first sound 7.89.
+First session accepted → ready: 0.83 seconds.
+W04 10% probability of packet loss/cloning in uplink and downlink: first subtitle 5.98, first sound 8.10.","The first session is ready faster, but readiness does not mean that the translated speech can be heard. N01 starts 15.124 seconds after the source PTS, first appears 19.933 seconds, and first sounds 33.374 seconds. After the subtitles appear, it still waits 13.44 seconds before starting to broadcast.
+Wait about 2.03 seconds after subtitles for N02 and 10.43 seconds for N03. The waiting time for each broadcast is obviously different, and the experience of text and sound needs to be evaluated separately.
+Counting from the first word ""please"" in Whisper, the first sound of N01 is 4.06 seconds and the first sound is 17.51 seconds; both calibers show first sound lag.
+Added W04: Source PTS for 8.289 seconds, 14.267 seconds for the first word to be recognized, 16.387 seconds for the first sound of the translated speech, 2.12 seconds for the subtitles, and 29.654 seconds for the end of translated speech. According to the first word of ASR, the caliber is 5.25/7.37 seconds.","1 cold start, 1 clone of the same process, and 1 default sound; not 3 independent cold starts under the same conditions.
+The first subtitle checks the same English sentence ""Please confirm..."" and excludes old subtitles, Chinese translated speechs and placeholder text.
+The acoustic caliber contains a leading low-energy sound segment, and the first word of ASR is not a precise vocal boundary. The video is 30fps, the OBS channel is not calibrated; the overlapping first response has a positioning uncertainty of approximately ±0.1 seconds. Stable means or P95 cannot be reported.
+The W04 client has been opened before the recording starts, excluding cold start; the first sound is offset auxiliary positioning, with an uncertainty of about ±0.1 seconds."
+8,Voice cloning,"3D-Speaker CAMPPlus, 192-dimensional voiceprint, original cosine:
+S01 input → clone: 0.6002; input → default: 0.0742.
+Similarity difference (clone minus default): 0.5259.
+Also use independent clone reference audio: Reference→Clone 0.6817, Reference→Default 0.1571.","Under both references, the voiceprint similarity of the cloned translated speech is higher than the default timbre, and the direction is the same. The main comparison score difference is 0.5259, supporting ""the cloned voice of this segment is closer to the input speaker"".
+The main comparison uses full S01 semantic content: 13.48 seconds for input sampling, 15.60 seconds for cloning, and 12.94 seconds for default. There is no overlap in Chinese source sounds between the cloned and default translated speech clips, and the offset audio is not used to calculate the main score.
+The similarity between the independent reference and the S01 input is 0.8632, which can be used as supplementary evidence of reference consistency, but cannot be used to independently confirm the identity of the real person.","The input is Chinese and the output is English. It is a cross-language comparison of the same corpus, not a word-for-word reading comparison in the same language.
+The text of the independent ""Sound Clone Audio"" is ""Physics is the law..."" and is for auxiliary purposes only.
+The cosine score indicates the similarity of model features. 0.6002 cannot be written as 60.02% reduction rate; there is no multi-speaker threshold calibration, no subjective blind listening score, and long-term timbre stability cannot be inferred in this round.
+Although W04 shows that voice cloning is enabled, the complete translated speech overlaps with the source sound, and a new complete main voiceprint score of the same text is not added. The original 0.6002/0.0742 main comparison remains unchanged."
+9,Translation accuracy,"Normal N01/N02/N03, 100ms scenario W01 and new 10% probability packet loss configuration W04, final subtitles are 5/5 facts, a total of 25/25 items passed the inspection.
+The five points are still: before the 10 point next Tuesday, the budget limit is 30,000, not 130,000, the release will be released after passing the test, and if there are problems, it will be postponed to Friday.
+Both W04 subtitles and translated speechs retain the 5 term; F1/F2 overlap, and homologous cancellation is used to assist ASR verification. The original interrupt recovery section still contains correct items 2, partial 1, and missing items 2.","The final results of the normal and 100ms samples retain the time, amount and negation, release conditions and extension date. ""30,000"" is not mixed with ""130,000"", nor is conditional release translated into unconditional release.
+The intermediate streaming results are unstable: N01 tentatively translated ""budget upper limit"" as budget up or down in about 22 to 23 seconds, corrected it in about 24 seconds, and the final subtitles and broadcast were correct.
+Only F4/F5 is kept intact in the recovery segment. ""30,000 yuan"" only retains the amount and lacks the semantics of ""budget upper limit"". The F2 part is recorded; F1 and F3 are missing. New input cannot be supplemented with old subtitles above.
+The full output of the 10% configuration catch-up ended while the configuration status was still shown to be valid, and no new facts were observed; this does not offset the lack of recovery from the original interruption scenario.","5/5 is a factual coverage result for fixed phrase materials, not a general translation accuracy rate. The 25 checks come from 5 different scene outputs of the same text, not 25 independent pieces of corpus.
+Equivalent expressions are allowed; focus on numbers, negations, and conditional relations item by item rather than matching reference translations word for word.
+ASR misrecognition in a mix does not directly count as product mistranslation. When the same text is played repeatedly after an interruption, it cannot be uniquely determined whether the new fragment comes from cached supplementary translation or replay input.
+W04 has only one supplementary recording. The actual packet loss and business coverage have not been verified and should not be generalized to ""100% correct under real 10% packet loss""."
+10,Translated speech quality,"Complete translated speech without overlap: The first and last utterance span of the N01 clone is 15.53 seconds, and the default span of N03 is 12.86 seconds.
+The normalized peak amplitudes are 0.381 and 0.275 respectively (the full amplitude is 1); the proportion of digital clipping samples in both segments is 0.0%.
+Observed inter-segment pauses: about 0.41 to 0.56 seconds for clones, about 0.20 to 0.54 seconds for default.
+Two independent English ASR transcriptions can restore the complete five facts, and no entire sentence content is repeated.
+W04: The auxiliary transcription checked 5 facts. The span of the entire first and last utterance was 13.27 seconds; the peak value of the non-overlapping last paragraph was 0.188, the digital clipping was 0.0%, and the pause between the two phrases was about 0.53/0.96 seconds.","There is no overlapping recording of this section, and the text recoverability and digital signal inspection support that ""the translated speech is understandable and no full frame overload is seen."" The first and last span of the clone broadcast is 2.67 seconds longer than the default, indicating that the output rhythms of the two sounds are different.
+The distribution of pauses by itself is not sufficient to determine stuttering: these gaps may be sentence or phrase boundaries. Complete transcription cannot exclude short staccato sounds, mechanical sounds or subtle distortions within words.
+Interruption and recovery only record the sound of the amount, and cannot be regarded as a complete translated speech.","Clipping criterion: |Sampling amplitude|≥0.999; 0.0% only means that no full-scale digital clipping is seen, but does not mean that there is no noise or distortion.
+The three labeled tracks in the recording are actually identical. N02/W01 active sound overlaps with the translated speech. The offset results are only used for content/time assistance and cannot be used for complete sound quality conclusions.
+Naturalness, rhythm, mechanical sense, and subjective clarity are not scored by the human ear, and no MOS, PESQ or STOI scores are generated.
+The first sentence of W04 overlaps with the budget sentence. The offset sound is only used for ASR assistance and is not used for subjective sound quality or complete voiceprint comparison. The tail section signal indicator does not mean that the entire section is free of subtle staccato."
+11,Impaired-network behavior,"100ms file: 100ms is appended to the upstream, 100ms is appended to the downstream, W01 first appears for 6.09 seconds, first sounds for 7.89 seconds, and the final subtitles are 5/5.
+Interrupt file: set 10 seconds, interface control state 54.800→65.033 seconds, lasting 10.23 seconds.
+After the cancellation, the new English amount was observed in about 78 seconds, and the corresponding voice appeared in 78.526 seconds; new subtitles F4/F5 were added in 82 seconds.
+Added W04: 10% probability packet loss configuration for uplink and downlink, first subtitle 5.98 seconds, first audible translated speech 8.10 seconds, subtitle/translated speech 5 fact remains.","The 100ms scene completes the two-sentence corpus. Compared with the normal default N03, the first subtitle observation difference is +0.42 seconds, and the first audible translated speech observation difference is −8.21 seconds; the single difference in different session states cannot be attributed to network delay.
+After 10 seconds of interruption, a reconnection prompt appears, and the complete corpus is not completed when the recovery is completed: the entire old paragraph 00:02 is still there, and the new paragraph below 00:53 only has the amount fragments and two subsequent facts, and the complete facts cover 2/5.
+The new English fragment was observed about 13 seconds after the tool was cancelled, and the amount sound appeared about 13.49 seconds. This is the time it takes for partial output to appear, not the time it takes for the first sentence or full recovery.
+10% is configured to supplementally record W04 to complete two sentences of corpus. Compared with the clone N02 in the same process, the first subtitle observation difference this time is +1.07 seconds and the first audible translated speech +1.16 seconds. The configuration status covers the entire output, but the actual damage amount has not been verified. It can only be judged that the configuration observation is completed, and it cannot be said that it is stable and can tolerate the real 10% packet loss.","100ms is the tool setting value, which affects the upstream and downstream respectively. It cannot be written as measured RTT=100ms. The interface confirms that the control object is Transync AI.exe, and no independent packet capture is done to verify the actual damage amount.
+After canceling in 65.033 seconds, the same text will be replayed in 68.524 seconds; the session will be stopped in about 84.13 seconds. Replay makes the supplementary translation attribution non-unique, and early stopping makes subsequent broadcasts unobservable.
+The conclusion is limited to incomplete recovery within this observation, and cannot be used to determine permanent loss, strict timeout, or stable failure rate.
+W04 sets 10% for uplink and downlink for 30 seconds; the interface displays the control object in effect in 2.700 seconds, displays none in 34.000 seconds, and only the UI status span in about 31.30 seconds. The original text of the tool states that ""the measured discard ratio has not been collected, and the business coverage still needs to be verified""; the end of the session is close to the removal of the control object, and recovery after revocation has not been independently verified."
+12,,,,
+13,"The delay main table is calculated from the starting point of the input acoustic activity; based on the first word of the ASR, the first cold start display is 4.06 seconds and the first sound is 17.51 seconds. See timing caliber comparison for details.",,,
+14,,,,
+15,,,,
+16,,,,
+17,,,,
+18,,,,

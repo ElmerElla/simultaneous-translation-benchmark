@@ -1,46 +1,46 @@
-# 隐私处理与证据边界
+# Privacy processing and evidence boundaries
 
-## 收录原则
+## Inclusion Principles
 
-只收录最终评测所采用的录像、最终数据、结论和相关源码。对原始目录采用明确文件清单筛选，没有整目录上传。废稿、修改前备份、旧版/调整稿工作簿、未采用文本、运行日志、原始 OCR/ASR 候选、依赖目录、模型、安装包、密钥文件、缓存、后台状态与会话配置均排除。
+Only the videos, final data, conclusions and related source code used in the final evaluation are included. Use explicit file list filtering for the original directory and do not upload the entire directory. Scrap drafts, pre-modification backups, old/adjusted draft workbooks, unused text, run logs, original OCR/ASR candidates, dependent directories, models, installation packages, key files, caches, background states, and session configurations are excluded.
 
-原始录像和工作簿保留本地，不改写或删除。七款最终明细工作簿仅导出可见单元格的 CSV 值，不带隐藏表、作者属性、批注、公式或个人文件超链接。四款未执行音色克隆测试的软件在报告中明确标注“本次跳过”，不沿用旧功能描述作为实测结论。
+The original recordings and workbooks are retained locally and will not be rewritten or deleted. Seven final detail workbooks export only the CSV values ​​of visible cells, without hidden tables, author attributes, comments, formulas, or personal file hyperlinks. The four pieces of software that did not perform the timbre cloning test were clearly marked "skip this time" in the report, and the old function descriptions were not used as the actual test conclusions.
 
-按用户要求，另收录最终综合对比表 `测试结论.xlsx` 的隐私清理副本。检查全部 ZIP 包部件，清空修改人/作者身份及本机绝对工作目录属性；单元格 XML、样式、绘图及公开来源批注逐字节保持一致。表中没有公式或外部关系，只有一张可见工作表。原件/副本校验值和修改部件清单见 `data/workbook-verification.json`，不记录被清除的姓名和路径。
+According to user requirements, a final comprehensive comparison table is also included.`benchmark-results.xlsx`Privacy-cleaned copy of. Check all ZIP package parts, clear the modifier/authorship and local absolute working directory attributes; cell XML, styles, drawings and open source annotations are consistent byte by byte. There are no formulas or external relationships in the table, there is only one visible worksheet. Original/copy verification values ​​and modified parts list see`data/workbook-verification.json`, the cleared names and paths are not recorded.
 
-## 画面处理
+## Screen processing
 
-原录像中发现账号尾号、浏览器头像与书签、参会姓名、会议链接/会议码/二维码，以及本机进程路径。公开副本使用完全不透明的黑色遮挡，默认遮住整幅画面，只揭示明确选定的测试业务区域。窗口移动时采用分时矩形，避免后移窗口重新暴露个人信息。
+The account number, browser avatar and bookmarks, names of participants, meeting links/conference codes/QR codes, and local process paths were found in the original video. The public copy uses a fully opaque black mask that blocks the entire frame by default, revealing only explicitly selected areas of the test business. A time-sharing rectangle is used when moving the window to avoid re-exposing personal information when the window is moved later.
 
-- Transync、Parley、Palabra、JotMe：主要保留测试译文区域；隐藏账号区、历史导航、进程路径、浏览器栏与桌面周边。
-- Maestra Live：保留测试输入/译文区域；隐藏浏览器个人内容及开发工具中的请求详情。
-- Wordly：仅保留测试文字区域；隐藏参会姓名、会议码、链接和浏览器内容。
-- 讯飞：分时保留客户端测试文字及后半段收听页文字；隐藏分享二维码、会议地址、账号区及开发工具请求详情。工具窗口移动到文字区域时缩小揭示范围。
+- Transync, Parley, Palabra, JotMe: mainly retain the test translation area; hide the account area, historical navigation, process path, browser bar and desktop peripherals.
+- Maestra Live: Preserve test input/translation area; hide browser profile and request details in development tools.
+- Wordly: Only keep the test text area; hide participant names, conference codes, links and browser content.
+- iFLYTEK: Time-sharing retains the client test text and the second half of the listening page text; hides the shared QR code, meeting address, account area and development tool request details. The tool window is revealed less when moved to the text area.
 
-这些遮挡有意比较保守，可能遮住部分测试文字、启动界面、控制参数或状态。因此公开副本有助于查看译文与播放过程，但不是完整桌面取证包，不能声称仅凭这些副本已重新证明全部弱网作用范围。配置核对沿用最终原件记录，原件 SHA-256 可供本地对照。
+These occlusions are intentionally conservative and may cover part of the test text, startup interface, control parameters or status. Therefore, the public copies are helpful for viewing the translation and playback process, but they are not a complete desktop forensics package. It cannot be claimed that these copies alone have re-proven the entire scope of the impaired network. Configuration verification follows the final original record, and the original SHA-256 is available for local comparison.
 
-47 张报告截图直接从公开副本对应时间点提取，并裁切安全区域以便阅读；不重绘测试文字，不拼贴不同时间的字幕。裁切坐标见 `data/evidence-index.json`，视频遮挡坐标与生效时段见 `data/media-manifest.json`。
+47 report screenshots are extracted directly from the corresponding time points of the public copy, and the safe area is cropped for easy reading; the test text is not redrawn, and subtitles at different times are not collaged. For cropping coordinates see`data/evidence-index.json`, see video occlusion coordinates and effective period.`data/media-manifest.json`。
 
-## 声音处理
+## Sound processing
 
-用户明确允许公开测试朗读与音色克隆声音。公开副本只保留原评测中测试输入/输出所在时间区间，其余时段静音。保留区间逐条记录在视频清单中。测试本身的错误翻译、额外数字和异常播报属于结果证据，不因内容不正确而删去。
+User expressly gives permission for public testing of spoken and timbre cloned voices. The public copy only retains the time interval where the test input/output in the original review occurred, and the rest of the time period is muted. The reserved intervals are recorded in the video list one by one. Incorrect translations, extra numbers and abnormal broadcasts of the test itself are evidence of the results and will not be deleted due to incorrect content.
 
-六款软件的重复音轨仅保留第一轨；讯飞保留两条不同内容的音轨，默认轨为英文译音，第二轨为中文输入。浏览器通常播放默认轨，需另选输入音轨时可用支持音轨切换的本地播放器。输入与克隆参考样本也随完整包提供，文件元数据已清除。
+Only the first track is retained among the six software's repeated audio tracks; iFLYTEK retains two audio tracks with different contents. The default track is English translated speech, and the second track is Chinese input. The browser usually plays the default track. If you need to select another input track, you can use a local player that supports track switching. Input and clone reference samples are also provided with the full package, with file metadata cleared.
 
-公开音频重编码为 AAC；峰值、数字削波、声纹和精确起止时间等定量结论均来自原件。参考 WAV 是测试样本的 PCM 解码副本；没有发布可直接检索个人身份的声纹向量文件。
+Public audio re-encoded to AAC; quantitative results such as peaking, digital clipping, voiceprint and precise start and end times are derived from the original. The reference WAV is a PCM-decoded copy of the test sample; no voiceprint vector file has been released that can directly retrieve individual identities.
 
-## 裁切与时间对应
+## Cropping corresponds to time
 
-保留的录像从原 PTS 0 开始，不变速，不拼接；只在末尾裁去未用于结论的内容。Transync 正常段保留至128.5秒、网络段至86秒；Parley 历史正常段至58秒；Maestra 网络段至110秒；JotMe 正常段至72秒，其后的自动摘要未收录。其余历史录像保留至原记录结束。11 月 11 日 Parley 补录只显示字幕矩形，准备阶段与会话退出前后采用黑屏，测试语音区间外静音。弱网补录同时保留工具底部配置，桌面、账号、路径和非测试区域均裁出，字幕内的本机时间另行遮挡。
+The retained video starts from the original PTS 0, without speeding up or splicing; only the content not used for the conclusion is cut off at the end. The normal segment of Transync is kept until 128.5 seconds, and the network segment is kept until 86 seconds; the normal segment of Parley history is kept until 58 seconds; the normal segment of Maestra is kept until 110 seconds; the normal segment of JotMe is kept until 72 seconds, and subsequent automatic summaries are not included. The remaining historical videos will be retained until the end of the original recording. On November 11th, Parley's re-recording only displays subtitle rectangles, uses a black screen during the preparation phase and before and after session exit, and mutes outside the test voice range. Impaired network supplementary recording also retains the bottom configuration of the tool. The desktop, account, path and non-test area are all cut out, and the local time in the subtitles is blocked.
 
-MP4 编码后的尾部时长可能与原件相差一两个帧/音频包；公开副本不用于帧级重新测量。原件时间戳、原件哈希、公开副本哈希及实际公开时长分别保存，不能将两个哈希混用。
+MP4 The encoded tail duration may differ by one or two frames/audio packets from the original; public copies are not used for frame-level remeasurement. The original timestamp, original hash, public copy hash and actual public duration are saved separately, and the two hashes cannot be mixed.
 
-## 检查范围与限制
+## Check scope and limitations
 
-本次检查包括画面抽帧与关键场景复核、47 张证据图的隐私关键词 OCR 扫描、所有导出视频逐帧的遮挡区域检查、非测试区间静音检查、文本/源码秘密信息扫描及发布清单检查。文本扫描中出现的 `example.com` 登录格式是拒绝凭证 URL 的测试用例，不是真实账号或凭证。
+This inspection includes frame extraction and key scene review, privacy keyword OCR scanning of 47 evidence maps, frame-by-frame occlusion area inspection of all exported videos, non-test interval silence inspection, text/source code secret information scanning and release list inspection. Appears in text scanning`example.com`The login format is a test case for denying a credential URL, not a real account or credential.
 
-声音内容核对以既有转写、固定测试语料、最终人工判定记录和允许保留的测试区间为依据；没有新增全程人工逐秒试听，也没有对源录像进行逐帧人工审片。抽帧/OCR 和自动遮挡校验不能替代人的全面审查，后续若发现遗漏应先撤下对应素材再修订。
+The sound content verification is based on the existing transcription, fixed test corpus, final manual judgment record and the test interval allowed to be retained; there is no new full manual second-by-second audition, nor frame-by-frame manual review of the source video. Frame extraction/OCR and automatic occlusion verification cannot replace a comprehensive human review. If any omissions are found later, the corresponding material should be removed and revised.
 
-## 源码配置
+## Source code configuration
 
-历史脚本中的个人项目路径改为环境变量。弱网工具不带本机 `data/`、`logs/` 或后台启动认证文件。代码中的认证变量、令牌生成与权限检查是程序逻辑，公开包中不包含真实令牌值。提交使用仓库专用的无个人邮箱身份，不带原目录 Git 历史。
+The personal project path in the history script is changed to an environment variable. Impaired network tool does not come with this machine`data/`、`logs/`Or start the authentication file in the background. The authentication variables, token generation and permission checking in the code are program logic, and the real token value is not included in the public package. Submit using the repository-specific non-personal email identity, without the original directory Git history.

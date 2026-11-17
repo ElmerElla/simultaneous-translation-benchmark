@@ -10,18 +10,18 @@ EVENT_IDS = {
     ('jotme', 'R01'): ('W02a', 'W02b'),
 }
 HEADERS = [
-    '软件', '场景ID', '测试设置', '客户端或主字幕F1–F5', '收听页字幕F1–F5', '录入译声F1–F5',
-    '主字幕完整事实数', '收听页字幕完整事实数', '译声完整事实数',
-    '主字幕首显秒', '录像译声首响秒', '计时事件ID', '计时与归属说明',
-    '录像文件', '截图录像秒', '截图文件', '逐轮备注',
+    'software', 'Scene ID', 'Test setup', 'Client or main subtitles F1–F5', 'Listen to page subtitles F1–F5', 'Enter the translated voice F1–F5',
+    'Main subtitles complete fact count', 'Listen to page subtitles complete fact number', 'Complete number of translated facts',
+    'First display seconds of main subtitles', 'Seconds to the first sound of video translation', 'Timing event ID', 'Timing and Attribution Instructions',
+    'video file', 'Screenshot and video seconds', 'screenshot file', 'Round-by-round notes',
 ]
 
 
 def display_facts(statuses):
     if not statuses:
         return '', ''
-    observed = any(status not in ('未确认', '本轮未观察到') for status in statuses)
-    full = sum(status.startswith('正确') for status in statuses)
+    observed = any(status not in ('Unconfirmed', 'Not observed in this run') for status in statuses)
+    full = sum(status.startswith('Correct') for status in statuses)
     return ' / '.join(statuses), full if observed else ''
 
 
@@ -44,18 +44,18 @@ def review_rows(root=ROOT):
             events = EVENT_IDS.get((slug, ident), (ident,))
             rows = [timing[slug, event] for event in events]
             first_caption, first_voice = rows[0]['subtitle_delay_s'], rows[0]['audio_delay_s']
-            note = '从原声起点计的录像观测。'
+            note = 'Video observations from the original acoustic starting point.'
             if (slug, ident) in EVENT_IDS or (slug == 'transync' and ident in ('W02', 'W03')):
                 first_caption = first_voice = None
-                note = '中断与重播交叠，具体事件见 timing.csv。'
+                note = 'Interruption and replay overlap, see timing.csv for specific events.'
             elif (slug, ident) == ('parley', 'R03'):
-                note = '工具撤销后至重播前未观察到新输出。'
+                note = 'No new output was observed after the tool was revoked until replayed.'
             elif (slug, ident) == ('parley', 'R04'):
-                note = '从重播原声起点计，无法单独量化自动恢复。'
+                note = 'From the starting point of replaying the original sound, it cannot be automatically restored by quantization alone.'
             elif slug == 'iflytek' and ident.startswith('R'):
-                note = '首显来自客户端。录入译声无法唯一归属到受控收听页。'
+                note = 'The first subtitle comes from the client. The recorded voice translation cannot be uniquely assigned to the controlled listening page.'
             elif (slug, ident) == ('wordly', 'N01'):
-                note = '本轮听众端关闭播音。'
+                note = 'The listener will close the broadcast for this round.'
             yield (
                 name, ident, case['label'], *texts, *counts, first_caption, first_voice,
                 ' / '.join(events), note, f'media/{media[frame["video_id"]]}',

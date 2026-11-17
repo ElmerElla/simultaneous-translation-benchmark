@@ -1,0 +1,93 @@
+﻿Original table row number,A,B,C,D,E,F
+1,,,,,,
+2,Fact checking and translated speech quality,,,,,
+3,,,,,,
+4,"Judgment basis: simplified version of actual test case C12:E12. Equivalent expressions are allowed, and final subtitles are checked separately from vocalizations.",,,,,
+5,,,,,,
+6,scene,fact,Unified short material requirements,final subtitles,translated speech,Check instructions
+7,N01,F1,Confirm test results before 10 a.m. next Tuesday,Correct,Correct,"Keywords corresponding to the target language: by 10 a.m. next Tuesday.
+Judgment: The cut-off meanings of ""next Tuesday"" and ""before 10 in the morning"" are retained, and the confirmation object is still the test result."
+8,N01,F2,"The budget limit is CNY 30,000",Correct,Correct,"Keywords corresponding to the target language: The budget cap is 30,000 yuan.
+Judgment: Keep the budget ""upper limit"" and ""30,000 yuan"", not just one amount.
+Process exception: The subtitles in the middle are budget up or down in about 22~23 seconds, and corrected in about 24 seconds. The final subtitles and corresponding broadcast are correct, and errors in the middle cannot be hidden."
+9,N01,F3,"Not 130,000 yuan",Correct,Correct,"Keyword corresponding to the target language: It’s not 130,000 yuan.
+Judgment: The negative object is still ""130,000 yuan"" to avoid confusion between 30,000 and 130,000."
+10,N01,F4,Release only if the test passes,Correct,Correct,"Keywords corresponding to the target language: The release will only happen if the tests pass.
+Judgment: The necessary condition of ""release only if the test passes"" is retained, and is not expressed as unconditional release."
+11,N01,F5,"If a problem is discovered, it will be postponed until Friday.",Correct,Correct,"Keywords corresponding to the target language: If any issues are found, it will be postponed until Friday.
+Determination: Keep the triggering conditions of ""Problem Found"" and the action and date of ""Postpone to Friday""."
+12,N02,F1,Confirm test results before 10 a.m. next Tuesday,Correct,Correct,"Keywords corresponding to the target language: by 10:00 a.m. next Tuesday.
+Judgment: The cut-off meanings of ""next Tuesday"" and ""before 10 in the morning"" are retained, and the confirmation object is still the test result.
+The sound of the first sentence overlaps with Chinese; waveform cancellation assists ASR verification to next Tuesday, and the final subtitles are clear. The strength of the evidence is weaker than the complete translated speech of N01/N03 without overlapping."
+13,N02,F2,"The budget limit is CNY 30,000",Correct,Correct,"Keywords corresponding to the target language: The budget cap is 30,000 yuan.
+Judgment: Keep the budget ""upper limit"" and ""30,000 yuan"", not just one amount."
+14,N02,F3,"Not 130,000 yuan",Correct,Correct,"Corresponding target language keyword: not 130,000 yuan.
+Judgment: The negative object is still ""130,000 yuan"" to avoid confusion between 30,000 and 130,000."
+15,N02,F4,Release only if the test passes,Correct,Correct,"Corresponding target language keywords: Only release after passing testing.
+Judgment: The necessary condition of ""release only if the test passes"" is retained, and is not expressed as unconditional release."
+16,N02,F5,"If a problem is discovered, it will be postponed until Friday.",Correct,Correct,"Keywords corresponding to the target language: if issues are found, postpone it to Friday.
+Determination: Keep the triggering conditions of ""Problem Found"" and the action and date of ""Postpone to Friday""."
+17,N03,F1,Confirm test results before 10 a.m. next Tuesday,Correct,Correct,"Keywords corresponding to the target language: by 10:00 a.m. next Tuesday.
+Judgment: The cut-off meanings of ""next Tuesday"" and ""before 10 in the morning"" are retained, and the confirmation object is still the test result."
+18,N03,F2,"The budget limit is CNY 30,000",Correct,Correct,"Keywords corresponding to the target language: The budget cap is 30,000 yuan.
+Judgment: Keep the budget ""upper limit"" and ""30,000 yuan"", not just one amount."
+19,N03,F3,"Not 130,000 yuan",Correct,Correct,"Corresponding target language keyword: not 130,000 yuan.
+Judgment: The negative object is still ""130,000 yuan"" to avoid confusion between 30,000 and 130,000."
+20,N03,F4,Release only if the test passes,Correct,Correct,"Keywords corresponding to the target language: the release will only happen if the tests pass.
+Judgment: The necessary condition of ""release only if the test passes"" is retained, and is not expressed as unconditional release."
+21,N03,F5,"If a problem is discovered, it will be postponed until Friday.",Correct,Correct,"Keywords corresponding to the target language: If any issues are found, it will be postponed until Friday.
+Determination: Keep the triggering conditions of ""Problem Found"" and the action and date of ""Postpone to Friday""."
+22,W01,F1,Confirm test results before 10 a.m. next Tuesday,Correct,Correct,"Keywords corresponding to the target language: by 10:00 a.m. next Tuesday.
+Judgment: The cut-off meanings of ""next Tuesday"" and ""before 10 in the morning"" are retained, and the confirmation object is still the test result.
+The sound of the first sentence overlaps with Chinese; waveform cancellation assists ASR verification to next Tuesday, and the final subtitles are clear. The strength of the evidence is weaker than the complete translated speech of N01/N03 without overlapping."
+23,W01,F2,"The budget limit is CNY 30,000",Correct,Correct,"Keywords corresponding to the target language: The budget cap is 30,000 yuan.
+Judgment: Keep the budget ""upper limit"" and ""30,000 yuan"", not just one amount."
+24,W01,F3,"Not 130,000 yuan",Correct,Correct,"Corresponding target language keyword: not 130,000 yuan.
+Judgment: The negative object is still ""130,000 yuan"" to avoid confusion between 30,000 and 130,000."
+25,W01,F4,Release only if the test passes,Correct,Correct,"Corresponding target language keyword: Only release after passing the tests.
+Judgment: The necessary condition of ""release only if the test passes"" is retained, and is not expressed as unconditional release."
+26,W01,F5,"If a problem is discovered, it will be postponed until Friday.",Correct,Correct,"Keywords corresponding to the target language: If any issues are discovered, postpone them until Friday.
+Determination: Keep the triggering conditions of ""Problem Found"" and the action and date of ""Postpone to Friday""."
+27,W02/W03 recovery segment,F1,Confirm test results before 10 a.m. next Tuesday,Omitted,Omitted,"The complete expression ""confirm the test results before 10 next Tuesday"" does not appear in the new paragraph. Although the old subtitles 00:02 above contain this sentence, it cannot be counted into the new input after the network is disconnected. The subtitles were omitted, and the sentence was not observed in the translated speech."
+28,W02/W03 recovery segment,F2,"The budget limit is CNY 30,000",Partial,Partial,"The new paragraph only has ""30,000 yuan"", and the amount is correct, but the complete semantics of ""budget upper limit"" are not retained, so that part is recorded. It takes about 78.526 seconds to only confirm the amount of the sound, and it will not be counted as F2 to be complete and correct."
+29,W02/W03 recovery segment,F3,"Not 130,000 yuan",Omitted,Omitted,"The negative expression ""not 130,000 yuan"" does not appear in the new paragraph. The mere appearance of 30,000 is not enough to express ""not 130,000"", and the subtitles and observed translated speech are omitted."
+30,W02/W03 recovery segment,F4,Release only if the test passes,Correct,Not observed in full broadcast,"Only release after passing the tests appears in the new segment about 82 seconds, the release premise is retained, and the subtitles are recorded correctly. It stopped about 84.13 seconds, and the complete broadcast of the translated speech was not observed. It cannot be said that it will never be broadcast in the future."
+31,W02/W03 recovery segment,F5,"If a problem is discovered, it will be postponed until Friday.",Correct,Not observed in full broadcast,"A new segment appears in about 82 seconds. If any issues are identified, postpone them until Friday, the conditions and Friday postponement are retained, and the subtitles are recorded correctly. The complete translated speech is not observed before stopping, and the unobserved is not regarded as a translation error."
+32,,,,,,
+33,,,,,,
+34,Final fact coverage (number of complete facts),,,,,
+35,scene,Correct number of subtitles,total number of facts,subtitle coverage,Correct number of translated speechs,explain
+36,N01 cold start,5,5,1,5,"The short intermediate mistranslation during cold start is not counted in the final 5/5, but is retained in the F2 line."
+37,N02 clone session,5,5,1,5,"The first sentence overlaps, and offset-assisted ASR is used; the second half is consistent with the final subtitles."
+38,N03 default tone,5,5,1,5,The complete translated speech of passive sound overlap can be independently transcribed and checked.
+39,W01 100ms,5,5,1,5,"The first sentence overlaps, and offset-assisted ASR is used."
+40,W02/W03 recovery,2,5,0.4,0,"New subtitles: F4/F5 correct 2 items, F2 partial 1 items, F1/F3 missing 2 items, complete fact coverage 2/5=40%. The observed translated speech is only a fragment of the amount; the complete facts of 0 have been confirmed, which does not mean that the translation accuracy is 0%, and subsequent broadcasts are subject to early stop restrictions."
+41,,,,,,
+42,,,,,,
+43,Sound Quality: Intelligibility and Signal Check,,,,,
+44,fragment,peak amplitude,clipping ratio,pause seconds between sentences,understandability,Unmeasured items
+45,N01 clone complete translated speech,0.3809814453125,0,About 0.41～0.56,"English ASR restoration deadline, budget limit, negative amount, release conditions and Friday extension 5 items, there is no duplication of the entire sentence. The span of the first and last utterance is 15.53 seconds.","The normalized peak value is 0.380981, and the clipping ratio is 0.0% (|sampling amplitude|≥0.999). Digital non-overdrive does not equal naturalness or distortion-free. No human ear naturalness, rhythm, and mechanical sense ratings were performed."
+46,N03 Default complete translated speech,0.2745361328125,0,About 0.20～0.54,"The English ASR recovered the same 5 facts, and no duplication of the entire sentence was found. The span between the beginning and the end of the utterance is 12.86 seconds, which is 2.67 seconds shorter than N01, which is a rhythm difference in this sample.","The normalized peak value is 0.274536, and the clipping ratio is 0.0%. The pause between paragraphs is about 0.20~0.54 seconds. It is impossible to distinguish between natural sentence fragmentation and lags by pausing alone. No MOS/PESQ/STOI results."
+47,N02/W01 overlap area,,,No statistics,"ASR offset assists in confirming the first sentence, and the offset sound is not used for voiceprint main comparison.","Noise, naturalness, or subtle staccato sounds cannot be fully evaluated with mixed sounds."
+48,Interrupt and resume broadcasting,,,No statistics,"Only short fragments of 30,000 yuan were observed.","The conversation will be stopped in about 84.13 seconds, and it cannot be confirmed whether the last sentence broadcast will be completed."
+49,,,,,,
+50,10% probability of packet loss and re-recording W04: fact-checking item by item,,,,,
+51,scene,fact,Unified short material requirements,final subtitles,translated speech,Check instructions
+52,W04,F1,Confirm test results before 10 a.m. next Tuesday,Correct,Correct,"Target language: Please confirm the test results by 10:00 a.m. next Tuesday.
+The final subtitles are retained by 10:00 a.m. next Tuesday, the deadline and test result objects are consistent. The first sentence overlaps with Chinese input; homologous cancellation assists ASR verification to Please confirm…next Tuesday."
+53,W04,F2,"The budget limit is CNY 30,000",Correct,Correct,"Target language: The budget cap is 30,000 yuan
+The final subtitle retains The budget cap is 30,000 yuan, including the ""upper limit"" rather than just the remaining amount. The budget sentence overlaps with the tail of the Chinese input; the offset-assisted ASR completely restores the budget cap and 30,000 yuan."
+54,W04,F3,"Not 130,000 yuan",Correct,Correct,"Target language: not 130,000 yuan
+The final subtitles and translated speech retain not 130,000 yuan, the negative object is correct, and thirty thousand and one hundred and thirty thousand are not interchanged. There is no overlapping of Chinese source sounds in the second half of this paragraph, so you can check it directly."
+55,W04,F4,Release only if the test passes,Correct,Correct,"Target language: Only release after passing the tests
+The final subtitles and translated speechs are Only release after passing the tests, retaining the necessary condition of ""release only after passing the tests"". Not expressed as an unconditional release."
+56,W04,F5,"If a problem is discovered, it will be postponed until Friday.",Correct,Correct,"Target language: If any issues are discovered, postpone them until Friday.
+The final subtitles and translated speech are retained. If any issues are discovered, postpone them until Friday, the problem triggering conditions and postponement until Friday are correct; the sound will end in about 29.654 seconds."
+57,,,,,,
+58,W04 fact coverage: complete facts 5/5 (see itemized instructions for auxiliary transcription restrictions),,,,,
+59,scene,Correct number of subtitles,total number of facts,subtitle coverage,Correct number of translated speechs,explain
+60,W04 10% packet loss,5,5,1,5,"The final subtitles 5 are all correct; the translated speech was also checked to 5, of which F1/F2 used homologous cancellation assistance. It only represents the fixed corpus 1, not the stable success rate under packet loss."
+61,,,,,,
+62,W04 translated speech quality: only perform signal check on non-overlapping tail segments,,,,,
+63,fragment,peak amplitude,clipping ratio,pause seconds between sentences,understandability,Unmeasured items
+64,W04 non-overlapping tail segment,0.187835693359375,0,About 0.53 / 0.96,"The auxiliary transcription restores the fact 5; the last segment of the original sound is 21.3~30.0 seconds, including the negative amount, release conditions, and Friday extension, which can be directly verified. The entire translated speech spans 13.27 seconds.","The peak value is about 0.188, and the digital clipping is 0.0%. 0.53/0.96 seconds are pauses between phrases and cannot be used to determine network lag. A complete sound quality score has not been done in the overlapping area, and the subjective naturalness has not yet been tested."

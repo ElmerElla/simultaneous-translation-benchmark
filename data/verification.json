@@ -16,7 +16,7 @@
   "packet_counting_tests": {
     "count": 6,
     "passed": true,
-    "scope": "仅现行弱网源码的纯统计逻辑；未改变网络状态。"
+    "scope": "Only the pure statistical logic of the current impaired network source code; the network status is not changed."
   },
   "browser_checks": {
     "html_rendering": true,
@@ -32,8 +32,8 @@
     "media_hashes_checked": true
   },
   "limits": [
-    "没有新增全程人工逐秒试听或逐帧人工审片。",
-    "OCR/ASR与自动检查不证明绝对不存在遗漏。",
-    "没有复跑产品测试或网络损伤测试。"
+    "There is no new full manual second-by-second audition or frame-by-frame manual review.",
+    "OCR/ASR and automatic checking do not prove that there are absolutely no omissions.",
+    "There is no rerun product testing or network damage testing."
   ]
 }

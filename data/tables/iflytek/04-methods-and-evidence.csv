@@ -1,0 +1,66 @@
+﻿Original table row number,A,B,C,D,E
+1,,,,,
+2,"Methods, quality and evidence navigation",,,,
+3,,,,,
+4,"Only the provided video will be analyzed and the original will be retained; no changes will be made to the product, account, network or original audio.",,,,
+5,,,,,
+6,project,Method/Results,limit,,
+7,M1,Timing adopts the common timeline of the original video PTS. Track samples 0 are PTS -0.021 seconds. Not the player showing seconds or ASR word time.,"See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+8,M2,"For the original audio, stream2 is selected, and for the translated speech, stream1 is selected; stream3 is another Chinese source audio, with a matching offset of about 26~36 milliseconds; the absolute delay of each acquisition channel is not calibrated.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+9,M3,"The subtitles first subtitleed in the 7 group are retrieved using blue new translation candidates, and adjacent frames have been visually reviewed. It is just the first valid English fragment, which does not mean that it is semantically complete.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+10,M4,The English content is cross-checked with clean stream 1 full tracks and 4 segments independently without VAD transcription. track3 forces recognition candidates in English not to be used for product determination. No subjective blind listening/MOS.,The identification tool is a supplementary evidence of the content and does not replace the real person listening to the review.,,
+11,M5,"The source sound 10ms RMS -50dBFS and the translated speech -42dBFS are the main thresholds; the original candidate contains other thresholds. The end of the source sound contains a low-energy ending, which is reported according to this unified caliber.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+12,M6,"With two Chrome listening windows/configurations open during the second half, the tracks are not isolated by window. The recorded sound cannot be directly identified as the controlled web page sound.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+13,M7,"The additional 4, 3, and Yes are inconsistent with the source corpus; the client uses a mixed sound source, and the source of additional input or recognition errors is not confirmed.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+14,M8,"The replay of the same manuscript and the old subtitles are separated one by one; the interruption observation window ends the next input. It is not presumed to be permanently lost, and scores will be automatically restored without replaying.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+15,M9,The configuration 100ms/10% is not equal to the measured RTT/packet loss rate; DevTools only retains its visible page configuration facts and does not prove to cover real-time connections.,"See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+16,M10,"This report is a single short-term observation of each condition, and does not report general accuracy, mean, P95 or stable failure rate.","See this catalog process, CSV, JSON and original screenshots/recordings for details.",,
+17,,,,,
+18,,,,,
+19,48kHz binaural original translated speech signal check,,,,
+20,,,,,
+21,scene,Peak value (full scale 1),Full clipping ratio,Vocal span seconds,Maximum threshold silence seconds
+22,N01,0.7864562273025513,0,18.020000000000003,4.51
+23,N02,0.7970055341720581,0,20.22999999999999,6.3100000000000005
+24,S100,0.7875165939331055,0,15.769999999999996,2.4
+25,Soff (only four),0.7309707403182983,0,,
+26,Sdrop,0.8111794590950012,0,15.379999999999995,2.09
+27,R100,0.7864351272583008,0,15.939999999999998,2.66
+28,Roff,0.7825863361358643,0,13.629999999999995,1.45
+29,Rdrop,0.7921402454376221,0,12.939999999999998,1.49
+30,,,,,
+31,,,,,
+32,Original documents and key evidence,,,,
+33,,,,,
+34,evidence,File/Location,illustrate,Open,
+35,Original video,"Cold start, normal test, impaired network test on the playback end and listening end respectively (100ms delay, interruption 10s, 10% packet loss).mkv",b82161b64f4f06010ff21533d963b3d0588ca46d2f85ecce3d82d4076f63bff8,Open the original video,
+36,Reference process,Transync five test results.xlsx,"Five results, time and impaired network, facts and translated speech, timbre and method, method and evidence; skip timbre this time.",open reference,
+37,Recording source,stream1 English; stream2/3 Chinese,"The three PCM hashes are different, but the label does not match the content; see track_provenance.json for details.",open source,
+38,Subtitle first subtitle border,7 group adjacent frame review,The first subtitle of a complete English word/fragment; not determined by OCR alone.,View boundaries,
+39,client interrupt,"129~139 second status, 142 second output","The complete old segment is retained, and there is no complete new S01 in this round.",View screenshot,
+40,Sender packet loss cancellation,176 seconds show that the original configuration has been restored,The translated speech of the last sentence ends at 181.1 seconds and cannot be counted as the entire packet loss state.,View screenshot,
+41,Listening end last time,308 second client new segment + listening page old segment,"Two Chrome windows, recording sound ownership is limited.",View screenshot,
+42,extra four,Original video 127.7～128.7 seconds,Not counted as the first sound of a valid translated speech; the source is not confirmed.,Audition clip,
+43,extra three,Original video 247.4～248.4 seconds,Not counted as valid F1 first audible translated speech; source unconfirmed.,Audition clip,
+44,,,,,
+45,,,,,
+46,Scene-by-scene screenshots and auditions,,,,
+47,,,,,
+48,scene,condition,Important limitations,screenshot,translated speech
+49,N01,first time entry,"First input; first draft of subtitles. Next Tuesday, please. Gradually rewrite, and finally complete. The original sound has been transliterated while still being input. Some of the Chinese input in the first two rounds overlapped in time with the English broadcast, but the actual English track selected did not have Chinese mixed in.",Open screenshot,Listen to the recording
+50,N02,Enter again normally,"Play the same S01 again in the same session. The previous round of translated speech ended at 62.8 seconds, and the current round of translated speech has been entered at 57.1 seconds; the current round of translated speech started at 66.5 seconds, and can be segmented according to order and content. Not an independent hot start experiment.",Open screenshot,Listen to the recording
+51,S100,Client upstream and downstream 100ms configuration,"The control object iFLYTEK Simultaneous Interpretation.exe, the screen confirmation is appended with 100ms for the upstream and downstream lines, which is valid for about 94~123 seconds. Input and all translated speechs are within this configured state; actual business impairment has not been independently verified.",Open screenshot,Listen to the recording
+52,Soff,Client interrupt related input,"Starting from the input of 125.9 seconds, the connection is interrupted for about 129 ~ 139 seconds; the complete new S01 is not seen before returning to 155.9 seconds before re-entering. Only four extra words were recorded near 128.1 seconds, which cannot be considered as a valid first sentence. The original three complete old subtitles are not considered a success in this round.",Open screenshot,Listen to the recording
+53,Sdrop,Client upstream and downstream packet loss configuration of 10%,"Starting from about 155 seconds, each uplink and downlink configuration has a 10% probability of packet loss; it takes about 175~176 seconds to manually cancel it, and the translated speech ends in 181.1 seconds. The input is basically in the configuration period, and the last segment of the broadcast is cancelled; it cannot be claimed that the entire segment is completed under 10%.",Open screenshot,Listen to the recording
+54,R100,Listening page 100ms configuration,"The listening page display delay of the new Chrome configuration is 100ms; the final subtitles and visible web pages on the client are complete. The first sentence of the recording is only 10 a.m. next Tuesday., but it lacks the confirmation test result and F1 part. Previously another listening window still existed and the audio was not isolated per browser window.",Open screenshot,Listen to the recording
+55,Roff,Listen to page Offline related input,"The listening page was offline for approximately 249~261 seconds; subtitles were still updated and translated speechs were recorded during this period, which did not prove that the real-time service connection was truly disconnected. The first sentence of the recording is only Results before 10 a.m. next Tuesday…, and the actions are incomplete; the additional three are saved separately. The time taken to recover from strict disconnection cannot be calculated.",Open screenshot,Listen to the recording
+56,Rdrop,Listening page WebRTC packet loss 10% configuration,"It can be seen that the listening page selects WebRTC packet loss 10% after about 273 seconds; the new round of subtitles on the client is complete, and it can be seen that the listening page still retains the previous round of text after 308.6 seconds. There is new English in the recording, but the F4 release conditions were not detected in both transcriptions; multiple listening windows make the translated speech source and controlled page ownership non-unique.",Open screenshot,Listen to the recording
+57,,,,,
+58,,,,,
+59,,,,,
+60,,,,,
+61,,,,,
+62,,,,,
+63,,,,,
+64,,,,,
+65,,,,,

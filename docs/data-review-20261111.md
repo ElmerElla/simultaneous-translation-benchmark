@@ -1,78 +1,78 @@
-# 七款同声传译软件数据复核
+# Data review of seven simultaneous interpretation software
 
-复核日期为 2026-11-11。对象为 2026-11-02 至 11-04 分析的 Windows 中译英录像。七款软件采用同一段 S01 语料，重播仍属于同一语料。下列结果描述已留存的录次。
+The review date is 2026-11-11. The objects are Windows Chinese-English videos analyzed from 2026-11-02 to 11-04. The seven softwares use the same S01 corpus, and the replay still belongs to the same corpus. The following results describe the admissions that have been retained.
 
-补录前的复核采用 45 组场景、18 段录像。Parley Voice 的正常录像 V01（N01、N02）已排除，依赖该录像的系统音色与译音对照一并移出。以下文件校验仍覆盖包含 V01 的完整历史记录。
+The review before supplementary recording uses the 45 group of scenes and the 18 segment of video. The normal recording V01 (N01, N02) of Parley Voice has been excluded, and the system timbre and translated speech control that rely on this recording have been removed. The following file check still covers the complete history including V01.
 
-- 重新从本机最终记录导出七款数据，与现有 47 组场景判定、49 条计时事件和 34 张明细工作表 CSV 逐项对照，内容一致。综合对比 Excel 的公开副本与原表单元格值一致。
-- 19 段本机原件和 19 段公开录像的 SHA-256 分别与清单一致。47 张截图与脱敏录像对应时间点的裁切像素一致。两份公开参考 WAV 哈希一致。
-- 对 Parley Voice 单独查看了七张场景图，并核对三段录像的两版原声抵消辅助转写、事件表及两段独立尾音的峰值和削波。音色余弦对照既有模型输出，本轮未重跑声纹模型。其余软件复核以最终原始评测记录与证据文件的对照为主。
+- Re-export seven types of data from the final record of this machine, and compare them item by item with the existing 47 group scene determination, 49 timing events and 34 detailed worksheet CSV, and the content is consistent. Comprehensive comparison The public copy of Excel has consistent cell values ​​with the original table.
+- The SHA-256 of the native original of the 19 segment and the public recording of the 19 segment are consistent with the manifest. The 47 screenshots are consistent with the cropped pixels at the corresponding time points of the redacted video. Two public reference WAV hashes match.
+- Checked seven scene images of Parley Voice separately, and checked the peaking and clipping of two versions of original sound offset assisted transcription, event table and two independent tail sounds of three videos. The timbre cosine is compared with the output of the existing model, and the voiceprint model is not re-run this round. The rest of the software review is mainly based on the comparison of the final original evaluation record and evidence documents.
 
-## 原录像复核摘要
+## Original video review summary
 
-| 软件 | 场景 / 计时事件数 | 首次录次字幕 / 译声完整事实 | 核对时需注意 |
+|software|Number of scenes/timed events|First recorded subtitles/translated complete facts|Please pay attention when checking|
 | --- | --- | --- | --- |
-| Transync AI | 7 / 7 | 5/5 · 5/5 | 中断后的新段只完整保留 F4、F5，F2 部分保留。重播后无法把补译唯一归属到此前输入。 |
-| Parley Voice | 5 / 5 | 无已采用的正常录次 | 保留克隆和弱网录次，详见下方。 |
-| Palabra | 7 / 7 | 5/5 · 5/5 | 另一正常录次和 10% 配置录次的 F2、F3 译音币种仍未确认。 |
-| Maestra Live | 5 / 5 | 5/5 · 5/5 | 首显观测来自流式中间稿。弱网来自 DevTools 的设置。 |
-| JotMe | 5 / 6 | 3/5 · 3/5 | 首次和同进程重播以及 100 ms 配置录次均有金额错译。单独的 10% 配置录次是 5/5。 |
-| Wordly | 8 / 9 | 5/5 · 播音关闭 | 15.1 秒首响属于另一轮开播录次。额外 N02 计时事件在 `timing.csv`，没有对应的发布场景截图。 |
-| 讯飞同传 | 8 / 8 | 5/5 · 5/5 | 首轮收听页字幕也为 5/5。Rdrop 的客户端字幕完整，受控收听页停留旧段，录到的声音无法唯一归属该窗口。 |
+| Transync AI | 7 / 7 | 5/5 · 5/5 |In the new segment after the interruption, only F4 and F5 are completely retained, and F2 is partially retained. After replaying, the supplementary translation cannot be uniquely attributed to the previous input.|
+| Parley Voice | 5 / 5 |No normal admissions have been adopted|Keep clone and impaired network records, see below for details.|
+| Palabra | 7 / 7 | 5/5 · 5/5 |The translated speech currencies of F2 and F3 for the other normal recordings and the 10% configured recordings have not yet been confirmed.|
+| Maestra Live | 5 / 5 | 5/5 · 5/5 |The first observation is from the streaming intermediate draft. The impaired network comes from DevTools settings.|
+| JotMe | 5 / 6 | 3/5 · 3/5 |The first time and the same process replay as well as the 100 ms configuration recording have mistranslation of amounts. The individual 10% configuration entries are 5/5.|
+| Wordly | 8 / 9 |5/5 · Broadcast off|The first audible translated speech of 15.1 seconds belongs to another round of broadcast recording. Additional N02 timing events in`timing.csv`, there is no corresponding release scene screenshot.|
+|iFLYTEK simultaneous interpretation| 8 / 8 | 5/5 · 5/5 |The subtitles on the first round of listening pages are also 5/5. Rdrop's client subtitles are complete, the controlled listening page stays at the old segment, and the recorded sound cannot uniquely belong to this window.|
 
-## Parley Voice 原录像复核
+## Parley Voice original video review
 
-原录像复核排除 V01。其后的千问 Live 弱网补录接替 V02 的四条采用记录，下表为当时的豆包复核结果。
+The original video review excluded V01. Subsequent Qwen Live impaired network supplementary recording replaced the four adoption records of V02. The following table shows the Doubao review results at that time.
 
-| 录次 | 字幕 / 译声完整事实 | 录像首显 / 首响约值 | 本轮复核 |
+|record|Subtitles/dubbed complete facts|Video First Display / First Response Approximate Value|This round of review|
 | --- | --- | --- | --- |
-| C01 实时克隆 | 3/5 · 3/5 | 3.7 / 4.6 秒 | [25 秒截图](../evidence/images/parley-c01.png)及辅助转写为预算金额 30,000 元，缺少「上限」限定。F2 记部分保留。 |
-| W01 上下行各 100 ms 配置 | 4/5 · 4/5 | 4.0 / 4.6 秒 | [32 秒截图](../evidence/images/parley-w01.png)中的 F1 变为向人事部门提交书面说明。 |
-| R01 中断相关残段 | 0 项完整、1 项部分（字幕及译声） | 无可独立归属的计时 | [54 秒截图](../evidence/images/parley-r01.png)先显示上轮完整字幕，再接本轮残段。只核对新增部分。 |
-| R02 恢复后同稿重播 | 4 项完整、1 项部分（字幕及译声） | 无可独立归属的计时 | [76 秒截图](../evidence/images/parley-r02.png)中的合并段出现确认测试结果，也混有「从现在到周五」等附加内容，无法拆出一次独立恢复。 |
-| W04 上下行各 10% 概率丢包配置 | 4/5 · 4/5 | 4.1 / 4.4 秒 | [104 秒截图](../evidence/images/parley-w04.png)下方新段要求向小组提交书面说明。实际业务丢包率未独立验证。 |
+|C01 real-time cloning| 3/5 · 3/5 |3.7 / 4.6 seconds| [25 second screenshot](../evidence/images/parley-c01.png)and auxiliary conversion to the budget amount of 30,000 yuan, which lacks the "upper limit" limit. F2 is partially reserved.|
+|W01 upstream and downstream 100 ms configuration| 4/5 · 4/5 |4.0 / 4.6 seconds| [32 second screenshot](../evidence/images/parley-w01.png)F1 in becomes a written explanation to the HR department.|
+|R01 interrupt related fragments|Items 0 are complete, items 1 are partial (subtitles and translations)|Time without independent ownership| [54 second screenshot](../evidence/images/parley-r01.png)The complete subtitles of the previous round will be displayed first, and then the fragments of this round will be displayed. Only check the newly added parts.|
+|R02 Replay the same article after recovery|Items 4 are complete, items 1 are partial (subtitles and translations)|Time without independent ownership| [76 second screenshot](../evidence/images/parley-r02.png)Confirmation test results appear in the merged segment, which is also mixed with additional content such as "from now to Friday" and cannot be separated into an independent recovery.|
+|W04 10% probability packet loss configuration for uplink and downlink| 4/5 · 4/5 |4.1 / 4.4 seconds| [104 second screenshot](../evidence/images/parley-w04.png)The new paragraph below requires a written explanation to be submitted to the panel. Actual business packet loss rates have not been independently verified.|
 
-克隆与弱网录次的计时以原录像中最早声学活动为起点。首显包括首次出现的完整英文单词，稳定短语另有记录。重叠首响由波形抵消辅助定位，OBS 通路未经标定。
+The timing of clone and impaired network recordings was based on the earliest acoustic activity in the original recording. First occurrences include the first occurrence of a complete English word, stable phrases are recorded separately. The overlapping first sounds are positioned by waveform cancellation, and the OBS channel is not calibrated.
 
-C01 克隆尾音与参考原声的声纹余弦值为 0.5450，峰值为 0.908，满幅削波为 0%。这些数值描述该短片段。主观音质和长期克隆稳定性缺少盲听及多样本测试。
+The cosine value of the voiceprint of the C01 clone tail and the reference original sound is 0.5450, the peak value is 0.908, and the full-scale clipping is 0%. These values ​​describe the short segment. Blind listening and multi-sample testing are lacking for subjective sound quality and long-term cloning stability.
 
-## 如何使用逐轮复核表
+## How to use the round-by-round review table
 
-打开 [47 组采用场景](../data/scenario-review.csv)。每行包含测试设置、F1 至 F5 判定、事件 ID、截图的录像时间和证据路径。讯飞收听页单列。完整事实数只统计「正确」和「正确（抵消辅助）」。空白表示没有可填写的独立计时或可判定的覆盖数。中断与重播交叠的具体时间事件及已排除录次的原始计时见 [timing.csv](../data/timing.csv)。
+Open[47 group adoption scenario](../data/scenario-review.csv). Each line contains test settings, F1 to F5 determinations, event ID, screenshot recording time and evidence path. iFLYTEK listening page single column. The number of complete facts only counts "correct" and "correct (offset auxiliary)". Blank means there are no independent timings to fill in or coverage numbers to determine. The specific time events for interruption and replay overlap and the original timing of excluded recordings can be found in[timing.csv](../data/timing.csv)。
 
-工作簿及原有数据仍是本次复核的来源。逐轮表由 [生成脚本](../scripts/build_scenario_review.py)从结构化结果、证据索引和录像清单导出。录像目录对应 [脱敏素材 Release](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106)。
+The workbook and original data are still the source of this review. Round by round table[Generate script](../scripts/build_scenario_review.py)Export from structured results, evidence index and video inventory. Video directory correspondence[Redacted material Release](https://github.com/ElmerElla/simultaneous-translation-benchmark/releases/tag/v1.0-20261106)。
 
 
-## 11 月 11 日 Parley Voice 正常场景补录
+## November 11 Parley Voice normal scene supplementary recording
 
-采用千问 Live 的两轮 S01，均启用实时克隆，界面显示新加坡线路。当前共 47 组采用场景、19 段采用录像。旧 V01 的两条记录保留排除状态。
+The two rounds of S01 using Qwen Live enable real-time cloning, and the interface displays the Singapore route. Currently, a total of 47 groups use scenes and 19 segments use videos. Two records for the old V01 remain excluded.
 
-| 录次 | 字幕 / 译声 | 原声起点 | 英文首显 | 译声首响约值 | 首显 / 首响差值 | 字幕尾句 / 译声结束 |
+|record|subtitles/dubbing|original sound starting point|First appearance in English|Approximate value of first echo of translated voice|First appearance / first sound difference|End of subtitles / end of translation|
 | --- | --- | --- | --- | --- | --- | --- |
-| N03 首次会话 | 5/5 · 5/5 | 5.70 秒 | 10.100 秒 | 10.19 秒 | 4.4 / 4.5 秒 | 18.200 / 25.76 秒 |
-| N04 同会话再次输入 | 5/5 · 5/5 | 26.73 秒 | 30.933 秒 | 30.81 秒 | 4.2 / 4.1 秒 | 38.700 / 47.73 秒 |
+|N03 first session| 5/5 · 5/5 |5.70 seconds|10.100 seconds|10.19 seconds|4.4 / 4.5 seconds|18.200 / 25.76 seconds|
+|N04 Enter again in the same session| 5/5 · 5/5 |26.73 seconds|30.933 seconds|30.81 seconds|4.2 / 4.1 seconds|38.700 / 47.73 seconds|
 
-录像起点客户端已打开。约 1.33 秒显示会话准备中，3.53 秒进入监听，界面状态转换约 2.2 秒。进程启动耗时无法从此录像测得。 这是同一会话中两次输入相同文本，N04 只核对气泡中的新增英文。
+The recording starting point client has been opened. It takes about 1.33 seconds to display that the session is in preparation, 3.53 seconds to enter monitoring, and the interface status transition takes about 2.2 seconds. The process startup time cannot be measured from this video. This is the same text entered twice in the same session, N04 only checks the new English in the bubble.
 
-首显和字幕尾句由 30 fps 相邻帧确定。三条标为混音、原音、译音的音轨解码后 SHA-256 相同。对中文首句的连续声学活动以波形定位，排除点击等短脉冲。英文五项事实由本地 Faster-Whisper Small 对混音全程和分段转写交叉核对，并与画面分开计分。重叠首响采用约值（约 ±0.2 秒），原件的音画通路未校准。新录次没有独立译音，也没有测量默认音色、主观音质、网络损伤或听众端延迟。
+The first subtitle and the last sentence of subtitles are determined by adjacent frames of 30 fps. The decoded SHA-256 of the three audio tracks marked as remix, original audio, and dubbing is the same. Continuous acoustic activity of the first Chinese sentence was localized as a waveform, excluding short pulses such as clicks. The five facts in English were cross-checked by a local Faster-Whisper Small on full and segmented transcriptions of the mix and scored separately from the footage. Overlapping first sounds are approximate (approximately ±0.2 seconds), and the audio and video paths of the original are not calibrated. The new recordings are not independently translated, nor are default timbres, subjective sound quality, network impairments, or listener latency measured.
 
-[补录脱敏录像](../media/parley-qwen-normal-20261111.mp4) · [N03 字幕截图](../evidence/images/parley-n03.png) · [N04 字幕截图](../evidence/images/parley-n04.png) · [录像原件与公开副本摘要](../data/media-manifest.json)
+[Supplementary recording of redacted video](../media/parley-qwen-normal-20261111.mp4) · [N03 subtitle screenshot](../evidence/images/parley-n03.png) · [N04 subtitle screenshot](../evidence/images/parley-n04.png) · [Summary of original video and public copy](../data/media-manifest.json)
 
-## 11 月 11 日 Parley Voice 弱网场景补录
+## November 11 Parley Voice impaired network scene supplementary recording
 
-四组录像观测取代豆包 V02 的四组场景。新增结果与同日正常补录同用千问 Live。每组输入为同一段 S01，独立判定新增英文。
+Four sets of video observations replace the four sets of scenes of Doubao V02. The new results are the same as the normal supplementary registration on the same day using Qwen Live. Each group of inputs is the same paragraph S01, and the new English is independently determined.
 
-| 录次 | 字幕 / 译声 | 原声起点 | 字幕首显 / 译声首响 | 首显 / 首响差值 | 字幕尾句 / 译声结束 |
+|record|subtitles/dubbing|original sound starting point|Subtitles appear for the first time / translation sounds for the first time|First appearance / first sound difference|End of subtitles / end of translation|
 | --- | --- | --- | --- | --- | --- |
-| W05 千问 Live · 上下行各 100 ms 配置 | 5/5 / 5/5 | 7.93 | 12.900 / 约 13.10 | 5.0 / 约 5.2 | 20.633 / 约 29.64 |
-| R03 千问 Live · 约 10 秒中断 | 未观察到 / 未观察到 | 37.17 | — | — | — |
-| R04 千问 Live · 解除中断后同稿重播 | 5/5 / 5/5 | 53.22 | 58.000 / 约 57.68 | 4.8 / 约 4.5 | 65.767 / 约 72.56 |
-| W06 千问 Live · 上下行各 10% 概率丢包配置 | 5/5 / 5/5 | 77.51 | 82.067 / 约 82.21 | 4.6 / 约 4.7 | 90.067 / 约 98.38 |
+|W05 Qwen Live · Uplink and downlink each 100 ms configuration| 5/5 / 5/5 | 7.93 |12.900 / about 13.10|5.0 / about 5.2|20.633 / about 29.64|
+|R03 Qwen Live · About 10 seconds interrupted|not observed / not observed| 37.17 | — | — | — |
+|R04 Qwen Live · Replay of the same article after the interruption is lifted| 5/5 / 5/5 | 53.22 |58.000 / about 57.68|4.8 / about 4.5|65.767 / about 72.56|
+|W06 Qwen Live · 10% probability packet loss configuration for both uplink and downlink| 5/5 / 5/5 | 77.51 |82.067 / about 82.21|4.6 / about 4.7|90.067 / about 98.38|
 
-表中时间与差值均为秒。原声以连续首句声学活动定位。英文首响由混音转写与波形估计；音画通路未标定。 三条标记音轨的解码 PCM 哈希一致。使用本地 Faster-Whisper Small 交叉复核完整录像和分段的英文转写，首响取约值。
+The times and differences in the table are all in seconds. The original sound is positioned by the acoustic activity of the first consecutive sentence. The English first sound is transcribed by mixing and waveform estimation; the audio and video channels are not calibrated. The decoded PCM hashes of the three tagged tracks are consistent. Use local Faster-Whisper Small to cross-check the complete video and segmented English transcriptions, and the first sound is approximated.
 
-弱网工作台显示 100 ms 配置约在 5.27–31.80 秒。10 秒中断配置的倒计时约在 40.13–50.27 秒，输入先于配置，撤销后约 3.0 秒再次输入。重播前未出现本轮新输出，重播后只出现一套完整新输出。无法独立量化重连或自动补译时延。
+The impaired network workbench displays 100 ms and the configuration is approximately 5.27–31.80 seconds. The countdown of 10 seconds to interrupt the configuration is about 40.13–50.27 seconds. The input is before the configuration, and it is input again after about 3.0 seconds after canceling. No new output of this round appears before replay, and only a complete set of new output appears after replay. There is no way to independently quantify reconnection or automatically compensate for latency.
 
-10% 配置约在 75.80 秒出现，至少到 99 秒仍显示有效。丢包轮的首句追加在旧气泡末尾，第二气泡续写其余四项事实。弱网工作台提示检测到可能的本机中转，业务覆盖待验证。各条件仅一轮，实测业务延迟和丢包率未独立采集。
+The 10% configuration appears approximately at 75.80 seconds and remains valid until at least 99 seconds. The first sentence of the packet loss round is appended to the end of the old bubble, and the second bubble continues with the remaining four facts. The impaired network workbench prompts that a possible local relay has been detected, and the service coverage needs to be verified. There is only one round of each condition, and the measured service delay and packet loss rate are not collected independently.
 
-[弱网补录脱敏录像](../media/parley-qwen-network-20261111.mp4) · [逐轮结果](../data/scenario-review.csv) · [录像校验清单](../data/media-manifest.json)
+[Impaired network supplementary recording of redacted videos](../media/parley-qwen-network-20261111.mp4) · [round by round results](../data/scenario-review.csv) · [Video Checklist](../data/media-manifest.json)

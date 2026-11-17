@@ -38,13 +38,13 @@ def safe_media_path(directory, filename):
 def fact_counts(statuses):
     result = dict(confirmed=0, partial=0, error=0, omitted=0, unconfirmed=0)
     for status in statuses:
-        if status.startswith('正确'):
+        if status.startswith('Correct'):
             result['confirmed'] += 1
-        elif status == '部分':
+        elif status == 'Partial':
             result['partial'] += 1
-        elif status == '错误':
+        elif status == 'Incorrect':
             result['error'] += 1
-        elif status == '遗漏':
+        elif status == 'Omitted':
             result['omitted'] += 1
         else:
             result['unconfirmed'] += 1

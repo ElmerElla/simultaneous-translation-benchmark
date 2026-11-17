@@ -1,0 +1,66 @@
+﻿Original table row number,A,B,C,D,E,F,G,H,I
+1,,,,,,,,,
+2,Time and impaired network,,,,,,,,
+3,,,,,,,,,
+4,All absolute moments are PTS seconds of the original video; waiting = first subtitle/first sound - source sound of this round; unconfirmed does not equal 0 seconds,,,,,,,,
+5,,,,,,,,,
+6,scene,video,Conditions/admissions,Source sound starting point seconds,First displayed seconds,First ring seconds,Wait seconds for first subtitle,First ring wait seconds,limit
+7,N01,V03,First time recording,17.4683125,21.4,22.608999999999998,3.931687499999999,5.1406874999999985,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+8,N02,V03,Normal/Enter again,42.3483125,47.967,49.289,5.6186875,6.940687500000003,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+9,W01,V02,100ms configuration,4.6676875,10.2,11.229,5.532312499999999,6.561312499999999,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+10,W02a,V02,Interrupt/replay input A,24.5376875,,41.069,Unconfirmed,16.531312500000002,The input spans the interruption and the same text is replayed; this time difference only describes the event and cannot be used as a strict recovery delay or a single-round completion indicator.
+11,W02b,V02,Interrupt/replay input B,38.8476875,,55.809,Unconfirmed,16.9613125,The input spans the interruption and the same text is replayed; this time difference only describes the event and cannot be used as a strict recovery delay or a single-round completion indicator.
+12,W04,V01,10% configuration,7.76025,12.9,14.279,5.13975,6.51875,Video observation; the sample under this condition is limited and the OBS audio and video channel is not calibrated.
+13,,,,,,,,,
+14,,,,,,,,,
+15,,,,,,,,,
+16,Network configuration and actual observations,,,,,,,,
+17,,,,,,,,,
+18,Configuration,Recording range,Visible control objects/status,Judgments and Limitations,evidence,,,,
+19,100ms,V02 is about 3~24 seconds,The actual control object JotMe.exe; up/down each 100ms,Complete output but amount mistranslation; configuration value not equal to RTT,frames/V02_controls_contact_1.jpg,,,,
+20,10 seconds interrupt,V02 is about 31~41 seconds,"Countdown for connection interruption; after recovery, the control object becomes empty","24.5 seconds input earlier than application, 38.8 seconds input again spans the interruption; complete recovery attribution unknown",frames/V02_controls_contact_1.jpg,,,,
+21,10% packet loss,V01 is about 18~31 seconds,10% probability of packet loss in each uplink and downlink; control JotMe.exe,Complete subtitles and auxiliary translated speech 5 facts; actual business packet loss rate has not been collected,frames/V01_facts_01110.png,,,,
+22,,,,,,,,,
+23,,,,,,,,,
+24,Starting and timing caliber,,,,,,,,
+25,,,,,,,,,
+26,first time/startup,,,,,,,,"Name is marked by video; unproven exit and restart 3 times per condition. Program opens, session connections, and post-typing responses are not mixed into the same metric."
+27,Starting point of source sound,,,,,,,,"The original sound of this round 10ms RMS is about −50dBFS, the earliest confirmable activity; −55/−42dBFS candidates are retained. Not player seconds or ASR first word time."
+28,Subtitles first subtitleed,,,,,,,,"Adjacent frame review; first readable English word fragment, not equal to a complete sentence. Parley stable phrase time save."
+29,The first sound of translated speech,,,,,,,,"The clean segment is directly waveformed; the overlapping segment is used as subsampling alignment and offset assistance; the threshold candidate is retained, and the offset sound does not contribute to the main voiceprint or sound quality."
+30,Accuracy,,,,,,,,"Sampling 0 corresponds to video PTS−0.021 seconds; 30fps is not an absolute synchronization accuracy. Summarized in approximately 0.1 seconds, overlapping first sounds are estimates; OBS paths are not calibrated."
+31,,,,,,,,,
+32,,,,,,,,,
+33,"Program opening, session readiness, and input responses are logged separately",,,,,,,,
+34,,,,,,,,,
+35,stage,video,Seconds of the previous screenshot,The next screenshot seconds,,,,,Boundaries and Limitations
+36,The program window appears,V03,2,4,,,,,"It is still the desktop for 2 seconds, and it is JotMe Loading for 4 seconds; the click to start itself is not fixed frame by frame."
+37,The main interface appears,V03,6,8,,,,,"It is still loading for 6 seconds, and the main interface is displayed for 8 seconds; this does not mean that the session connection is completed."
+38,Session can receive input,V03,14,15,,,,,"The 14 seconds display is preparing, the 15 seconds preparation prompt disappears and the pause/stop control is visible."
+39,,,,,,,,,
+40,,,,,,,,,
+41,,,,,,,,,
+42,The first full display of the last sentence and the last sound of the translated speech: it does not mean that the overall wording is correct or that the queue has been cleared.,,,,,,,,
+43,,,,,,,,,
+44,scene,video,Observation object,Source sound starting point seconds,The last sentence is displayed in full seconds,translated speech last ringing seconds,Display full wait seconds,Wait seconds for last ring,Vesting/subsequent change restrictions
+45,N01,V03,The last sentence of this round/attributable translated speech,17.4683125,35.766666666666666,37.129,18.298354166666666,19.660687499999998,This is the first time that the last sentence of the first paragraph is complete; then another isolated Friday appears on the screen. It cannot be concluded that there will be no further changes based on the first complete frame. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+46,N02,V03,The last sentence of this round/attributable translated speech,42.3483125,61.8,68.559,19.4516875,26.2106875,"Subtitles complete the last sentence first, then repeat the release/postponement condition; audio completion includes repeating the last sentence. The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later."
+47,W01,V02,The last sentence of this round/attributable translated speech,4.6676875,21.3,23.279,16.6323125,18.6113125,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+48,W04,V01,The last sentence of this round/attributable translated speech,7.76025,34.8,37.208999999999996,27.039749999999998,29.448749999999997,The adjacent frames before and after the last sentence have been visually reviewed; the first subtitle of the last word does not mean that it will not be revised later.
+49,W02a,V02,The last sentence of this round/attributable translated speech,24.5376875,,,Unconfirmed,Unconfirmed,The completion of this round's new subtitles/segments cannot be separated and remains unconfirmed. The current video is not enough to confirm the completion of the last sentence of this round of subtitles.
+50,W02b,V02,The last sentence of this round/attributable translated speech,38.8476875,,,Unconfirmed,Unconfirmed,The completion of this round's new subtitles/segments cannot be separated and remains unconfirmed. The current video is not enough to confirm the completion of the last sentence of this round of subtitles.
+51,,,,,,,,,
+52,,,,,,,,,
+53,,,,,,,,,
+54,,,,,,,,,
+55,,,,,,,,,
+56,,,,,,,,,
+57,,,,,,,,,
+58,,,,,,,,,
+59,,,,,,,,,
+60,,,,,,,,,
+61,,,,,,,,,
+62,,,,,,,,,
+63,,,,,,,,,
+64,,,,,,,,,
+65,,,,,,,,,

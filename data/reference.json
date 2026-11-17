@@ -1,13 +1,14 @@
 {
   "id": "S01",
-  "direction": "zh-CN → en",
-  "source": "请在下周二上午十点前确认测试结果，预算上限是三万元，不是十三万元。只有测试通过才发布；如果发现问题，就推迟到周五。",
+  "direction": "zh-CN \u2192 en",
+  "source": "Please confirm the test results before 10 a.m. next Tuesday. The upper limit of the budget is 30,000 yuan, not 130,000 yuan. It will be released only if the test passes; if problems are found, it will be postponed until Friday.",
   "facts": [
-    "F1 下周二上午十点前确认测试结果",
-    "F2 预算上限三万元",
-    "F3 不是十三万元",
-    "F4 只有测试通过才发布",
-    "F5 发现问题则推迟到周五"
+    "F1 Confirm the test results before 10 a.m. next Tuesday",
+    "F2 Budget upper limit is 30,000 yuan",
+    "F3 is not 130,000 yuan",
+    "F4 will be released only after passing the test",
+    "F5 If the problem is found, it will be postponed to Friday."
   ],
-  "scope": "固定语料的录像离线核查，非总体准确率或统计排名"
+  "scope": "Offline verification of recordings of fixed corpus, not overall accuracy or statistical ranking",
+  "source_note": "English gloss of the Chinese S01 input; the recording remains Chinese. The English text is not a replacement test input."
 }

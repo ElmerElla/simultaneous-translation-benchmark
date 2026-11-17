@@ -1,23 +1,25 @@
-# Parley 豆包 Mac 补充示例
+# Parley Voice: supplementary Doubao Mac examples
 
-### 豆包 Mac 短句与停顿补充示例（01、02）
+### Doubao Mac short-utterance and pause examples (01, 02)
 
-以下仅说明短句及停顿场景，不纳入上方竞品对比表，也不替换千问最新版本测试。两段均为 Mac 录像，使用的音频与竞品横评的统一 S01 音频不同，仅作为低延迟现象的辅证，不用于跨产品比较。本次观测最低约1.7秒，不能代表长句或持续说话的延迟。
+These two Mac recordings use different audio from the standard S01 cross-product test. They are supplementary evidence of low latency only, are excluded from the comparison table, and do not replace the latest adopted Qwen test. The lowest observed latency is approximately 1.7 seconds; this is not representative of long utterances or continuous speech.
 
-**示例01：单句问候。** 原声“你好”译为“Hello”，字幕延迟约1.8秒，译音首响约1.7秒，含义正确。短句及适当停顿可能帮助系统更早确定分句、输出译文；本例观察到约1.7秒的译音首响延迟，但不能据此量化停顿带来的降幅，具体数值仍取决于句长、输入节奏及当次条件。
+**Example 01: a short greeting.** The Chinese greeting (English gloss: "Hello") is translated as "Hello". Subtitle latency is approximately 1.8 seconds and translated-speech onset latency approximately 1.7 seconds. The meaning is correct. Short utterances and suitable pauses may help the system segment and translate earlier. This sample cannot quantify a latency reduction caused by pausing; sentence length, speaking rhythm and recording conditions also matter.
 
-[播放豆包 Mac 示例01](../media/parley-doubao-normal-01-20261116.mp4)
+[Play Doubao Mac example 01](../media/parley-doubao-normal-01-20261116.mp4)
 
-**示例02：问候后停顿，再问会议时间。** “你好”后停顿约0.5秒，再说“请问今天下午的会议几点开始？”。问候字幕延迟约1.7秒；后一句字幕延迟约3.4秒、译音首响约3.37秒，译文保留原意。停顿可能帮助系统更早分句；本例问候字幕延迟约1.7秒，但不能据此量化停顿带来的降幅，也不表示后面的长句固定为1.7秒。
+**Example 02: a greeting, a pause, then a meeting question.** The speaker pauses approximately 0.5 seconds after the Chinese greeting, then asks in Chinese, "What time does this afternoon's meeting start?" The greeting subtitle appears after approximately 1.7 seconds. The question's subtitle latency is approximately 3.4 seconds and translated-speech onset latency approximately 3.37 seconds. The translation preserves the meaning. A pause may help earlier segmentation, but this sample cannot quantify the reduction caused by pausing or imply that the longer question also has a 1.7-second latency.
 
-[播放豆包 Mac 示例02](../media/parley-doubao-normal-02-20261116.mp4)
+[Play Doubao Mac example 02](../media/parley-doubao-normal-02-20261116.mp4)
 
-延迟从对应中文语段的原声起点算起，字幕首显有约0.1秒抽样误差。02问候译音与后续中文混音重叠，首响未唯一确认。内容由混音波形和辅助转写核对，未做人耳音质验收，音画通路未标定。这两段示例没有同稿有／无停顿对照，不能单独量化停顿带来的降幅，也不承诺固定延迟。
+Each delay starts at the corresponding Chinese utterance onset. Subtitle sampling uncertainty is approximately 0.1 seconds. The greeting's translated speech in example 02 overlaps the following Chinese input, so its onset is unconfirmed. Mixed-audio waveforms and assisted transcription support the content checks. No human listening assessment was performed, and the audio/video paths were not calibrated. No matched-script with/without-pause trial was conducted, so no causal reduction or fixed latency is claimed.
 
-## 原录像计时
+## Original recording timestamps
 
-01：原声4.78秒，字幕6.50–6.60秒，译音6.48秒；02：第一句原声4.03秒、字幕5.70–5.75秒，第二句原声4.94秒、字幕8.30–8.40秒、译音8.31秒。
+Example 01: source onset 4.78 s; subtitle onset 6.50–6.60 s; translated speech onset 6.48 s.
 
-[结构化数据](../data/parley-normal-20261116.json) · [千问最新版本测试](parley-normal-retest-20261112.md)
+Example 02, greeting: source onset 4.03 s; subtitle onset 5.70–5.75 s. Question: source onset 4.94 s; subtitle onset 8.30–8.40 s; translated speech onset 8.31 s.
 
-![豆包01字幕](../evidence/images/parley-doubao-normal-01.png)
+[Structured data](../data/parley-normal-20261116.json) · [Latest adopted Qwen test](parley-normal-retest-20261112.md)
+
+![Example 01 subtitle](../evidence/images/parley-doubao-normal-01.png)

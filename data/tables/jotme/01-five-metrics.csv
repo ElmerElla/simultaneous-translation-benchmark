@@ -1,0 +1,26 @@
+﻿Original table row number,A,B,C,D
+1,,,,
+2,JotMe five test results,,,
+3,,,,
+4,2026-11-03 · Video offline review · S01 Chinese→English · The same five frameworks as Transync,,,
+5,,,,
+6,Evaluation items,Actual measurement results and judgment,Conclusion scope,Review tips
+7,Translation accuracy,"Unify S01 Chinese → English. For the first time, the replay in the same process and the recording of 100ms configuration, the final subtitles and auxiliary translated speech are all 3/5. Complete facts: deadline, release conditions and Friday extension are reserved; 30,000 yuan was changed to 130,000 yuan or 300,000 yuan, and ""not 130,000 yuan"" was changed to ""not 1,300,000 yuan"".
+The 10% packet loss configuration alone records the final subtitles and auxiliary translated speech 5/5; it cannot be inferred that the packet loss improves the accuracy. There is still an amount error in the recovery and replay merge segment, and the attribution is restricted.",The normal and 100ms records contain two amount factual errors.,5/5 only covers key facts for this S01; not overall accuracy.
+8,Voice cloning,This item is skipped according to the range; the original description of the conclusion table is retained.,Skip this item,Raw cosines are not reduction percentages; see details for cross-language short snippet and switch evidence limitations.
+9,Real-time performance,"First display/first sound, in seconds; both are measured from the original acoustic starting point of the current round.
+3.9/5.1 for the first time; 5.6/6.9 again; 100ms configuration 5.5/6.6; 10% configuration 5.1/6.5.
+Single video observation; the audio and video channels are not calibrated, and there is no stable mean or P95. The source sound and the translated speech overlap, and the first sound is offset by the same origin to assist in positioning; the first sound is only the first English fragment, not a complete sentence.
+Startup in stages: The program loads between about 2 and 8 seconds; the session is ready between 14 and 15 seconds of recording, and it starts after 17.5 seconds of input.
+It takes 18.3 seconds to input the full range of the last sentence for the first time; it takes 19.7 seconds to input the last sound of the translated speech. Just because the last sentence is complete for the first time does not mean that it will not be revised or repeated later.","Subtitles come out first, and the starting point for translated speech needs to be mixed.",Single observation; OBS pathway not calibrated; first subtitle does not equal complete sentence.
+10,Translated speech quality,"Clean end peak: 0.159 for the first time, 0.174 again, 10% configuration 0.257; full-scale digital clipping is 0%.
+After re-entering, the release conditions and Friday postponement are broadcast again; subtitles and independent tail segment transcription evidence are retained. 10% of recordings have pauses exceeding 2 seconds, but network lag cannot be determined based on pauses alone.
+The sound quality cannot be fully evaluated in the mixing overlap area; no naturalness, rhythm or MOS blind listening scores were made.","After re-typing, the last sentence is repeated.",The three tracks are actually the same; no naturalness/rhythm blind listening ratings were made.
+11,Impaired-network behavior,"100ms: The screen shows that 100ms is appended to the upstream and downstream lines of JotMe.exe; the output is complete but the amount is mistranslated.
+10%: Individual recording shows probability packet loss configuration, 10% for uplink and downlink respectively; the final subtitle/auxiliary translated speech 5 fact is retained, and the real service packet loss rate is not collected.
+Interruption: display control for about 31~41 seconds; input has started for 24.5 seconds, input again for 38.8 seconds, and then new segments and additional broadcasts are interleaved. It can only describe this new output, and cannot give strict recovery time or cached supplementary translation attribution.",10% configuration records are complete; the attribution of the interrupted supplementary translation is unclear,"Only visible configuration; no independent verification of full-link impairment, no stable success rate reported."
+12,,,,
+13,Status: Video analysis completed; insufficient evidence for some items,,,
+14,Measurements not covered by the existing video remain unconfirmed; no online measurements will be added.,,,
+15,,,,
+16,,,,

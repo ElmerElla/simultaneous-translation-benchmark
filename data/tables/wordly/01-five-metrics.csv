@@ -1,0 +1,25 @@
+﻿Original table row number,A,B,C,D
+1,,,,
+2,Wordly five test results,,,
+3,,,,
+4,2026-11-03 · Video offline review · S01 Chinese→English · The same five frameworks as Transync,,,
+5,,,,
+6,Evaluation items,Actual measurement results and judgment,Conclusion scope,Review tips
+7,Translation accuracy,"The first two no throttling baselines for the first subtitles and the impaired network recording, the final new subtitles retain 5 key facts; the independent translated speech after the broadcast is turned on also restores 5 key facts. In English, the release/delay object is written as test, and the expression is ambiguous. 5/5 cannot be understood as the entire paragraph is worded correctly.
+There are new subtitles entered twice in 100ms, and the key facts are retained; the corresponding new translated speech is not confirmed. The new subtitles configured for packet loss at the end of normal recording are missing next Tuesday, complete facts 4/5, and partial 1 item. The new output of the last 10% of the input is not confirmed.",Key facts are mostly reserved; the expression of the test object is ambiguous,5/5 only covers key facts for this S01; not overall accuracy.
+8,Voice cloning,This item is skipped according to the range; the original description of the conclusion table is retained.,Skip this item,Raw cosines are not reduction percentages; see details for cross-language short snippet and switch evidence limitations.
+9,Real-time performance,"First display/first sound, in seconds; both are measured from the original acoustic starting point of the current round.
+The first subtitles were recorded for 2.3 seconds, and the first sound was not measured during initial muting; after the broadcast was turned on, the first sound was recorded for 15.1 seconds. No throttling baseline is 2.2/16.0, 2.4/15.1.
+There are two new subtitles in 100ms, about 2.3 and 15.5 seconds, and the new translated speech is not confirmed; the second time there is replay/queue interference. Single video observation; the audio and video channels are not calibrated, and there is no stable mean or P95.
+Startup in stages: The browser opening time is missing; the speaker end takes 2 to 4 seconds, the listener end joins in 4 to 6 seconds, the routing configuration is completed in 8 to 10 seconds, and the initial broadcast is closed.
+It takes 14.0 seconds for the first full range input of the last sentence to be displayed; the input of the final range of the translated speech is not confirmed. Just because the last sentence is complete for the first time does not mean that it will not be revised or repeated later.","Mute, new subtitles and new translated speech are judged separately",Single observation; OBS pathway not calibrated; first subtitle does not equal complete sentence.
+10,Translated speech quality,"After the broadcast is turned on, the complete translated speech peak is 0.659; the other two segments are no throttling baseline 0.658/0.653, the full-scale digital clipping is 0%, and the phrase pauses for about 0.17~0.75 seconds. Independent transcription can recover the 5 facts, but test is ambiguous as a release/delay object.
+New translated speechs that are not recorded in early silent and impaired network segments cannot be scored, and it cannot be used to conclude that the product does not support voice. No blind listening scores were made for naturalness and rhythm.","The audio baseline is comprehensible, but the missing recording scenes will not be scored.",The three tracks are actually the same; no naturalness/rhythm blind listening ratings were made.
+11,Impaired-network behavior,"""Impaired network"" recording 0 ~ 76 seconds is still No throttling, 11.6/45.2 second input is only the baseline. About 77 seconds later, the audience page selects 100ms. The subtitles have been updated, and the unrecorded can be attributed to the new English broadcast; the speaking end is another browser page, and the scope of effect has not been verified.
+After selecting the 10% configuration in about 131 seconds and then inputting it again, the new output was not confirmed before the end of the recording in 149.6 seconds, and the old subtitles were not counted as successful. The packet loss configuration was also selected in the later part of normal recording, and the new subtitles were missing on Tuesday.
+No evidence was found that Offline was applied continuously for about 10 seconds, and no conclusion can be made about interruption recovery.",Failure to obtain qualified 10 second interruption and complete impaired network translated speech evidence,"Only visible configuration; no independent verification of full-link impairment, no stable success rate reported."
+12,,,,
+13,Status: Video analysis completed; insufficient evidence for some items,,,
+14,Measurements not covered by the existing video remain unconfirmed; no online measurements will be added.,,,
+15,,,,
+16,,,,

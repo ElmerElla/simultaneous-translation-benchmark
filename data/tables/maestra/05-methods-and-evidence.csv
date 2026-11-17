@@ -1,0 +1,129 @@
+﻿Original table row number,A,B,C
+1,,,
+2,Methods and evidence,,
+3,,,
+4,"The original video is retained; source file verification, scene ownership and review paths are concentrated here.",,
+5,,,
+6,theme,Implementation methods/evidence,Source/Limitations
+7,scope,"Only existing videos are analyzed offline; no online measurements are supplemented; overall accuracy, P95 or subjective naturalness scores are not reported.","The product, account, network configuration or original video will not be modified this time."
+8,unified corpus,"Please confirm the test results before 10 a.m. next Tuesday. The upper limit of the budget is 30,000 yuan, not 130,000 yuan. It will be released only if the test passes; if problems are found, it will be postponed until Friday.","Five facts of S01: deadline/confirmation target, budget limit of 30,000, not 130,000, release only after approval, extension to Friday if there are problems."
+9,Reference process,"Transync five test results.xlsx: real-time, accuracy, cloning, translated speech, impaired network; retain its single, mix, and recovery attribution restrictions.",../../Transync test/outputs/evaluation results_20261102/Transync five test results.xlsx
+10,Recording verification,3 video clips; each 3 audio track PCM is exactly the same and is the same mix.,manifest.json and raw/*_probe.json; the label source/translated cannot be used as an independent track.
+11,timeline,Video frame PTS is retained frame by frame; audio track sample0 is −0.021 seconds.,raw/*_video_pts.json; time event table.csv; timing_candidates.json; reviewed_results.json
+12,subtitle,"2 second rough scan assist, then locate adjacent frames for boundaries and visually review; old subtitles, new blocks and streaming rewriting are separated.",raw/*_ocr.json; frames/*subtitle*.png; Parley see also *fragment*.png. OCR errors are not directly regarded as product errors.
+13,speech recognition,faster-whisper-small; CPU int8; beam=5; word-level time; only for content/time support.,"raw/*_assist2_asr.json, direct_clean_asr.json; the mixed forced language will be misrecognized, and the old candidates will be retained but will be listed separately in the final judgment."
+14,offset assist,"Recording clean original sound for the first time with the current Maestra, 3 second correlation alignment, subsampling cubic interpolation, least squares gain; differential only assists overlap transcription and first sound.",raw/*_subtraction3.json and audio/*_target_assist3.wav; original reference offset and integer alignment candidates are retained.
+15,sound quality,"Only clipping, peaking, pauses and independent transcriptions of non-overlapping areas of the original recording are used; no MOS/PESQ/STOI or subjective naturalness scores.",sound_quality.json；direct_clean_asr.json；audio/*_clean.wav
+16,Impaired network boundary,"Interface configuration, control objects, and function coverage are separated; there is no independent packet capture, and the setting 100ms/10% is not regarded as actual measured service damage.",Configuration table and corresponding screenshots in time and impaired network.
+17,Duplicate/missing items,"The same corpus is played multiple times and is not an independent corpus; different network conditions are not combined into repetition times. Overall accuracy, mean/P95, or permanent loss is not reported.","Restrictions such as replay, mute, old subtitles, early end of recording, currency listening, etc. have been listed one by one."
+18,Tool source,Reuse local Transync dependencies/fixed models without adding new dependencies or re-running online translation.,"For model, preprocessing and version verification, see speaker_results.json; for reproduction commands, see Process and Evidence Index.txt."
+19,,,
+20,,,
+21,,,
+22,Original list and SHA256,,
+23,,,
+24,Video ID,Original file (relative to product folder),SHA256 / Duration
+25,V01,cold boot.mkv,"79cea84a02232a593907f6b2f34766719889cc8d2eaae4d07c10fbadf6fa4a3a
+39.533 seconds; 3 tracks are the same: true"
+26,V02,"Delay 100ms, interruption 10s, packet loss 10%.mkv","19a4b6548aca7be4cf93d0a563fd8d9573c95448cf8622e3e6a44c4f7fb2eba8
+251.766 seconds; 3 tracks are the same: true"
+27,V03,Normal translation.mkv,"4823f1931eb67eebc4d678c337e9c2fbd26f67609bdd1064daa264726db793fa
+34.7 seconds; 3 tracks are the same: true"
+28,,,
+29,,,
+30,,,
+31,Scene-by-scene evidence navigation,,
+32,,,
+33,scene,Original video and screenshot positioning,Link
+34,N01 First recording/Puck,"cold boot.mkv
+PTS 38 seconds; frames/V01_facts_01140.png",open evidence
+35,N02 has normal recording times/Puck,"Normal translation.mkv
+PTS 30 seconds; frames/V03_facts_00900.png",open evidence
+36,W01 DevTools delay 100ms configuration,"Delay 100ms, interruption 10s, packet loss 10%.mkv
+PTS 33 seconds; frames/V02_facts_00990.png",open evidence
+37,New paragraph after W02 Offline cancellation,"Delay 100ms, interruption 10s, packet loss 10%.mkv
+PTS 68.5 seconds; frames/V02_facts_02055.png",open evidence
+38,W04 DevTools 10% packet loss configuration,"Delay 100ms, interruption 10s, packet loss 10%.mkv
+PTS 100 seconds; frames/V02_facts_03000.png",open evidence
+39,,,
+40,,,
+41,,,
+42,Audio Evidence Navigation,,
+43,,,
+44,fragment,Original WAV range,Link
+45,N01_full,V01 26～39 seconds; audio/N01_full_clean.wav,Turn on audio
+46,N02_full,V03 20.7～33.7 seconds; audio/N02_full_clean.wav,Turn on audio
+47,W01_full,V02 21～33.7 seconds; audio/W01_full_clean.wav,Turn on audio
+48,W02_full,V02 56～68.7 seconds; audio/W02_full_clean.wav,Turn on audio
+49,W04_full,V02 88.3～101.2 seconds; audio/W04_full_clean.wav,Turn on audio
+50,,,
+51,,,
+52,,,
+53,Startup and output completion evidence,,
+54,,,
+55,event,Evidence documents,Link
+56,Browser opens,V01 frames/V01_cold_00030.png,open evidence
+57,Browser opens,V01 frames/V01_cold_00060.png,open evidence
+58,Product home page display,V01 frames/V01_cold_00150.png,open evidence
+59,Product home page display,V01 frames/V01_cold_00180.png,open evidence
+60,Session connected,V01 frames/V01_cold_00240.png,open evidence
+61,Session connected,V01 frames/V01_cold_00270.png,open evidence
+62,Session can receive input,V01 frames/V01_cold_ready_00300.png,open evidence
+63,Session can receive input,V01 frames/V01_cold_ready_00315.png,open evidence
+64,N01 Last sentence adjacent frame,V01 frames\N01_tail_00756.png,open evidence
+65,N01 Last sentence adjacent frame,V01 frames\N01_tail_00757.png,open evidence
+66,N02 Last sentence adjacent frame,V03 frames\N02_tail_00548.png,open evidence
+67,N02 Last sentence adjacent frame,V03 frames\N02_tail_00549.png,open evidence
+68,W01 last sentence adjacent frame,V02 frames\W01_tail_00611.png,open evidence
+69,W01 last sentence adjacent frame,V02 frames\W01_tail_00612.png,open evidence
+70,W02 last sentence adjacent frame,V02 frames\W02_tail_01660.png,open evidence
+71,W02 last sentence adjacent frame,V02 frames\W02_tail_01661.png,open evidence
+72,W04 last sentence adjacent frame,V02 frames\W04_tail_02639.png,open evidence
+73,W04 last sentence adjacent frame,V02 frames\W04_tail_02640.png,open evidence
+74,,,
+75,,,
+76,,,
+77,,,
+78,,,
+79,,,
+80,,,
+81,,,
+82,,,
+83,,,
+84,,,
+85,,,
+86,,,
+87,,,
+88,,,
+89,,,
+90,,,
+91,,,
+92,,,
+93,,,
+94,,,
+95,,,
+96,,,
+97,,,
+98,,,
+99,,,
+100,,,
+101,,,
+102,,,
+103,,,
+104,,,
+105,,,
+106,,,
+107,,,
+108,,,
+109,,,
+110,,,
+111,,,
+112,,,
+113,,,
+114,,,
+115,,,
+116,,,
+117,,,
+118,,,
+119,,,
+120,,,
